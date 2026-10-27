@@ -1,63 +1,88 @@
-# AimRL 规格（Day 4）
+# AimRL Specification (Day 5)
 
-## 研究问题与范围
+## Research Question and Scope
 
-在相同环境交互步数下，距离奖励塑形是否使 Q-learning 更快学会命中移动目标？训练完成后，目标移动概率变化如何影响表现？比较规则方法、基础奖励 Q-learning 和 potential-based 塑形 Q-learning。规则方法对准时开火，否则先调整横向再调整纵向。项目是小型可复现实验；塑形是已有方法，不声称发明新算法，也不预设强化学习优于规则方法。临时原型只表明方案可能可行，目前没有正式训练结果。
+Under an equal environment-interaction budget, does distance-based potential reward shaping help Q-learning learn to hit a moving target sooner? How does changing the target movement probability affect the trained policies? The project compares a rule policy, base-reward Q-learning, and potential-shaped Q-learning.
 
-## 环境和状态
+The rule policy fires when aligned; otherwise it corrects the horizontal position first and then the vertical position. This is a small reproducible experiment. Potential-based reward shaping is an established method; the contribution is the environment implementation, controlled comparison, and analysis, not a new algorithm. Reinforcement learning is not assumed to outperform the rule policy. Preliminary prototypes established feasibility only; formal three-seed results are recorded separately under `outputs/day5/`.
 
-5×5 网格，x 向右、y 向下增大，坐标均为 0–4。每次 reset 随机选择不重合的准星 (xc,yc) 和目标 (xt,yt)；目标行 yt 在一次尝试中固定，初始方向随机向左或向右。状态 s=(xc,yc,xt,yt,v)，v=-1 为左、+1 为右；Q 表方向索引 0 为左、1 为右。Q 表 shape=(5,5,5,5,2,6)，dtype=float32，共 1,250 个状态组合、7,500 个 Q 值，元素数据 30,000 字节，不含 Python 进程其他开销。使用直接可见的坐标状态，观察空间与窗口像素无关。
+## Environment, Coordinates, and State
 
-| 编号 | 动作 | 效果 |
+The field is a 5×5 grid. The x coordinate increases to the right and y increases downward; both range from 0 to 4. Each reset randomly chooses distinct crosshair `(xc, yc)` and target `(xt, yt)` positions. The target row `yt` remains fixed within an episode, and its initial direction is randomly left or right.
+
+The state is `s = (xc, yc, xt, yt, v)`, with `v = -1` for left and `v = +1` for right. Q-table direction index 0 denotes left and index 1 denotes right. The planned and implemented table has shape `(5,5,5,5,2,6)` and dtype float32: 1,250 state combinations, 7,500 Q values, and 30,000 bytes of element data, excluding other Python-process overhead. Observations contain directly available coordinates and do not depend on display resolution.
+
+| ID | Action | Effect |
 |---:|---|---|
-| 0 | left | x 减 1 |
-| 1 | right | x 加 1 |
-| 2 | up | y 减 1 |
-| 3 | down | y 加 1 |
-| 4 | stay | 准星不动 |
-| 5 | fire | 当前位置开火，准星不动 |
+| 0 | left | Decrease crosshair x by 1 |
+| 1 | right | Increase crosshair x by 1 |
+| 2 | up | Decrease crosshair y by 1 |
+| 3 | down | Increase crosshair y by 1 |
+| 4 | stay | Leave the crosshair unchanged |
+| 5 | fire | Fire at the current crosshair position without moving it |
 
-移动最多一格，越界时限制在边界。动作编号与配置 actions 顺序一致。
+Movement is at most one cell and is clipped at grid boundaries. Action IDs match the order in `configs/base.json`.
 
-每步严格按以下顺序：
+Each step follows this exact order:
 
-1. 准星执行动作。
-2. 若 fire，用此刻准星与目标位置判断是否完全重合。
-3. 命中立即终止，目标不再移动。
-4. 未命中时，以 0.10 概率反转目标方向。
-5. 再独立地以 0.25 概率尝试移动一格；若当前方向越界，先反向再移动一格。
-6. 根据动作结果和目标更新后的真实下一状态计算奖励并返回下一状态。
+1. Validate the lifecycle and action, execute the crosshair action, and increment the step count.
+2. If the action is fire, check whether the current crosshair and target positions coincide exactly.
+3. If hit, terminate immediately; do not move the target or sample its direction.
+4. Otherwise, reverse the target direction with probability 0.10.
+5. Independently attempt a one-cell target move with probability 0.25. If the current direction would cross a boundary, reverse first and then move one cell.
+6. Compute the reward and return the actual next state, including the updated target.
 
-命中为 terminated=True；50 步未命中为 truncated=True、terminated=False；第 50 步命中为 terminated=True、truncated=False。50 步是外部采样和评估上限，状态不包含剩余步数；超时评估记为未成功，不构造成有限时域终止状态。命中不 bootstrap；外部截断仍从截断前的下一状态 bootstrap，不使用 reset 后状态。未来接口为 reset 返回 (observation, info)，step 返回 (observation, reward, terminated, truncated, info)；本轮不引入 Gymnasium。
+Moving onto the target is not a hit; firing is required. A missed shot remains a miss if the target subsequently moves into the crosshair cell. Direction can change without movement. Every non-hit step draws turning and movement randomness in that order.
 
-## 奖励与学习
+## Lifecycle and Time Limits
 
-基础奖励 rA：每步 -0.05，命中额外 +10（命中步 +9.95），空枪额外 -1（空枪步 -1.05），其他步 -0.05。
+`reset(seed=None)` returns `(observation, info)`. An integer seed initializes the environment's independent NumPy generator; no seed continues its existing stream. Observations are immutable tuples, and each info dictionary is new and includes `step_count`, `hit`, `miss`, and `base_reward`. Python and NumPy integer actions 0–5 are accepted; booleans and other values are rejected without changing the state, count, or random stream. Call reset before the first step and after an episode ends.
 
-Phi(s) = -(|xc-xt| + |yc-yt|)；rB = rA + shaping_scale × [gamma × Phi(s_next) - Phi(s)]。shaping_scale=1.0，gamma 与 learning.gamma 共用。命中终止状态 Phi=0；时间截断不强制清零，下一状态采用目标更新后的真实状态。
+A hit sets `terminated=True`. Reaching 50 steps without a hit sets `truncated=True` and `terminated=False`. A hit on step 50 sets `terminated=True` and `truncated=False`. The limit is an external sampling/evaluation bound; remaining time is not part of the state, and timeout is not an additional finite-horizon terminal state.
 
-Q(s,a) ← Q(s,a) + alpha × [target - Q(s,a)]。真正终止时 target=r；其他情况包括外部截断时 target=r+gamma×max_a Q(s_next,a)。两种奖励使用相同状态、动作、初值、训练预算和探索计划。训练时最大 Q 并列的动作随机选择；评估时按固定动作顺序打破并列。
+Learning does not bootstrap after a true hit. External truncation still bootstraps from the actual next state before reset. The environment does not reset automatically. The interface follows the reset/step convention above without requiring Gymnasium.
 
-## 实验协议（计划，尚未执行）
+## Rewards and Learning
 
-- 两种 Q-learning 各用根种子 0、1、2 训练，每次 100,000 环境交互步；alpha=0.15、gamma=0.95、初始 Q=0。epsilon 前 80,000 步从 1.00 线性下降至 0.05，此后保持。训练目标移动概率 0.25，方向反转概率 0.10。
-- 从每个训练根种子构造互相独立的环境与探索随机数生成器。验证和测试使用独立场景种子，评估不能推进训练随机数状态。
-- 第 0 步和每 10,000 步验证，200 个场景，种子 100000–100199，epsilon=0。
-- 固定配置后，最终模型在移动概率 0.10、0.25、0.50 下各测试 500 次，场景种子 200000–200499。规则方法在每档速度上用同一组测试场景评估一次，不复制为三次独立训练。评估冻结 Q 表，不更新；最终测试数据不用于调参。
-- 指标为 50 步内成功率、每次尝试平均步数（超时计 50）及平均空枪数。连续两个验证检查点成功率均 ≥90% 时，学习效率记录其中第一个检查点的训练步数；未达到记为 >100000。先分别汇总每个训练种子，再计算三个种子间均值和样本标准差。不同奖励版本不直接比较累计奖励。
+Base reward `rA` is −0.05 per valid step, plus a hit bonus of +10 or a miss penalty of −1. Therefore a hit step yields +9.95, a missed shot −1.05, and other steps −0.05. Boundary-clipped movements have the same step cost. Truncation adds no separate reward.
 
-## 交付边界与参考资料
+```text
+Phi(s) = -(|xc-xt| + |yc-yt|)
+rB = rA + shaping_scale * [gamma * Phi(s_next) - Phi(s)]
+```
 
-课程最终交付计划为 ICML 双栏报告，正文最多 5 页（参考文献和成员贡献不计入），以及 GitHub 代码与复现说明。Day 4 已实现势函数塑形和单种子同预算开发对照；多种子正式实验和最终测试留待 Day 5。
+`shaping_scale=1.0`; gamma is shared with `learning.gamma`. A true terminal next state has potential 0. External truncation does not clear the potential. The next state is the actual target-updated state. The environment returns only the base reward; the training loop applies the transformation exactly once. No heuristic Q initialization or rule-policy action substitution is used.
 
-实现接口为 `AimEnv(config)`、`reset(seed=None)` 和 `step(action)`。reset 的整数种子重置环境独立随机流；不传种子继续现有随机流。观察为不可变 tuple，info 包括本步的 step_count、hit、miss 和 base_reward。结束后需显式 reset。规则策略只读取观察，随机策略使用独立生成器；Q-learning 演示加载已训练模型。演示、测试和诊断命令见 README。
+Q-learning updates `Q(s,a) ← Q(s,a) + alpha * [target - Q(s,a)]`. For true termination, `target = r`. Otherwise, including external truncation, `target = r + gamma * max_a Q(s_next,a)`. Both methods use identical states, actions, zero initialization, budgets, and exploration schedules. Training breaks maximum-Q ties randomly; evaluation uses fixed action order. Logged base, learning, and shaping returns are undiscounted sums within an episode. Returns from different reward modes are not compared as performance scores.
 
-本次在 Windows 11、Python 3.13.9、NumPy 2.5.4、Matplotlib 3.11.2 上，配置检查和 10 个单元测试通过。各 100 次、种子 300000–300099 的诊断：规则策略成功率 100%、平均步数 5.07、平均空枪 0.00；随机策略对应 25%、43.77、6.89。CSV 与最终画面保存在 outputs；它们不是正式实验结果。交互窗口未验证。PNG 已检查；导出时用户目录的 Matplotlib 字体缓存无法写入，但图片生成成功。
+## Frozen Formal Experiment Protocol
 
-Day 3 将训练环境与探索流由根种子派生，验证采用独立环境和固定 100000–100199 场景，不更新 Q 表或推进训练流。epsilon 按动作选择前已完成的全局训练步数计算；命中不 bootstrap，截断从该转移的下一状态 bootstrap。检查点、逐场景验证、基线与训练记录保存在 `outputs/day3/`。移动靶 seed 0 的 100,000 步单次开发试验验证成功率为 0%→100%，不是多种子正式结果；静止靶 10,000 步诊断为 0%→13.5%。项目内 `.mplconfig` 解决了本次无界面绘图缓存警告；交互窗口仍未验证。运行命令与模型配套加载规则见 README。
+- Methods: base and potential; training root seeds 0, 1, and 2; 100,000 interactions per run; alpha 0.15; gamma 0.95; initial Q 0, float32.
+- Epsilon decreases linearly from 1.00 to 0.05 during the first 80,000 completed global training steps and then remains fixed. It does not restart after reset.
+- Training target movement probability is 0.25 and turning probability is 0.10. Independent environment and exploration streams are derived from each root seed. Evaluation does not advance training random streams.
+- Validate at step 0 and every 10,000 updates, using 200 scenarios with seeds 100000–100199, epsilon 0, and a frozen Q table.
+- Fix the final model at step 100,000. Test each model on 500 scenarios, seeds 200000–200499, for movement probabilities 0.10, 0.25, and 0.50. Turning remains 0.10. Final tests are not used for tuning or checkpoint selection.
+- Evaluate the rule and random baselines once per condition using the same scenario seeds. They do not have three training seeds. Random baseline actions use independent per-episode `SeedSequence([314159, scenario_seed])` generators.
+- Report success within 50 steps, mean steps across all attempts (timeouts count as 50), mean misses, and mean undiscounted base return. Each completed episode satisfies `base_return = 10 * success - 0.05 * steps - misses` within floating-point tolerance.
+- For learning efficiency, find the earliest adjacent validation checkpoints both reaching success ≥90%; record the first and the confirmation checkpoint. If not observed, store `achieved=false` and null step values. Resolution is 10,000 steps.
+- Aggregate each training seed first, then compute means and sample standard deviations across the three seeds. They describe between-training-seed variation, not 95% confidence intervals. Do not treat evaluation episodes as independent training runs.
 
-Day 4 环境仍只返回基础奖励，训练按配置仅变换一次学习奖励；日志三种回报为未折扣尝试内求和。两个 seed=0 开发运行各 100,000 步，使用相同验证种子，基础版复现 Day 3。第 10,000 步基础/塑形成功率为 70%/100%，平均步数 26.605/6.990；连续两个检查点至少 90% 的第一个检查点分别为 20,000/10,000 步（分辨率 10,000）。仅为单种子初步观察，不代表统计显著。最终测试未使用；Day 5 冻结协议见 `outputs/day4/protocol_frozen.json`。静止靶重放说明见 `outputs/day4/static_diagnostic_note.md`。
+## Implementation Status and Provenance
 
-- Ng, Harada & Russell (1999), *Policy invariance under reward transformations: Theory and application to reward shaping*: https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf
-- Gymnasium, *Handling Time Limits*: https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/
-- Gymnasium, *Solving Frozenlake with Tabular Q-Learning*: https://gymnasium.farama.org/tutorials/training_agents/frozenlake_q_learning/
+Day 5 completed the three-seed experiments and independent final tests. The original frozen protocol remains in `outputs/day4/protocol_frozen.json`; the actual run manifest is in `outputs/day5/protocol_used.json`. Source and model hashes in these historical records identify the pre-translation experiments and are preserved unchanged. Later English translation and provenance-validation adaptations are documented in `translation/README.md` and `translation/manifest.json`; translated source files are not claimed to have produced the earlier results.
+
+The Day 3 stationary-target diagnostic used seed 42, 10,000 steps, and an 8,000-step epsilon decay. Validation success increased from 0% to 13.5%. Its limited read-only replay is documented in `outputs/day4/static_diagnostic_note.md`. The Day 3 moving-target run used seed 0 and 100,000 steps, reaching 100% from 0%; Day 4 base reproduced its Q table and all validation checkpoints.
+
+Earlier Day 2 diagnostics passed 10 environment unit tests. On 100 scenarios with seeds 300000–300099, the rule policy achieved 100% success, 5.07 mean steps, and 0.00 mean misses; the random policy achieved 25% success, 43.77 mean steps, and 6.89 mean misses. These diagnostics are separate from the later validation and formal test sets. The saved preview was visually checked. The initial user-directory font-cache warning did not prevent image export and was subsequently resolved by the project-local cache.
+
+The Day 4 seed-0 development comparison gave base/potential success of 70%/100% and mean steps of 26.605/6.990 at step 10,000. Their first confirmed ≥90% checkpoints were 20,000/10,000 steps. These development observations are separate from the three-seed results. The formal results and limitations are in `outputs/day5/summary/results_summary.md`.
+
+The environment is small and fully observable, with only three training seeds and a finite scenario set. Training seed 0 was used during development. Independent scenario seeds do not guarantee unseen initial states. The rule policy is not proven optimal. Descriptive results do not establish statistical significance, real-game generalization, image-based control, or performance in arbitrary environments. Headless figures and model previews were checked; the interactive GUI remains unverified. The project-local Matplotlib cache resolved the earlier user-directory cache warning.
+
+The final course deliverables are an ICML two-column report with at most five body pages (references and member contributions excluded), GitHub code, and reproduction instructions. A completed report is not yet available.
+
+## References
+
+- Ng, Harada & Russell (1999). *Policy invariance under reward transformations: Theory and application to reward shaping*. https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf
+- Gymnasium. *Handling Time Limits*. https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/
+- Gymnasium. *Solving Frozenlake with Tabular Q-Learning*. https://gymnasium.farama.org/tutorials/training_agents/frozenlake_q_learning/

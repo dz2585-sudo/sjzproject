@@ -2,122 +2,117 @@
 
 # AimRL
 
-AimRL 是 ELEN E6885 课程的小型可复现强化学习项目，研究距离奖励塑形对命中移动目标的 Q-learning 学习效率的影响，以及目标移动概率变化对表现的影响。比较规则方法、基础奖励和塑形奖励；不预设哪种方法更好。
+AimRL is a small reproducible reinforcement-learning project for ELEN E6885. It investigates whether distance-based potential reward shaping accelerates tabular Q-learning for hitting a moving target, and how policies perform when the target movement probability changes. The comparison includes a rule policy, base-reward Q-learning, and potential-shaped Q-learning. No method is assumed to be superior in advance.
 
-目前已完成 Day 5：网格环境、基础与塑形 Q-learning、三种子实验、独立最终测试及结果汇总。无需 GPU、CUDA、PyTorch 或 TensorFlow。
+Day 5 is complete: the grid environment, both Q-learning methods, three-seed experiments, independent final testing, summaries, and automatic demonstrations are implemented. No GPU, CUDA, PyTorch, or TensorFlow is required. A completed report is not yet available.
 
-## 软件环境与安装
+## Installation and Setup Check
 
-需要 Python 3 和项目专用虚拟环境。核心依赖是 NumPy 和 Matplotlib。已在本次执行环境的 Windows、Python 3.13.9 虚拟环境中验证 NumPy 2.5.4 和 Matplotlib 3.11.2，并将这两个版本固定在 requirements.txt；其他平台和 Python 版本尚未验证。
+Use a project-specific virtual environment. The existing environment was verified on Windows 11 with Python 3.13.9, NumPy 2.5.4, and Matplotlib 3.11.2. The two dependency versions are pinned in [requirements.txt](requirements.txt). Other operating systems and Python versions have not been verified.
 
-在项目根目录运行：
+Run the following commands from the repository root when creating a new environment. An existing working environment can be reused.
 
-Windows PowerShell：
+Windows PowerShell:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe scripts\check_setup.py
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-macOS / Linux：
+macOS / Linux:
 
 ```bash
 python3 -m venv .venv
 ./.venv/bin/python -m pip install -r requirements.txt
 ./.venv/bin/python scripts/check_setup.py
+./.venv/bin/python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-不需要激活虚拟环境或修改 PowerShell 执行策略。检查脚本打印操作系统、解释器、实际导入的依赖版本、配置和资源预算；依赖或配置出错时返回非零状态。它不训练或打开窗口。
+Activation and PowerShell execution-policy changes are unnecessary. The setup script reports the operating system, interpreter, imported dependency versions, configuration checks, and resource budget. It returns a nonzero exit status on failure and does not open a window or train a model.
 
-## 环境与演示
+## Environment and Policies
 
-`AimEnv(config)` 的 `reset(seed=42)` 返回 `(observation, info)`，`step(action)` 返回 `(observation, reward, terminated, truncated, info)`。观察为 `(xc, yc, xt, yt, v)`，动作 0–5 依次为 left、right、up、down、stay、fire。每步先执行准星动作并判断射击，命中立即终止；未命中先抽样目标转向，再独立抽样移动。基础奖励为普通步 -0.05、空枪 -1.05、命中 +9.95。未命中达到上限为截断；上限步命中优先终止。结束后必须 reset。
+`AimEnv(config).reset(seed=42)` returns `(observation, info)`. `step(action)` returns `(observation, reward, terminated, truncated, info)`. The observation is the immutable tuple `(xc, yc, xt, yt, v)`. Actions 0–5 are left, right, up, down, stay, and fire. Each step executes the crosshair action and checks firing before updating the target. A hit terminates immediately; otherwise, target turning and movement are sampled independently, in that order.
 
-在项目根目录的 Windows PowerShell 中运行：
+Base rewards are −0.05 for an ordinary step, −1.05 for a miss, and +9.95 for a hit. Reaching the 50-step limit without a hit truncates the episode. A hit on the last allowed step takes termination priority. Call `reset()` explicitly after either ending condition. See [spec.md](spec.md) for the complete rules.
+
+The rule policy fires when aligned; otherwise it corrects the horizontal coordinate before the vertical coordinate. The random policy samples uniformly from the six actions using an independent generator. Neither baseline is trained.
+
+## Demonstrations
+
+Run these commands from the repository root:
 
 ```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py" -v
 .\.venv\Scripts\python.exe -m aimrl.demo --policy rule --episodes 3 --seed 42 --interval-ms 250
-.\.venv\Scripts\python.exe -m aimrl.demo --policy rule --episodes 100 --seed 300000 --headless --csv outputs/day2_rule_smoke.csv --save-frame outputs/day2_rule_preview.png
-.\.venv\Scripts\python.exe -m aimrl.demo --policy random --episodes 100 --seed 300000 --headless --csv outputs/day2_random_smoke.csv
+.\.venv\Scripts\python.exe -m aimrl.demo --policy random --episodes 3 --seed 42 --headless
+.\.venv\Scripts\python.exe -m aimrl.demo --policy qlearning --model outputs/day5/runs/potential_seed0/q_table.npy --episodes 3 --seed 42 --interval-ms 250
+.\.venv\Scripts\python.exe -m aimrl.demo --policy qlearning --model outputs/day5/runs/base_seed0/q_table.npy --episodes 3 --seed 42 --headless --save-frame .tmp/base_preview.png
 ```
 
-图形演示自动进行，结束后关闭窗口退出；`--policy random` 可换成随机策略。无界面模式不等待，也不创建 GUI；场景种子从指定 seed 逐次加一，随机策略使用独立随机流。CSV 和预览图是 Day 2 诊断，不是学习曲线或正式测试结果。
+The demonstration runs automatically. Close the window after completion to exit. Headless mode creates no GUI and does not wait between steps. Optional `--csv` records episode diagnostics; `--save-frame` saves the final episode state. Scenario seeds increase from the specified seed, and random actions use an independent reproducible stream.
 
-Day 2 的无界面诊断记录保留在 outputs；交互图形窗口尚未验证。
+Model loading requires `run_config.json` and `metadata.json` alongside the final Q table. The grid size, action mapping, table shape, dtype, and finite values are checked. The saved environment configuration is used for the demonstration, which is greedy and does not train or apply shaping again. The display identifies Base or Potential Q-learning and the number of training steps. Headless previews have been verified; the interactive GUI has not been verified.
 
-## Day 3 训练与验证
+Before importing Matplotlib, plotting and demonstration processes respect an existing writable `MPLCONFIGDIR`; otherwise they use the project `.mplconfig` directory or a temporary directory. This resolved the earlier user-directory font-cache warning without changing system settings.
 
-`QLearningAgent` 的 `state_index` 映射方向 -1→0、+1→1；`select_action` 在训练时随机打破最大值并列，`greedy_action` 以固定动作顺序打破并列。`update(state, action, reward, next_state, terminated, truncated)` 仅在命中终止时停止 bootstrap，截断仍使用真实下一状态。epsilon 以全局交互步数从 1 线性下降到 0.05；环境和探索使用 `SeedSequence(seed).spawn(2)` 派生的独立流。验证使用独立环境、固定种子和冻结 Q 表。
+## Learning and Reward Shaping
 
-以下命令在项目根目录运行；训练拒绝覆盖非空输出目录，重复运行需指定新目录：
+`QLearningAgent.state_index` maps direction −1 to index 0 and +1 to index 1. `select_action` uses epsilon-greedy exploration and random tie-breaking during training. `greedy_action` uses a fixed action-order tie-break during evaluation. `update(state, action, reward, next_state, terminated, truncated)` suppresses bootstrap only for true termination; external truncation bootstraps from the actual next state.
 
-```powershell
-.\.venv\Scripts\python.exe -m aimrl.train --config outputs/day3/static_diagnostic_config.json --seed 42 --reward-mode base --output outputs/day3/static_new
-.\.venv\Scripts\python.exe -m aimrl.train --config configs/base.json --seed 0 --reward-mode base --output outputs/day3/base_new
-.\.venv\Scripts\python.exe -m aimrl.plots --run-dir outputs/day3/base_seed0
-.\.venv\Scripts\python.exe -m aimrl.demo --policy qlearning --model outputs/day3/base_seed0/q_table.npy --episodes 3 --seed 42 --interval-ms 250
-.\.venv\Scripts\python.exe -m aimrl.demo --policy qlearning --model outputs/day3/base_seed0/q_table.npy --episodes 3 --seed 42 --headless --save-frame outputs/day3/base_seed0/qlearning_preview.png
+Epsilon decreases from 1.00 to 0.05 over the first 80,000 global interaction steps and remains at 0.05 thereafter. Environment and exploration streams are derived independently using `SeedSequence(seed).spawn(2)`. Validation uses an independent environment, fixed scenarios, and a frozen Q table.
+
+The environment always returns the base reward. Potential mode applies exactly one transformation immediately before the Q update:
+
+```text
+Phi(s) = -(|xc-xt| + |yc-yt|)
+learning_reward = base_reward + scale * (gamma * Phi(next_state) - Phi(state))
 ```
 
-演示读取最终 Q 表旁的 `run_config.json` 和 `metadata.json`，校验网格、动作和表的形状、dtype、数值，并使用保存的运行环境参数。图表和演示在导入 Matplotlib 前优先使用用户已设置且可写的 `MPLCONFIGDIR`，否则使用项目 `.mplconfig` 或临时目录，不修改系统环境变量。项目缓存已加入忽略列表；本次无界面导图未再出现字体缓存警告，GUI 尚未验证。
+Only true termination sets the next potential to zero. External truncation retains the actual next potential and bootstraps. Both methods begin with zero float32 Q tables. `base_return`, `learning_return`, and `shaping_return` in training logs are undiscounted episode sums; learning returns are not compared across reward modes as a performance measure.
 
-本次 Windows 11、Python 3.13.9、NumPy 2.5.4、Matplotlib 3.11.2 的单种子开发运行：静止靶 seed 42、10,000 步验证成功率从 0% 到 13.5%；移动靶 seed 0、100,000 步从 0% 到 100%。主运行记录实际 100,000 次交互，保存 11 个检查点及 2,200 行验证场景；模型保存后逐项和贪心动作重载核对通过。`episodes.csv` 仅含完整尝试，末尾 5 步未完成尝试记录在 metadata。结果不是多种子正式结论，最终测试集未使用。
+## Formal Experiments and Reproduction
 
-运行目录内的 `run_config.json`、`metadata.json`、`q_table.npy`、`checkpoints/`、`episodes.csv`、`validation.csv`、`validation_episodes.csv`、`baselines.csv` 和 `learning_curve.png` 分别保存配置、元信息、模型、检查点、完整训练尝试、验证汇总与逐场景记录、同验证集基线和曲线。
+The [frozen Day 4 protocol](outputs/day4/protocol_frozen.json) specifies base/potential × training seeds 0/1/2, each trained from zero for exactly 100,000 interactions. Validation uses seeds 100000–100199 at steps 0, 10000, …, 100000. Final testing fixes the 100,000-step models and uses independent scenario seeds 200000–200499 at target movement probabilities 0.10, 0.25, and 0.50, with turning probability 0.10.
 
-## 文件职责
+The archived run contains 600,000 training interactions, 13,200 validation episodes, 9,000 learned-policy test episodes, and 3,000 baseline test episodes. Test metrics include all episodes: success rate, mean steps (timeouts count as 50), mean misses, and mean undiscounted base return. Learned-policy error terms are sample standard deviations across three training seeds, not confidence intervals. Baselines have no training-seed standard deviation.
 
-### Day 4 塑形与单种子开发对照
+See the [experiment record](outputs/day5/summary/results_summary.md), [per-seed final results](outputs/day5/test/learned_per_seed.csv), [paired differences](outputs/day5/summary/paired_differences.csv), [learning curves](outputs/day5/summary/learning_curves.png), and [final-test comparison](outputs/day5/summary/test_comparison.png). The [run manifest](outputs/day5/protocol_used.json) preserves model hashes, the pre-test settings, and actual test timestamps. Final tests were not used to tune parameters or select checkpoints. Training seed 0 was used during development; new test seeds do not guarantee previously unseen states.
 
-环境始终返回基础奖励。训练使用 `Phi(s) = -(|xc-xt| + |yc-yt|)`，potential 模式的更新奖励为基础奖励加 `scale × (gamma × Phi(next_state) - Phi(state))`；命中时下一势值取 0，时间截断保留真实下一势值并 bootstrap。两个模式均从全零 Q 表开始，验证冻结 Q 表且使用基础奖励。`episodes.csv` 中 base_return、learning_return、shaping_return 是各尝试内未折扣的奖励和；不以不同模式的 learning_return 大小衡量性能。
+The historical results were produced before the English translation. Original frozen hashes and run metadata remain unchanged. The [translation provenance record](translation/README.md) and [manifest](translation/manifest.json) distinguish the recorded experimental source from later language and provenance-validation changes. The entry point accepts only exact source hashes documented in that record. Historical JSON files retain their original absolute paths as evidence; use a new output directory to reproduce the workflow on another computer.
 
-在项目根目录运行（训练目录非空时需指定新的输出路径）：
-
-```powershell
-.\.venv\Scripts\python.exe -m aimrl.train --config configs/base.json --seed 0 --reward-mode base --output outputs/day4/base_new
-.\.venv\Scripts\python.exe -m aimrl.train --config configs/base.json --seed 0 --reward-mode potential --output outputs/day4/potential_new
-.\.venv\Scripts\python.exe -m aimrl.demo --policy qlearning --model outputs/day4/potential_seed0/q_table.npy --episodes 3 --seed 42 --interval-ms 250
-```
-
-现有结果 `outputs/day4/comparison/` 来源于同配置、同 seed、各 100,000 步、200 个相同验证场景的单种子开发对照。第 10,000 步 base/potential 成功率为 70%/100%，平均步数 26.605/6.990；第 100,000 步两者成功率均为 100%，平均步数 5.055/4.670。连续两次验证成功率至少 90% 的首个检查点分别为 20,000/10,000 步，分辨率 10,000 步。这不是跨种子统计或显著性结论。Day 4 base 与 Day 3 的配置、最终 Q 表和各验证指标一致。
-
-静止靶的只读重放及其局限记录在 `outputs/day4/static_diagnostic_note.md`。正式实验设置固定在 `outputs/day4/protocol_frozen.json`；最终测试集和多种子正式实验尚未使用。已重载塑形模型并完成无界面演示，交互窗口仍未验证。
-
-- `spec.md`：环境、奖励、算法、实验协议、指标和参考资料。
-- `configs/base.json`：后续实现使用的集中参数。
-- `requirements.txt`：核心依赖。
-- `scripts/check_setup.py`：独立于当前工作目录的配置和环境检查。
-- `aimrl/__init__.py`：Python 包说明。
-- `aimrl/config.py`、`aimrl/env.py`：读取配置和实现环境。
-- `aimrl/policies.py`：规则与随机策略。
-- `aimrl/render.py`、`aimrl/demo.py`：绘图与自动演示。
-- `aimrl/agent.py`、`aimrl/train.py`、`aimrl/evaluate.py`：Q 表、训练与独立验证。
-- `aimrl/rewards.py`、`aimrl/compare.py`：奖励变换和开发对照。
-- `aimrl/plots.py`、`aimrl/mpl_setup.py`：验证曲线与可写绘图缓存。
-- `tests/test_env.py`：环境和策略的标准库单元测试。
-- `tests/test_learning.py`、`tests/test_rewards.py`：学习逻辑、训练流程与塑形测试。
-- `outputs/`：本次真实诊断 CSV 与最终状态预览图。
-- `.gitignore`：忽略虚拟环境、缓存和临时文件，保留正式数据。
-
-## Day 5 正式实验与复现
-
-正式运行保存于 `outputs/day5/`：两种方法各以种子 0、1、2 从零训练 100,000 步，随后固定最终模型，在独立场景 200000–200499 和移动概率 0.10、0.25、0.50 下测试。规则与随机基线分别按相同场景评估，不计入训练种子标准差。成功率、平均步数、平均空枪与基础回报使用全部回合；学习曲线和测试汇总的误差为三个训练种子的样本标准差。
-
-结果、逐种子阈值、配对差值和局限见 `outputs/day5/summary/results_summary.md`；原始记录见 `outputs/day5/test/`，六个模型和验证记录见 `outputs/day5/runs/`。`protocol_used.json` 记录最终模型哈希、测试前清单与测试状态。seed=0 曾用于开发，测试场景种子独立，但不保证初始状态未在训练时出现。GUI 未验证。
-
-在项目根目录运行以下命令以创建新的完整实验；训练和测试拒绝覆盖已有原始结果，汇总只读取已保存的记录：
+Run these stages in order from the repository root. Training and testing reject existing raw outputs; summarization reads saved results and may regenerate derived summaries and figures.
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\check_setup.py
-.\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py" -v
 .\.venv\Scripts\python.exe -m aimrl.experiments --protocol outputs/day4/protocol_frozen.json --output outputs/day5_new --stage train
 .\.venv\Scripts\python.exe -m aimrl.experiments --protocol outputs/day4/protocol_frozen.json --output outputs/day5_new --stage test
 .\.venv\Scripts\python.exe -m aimrl.experiments --protocol outputs/day4/protocol_frozen.json --output outputs/day5_new --stage summarize
 ```
 
-不要用最终测试来调整模型、超参数或挑选检查点；三训练种子只支持描述性结论。
+Do not use final-test results to adjust models, hyperparameters, training budgets, or checkpoint selection. The three training seeds support descriptive conclusions within this small fully observable environment, not claims of statistical significance or real-game generalization.
 
+## Earlier Development Records
 
-GitHub 归档说明：本仓库保留 Day 5 正式结果和复现所需的 Day 4 协议、回归模型及开发记录。历史 JSON 中的绝对路径保留为原始运行证据；在其他电脑复现时请使用上述命令生成新的输出目录。当前尚无完成的 report/ 报告。
+Day 3 stationary-target diagnostic (seed 42, 10,000 steps, epsilon decay over 8,000 steps): success increased from 0% to 13.5%, with final mean steps 43.72 and mean misses 1.96. No additional stationary-target training was performed. A [read-only replay note](outputs/day4/static_diagnostic_note.md) records five failed scenarios and the limits of that inspection.
+
+Day 3 moving-target development run (seed 0, 100,000 steps): validation success increased from 0% to 100%. The base model and all checkpoint metrics were reproduced on Day 4. In the Day 4 single-seed comparison, base/potential success at 10,000 steps was 70%/100%, with mean steps 26.605/6.990. At 100,000 steps both achieved 100%, with mean steps 5.055/4.670. The first of two consecutive ≥90% checkpoints was 20,000/10,000 steps at 10,000-step resolution. These are development observations, not independent multi-seed findings.
+
+The Day 3 base run saved 11 checkpoints and 2,200 validation-episode records. Its complete training episodes covered 99,995 interactions; the remaining five steps of an unfinished episode are recorded in metadata rather than represented as an artificial environment termination.
+
+The repository includes the Day 4 protocol, regression models, and comparison records needed by the formal reproduction entry point. Earlier Day 1–3 development outputs remain in the original local project and are not part of this upload.
+
+## File Responsibilities
+
+- `spec.md`: environment, algorithms, protocol, metrics, limitations, and references.
+- `configs/base.json`: central parameters; `requirements.txt`: pinned dependencies.
+- `scripts/check_setup.py`: configuration and execution-environment checks.
+- `aimrl/config.py`, `aimrl/env.py`: configuration loading and environment transitions.
+- `aimrl/policies.py`, `aimrl/agent.py`: baselines and tabular Q-learning.
+- `aimrl/rewards.py`, `aimrl/train.py`, `aimrl/evaluate.py`: reward transformation, training, and independent evaluation.
+- `aimrl/experiments.py`, `aimrl/compare.py`: staged formal experiments and development comparisons.
+- `aimrl/render.py`, `aimrl/demo.py`, `aimrl/plots.py`, `aimrl/mpl_setup.py`: visualization, demonstrations, and a writable cache.
+- `aimrl/provenance.py`, `translation/`: validation and documentation of post-experiment translation changes.
+- `tests/`: environment, learning, shaping, experiment, and provenance checks.
+- `outputs/day5/`: final models, configurations, raw records, summaries, and figures.
+- `.gitignore`: excludes environments, caches, credentials, and temporary files; `.gitattributes`: preserves exact bytes for recorded hashes.

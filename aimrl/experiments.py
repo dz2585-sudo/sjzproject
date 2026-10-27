@@ -18,6 +18,7 @@ import numpy as np
 from .agent import QLearningAgent
 from .evaluate import evaluate
 from .policies import random_policy, rule_policy
+from .provenance import source_hash_matches
 from .train import train
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -81,7 +82,7 @@ def frozen_protocol(path):
     config_path = ROOT / 'configs/base.json'
     if digest(config_path) != frozen['config_sha256'] or read_json(config_path) != frozen['effective_config']:
         raise ValueError('Frozen configuration mismatch')
-    mismatches = [name for name, sha in frozen['source_sha256'].items() if not (ROOT / name).exists() or digest(ROOT / name) != sha]
+    mismatches = [name for name, sha in frozen['source_sha256'].items() if not source_hash_matches(ROOT, name, sha)]
     if mismatches:
         raise ValueError(f'Frozen source mismatch: {mismatches}')
     config = frozen['effective_config']
@@ -195,7 +196,7 @@ def train_stage(protocol_path, output, frozen, config):
         revision = None
     manifest = {'frozen_protocol_path': str(Path(protocol_path).resolve()), 'frozen_protocol_sha256': digest(protocol_path),
                 'config_sha256': digest(ROOT / 'configs/base.json'), 'config': config, 'source_hashes': sources,
-                'source_changes': 'Frozen source files unchanged; added aimrl/experiments.py and tests/test_experiments.py for orchestration and checks.',
+                'source_changes': 'See translation/manifest.json for post-experiment English translations and exact hash mappings. Training, environment, and reward-update rules are unchanged; this manifest describes this later reproduction run.',
                 'git_revision': revision, 'git_note': 'No commit available; source hashes identify the working files.' if revision is None else 'Working files identified by source hashes.',
                 'environment': {'platform': platform.platform(), 'python': sys.version, 'numpy': np.__version__, 'matplotlib': importlib.metadata.version('matplotlib')},
                 'models': models, 'regression_day4_seed0': regression, 'training_started_utc': started, 'training_completed_utc': now(),
@@ -217,7 +218,7 @@ def test_stage(protocol_path, output, frozen, config):
         raise FileExistsError('Test already started or test directory exists; preserve it and use a new output directory')
     if manifest['frozen_protocol_sha256'] != digest(protocol_path):
         raise ValueError('Frozen protocol changed since training')
-    if any(digest(ROOT / name) != sha for name, sha in manifest['source_hashes'].items()):
+    if any(not source_hash_matches(ROOT, name, sha) for name, sha in manifest['source_hashes'].items()):
         raise ValueError('Source changed after training; refusing to open final test')
     for model in manifest['models']:
         if digest(model['model_path']) != model['model_sha256'] or digest(model['config_path']) != model['config_sha256']:
@@ -328,35 +329,35 @@ def summarize_stage(output):
               'threshold_resolution_steps': 10000, 'test_completed': manifest['test_completed']}
     save_json(summary_dir / 'checks.json', checks)
     plot_results(summary_dir, learning_summary, overall, baseline_summary)
-    lines = ['# Day 5 正式实验记录', '',
-             '两种方法各用根种子 0、1、2 从零训练 100,000 步，验证使用 100000–100199；固定最终模型后在 200000–200499 测试。误差为三个训练种子之间的样本标准差，并非置信区间。',
-             f"执行环境：{manifest['environment']['platform']}，Python {sys.version.split()[0]}，NumPy {np.__version__}，Matplotlib {manifest['environment']['matplotlib']}。",
-             f"六次训练耗时之和 {sum(m['elapsed_seconds'] for m in manifest['models']):.3f} 秒；训练 {manifest['training_started_utc']} 至 {manifest['training_completed_utc']}，测试 {manifest['test_started_utc']} 至 {manifest['test_completed_utc']}。", '',
-             '## 验证（均值 ± 样本标准差）', '', '| 方法 | 步数 | 成功率 | 平均步数 | 平均空枪 |', '|---|---:|---:|---:|---:|']
+    lines = ['# Day 5 Formal Experiment Record', '',
+             'Each method was trained from zero for 100,000 steps using root seeds 0, 1, and 2. Validation used scenario seeds 100000–100199; final testing used seeds 200000–200499 after the final models were fixed. Error terms are sample standard deviations across three training seeds, not confidence intervals.',
+             f"Execution environment: {manifest['environment']['platform']}, Python {sys.version.split()[0]}, NumPy {np.__version__}, Matplotlib {manifest['environment']['matplotlib']}.",
+             f"Sum of elapsed times for six training runs: {sum(m['elapsed_seconds'] for m in manifest['models']):.3f} seconds; training: {manifest['training_started_utc']} to {manifest['training_completed_utc']}; testing: {manifest['test_started_utc']} to {manifest['test_completed_utc']}.", '',
+             '## Validation (Mean ± Sample Standard Deviation)', '', '| Method | Training steps | Success rate | Mean steps | Mean misses |', '|---|---:|---:|---:|---:|']
     for r in learning_summary:
         if r['global_step'] in (0, 10000, 30000, 100000):
             lines.append(f"| {r['method']} | {r['global_step']} | {100*r['success_rate_mean']:.2f}% ± {100*r['success_rate_std']:.2f}% | {r['mean_steps_mean']:.3f} ± {r['mean_steps_std']:.3f} | {r['mean_misses_mean']:.3f} ± {r['mean_misses_std']:.3f} |")
-    lines += ['', '## 连续两次 ≥90% 的检查点', '', '| 方法 | 种子 | 首次 | 确认 |', '|---|---:|---:|---:|']
+    lines += ['', '## Two Consecutive Validation Checkpoints at ≥90%', '', '| Method | Training seed | First checkpoint | Confirmation checkpoint |', '|---|---:|---:|---:|']
     for r in thresholds:
-        lines.append(f"| {r['method']} | {r['training_seed']} | {r['first_checkpoint_step'] if r['achieved'] else '未观察到'} | {r['confirmation_step'] if r['achieved'] else '未观察到'} |")
+        lines.append(f"| {r['method']} | {r['training_seed']} | {r['first_checkpoint_step'] if r['achieved'] else 'Not observed'} | {r['confirmation_step'] if r['achieved'] else 'Not observed'} |")
     for mode in METHODS:
         group = [r for r in thresholds if r['method'] == mode]
         if all(r['achieved'] for r in group):
             mean, std = mean_std([r['first_checkpoint_step'] for r in group])
-            lines.append(f'\n{mode} 达标 3/3，首次检查点均值 {mean:.0f}，样本标准差 {std:.0f} 步。')
+            lines.append(f'\n{mode} reached the threshold in 3/3 runs; mean first checkpoint: {mean:.0f}; sample standard deviation: {std:.0f} steps.')
         else:
-            lines.append(f'\n{mode} 达标 {sum(r["achieved"] for r in group)}/3，未计算完整均值。')
-    lines += ['', '检查点分辨率为 10,000 步，不能据此声称精确的训练速度倍数。', '',
-              '## 最终测试', '', '| 方法 | 移动概率 | 成功率 | 平均步数 | 平均空枪 |', '|---|---:|---:|---:|---:|']
+            lines.append(f'\n{mode} reached the threshold in {sum(r["achieved"] for r in group)}/3 runs; a full-method mean was not calculated.')
+    lines += ['', 'The checkpoint resolution is 10,000 steps; these observations do not establish an exact training-speed ratio.', '',
+              '## Final Test', '', '| Method | Move probability | Success rate | Mean steps | Mean misses |', '|---|---:|---:|---:|---:|']
     for r in overall:
         lines.append(f"| {r['method']} | {r['move_probability']:.2f} | {100*r['success_rate_mean']:.2f}% ± {100*r['success_rate_std']:.2f}% | {r['mean_steps_mean']:.3f} ± {r['mean_steps_std']:.3f} | {r['mean_misses_mean']:.3f} ± {r['mean_misses_std']:.3f} |")
     for r in baseline_summary:
         lines.append(f"| {r['method']} | {r['move_probability']:.2f} | {100*r['success_rate']:.2f}% | {r['mean_steps']:.3f} | {r['mean_misses']:.3f} |")
-    lines += ['', '## 配对差值', '', '每个训练种子的 potential − base 成功率、base − potential 平均步数和空枪数见 `paired_differences.csv`；正值分别表示塑形在该指标更好。']
+    lines += ['', '## Paired Differences', '', 'For each training seed, paired_differences.csv reports potential − base success rate and base − potential mean steps and misses. A positive difference favors potential shaping for the corresponding metric.']
     for r in paired:
-        lines.append(f"- 种子 {r['training_seed']}，移动概率 {r['move_probability']:.2f}：成功率差 {r['success_potential_minus_base']:+.3f}，步数差 {r['steps_base_minus_potential']:+.3f}，空枪差 {r['misses_base_minus_potential']:+.3f}。")
-    lines += ['', '局限：仅三个训练种子，且 seed=0 曾用于开发；小型完全可观测环境和有限测试场景不证明真实游戏泛化。规则策略是基线，并未证明最优。结果为描述性观察，不作显著性声明。新测试种子不保证初始状态未在训练中出现。',
-              '图表与 CSV 均由真实原始记录生成；GUI 未验证。运行命令：`python -m aimrl.experiments --protocol outputs/day4/protocol_frozen.json --output outputs/day5 --stage train`，随后依次使用 `--stage test` 和 `--stage summarize`。实际文件见 outputs/day5。']
+        lines.append(f"- Training seed {r['training_seed']}, move probability {r['move_probability']:.2f}: success-rate difference {r['success_potential_minus_base']:+.3f}, step difference {r['steps_base_minus_potential']:+.3f}, miss difference {r['misses_base_minus_potential']:+.3f}.")
+    lines += ['', 'Limitations: only three training seeds were used, and seed 0 was used during development. This small fully observable environment and finite test set do not establish generalization to real games. The rule policy is a baseline, not a proven optimum. Results are descriptive; no statistical-significance claim is made. New test seeds do not guarantee initial states absent from training.',
+              'Figures and CSV files were generated from actual raw records; the GUI has not been verified. Command: `python -m aimrl.experiments --protocol outputs/day4/protocol_frozen.json --output outputs/day5 --stage train`; then use --stage test and --stage summarize in order. Outputs are stored in outputs/day5.']
     (summary_dir / 'results_summary.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print('Summaries and plots generated:', counts)
 

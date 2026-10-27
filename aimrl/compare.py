@@ -58,7 +58,7 @@ def main():
                'checkpoint_resolution_steps': configs['base']['experiments']['validation']['interval_steps'],
                'key_checkpoints': {k: [r for r in entries if int(r['global_step']) in (0, 10000, 30000, 100000)] for k, entries in rows.items()}}
     (args.output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
-    (args.output / 'README.md').write_text('这是 seed=0 的单次开发对照，使用同预算和同一验证场景，并非多种子正式结果或显著性结论。曲线来自各运行的 validation.csv；奖励回报尺度不作方法间比较。\n', encoding='utf-8')
+    (args.output / 'README.md').write_text('This single-seed development comparison uses seed 0, equal training budgets, and the same validation scenarios. It is not a multi-seed formal result or evidence of statistical significance. Curves are derived from validation.csv for each run; reward-return scales are not compared across methods.\n', encoding='utf-8')
     configure_mpl()
     import matplotlib
     matplotlib.use('Agg')

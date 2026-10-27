@@ -1,12 +1,12 @@
-# Day 5 正式实验记录
+# Day 5 Formal Experiment Record
 
-两种方法各用根种子 0、1、2 从零训练 100,000 步，验证使用 100000–100199；固定最终模型后在 200000–200499 测试。误差为三个训练种子之间的样本标准差，并非置信区间。
-执行环境：Windows-11-10.0.26200-SP0，Python 3.13.9，NumPy 2.5.4，Matplotlib 3.11.2。
-六次训练耗时之和 13.633 秒；训练 2026-10-27T02:27:37.975674+00:00 至 2026-10-27T02:27:52.184711+00:00，测试 2026-10-27T02:27:55.767211+00:00 至 2026-10-27T02:27:56.932569+00:00。
+Each method was trained from zero for 100,000 steps using root seeds 0, 1, and 2. Validation used scenario seeds 100000–100199; final testing used seeds 200000–200499 after the final models were fixed. Error terms are sample standard deviations across three training seeds, not confidence intervals.
+Execution environment: Windows-11-10.0.26200-SP0, Python 3.13.9, NumPy 2.5.4, Matplotlib 3.11.2.
+Sum of elapsed times for six training runs: 13.633 seconds; training: 2026-10-27T02:27:37.975674+00:00 to 2026-10-27T02:27:52.184711+00:00; testing: 2026-10-27T02:27:55.767211+00:00 to 2026-10-27T02:27:56.932569+00:00.
 
-## 验证（均值 ± 样本标准差）
+## Validation (Mean ± Sample Standard Deviation)
 
-| 方法 | 步数 | 成功率 | 平均步数 | 平均空枪 |
+| Method | Training steps | Success rate | Mean steps | Mean misses |
 |---|---:|---:|---:|---:|
 | base | 0 | 0.00% ± 0.00% | 50.000 ± 0.000 | 0.000 ± 0.000 |
 | base | 10000 | 67.50% ± 7.57% | 27.260 ± 2.634 | 1.292 ± 0.024 |
@@ -17,9 +17,9 @@
 | potential | 30000 | 100.00% ± 0.00% | 5.145 ± 0.185 | 0.070 ± 0.061 |
 | potential | 100000 | 100.00% ± 0.00% | 4.710 ± 0.057 | 0.000 ± 0.000 |
 
-## 连续两次 ≥90% 的检查点
+## Two Consecutive Validation Checkpoints at ≥90%
 
-| 方法 | 种子 | 首次 | 确认 |
+| Method | Training seed | First checkpoint | Confirmation checkpoint |
 |---|---:|---:|---:|
 | base | 0 | 20000 | 30000 |
 | base | 1 | 30000 | 40000 |
@@ -28,15 +28,15 @@
 | potential | 1 | 10000 | 20000 |
 | potential | 2 | 10000 | 20000 |
 
-base 达标 3/3，首次检查点均值 23333，样本标准差 5774 步。
+base reached the threshold in 3/3 runs; mean first checkpoint: 23333 steps; sample standard deviation: 5774 steps.
 
-potential 达标 3/3，首次检查点均值 10000，样本标准差 0 步。
+potential reached the threshold in 3/3 runs; mean first checkpoint: 10000 steps; sample standard deviation: 0 steps.
 
-检查点分辨率为 10,000 步，不能据此声称精确的训练速度倍数。
+The checkpoint resolution is 10,000 steps; these observations do not establish an exact training-speed ratio.
 
-## 最终测试
+## Final Test
 
-| 方法 | 移动概率 | 成功率 | 平均步数 | 平均空枪 |
+| Method | Move probability | Success rate | Mean steps | Mean misses |
 |---|---:|---:|---:|---:|
 | base | 0.10 | 100.00% ± 0.00% | 5.973 ± 0.414 | 0.000 ± 0.000 |
 | base | 0.25 | 100.00% ± 0.00% | 5.234 ± 0.113 | 0.000 ± 0.000 |
@@ -51,18 +51,18 @@ potential 达标 3/3，首次检查点均值 10000，样本标准差 0 步。
 | random | 0.25 | 23.80% | 43.654 | 7.358 |
 | random | 0.50 | 25.20% | 43.102 | 7.178 |
 
-## 配对差值
+## Paired Differences
 
-每个训练种子的 potential − base 成功率、base − potential 平均步数和空枪数见 `paired_differences.csv`；正值分别表示塑形在该指标更好。
-- 种子 0，移动概率 0.10：成功率差 +0.000，步数差 +0.340，空枪差 +0.000。
-- 种子 0，移动概率 0.25：成功率差 +0.000，步数差 +0.150，空枪差 +0.000。
-- 种子 0，移动概率 0.50：成功率差 +0.000，步数差 +0.074，空枪差 +0.000。
-- 种子 1，移动概率 0.10：成功率差 +0.000，步数差 +1.192，空枪差 -0.046。
-- 种子 1，移动概率 0.25：成功率差 +0.000，步数差 +0.426，空枪差 -0.024。
-- 种子 1，移动概率 0.50：成功率差 +0.000，步数差 +0.126，空枪差 +0.000。
-- 种子 2，移动概率 0.10：成功率差 +0.000，步数差 +0.656，空枪差 -0.008。
-- 种子 2，移动概率 0.25：成功率差 +0.000，步数差 +0.472，空枪差 -0.008。
-- 种子 2，移动概率 0.50：成功率差 +0.000，步数差 +0.306，空枪差 +0.000。
+For each training seed, paired_differences.csv reports potential − base success rate and base − potential mean steps and misses. A positive difference favors potential shaping for the corresponding metric.
+- Training seed 0, move probability 0.10: success-rate difference +0.000, step difference +0.340, miss difference +0.000.
+- Training seed 0, move probability 0.25: success-rate difference +0.000, step difference +0.150, miss difference +0.000.
+- Training seed 0, move probability 0.50: success-rate difference +0.000, step difference +0.074, miss difference +0.000.
+- Training seed 1, move probability 0.10: success-rate difference +0.000, step difference +1.192, miss difference -0.046.
+- Training seed 1, move probability 0.25: success-rate difference +0.000, step difference +0.426, miss difference -0.024.
+- Training seed 1, move probability 0.50: success-rate difference +0.000, step difference +0.126, miss difference +0.000.
+- Training seed 2, move probability 0.10: success-rate difference +0.000, step difference +0.656, miss difference -0.008.
+- Training seed 2, move probability 0.25: success-rate difference +0.000, step difference +0.472, miss difference -0.008.
+- Training seed 2, move probability 0.50: success-rate difference +0.000, step difference +0.306, miss difference +0.000.
 
-局限：仅三个训练种子，且 seed=0 曾用于开发；小型完全可观测环境和有限测试场景不证明真实游戏泛化。规则策略是基线，并未证明最优。结果为描述性观察，不作显著性声明。新测试种子不保证初始状态未在训练中出现。
-图表与 CSV 均由真实原始记录生成；GUI 未验证。运行命令：`python -m aimrl.experiments --protocol outputs/day4/protocol_frozen.json --output outputs/day5 --stage train`，随后依次使用 `--stage test` 和 `--stage summarize`。实际文件见 outputs/day5。
+Limitations: only three training seeds were used, and seed 0 was used during development. This small fully observable environment and finite test set do not establish generalization to real games. The rule policy is a baseline, not a proven optimum. Results are descriptive; no statistical-significance claim is made. New test seeds do not guarantee initial states absent from training.
+Figures and CSV files were generated from actual raw records; the GUI has not been verified. Command: `python -m aimrl.experiments --protocol outputs/day4/protocol_frozen.json --output outputs/day5 --stage train`; then use --stage test and --stage summarize in order. Outputs are stored in outputs/day5.
