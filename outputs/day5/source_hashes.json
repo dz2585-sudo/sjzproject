@@ -1,0 +1,21 @@
+{
+  "aimrl/__init__.py": "b154c64a07a36514c1e72e7e236bfb2ca7d58fa73c0227f22a30643e64d2d198",
+  "aimrl/agent.py": "809af3b7f0d37d3607797c8651984fbd6d960147f30b29665bbbe47ff7c2e7ee",
+  "aimrl/compare.py": "0de753d84a9be5163f77fa15f2d69aff9d6a27465730401074c88f15cf61dbda",
+  "aimrl/config.py": "82652661ceb7c9038d1d75767c10f20a981e796d866682f84de901c367d30f4f",
+  "aimrl/demo.py": "97e9febac8c9e93de0ab66f71009e0b4c0e94425c874f0424fd80ea3e46e07cc",
+  "aimrl/env.py": "f8c9e7ec1f39788eb4d989c895958af3cba69a8e5588e5c4eb3cb5964b8ca0af",
+  "aimrl/evaluate.py": "19e7e8a0a2d28b024015f7ed29681f6ae7ea7dab1bb6a72ec0e29f740eaf6bfd",
+  "aimrl/experiments.py": "fdff24d4d92c172e6f4f6d356f1af0b0a17e314b6ed4ec8c7094312dfa0ce9fe",
+  "aimrl/mpl_setup.py": "ec02417756a08b3075874ed155ba330f555ef9c947891f8f6e4a5306e9721ed7",
+  "aimrl/plots.py": "f8c894523eba972a58ade5c06bcab4c9344811232e016e898f26c9d44927f5e2",
+  "aimrl/policies.py": "c522a8b39cb89ec8b20ea746258a51ccd8f063fd60a293ecbc05453ab507061f",
+  "aimrl/render.py": "52be4a77dadb26184721bc622524cf7cb69bcda903344f02444c6e432b4e8cfb",
+  "aimrl/rewards.py": "9fdd9dfbda6a718f0baf86008675e08782030475843c142f258004afb9e2f7aa",
+  "aimrl/train.py": "356986e32448d66e19b8f18124be751b876f16fca3ce1ac276d0405a646fa056",
+  "requirements.txt": "af9c9ea6a882ecdb9816a50416e4e777ff38447e9caf3b8e4c630ce2f227d324",
+  "tests/test_env.py": "f28dc0e71c75e2fec63014280db5f0e1fd5df14c456e09e446d88e0d3b994bdd",
+  "tests/test_experiments.py": "fc5147c9b4319da6a0596da7da9a1877d3923db5a3a38c6d00bbfd34dba07167",
+  "tests/test_learning.py": "4a15a86a4fab9613c3c4fc3e044829cf2301418c187704e8539488ca70fc557f",
+  "tests/test_rewards.py": "a35fa6f87b8203b8992b2bacc6915b27e7b1f835eccadab41d18ecad216c144a"
+}

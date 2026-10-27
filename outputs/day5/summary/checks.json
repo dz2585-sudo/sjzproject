@@ -1,0 +1,29 @@
+{
+  "counts": {
+    "learned_episodes": 9000,
+    "baseline_episodes": 3000,
+    "learned_per_seed": 18,
+    "learned_summary": 6,
+    "baseline_summary": 6,
+    "learning_per_seed": 66,
+    "learning_summary": 22,
+    "thresholds": 6,
+    "paired_differences": 9
+  },
+  "unique_keys": true,
+  "episode_invariants": true,
+  "model_and_config_hashes_unchanged": true,
+  "training_steps_total": 600000,
+  "day4_seed0_regression": {
+    "base": {
+      "q_equal": true,
+      "validation_equal": true
+    },
+    "potential": {
+      "q_equal": true,
+      "validation_equal": true
+    }
+  },
+  "threshold_resolution_steps": 10000,
+  "test_completed": true
+}

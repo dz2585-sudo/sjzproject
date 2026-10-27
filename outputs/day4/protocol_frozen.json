@@ -1,0 +1,121 @@
+{
+  "protocol_status": "frozen Day 5 plan; final test not run",
+  "config_path": "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\configs\\base.json",
+  "config_sha256": "0fe2f7a145a50e14210ba17d596e52c7a58a8a3de8d24aa1d0f183975a4c6292",
+  "effective_config": {
+    "project": {
+      "name": "AimRL",
+      "stage": "day1"
+    },
+    "environment": {
+      "grid_size": 5,
+      "target_move_probability": 0.25,
+      "target_turn_probability": 0.1,
+      "max_episode_steps": 50
+    },
+    "actions": [
+      "left",
+      "right",
+      "up",
+      "down",
+      "stay",
+      "fire"
+    ],
+    "rewards": {
+      "step": -0.05,
+      "hit_bonus": 10,
+      "miss_penalty": -1
+    },
+    "learning": {
+      "alpha": 0.15,
+      "gamma": 0.95,
+      "initial_q": 0,
+      "q_dtype": "float32",
+      "training_steps": 100000,
+      "epsilon_start": 1,
+      "epsilon_end": 0.05,
+      "epsilon_decay_steps": 80000,
+      "shaping_scale": 1
+    },
+    "experiments": {
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "reward_modes": [
+        "base",
+        "potential"
+      ],
+      "validation": {
+        "interval_steps": 10000,
+        "episodes": 200,
+        "seed_start": 100000
+      },
+      "test": {
+        "move_probabilities": [
+          0.1,
+          0.25,
+          0.5
+        ],
+        "episodes_per_condition": 500,
+        "seed_start": 200000
+      }
+    }
+  },
+  "methods": [
+    "base",
+    "potential"
+  ],
+  "training_root_seeds": [
+    0,
+    1,
+    2
+  ],
+  "initial_q": 0,
+  "training_steps_per_run": 100000,
+  "shaping_scale": 1.0,
+  "validation": {
+    "seed_start": 100000,
+    "seed_end": 100199,
+    "episodes_per_checkpoint": 200,
+    "checkpoints": "0, 10000, ..., 100000"
+  },
+  "final_test": {
+    "seed_start": 200000,
+    "seed_end": 200499,
+    "episodes_per_condition": 500,
+    "move_probabilities": [
+      0.1,
+      0.25,
+      0.5
+    ]
+  },
+  "fixed_training_environment": {
+    "target_move_probability": 0.25,
+    "target_turn_probability": 0.1
+  },
+  "final_model_selection": "fixed 100000-step checkpoint; do not use test results to choose",
+  "aggregation": "aggregate each training seed first, then mean and sample standard deviation across three seeds",
+  "git_revision": null,
+  "version_note": "No Git commit; source files identified by SHA-256, not a commit.",
+  "source_sha256": {
+    "aimrl/__init__.py": "b154c64a07a36514c1e72e7e236bfb2ca7d58fa73c0227f22a30643e64d2d198",
+    "aimrl/agent.py": "809af3b7f0d37d3607797c8651984fbd6d960147f30b29665bbbe47ff7c2e7ee",
+    "aimrl/compare.py": "0de753d84a9be5163f77fa15f2d69aff9d6a27465730401074c88f15cf61dbda",
+    "aimrl/config.py": "82652661ceb7c9038d1d75767c10f20a981e796d866682f84de901c367d30f4f",
+    "aimrl/demo.py": "97e9febac8c9e93de0ab66f71009e0b4c0e94425c874f0424fd80ea3e46e07cc",
+    "aimrl/env.py": "f8c9e7ec1f39788eb4d989c895958af3cba69a8e5588e5c4eb3cb5964b8ca0af",
+    "aimrl/evaluate.py": "19e7e8a0a2d28b024015f7ed29681f6ae7ea7dab1bb6a72ec0e29f740eaf6bfd",
+    "aimrl/mpl_setup.py": "ec02417756a08b3075874ed155ba330f555ef9c947891f8f6e4a5306e9721ed7",
+    "aimrl/plots.py": "f8c894523eba972a58ade5c06bcab4c9344811232e016e898f26c9d44927f5e2",
+    "aimrl/policies.py": "c522a8b39cb89ec8b20ea746258a51ccd8f063fd60a293ecbc05453ab507061f",
+    "aimrl/render.py": "52be4a77dadb26184721bc622524cf7cb69bcda903344f02444c6e432b4e8cfb",
+    "aimrl/rewards.py": "9fdd9dfbda6a718f0baf86008675e08782030475843c142f258004afb9e2f7aa",
+    "aimrl/train.py": "356986e32448d66e19b8f18124be751b876f16fca3ce1ac276d0405a646fa056",
+    "requirements.txt": "af9c9ea6a882ecdb9816a50416e4e777ff38447e9caf3b8e4c630ce2f227d324",
+    "tests/test_env.py": "f28dc0e71c75e2fec63014280db5f0e1fd5df14c456e09e446d88e0d3b994bdd",
+    "tests/test_learning.py": "4a15a86a4fab9613c3c4fc3e044829cf2301418c187704e8539488ca70fc557f",
+    "tests/test_rewards.py": "a35fa6f87b8203b8992b2bacc6915b27e7b1f835eccadab41d18ecad216c144a"
+  }
+}

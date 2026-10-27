@@ -1,0 +1,7 @@
+method,training_seed,achieved,first_checkpoint_step,confirmation_step
+base,0,True,20000,30000
+base,1,True,30000,40000
+base,2,True,20000,30000
+potential,0,True,10000,20000
+potential,1,True,10000,20000
+potential,2,True,10000,20000

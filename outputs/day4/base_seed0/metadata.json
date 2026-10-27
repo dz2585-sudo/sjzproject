@@ -1,0 +1,26 @@
+{
+  "reward_mode": "base",
+  "gamma": 0.95,
+  "shaping_scale": 1,
+  "return_definition": "Undiscounted sums of per-step base, learning and shaping rewards.",
+  "root_seed": 0,
+  "random_streams": "SeedSequence(root).spawn(2): environment, action exploration",
+  "environment_initialization_seed": 8668861027912758289,
+  "global_steps": 100000,
+  "unfinished_episode": {
+    "steps": 5,
+    "misses": 0,
+    "base_return": -0.25,
+    "learning_return": -0.25,
+    "shaping_return": 0.0
+  },
+  "complete_episode_steps": 99995,
+  "elapsed_seconds": 1.9660138001199812,
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_revision": null,
+  "git_note": "No Git commit available; source is unversioned.",
+  "reload_verified": true
+}

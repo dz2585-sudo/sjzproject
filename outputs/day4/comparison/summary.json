@@ -1,0 +1,89 @@
+{
+  "scope": "seed=0 single-seed development comparison; not a statistical conclusion",
+  "sources": {
+    "base": "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\outputs\\day4\\base_seed0",
+    "potential": "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\outputs\\day4\\potential_seed0"
+  },
+  "day3_base_source": "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\outputs\\day3\\base_seed0",
+  "day3_regression": {
+    "config_equal": true,
+    "validation_equal": true,
+    "q_table_equal": true,
+    "metadata_fields_equal": true
+  },
+  "first_of_two_consecutive_validation_checkpoints_at_least_90_percent": {
+    "base": 20000,
+    "potential": 10000
+  },
+  "checkpoint_resolution_steps": 10000,
+  "key_checkpoints": {
+    "base": [
+      {
+        "global_step": "0",
+        "episodes": "200",
+        "success_rate": "0.0",
+        "mean_steps": "50.0",
+        "mean_misses": "0.0",
+        "mean_base_return": "-2.499999999999999"
+      },
+      {
+        "global_step": "10000",
+        "episodes": "200",
+        "success_rate": "0.7",
+        "mean_steps": "26.605",
+        "mean_misses": "1.3",
+        "mean_base_return": "4.369749999999999"
+      },
+      {
+        "global_step": "30000",
+        "episodes": "200",
+        "success_rate": "0.99",
+        "mean_steps": "7.49",
+        "mean_misses": "0.115",
+        "mean_base_return": "9.410499999999999"
+      },
+      {
+        "global_step": "100000",
+        "episodes": "200",
+        "success_rate": "1.0",
+        "mean_steps": "5.055",
+        "mean_misses": "0.0",
+        "mean_base_return": "9.74725"
+      }
+    ],
+    "potential": [
+      {
+        "global_step": "0",
+        "episodes": "200",
+        "success_rate": "0.0",
+        "mean_steps": "50.0",
+        "mean_misses": "0.0",
+        "mean_base_return": "-2.499999999999999"
+      },
+      {
+        "global_step": "10000",
+        "episodes": "200",
+        "success_rate": "1.0",
+        "mean_steps": "6.99",
+        "mean_misses": "0.015",
+        "mean_base_return": "9.6355"
+      },
+      {
+        "global_step": "30000",
+        "episodes": "200",
+        "success_rate": "1.0",
+        "mean_steps": "4.935",
+        "mean_misses": "0.1",
+        "mean_base_return": "9.65325"
+      },
+      {
+        "global_step": "100000",
+        "episodes": "200",
+        "success_rate": "1.0",
+        "mean_steps": "4.67",
+        "mean_misses": "0.0",
+        "mean_base_return": "9.7665"
+      }
+    ]
+  }
+}
