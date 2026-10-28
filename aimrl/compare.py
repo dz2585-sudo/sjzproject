@@ -1,4 +1,4 @@
-"""Compare two Day 4 validation runs and check the Day 3 base regression."""
+"""Compare two reward-shaping development validation runs and check the Q-learning development base regression."""
 import argparse
 import csv
 import json
@@ -18,7 +18,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base', required=True, type=Path)
     parser.add_argument('--potential', required=True, type=Path)
-    parser.add_argument('--day3-base', required=True, type=Path)
+    parser.add_argument('--reference-base', required=True, type=Path)
     parser.add_argument('--output', required=True, type=Path)
     args = parser.parse_args()
     if args.output.exists() and any(args.output.iterdir()):
@@ -33,10 +33,10 @@ def main():
     rows = {k: read_csv(d / 'validation.csv') for k, d in dirs.items()}
     if [r['global_step'] for r in rows['base']] != [r['global_step'] for r in rows['potential']]:
         raise ValueError('Validation checkpoints do not match')
-    old_config = json.loads((args.day3_base / 'run_config.json').read_text(encoding='utf-8'))
-    old_meta = json.loads((args.day3_base / 'metadata.json').read_text(encoding='utf-8'))
-    old_rows = read_csv(args.day3_base / 'validation.csv')
-    q_match = np.array_equal(np.load(args.day3_base / 'q_table.npy', allow_pickle=False),
+    old_config = json.loads((args.reference_base / 'run_config.json').read_text(encoding='utf-8'))
+    old_meta = json.loads((args.reference_base / 'metadata.json').read_text(encoding='utf-8'))
+    old_rows = read_csv(args.reference_base / 'validation.csv')
+    q_match = np.array_equal(np.load(args.reference_base / 'q_table.npy', allow_pickle=False),
                              np.load(args.base / 'q_table.npy', allow_pickle=False))
     compared_meta = ['root_seed', 'random_streams', 'environment_initialization_seed', 'global_steps', 'numpy', 'matplotlib', 'python']
     regression = {'config_equal': old_config == configs['base'], 'validation_equal': old_rows == rows['base'],
@@ -53,7 +53,7 @@ def main():
                                  if float(a['success_rate']) >= .9 and float(b['success_rate']) >= .9), None)
     summary = {'scope': 'seed=0 single-seed development comparison; not a statistical conclusion',
                'sources': {k: str(v.resolve()) for k, v in dirs.items()},
-               'day3_base_source': str(args.day3_base.resolve()), 'day3_regression': regression,
+               'reference_base_source': str(args.reference_base.resolve()), 'reference_regression': regression,
                'first_of_two_consecutive_validation_checkpoints_at_least_90_percent': efficiency,
                'checkpoint_resolution_steps': configs['base']['experiments']['validation']['interval_steps'],
                'key_checkpoints': {k: [r for r in entries if int(r['global_step']) in (0, 10000, 30000, 100000)] for k, entries in rows.items()}}
@@ -78,7 +78,7 @@ def main():
     fig.tight_layout()
     fig.savefig(args.output / 'comparison.png', dpi=150)
     plt.close(fig)
-    print('Day 3 regression:', regression, '; first consecutive >=90% checkpoints:', efficiency)
+    print('Q-learning development regression:', regression, '; first consecutive >=90% checkpoints:', efficiency)
 
 
 if __name__ == '__main__':

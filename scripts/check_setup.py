@@ -1,4 +1,4 @@
-"""Check the Day 1 configuration and dependencies without running training."""
+"""Check the project setup configuration and dependencies without running training."""
 
 import importlib
 import json

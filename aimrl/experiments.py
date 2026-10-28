@@ -1,4 +1,4 @@
-"""Frozen Day 5 experiment: independent train, test and summarize stages."""
+"""Frozen Grid5 benchmark experiment: independent train, test and summarize stages."""
 import argparse
 import copy
 import csv
@@ -15,6 +15,9 @@ from pathlib import Path
 
 import numpy as np
 
+from .model_io import artifact_digest, resolve_artifact
+from .provenance import verify_historical_hashes
+
 from .agent import QLearningAgent
 from .evaluate import evaluate
 from .policies import random_policy, rule_policy
@@ -29,7 +32,7 @@ METRICS = ('success_rate', 'mean_steps', 'mean_misses', 'mean_base_return')
 
 
 def digest(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    return artifact_digest(path)
 
 
 def now():
@@ -37,7 +40,7 @@ def now():
 
 
 def read_json(path):
-    return json.loads(Path(path).read_text(encoding='utf-8'))
+    return json.loads(resolve_artifact(path).read_text(encoding='utf-8'))
 
 
 def save_json(path, value):
@@ -171,11 +174,11 @@ def train_stage(protocol_path, output, frozen, config):
                            'config_path': str((run / 'run_config.json').resolve()), 'config_sha256': digest(run / 'run_config.json'),
                            'elapsed_seconds': meta['elapsed_seconds']})
             if seed == 0:
-                old = ROOT / 'outputs/day4' / f'{mode}_seed0'
+                old = ROOT / 'results/reward_shaping_development' / f'{mode}_seed0'
                 regression[mode] = {'q_equal': np.array_equal(agent.q, np.load(old / 'q_table.npy', allow_pickle=False)),
                                     'validation_equal': valid == read_csv(old / 'validation.csv')}
                 if not all(regression[mode].values()):
-                    raise ValueError(f'Day 4 seed 0 regression mismatch for {mode}')
+                    raise ValueError(f'reward-shaping development seed 0 regression mismatch for {mode}')
     # A pre-test diagnostic uses distinct scenarios and does not touch saved model files.
     diagnostic = []
     for speed in SPEEDS:
@@ -196,10 +199,10 @@ def train_stage(protocol_path, output, frozen, config):
         revision = None
     manifest = {'frozen_protocol_path': str(Path(protocol_path).resolve()), 'frozen_protocol_sha256': digest(protocol_path),
                 'config_sha256': digest(ROOT / 'configs/base.json'), 'config': config, 'source_hashes': sources,
-                'source_changes': 'See translation/manifest.json for post-experiment English translations and exact hash mappings. Training, environment, and reward-update rules are unchanged; this manifest describes this later reproduction run.',
+                'source_changes': 'See provenance/source_compatibility.json for post-experiment English translations and exact hash mappings. Training, environment, and reward-update rules are unchanged; this manifest describes this later reproduction run.',
                 'git_revision': revision, 'git_note': 'No commit available; source hashes identify the working files.' if revision is None else 'Working files identified by source hashes.',
                 'environment': {'platform': platform.platform(), 'python': sys.version, 'numpy': np.__version__, 'matplotlib': importlib.metadata.version('matplotlib')},
-                'models': models, 'regression_day4_seed0': regression, 'training_started_utc': started, 'training_completed_utc': now(),
+                'models': models, 'regression_development_seed0': regression, 'training_started_utc': started, 'training_completed_utc': now(),
                 'model_selection': 'Fixed final 100000-step model; no selection by validation or test performance.',
                 'test_settings': {'move_probabilities': list(SPEEDS), 'turn_probability': .1, 'scenario_seed_start': 200000,
                                   'episodes_per_condition': 500, 'random_policy_rng': 'NumPy SeedSequence([314159, scenario_seed]), independent per episode',
@@ -325,11 +328,11 @@ def summarize_stage(output):
         if digest(model['model_path']) != model['model_sha256'] or digest(model['config_path']) != model['config_sha256']:
             raise ValueError('Model or config changed after testing')
     checks = {'counts': counts, 'unique_keys': True, 'episode_invariants': True, 'model_and_config_hashes_unchanged': True,
-              'training_steps_total': sum(m['steps'] for m in manifest['models']), 'day4_seed0_regression': manifest['regression_day4_seed0'],
+              'training_steps_total': sum(m['steps'] for m in manifest['models']), 'development_seed0_regression': manifest['regression_development_seed0'],
               'threshold_resolution_steps': 10000, 'test_completed': manifest['test_completed']}
     save_json(summary_dir / 'checks.json', checks)
     plot_results(summary_dir, learning_summary, overall, baseline_summary)
-    lines = ['# Day 5 Formal Experiment Record', '',
+    lines = ['# Grid5 benchmark Formal Experiment Record', '',
              'Each method was trained from zero for 100,000 steps using root seeds 0, 1, and 2. Validation used scenario seeds 100000–100199; final testing used seeds 200000–200499 after the final models were fixed. Error terms are sample standard deviations across three training seeds, not confidence intervals.',
              f"Execution environment: {manifest['environment']['platform']}, Python {sys.version.split()[0]}, NumPy {np.__version__}, Matplotlib {manifest['environment']['matplotlib']}.",
              f"Sum of elapsed times for six training runs: {sum(m['elapsed_seconds'] for m in manifest['models']):.3f} seconds; training: {manifest['training_started_utc']} to {manifest['training_completed_utc']}; testing: {manifest['test_started_utc']} to {manifest['test_completed_utc']}.", '',
@@ -357,7 +360,7 @@ def summarize_stage(output):
     for r in paired:
         lines.append(f"- Training seed {r['training_seed']}, move probability {r['move_probability']:.2f}: success-rate difference {r['success_potential_minus_base']:+.3f}, step difference {r['steps_base_minus_potential']:+.3f}, miss difference {r['misses_base_minus_potential']:+.3f}.")
     lines += ['', 'Limitations: only three training seeds were used, and seed 0 was used during development. This small fully observable environment and finite test set do not establish generalization to real games. The rule policy is a baseline, not a proven optimum. Results are descriptive; no statistical-significance claim is made. New test seeds do not guarantee initial states absent from training.',
-              'Figures and CSV files were generated from actual raw records; the GUI has not been verified. Command: `python -m aimrl.experiments --protocol outputs/day4/protocol_frozen.json --output outputs/day5 --stage train`; then use --stage test and --stage summarize in order. Outputs are stored in outputs/day5.']
+              'Figures and CSV files were generated from actual raw records; the GUI has not been verified. Command: `python -m aimrl.experiments --protocol results/reward_shaping_development/protocol_frozen.json --output results/grid5_benchmark --stage train`; then use --stage test and --stage summarize in order. Outputs are stored in results/grid5_benchmark.']
     (summary_dir / 'results_summary.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print('Summaries and plots generated:', counts)
 

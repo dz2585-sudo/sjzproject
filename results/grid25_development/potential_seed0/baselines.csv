@@ -1,0 +1,3 @@
+policy,scenario_seed_start,scenario_seed_end,policy_rng,episodes,success_rate,mean_steps,mean_misses,mean_base_return
+rule,3500000,3500199,none,200,1.0,20.835,0.0,8.95825
+random,3500000,3500199,"SeedSequence([0, 2])",200,0.015,99.175,16.495,-21.303750000000036

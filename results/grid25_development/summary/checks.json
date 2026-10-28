@@ -1,0 +1,68 @@
+{
+  "runs": {
+    "base": {
+      "global_steps": 5000000,
+      "complete_episodes": 51332,
+      "complete_episode_steps": 4999993,
+      "unfinished_episode": {
+        "steps": 7,
+        "misses": 0,
+        "base_return": -0.35,
+        "learning_return": -0.35,
+        "shaping_return": 0.0
+      },
+      "elapsed_seconds": 56.54846329987049,
+      "q_shape": [
+        25,
+        25,
+        25,
+        25,
+        2,
+        6
+      ],
+      "q_dtype": "float32",
+      "q_nbytes": 18750000,
+      "final_model_sha256": "2f7609bc4ff2b92e0d67d2142d0c2b77881cc6c600b9b1803f422a30cfb07bc7",
+      "validation_summary_rows": 11,
+      "validation_episode_rows": 2200,
+      "reload_and_final_checkpoint_equal": true,
+      "zero_initial_checkpoint": true
+    },
+    "potential": {
+      "global_steps": 5000000,
+      "complete_episodes": 109264,
+      "complete_episode_steps": 4999985,
+      "unfinished_episode": {
+        "steps": 15,
+        "misses": 1,
+        "base_return": -1.75,
+        "learning_return": 8.74,
+        "shaping_return": 10.49
+      },
+      "elapsed_seconds": 56.15373369981535,
+      "q_shape": [
+        25,
+        25,
+        25,
+        25,
+        2,
+        6
+      ],
+      "q_dtype": "float32",
+      "q_nbytes": 18750000,
+      "final_model_sha256": "a37a9edbb09b1ee05953ffebc2521566c0b08eb87d23a3350d14b7769abc4928",
+      "validation_summary_rows": 11,
+      "validation_episode_rows": 2200,
+      "reload_and_final_checkpoint_equal": true,
+      "zero_initial_checkpoint": true
+    }
+  },
+  "validation_summary_rows": 22,
+  "validation_episode_rows": 4400,
+  "baseline_episodes": 400,
+  "baseline_random_rng": "SeedSequence([314159, scenario_seed]) per episode",
+  "baseline_note": "The comparison uses one new paired baseline evaluation. Baseline summaries written by train.py use a different fixed action stream and are not pooled.",
+  "historical_files_unchanged": 224,
+  "total_training_interactions": 10000000,
+  "final_test_used": false
+}

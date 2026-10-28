@@ -1,0 +1,80 @@
+{
+  "setup_exit_code": 0,
+  "unit_test_exit_code": 0,
+  "tests_passed": 55,
+  "bounded_saved_model_demo": {
+    "ticks": 30,
+    "hits": 3,
+    "learning_updates": 0,
+    "exit_code": 0,
+    "storage": "lossless NPZ package"
+  },
+  "translation_directory_absent": true,
+  "obsolete_outputs_directory_absent": true,
+  "day_number_filenames": [],
+  "required_result_directories": [
+    "results/q_learning_development",
+    "results/reward_shaping_development",
+    "results/grid5_benchmark",
+    "results/grid25_development",
+    "results/continuous_tracking"
+  ],
+  "local_markdown_links_checked": 22,
+  "broken_local_links": [],
+  "readme_animated_embed_verified": true,
+  "original_local_files_preserved": 358,
+  "immutable_numeric_and_binary_files_preserved": 316,
+  "model_packages": [
+    {
+      "path": "results/continuous_tracking/base/q_table.npz",
+      "archive_bytes": 9778931,
+      "original_bytes": 125000128,
+      "exact_original_npy_sha256": "bf0f11b1b63e67b762f68613b5ee708e573fe0e7f9b0dea775e61c4063e530e3"
+    },
+    {
+      "path": "results/continuous_tracking/potential/q_table.npz",
+      "archive_bytes": 32015246,
+      "original_bytes": 125000128,
+      "exact_original_npy_sha256": "00501ffd0a01aba31aaf80bdf73a9efecd380e18dca27250f678e683368ac259"
+    }
+  ],
+  "gifs": [
+    {
+      "path": "results/continuous_tracking/render/seed3601000_comparison.gif",
+      "frames": 301,
+      "duration_ms": 20070,
+      "frame_duration_values_ms": [
+        60,
+        70
+      ],
+      "sha256": "59a16893badd5e8bee2ec06e53be5f649468a04fecc7ee9d9a7061545b5fa228"
+    },
+    {
+      "path": "results/continuous_tracking/render/seed3601001_comparison.gif",
+      "frames": 301,
+      "duration_ms": 20070,
+      "frame_duration_values_ms": [
+        60,
+        70
+      ],
+      "sha256": "836441a68376bc3b5f758c9b7e92db30558d4ca5097e48f806eb750c095926b8"
+    },
+    {
+      "path": "results/continuous_tracking/render/seed3601002_comparison.gif",
+      "frames": 301,
+      "duration_ms": 20070,
+      "frame_duration_values_ms": [
+        60,
+        70
+      ],
+      "sha256": "e6a60ae20374cb26686ce98c21e0e0c2531bfab6c7d178cd5c3f219d07bd343c"
+    }
+  ],
+  "maximum_file_bytes": 32015246,
+  "file_size_limit_bytes": 104857600,
+  "retired_evidence_git_blob_checks": 3,
+  "continuous_history_entries_verified": 285,
+  "grid25_current_history_entries_verified": 221,
+  "training_rerun": false,
+  "original_frozen_hashes_replaced": false
+}

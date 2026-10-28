@@ -1,0 +1,130 @@
+{
+  "setup_exit_code": 0,
+  "unit_tests_passed": 52,
+  "unit_test_exit_code": 0,
+  "v2_targeted_test_groups": 12,
+  "stage_exit_codes": {
+    "check": 0,
+    "train": 0,
+    "evaluate": 0,
+    "render": 0
+  },
+  "models_verified": true,
+  "training_interactions": 40000000,
+  "windows_per_method": 66666,
+  "partial_ticks_per_method": 200,
+  "validation_summary_rows": 22,
+  "validation_episode_rows": 4400,
+  "validation_interactions": 1320000,
+  "baseline_episode_rows": 400,
+  "baseline_interactions": 120000,
+  "all_validation_metrics_recomputed": true,
+  "paired_training_target_windows": 66667,
+  "evaluation_target_paths_paired": 200,
+  "historical_hashes_unchanged": 285,
+  "frozen_v2_source_hashes_unchanged": true,
+  "demo_trajectory_rows": 3612,
+  "clips": [
+    {
+      "seed": 3601000,
+      "frames": 301,
+      "duration_ms": 20070,
+      "continuing_after_hits": {
+        "base": {
+          "hits": 4,
+          "first_hit": 56,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        },
+        "potential": {
+          "hits": 65,
+          "first_hit": 15,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        },
+        "rule": {
+          "hits": 36,
+          "first_hit": 10,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        },
+        "random": {
+          "hits": 0,
+          "first_hit": null,
+          "target_motion_after_first_hit": null,
+          "last_tick": 300
+        }
+      }
+    },
+    {
+      "seed": 3601001,
+      "frames": 301,
+      "duration_ms": 20070,
+      "continuing_after_hits": {
+        "base": {
+          "hits": 4,
+          "first_hit": 10,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        },
+        "potential": {
+          "hits": 78,
+          "first_hit": 4,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        },
+        "rule": {
+          "hits": 52,
+          "first_hit": 4,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        },
+        "random": {
+          "hits": 0,
+          "first_hit": null,
+          "target_motion_after_first_hit": null,
+          "last_tick": 300
+        }
+      }
+    },
+    {
+      "seed": 3601002,
+      "frames": 301,
+      "duration_ms": 20070,
+      "continuing_after_hits": {
+        "base": {
+          "hits": 0,
+          "first_hit": null,
+          "target_motion_after_first_hit": null,
+          "last_tick": 300
+        },
+        "potential": {
+          "hits": 79,
+          "first_hit": 10,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        },
+        "rule": {
+          "hits": 49,
+          "first_hit": 6,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        },
+        "random": {
+          "hits": 1,
+          "first_hit": 147,
+          "target_motion_after_first_hit": true,
+          "last_tick": 300
+        }
+      }
+    }
+  ],
+  "gui_verified": false,
+  "github_push_performed": false,
+  "git_identity_settings_changed": false,
+  "plots_visually_inspected": true,
+  "gif_start_middle_end_frames_visually_inspected_for_all_clips": true,
+  "hit_flash_pre_motion_location_inspected": true,
+  "new_project_content_english_scan_passed": true,
+  "added_dependencies": []
+}

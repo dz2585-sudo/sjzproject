@@ -1,0 +1,5 @@
+method,training_seed,scenario_seed_start,episodes,success_rate,mean_steps,mean_misses,mean_base_return
+base,0,3500000,200,0.06,96.455,4.47,-8.692750000000004
+potential,0,3500000,200,1.0,24.675,0.18,8.58625
+rule,,3500000,200,1.0,20.835,0.0,8.95825
+random,,3500000,200,0.02,99.45,16.51,-21.282500000000038

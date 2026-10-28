@@ -1,10 +1,10 @@
-# AimRL Specification (Day 5)
+# AimRL Specification (Grid5 benchmark)
 
 ## Research Question and Scope
 
 Under an equal environment-interaction budget, does distance-based potential reward shaping help Q-learning learn to hit a moving target sooner? How does changing the target movement probability affect the trained policies? The project compares a rule policy, base-reward Q-learning, and potential-shaped Q-learning.
 
-The rule policy fires when aligned; otherwise it corrects the horizontal position first and then the vertical position. This is a small reproducible experiment. Potential-based reward shaping is an established method; the contribution is the environment implementation, controlled comparison, and analysis, not a new algorithm. Reinforcement learning is not assumed to outperform the rule policy. Preliminary prototypes established feasibility only; formal three-seed results are recorded separately under `outputs/day5/`.
+The rule policy fires when aligned; otherwise it corrects the horizontal position first and then the vertical position. This is a small reproducible experiment. Potential-based reward shaping is an established method; the contribution is the environment implementation, controlled comparison, and analysis, not a new algorithm. Reinforcement learning is not assumed to outperform the rule policy. Preliminary prototypes established feasibility only; formal three-seed results are recorded separately under `results/grid5_benchmark/`.
 
 ## Environment, Coordinates, and State
 
@@ -69,13 +69,13 @@ Q-learning updates `Q(s,a) ← Q(s,a) + alpha * [target - Q(s,a)]`. For true ter
 
 ## Implementation Status and Provenance
 
-Day 5 completed the three-seed experiments and independent final tests. The original frozen protocol remains in `outputs/day4/protocol_frozen.json`; the actual run manifest is in `outputs/day5/protocol_used.json`. Source and model hashes in these historical records identify the pre-translation experiments and are preserved unchanged. Later English translation and provenance-validation adaptations are documented in `translation/README.md` and `translation/manifest.json`; translated source files are not claimed to have produced the earlier results.
+Grid5 benchmark completed the three-seed experiments and independent final tests. The original frozen protocol remains in `results/reward_shaping_development/protocol_frozen.json`; the actual run manifest is in `results/grid5_benchmark/protocol_used.json`. Source and model hashes in these historical records identify the pre-translation experiments and are preserved unchanged. Later English translation and provenance-validation adaptations are documented in `provenance/README.md` and `provenance/source_compatibility.json`; translated source files are not claimed to have produced the earlier results.
 
-The Day 3 stationary-target diagnostic used seed 42, 10,000 steps, and an 8,000-step epsilon decay. Validation success increased from 0% to 13.5%. Its limited read-only replay is documented in `outputs/day4/static_diagnostic_note.md`. The Day 3 moving-target run used seed 0 and 100,000 steps, reaching 100% from 0%; Day 4 base reproduced its Q table and all validation checkpoints.
+The Q-learning development stationary-target diagnostic used seed 42, 10,000 steps, and an 8,000-step epsilon decay. Validation success increased from 0% to 13.5%. Its limited read-only replay is documented in `results/reward_shaping_development/static_diagnostic_note.md`. The Q-learning development moving-target run used seed 0 and 100,000 steps, reaching 100% from 0%; reward-shaping development base reproduced its Q table and all validation checkpoints.
 
-Earlier Day 2 diagnostics passed 10 environment unit tests. On 100 scenarios with seeds 300000–300099, the rule policy achieved 100% success, 5.07 mean steps, and 0.00 mean misses; the random policy achieved 25% success, 43.77 mean steps, and 6.89 mean misses. These diagnostics are separate from the later validation and formal test sets. The saved preview was visually checked. The initial user-directory font-cache warning did not prevent image export and was subsequently resolved by the project-local cache.
+Earlier environment diagnostics diagnostics passed 10 environment unit tests. On 100 scenarios with seeds 300000–300099, the rule policy achieved 100% success, 5.07 mean steps, and 0.00 mean misses; the random policy achieved 25% success, 43.77 mean steps, and 6.89 mean misses. These diagnostics are separate from the later validation and formal test sets. The saved preview was visually checked. The initial user-directory font-cache warning did not prevent image export and was subsequently resolved by the project-local cache.
 
-The Day 4 seed-0 development comparison gave base/potential success of 70%/100% and mean steps of 26.605/6.990 at step 10,000. Their first confirmed ≥90% checkpoints were 20,000/10,000 steps. These development observations are separate from the three-seed results. The formal results and limitations are in `outputs/day5/summary/results_summary.md`.
+The reward-shaping development seed-0 development comparison gave base/potential success of 70%/100% and mean steps of 26.605/6.990 at step 10,000. Their first confirmed ≥90% checkpoints were 20,000/10,000 steps. These development observations are separate from the three-seed results. The formal results and limitations are in `results/grid5_benchmark/summary/results_summary.md`.
 
 The environment is small and fully observable, with only three training seeds and a finite scenario set. Training seed 0 was used during development. Independent scenario seeds do not guarantee unseen initial states. The rule policy is not proven optimal. Descriptive results do not establish statistical significance, real-game generalization, image-based control, or performance in arbitrary environments. Headless figures and model previews were checked; the interactive GUI remains unverified. The project-local Matplotlib cache resolved the earlier user-directory cache warning.
 

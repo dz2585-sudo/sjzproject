@@ -1,0 +1,102 @@
+{
+  "setup_exit_code": 0,
+  "unit_tests": 40,
+  "unit_test_exit_code": 0,
+  "trial_specific_smoke_tests": 6,
+  "commands_exit_codes": {
+    "trial_preflight": 0,
+    "base_train": 0,
+    "potential_train": 0,
+    "summarize": 0,
+    "demo": 0
+  },
+  "preserved_historical_files": 224,
+  "all_historical_hashes_match": true,
+  "gif_frames": 101,
+  "gif_dimensions": [
+    1260,
+    530
+  ],
+  "gif_selected_frame_errors_vs_source_png": {
+    "gif_start.png": {
+      "mean_absolute_channel_error": 0.006116601776979136,
+      "maximum_channel_error": 33
+    },
+    "gif_middle.png": {
+      "mean_absolute_channel_error": 0.00734701008285914,
+      "maximum_channel_error": 41
+    },
+    "gif_final.png": {
+      "mean_absolute_channel_error": 0.007643506039732455,
+      "maximum_channel_error": 41
+    }
+  },
+  "finished_panels_hold_verified": true,
+  "finished_panel_mean_channel_errors": {
+    "50": 0.0004130455097654425,
+    "100": 0.0021605457433884682
+  },
+  "gif_palette_validation_note": "A preliminary maximum-channel threshold of 5 was too strict for normal 256-color GIF quantization. Final checks require mean absolute channel error below 0.1 and maximum channel error at most 50 on the 0\u2013255 scale, in addition to visual inspection.",
+  "demo_seed": 3501000,
+  "demo_final_records": {
+    "Base Q-learning": {
+      "policy": "Base Q-learning",
+      "scenario_seed": "3501000",
+      "step_count": "100",
+      "xc": "1",
+      "yc": "11",
+      "xt": "10",
+      "yt": "12",
+      "v": "-1",
+      "action": "right",
+      "base_reward": "-0.05",
+      "base_return": "-6.99999999999999",
+      "misses": "2",
+      "terminated": "False",
+      "truncated": "True",
+      "status": "Timeout"
+    },
+    "Potential Q-learning": {
+      "policy": "Potential Q-learning",
+      "scenario_seed": "3501000",
+      "step_count": "14",
+      "xc": "16",
+      "yc": "12",
+      "xt": "16",
+      "yt": "12",
+      "v": "-1",
+      "action": "fire",
+      "base_reward": "9.95",
+      "base_return": "9.299999999999999",
+      "misses": "0",
+      "terminated": "True",
+      "truncated": "False",
+      "status": "Hit"
+    },
+    "Rule policy": {
+      "policy": "Rule policy",
+      "scenario_seed": "3501000",
+      "step_count": "14",
+      "xc": "16",
+      "yc": "12",
+      "xt": "16",
+      "yt": "12",
+      "v": "-1",
+      "action": "fire",
+      "base_reward": "9.95",
+      "base_return": "9.299999999999999",
+      "misses": "0",
+      "terminated": "True",
+      "truncated": "False",
+      "status": "Hit"
+    }
+  },
+  "gif_trajectories_unchanged_across_export_attempts": true,
+  "gif_start_middle_final_visually_inspected": true,
+  "figures_visually_inspected": true,
+  "gui_verified": false,
+  "export_issue": "The first export accumulated legend entries and changed panel layout. It is retained in demo_export_attempt1. The corrected export uses one legend, fixed layout and full-frame disposal. Decoded GIF frames match source PNGs within palette quantization tolerance.",
+  "added_dependencies": [],
+  "final_test_evaluated": false,
+  "github_push_performed": false
+}

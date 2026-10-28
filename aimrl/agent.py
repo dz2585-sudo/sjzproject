@@ -1,6 +1,8 @@
 """Tabular Q-learning agent."""
 import numpy as np
 
+from .model_io import load_model_array
+
 
 class QLearningAgent:
     def __init__(self, config, rng=None):
@@ -43,7 +45,7 @@ class QLearningAgent:
         np.save(path, self.q, allow_pickle=False)
 
     def load(self, path):
-        data = np.load(path, allow_pickle=False)
+        data = load_model_array(path)
         if data.shape != self.shape or data.dtype != np.float32:
             raise ValueError(f"Incompatible Q table: expected shape {self.shape} and float32, got {data.shape} and {data.dtype}")
         if not np.isfinite(data).all():

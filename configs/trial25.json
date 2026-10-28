@@ -1,0 +1,13 @@
+{
+  "project": {"name": "AimRL", "stage": "trial25_development"},
+  "environment": {"grid_size": 25, "target_move_probability": 0.25, "target_turn_probability": 0.1, "max_episode_steps": 100},
+  "actions": ["left", "right", "up", "down", "stay", "fire"],
+  "rewards": {"step": -0.05, "hit_bonus": 10, "miss_penalty": -1},
+  "learning": {"alpha": 0.15, "gamma": 0.99, "initial_q": 0, "q_dtype": "float32", "training_steps": 5000000, "epsilon_start": 1, "epsilon_end": 0.05, "epsilon_decay_steps": 4000000, "shaping_scale": 1},
+  "experiments": {
+    "training_seeds": [0],
+    "reward_modes": ["base", "potential"],
+    "validation": {"interval_steps": 500000, "episodes": 200, "seed_start": 3500000},
+    "test": {"enabled": false, "move_probabilities": [0.25], "episodes_per_condition": 200, "seed_start": 3502000}
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "description": "Exact verified compatibility mappings required by archived source/history checks. Original frozen hashes remain authoritative; unrecorded changes are rejected.",
+  "mappings": [
+    {
+      "path": "README.md",
+      "recorded_sha256": "e3207dafba0f8f4f120a31901825314362ad6a7d8f536188c92169e64654590d",
+      "current_sha256": "3780f4c00fb39ce7d316df9eca7f7cf4bb920a3bd4c1fb328c5186fda610eb79",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "preserved_git_blob",
+      "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
+      "git_blob": "104488c00c7be3580e1c85acb0ba68885592d7b8"
+    },
+    {
+      "path": "aimrl/agent.py",
+      "recorded_sha256": "809af3b7f0d37d3607797c8651984fbd6d960147f30b29665bbbe47ff7c2e7ee",
+      "current_sha256": "9a1fe0d3b9ae186652b9181be969143adcbab3efb0c8e83040875070a1f2d7c3",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "aimrl/agent.py"
+    },
+    {
+      "path": "aimrl/compare.py",
+      "recorded_sha256": "0de753d84a9be5163f77fa15f2d69aff9d6a27465730401074c88f15cf61dbda",
+      "current_sha256": "1b87ed848d0b4e95965067b64bcba55b999c014185ff23bf49b681afdb32c216",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "preserved_git_blob",
+      "git_commit": "d89c7db4f90fcbee45e9437f945485352f63a642",
+      "git_blob": "3a8b91c096843127cf4240f2f5065345c45b39bd"
+    },
+    {
+      "path": "aimrl/compare.py",
+      "recorded_sha256": "155b9256ac41d7539882965d59bdcf16154c5f8f2a529b4342b69c05d3f8d3a1",
+      "current_sha256": "1b87ed848d0b4e95965067b64bcba55b999c014185ff23bf49b681afdb32c216",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "aimrl/compare.py"
+    },
+    {
+      "path": "aimrl/experiments.py",
+      "recorded_sha256": "956ed1fa6961dbd15fff462dc4947793b4d7197a67004dcfd16580df5210d77c",
+      "current_sha256": "c9535bd74b2230004994c8baba07a116f81ae0333c40771b08ef81e644e1c763",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "aimrl/experiments.py"
+    },
+    {
+      "path": "aimrl/experiments.py",
+      "recorded_sha256": "fdff24d4d92c172e6f4f6d356f1af0b0a17e314b6ed4ec8c7094312dfa0ce9fe",
+      "current_sha256": "c9535bd74b2230004994c8baba07a116f81ae0333c40771b08ef81e644e1c763",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "preserved_git_blob",
+      "git_commit": "d89c7db4f90fcbee45e9437f945485352f63a642",
+      "git_blob": "c5cac69e18b8c01b3d610a0a9d88031e457483a1"
+    },
+    {
+      "path": "aimrl/provenance.py",
+      "recorded_sha256": "48bc83526348c701966834b8bc41ed0e9cc2b9911e8cc9b94b814b3d697fda40",
+      "current_sha256": "99d5477057f7dc5cdfce8797f410f034e5d5fc55662664bd088fc6cb6991a2fd",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "aimrl/provenance.py"
+    },
+    {
+      "path": "aimrl/tracking25/__main__.py",
+      "recorded_sha256": "e58a7dfbaa5db07f14cb949ceb03b8e212fa4dbfe54e3c442dafd3c0f3a7b90e",
+      "current_sha256": "8928a8de6d1bbe139bc75d0f066938d022812cf304f1df352792297559f05f02",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "aimrl/tracking25/__main__.py"
+    },
+    {
+      "path": "aimrl/tracking25/agent.py",
+      "recorded_sha256": "69e50493bfb2ea9ae4fccfd5aa9977831f0d1ab683623f8e6036351dda1e0538",
+      "current_sha256": "e4ae5beae23875d6ee4a3b475f32b37c7babfe09ad41ee417ea577d663163107",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "aimrl/tracking25/agent.py"
+    },
+    {
+      "path": "aimrl/tracking25/workflow.py",
+      "recorded_sha256": "08d63a9eb48a26d8f87b0bcace901fdd0aeef37ba12e770fadc088cbd60f46be",
+      "current_sha256": "2ab8c99f4abce16a1e7392c7d732209df595b83d0afbdc71302668f182684e45",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "aimrl/tracking25/workflow.py"
+    },
+    {
+      "path": "aimrl/trial25.py",
+      "recorded_sha256": "19c9bac278ad1504c9046c98f011e20a1ac80cd03750f801c4695dea6f5457d7",
+      "current_sha256": "673f0b471c465322d472dd38ba39dd2dfea78c5232169b1750c43e50366408f3",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "aimrl/trial25.py"
+    },
+    {
+      "path": "results/reward_shaping_development/static_diagnostic_note.md",
+      "recorded_sha256": "b4fa343ef4ea0dc14a77059f386d4b528dc323e77bc92a14d3605b8b5524a7fc",
+      "current_sha256": "e65e5ddcae6e20e10b96f56c8426a370820ee883e8275dcb0d09f7d66868fee1",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "outputs/day4/static_diagnostic_note.md"
+    },
+    {
+      "path": "results/grid5_benchmark/summary/results_summary.md",
+      "recorded_sha256": "b879e0a7a7d68aa938a48682834e676db2038582f31416de531cb94ae4c0a730",
+      "current_sha256": "671efd18b6bbeaae74920f4d1968af537856b293e026525af9316e661b3a6ab1",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "outputs/day5/summary/results_summary.md"
+    },
+    {
+      "path": "results/grid25_development/summary/results_summary.md",
+      "recorded_sha256": "35d30cca575f8afc5fdad559692c5a9ae9b4607b3f90790069091fbb92d4540b",
+      "current_sha256": "dc840af15add16a5b9f71d1bb2353ac8500ef4dbd03750e4155cc8a8bf941432",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "outputs/trial25/summary/results_summary.md"
+    },
+    {
+      "path": "spec.md",
+      "recorded_sha256": "3ff100b7786386f6a69d2098608fc30e805783977fd2695aa32f9ad59bcdf6b5",
+      "current_sha256": "6dd9f6a9edc05d31f10d79a04b96028f91a89e8e2eb04a7a0f7451aaff50750f",
+      "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
+      "verified_original": "original_local_file",
+      "original_path": "spec.md"
+    }
+  ],
+  "retired_evidence": [
+    {
+      "historical_path": "translation/README.md",
+      "recorded_sha256": "7c8c06a2d7c6a0cfeb46c352c1bea3c86b07297990f5e27cf28ebb6b5a3bc309",
+      "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
+      "git_blob": "79021597e4867961568461e9a02bf6806cf349e6",
+      "reason": "Explanatory record explicitly retired from the published tree; verify exact bytes through preserved Git history."
+    },
+    {
+      "historical_path": "translation/manifest.json",
+      "recorded_sha256": "3e00b50bc63074b7cc7425293e8eca70dc4e13cddb208450ac5eb7845f425008",
+      "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
+      "git_blob": "90c8d5c53502b3dc553afaebb4a166eafcc6f556",
+      "reason": "Explanatory record explicitly retired from the published tree; verify exact bytes through preserved Git history."
+    },
+    {
+      "historical_path": "translation/verification.json",
+      "recorded_sha256": "f6af3c7f819bb882a68e9a3108fd4eb079a67af3e4fd6cd13141e1862c989e4c",
+      "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
+      "git_blob": "fb324931768693c9cf354ac0e17aa740db71214f",
+      "reason": "Explanatory record explicitly retired from the published tree; verify exact bytes through preserved Git history."
+    }
+  ]
+}

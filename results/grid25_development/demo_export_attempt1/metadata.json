@@ -1,0 +1,47 @@
+{
+  "scenario_seed": 3501000,
+  "frames": 101,
+  "frame_interval_ms": 120,
+  "last_frame_hold_ms": 1500,
+  "writer": "Pillow 13.0.0",
+  "added_dependencies": [],
+  "dimensions": [
+    1260,
+    530
+  ],
+  "finished_panel_behavior": "Hold the actual final observed state",
+  "policies": {
+    "base": {
+      "model_sha256": "2f7609bc4ff2b92e0d67d2142d0c2b77881cc6c600b9b1803f422a30cfb07bc7",
+      "q_unchanged": true,
+      "steps": 100,
+      "status": "Timeout",
+      "misses": 2
+    },
+    "potential": {
+      "model_sha256": "a37a9edbb09b1ee05953ffebc2521566c0b08eb87d23a3350d14b7769abc4928",
+      "q_unchanged": true,
+      "steps": 14,
+      "status": "Hit",
+      "misses": 0
+    }
+  },
+  "rule_final": {
+    "policy": "Rule policy",
+    "scenario_seed": 3501000,
+    "step_count": 14,
+    "xc": 16,
+    "yc": 12,
+    "xt": 16,
+    "yt": 12,
+    "v": -1,
+    "action": "fire",
+    "base_reward": 9.95,
+    "base_return": 9.299999999999999,
+    "misses": 0,
+    "terminated": true,
+    "truncated": false,
+    "status": "Hit"
+  },
+  "gui_verified": false
+}

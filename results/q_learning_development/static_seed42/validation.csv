@@ -1,0 +1,3 @@
+global_step,episodes,success_rate,mean_steps,mean_misses,mean_base_return
+0,200,0.0,50.0,0.0,-2.499999999999999
+10000,200,0.135,43.72,1.96,-2.795999999999998

@@ -1,0 +1,6 @@
+{
+  "configs/trial25.json": "dfe4eecdc7f7583f7385d6026fe09213b41d42572590df41a869fda2551c79d5",
+  "aimrl/trial25.py": "19c9bac278ad1504c9046c98f011e20a1ac80cd03750f801c4695dea6f5457d7",
+  "tests/test_trial25.py": "bb663b32e195e28c26016dd55a4fdcaa54e2c2af2b48055eb23c5e3cbe3fe612",
+  "docs/trial25.md": "27f00cfdc7b94fb889289c41eecd93ff10b935fe661d5af8326c3d09d2886898"
+}

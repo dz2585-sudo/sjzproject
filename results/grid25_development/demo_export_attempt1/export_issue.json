@@ -1,0 +1,4 @@
+{
+  "issue": "Visual inspection found accumulated legends, shifting layout and text artifacts in the GIF. Original export retained; no models or trajectories changed.",
+  "resolution": "Regenerate from the same fixed scenario using one legend, fixed panel layout and full-frame GIF disposal."
+}
