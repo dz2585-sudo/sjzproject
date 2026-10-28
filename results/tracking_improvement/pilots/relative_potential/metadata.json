@@ -1,0 +1,91 @@
+{
+  "method": "relative_potential",
+  "representation": "relative",
+  "indexing_version": "tracking_relative_offsets_v1",
+  "reward_mode": "potential",
+  "training_seed": 99,
+  "interactions": 100000,
+  "pilot": true,
+  "complete_windows": 333,
+  "partial_ticks": 100,
+  "environment_seed": 10068329813035891175,
+  "elapsed_seconds": 2.019120599841699,
+  "process_lifetime_peak_working_set_bytes": 444506112,
+  "timing_scope": "Training, validation, update-count diagnostics, compression and exact reload checks",
+  "q_shape": [
+    49,
+    49,
+    4,
+    2,
+    10
+  ],
+  "q_element_bytes": 768320,
+  "counter_bytes": 768320,
+  "q_array_sha256": "2b86f24274c40ed7e9e3e92f35fddc646ec33bb21d259bff5e2475dc88478173",
+  "counts_array_sha256": "3df835014fd1d1dc163165508c9aa509b8be4ababf94c3d373955b7ce36226d7",
+  "source_sha256": {
+    "aimrl/tracking_research/agent.py": "14b3a9391a6b84a54d3b6ded87c455f3373bfac4211678dd768a1205eb5a85b5",
+    "aimrl/tracking_research/audit.py": "626c3f16c8618781f574e798bd124b55ee669049dd428fe4c30b8bd995c0aa43",
+    "aimrl/tracking_research/evaluate.py": "dbaef1407827c281cb8292345d1a36cde441e44e8e836d13f34b85e379f31a8d",
+    "aimrl/tracking_research/io.py": "6ee3470948240368b9877dc8e40d0a5e966a5b0477055bd192b902e7e270fb0c",
+    "aimrl/tracking_research/render.py": "7452314e07f4a610934b653c4d38fc41fcba727d90f24a367e342b7943decdfe",
+    "aimrl/tracking_research/report.py": "cec673dd3f7efda557541a88b2dab717c6d698040f471ce0293dc1f056fc168a",
+    "aimrl/tracking_research/workflow.py": "ca13b3740e347ce2bf590224eed159044c4b0f22b9a0be18d07c440f612a9003",
+    "aimrl/tracking_research/__init__.py": "7763e60ffba48d7eb5a6f6ba61d5ac85e9c948479e2c2fb5e778ac3fdf1a45ff",
+    "aimrl/tracking_research/__main__.py": "2769d6a31403f144cdd6a1a4bd862ecadd454245231f8c373ace4a20eec0150a",
+    "aimrl/tracking25/agent.py": "69e50493bfb2ea9ae4fccfd5aa9977831f0d1ab683623f8e6036351dda1e0538",
+    "aimrl/tracking25/env.py": "fea8ce62da85985fe9afbddcd5733c90484c25be903c61c3abd5449bad139a2c",
+    "aimrl/tracking25/evaluate.py": "d5faea87151f892b025e5d51c7cc19a9c2edecdcb397095f7cb86cd3a079004c",
+    "aimrl/tracking25/metrics.py": "82828e20a497e8c24833c5ba1ed1cbe400c678d7ca86eff2d59a77fd00737536",
+    "aimrl/tracking25/policies.py": "1dc5d00ee7af61c59cd56a17d840479ebb4ae1b5a8efba86f45b2531e739d2d4",
+    "aimrl/tracking25/render.py": "5b3ba1ffb31850c811f517cb7c746b9e9f8c62617faed7effb18810ac5baddf2",
+    "aimrl/tracking25/workflow.py": "08d63a9eb48a26d8f87b0bcace901fdd0aeef37ba12e770fadc088cbd60f46be",
+    "aimrl/tracking25/__init__.py": "6947ec770e6e27a15a582bc21cf7023dedef404b935469188db383b1788ce929",
+    "aimrl/tracking25/__main__.py": "e58a7dfbaa5db07f14cb949ceb03b8e212fa4dbfe54e3c442dafd3c0f3a7b90e",
+    "configs/tracking_research.json": "a470bdf03b46b520f1f720b0ec6772dbd29d4604d937e8fe10b912ca0ef2c7fe",
+    "tests/test_tracking_research.py": "7919c52d88dd25861da30fabb08b3f65a396dd2d41c45887e6b16dff9b0362db"
+  },
+  "reload_exact": true,
+  "coverage": {
+    "state_rows": 19208,
+    "state_action_pairs": 192080,
+    "visited_rows": 16144,
+    "visited_pairs": 67238,
+    "visited_row_fraction": 0.8404831320283215,
+    "visited_pair_fraction": 0.3500520616409829,
+    "zero_pair_fraction": 0.6499479383590171,
+    "update_sum": 100000,
+    "visited_pair_quantiles": [
+      1.0,
+      1.0,
+      1.0,
+      2.0,
+      3.0,
+      8.0
+    ],
+    "visited_row_quantiles": [
+      1.0,
+      2.0,
+      5.0,
+      9.0,
+      16.0,
+      36.0
+    ],
+    "quantile_probabilities": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      0.95,
+      1
+    ]
+  },
+  "files_sha256": {
+    "attempt.json": "343e415985017c0800febf3ff86dd2187b0eddf32065cd2a5a9034b40538990d",
+    "q_table.npz": "52598b75a30e2cf605582da01a17ef9f57ccb4be90cbc46460650ac977a797a9",
+    "run_config.json": "57980c0df08337aab7b2e89abda6a341be728859442cdcf18c535d550002ea65",
+    "training_windows.csv": "1355d4fe7d65e2d08d66721875035dc92bf8559f689659d2d21569246b62a463",
+    "validation.json": "c4c8b6b2e72ffbf21d1487fb1dbfa1fedbf1add4f796d6ee51d7c97acb7bbbcf",
+    "visitation.npz": "26cf9a025a23273d445631aa40be51b2a35fc0e5c00db2a97d1afe790ca97175"
+  }
+}

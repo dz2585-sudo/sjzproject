@@ -26,3 +26,6 @@ credentials.json
 *.run.xml
 *.synctex.gz
 *.toc
+results/tracking_improvement/pilots/**/q_table.npz
+results/tracking_improvement/pilots/**/visitation.npz
+results/tracking_improvement/**/*.npy

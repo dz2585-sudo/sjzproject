@@ -1,0 +1,6 @@
+{
+  "command": "python -m aimrl.tracking_research --config configs/tracking_research.json --stage check",
+  "exit_code": 1,
+  "elapsed_seconds": 2.939301999984309,
+  "peak_working_set_bytes": 289853440
+}

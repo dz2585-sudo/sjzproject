@@ -1,0 +1,76 @@
+{
+  "project": {
+    "name": "AimRL Tracking Representation Study",
+    "schema": "tracking25_v2"
+  },
+  "environment": {
+    "grid_size": 25,
+    "minimum_reset_distance": 12,
+    "turn_probability": 0.05,
+    "speed_toggle_probability": 0.05,
+    "episode_ticks": 300
+  },
+  "actions": [
+    "left_slow",
+    "right_slow",
+    "up_slow",
+    "down_slow",
+    "stay",
+    "fire",
+    "left_fast",
+    "right_fast",
+    "up_fast",
+    "down_fast"
+  ],
+  "rewards": {
+    "step": -0.05,
+    "hit": 10.0,
+    "miss": -1.0
+  },
+  "learning": {
+    "alpha": 0.15,
+    "gamma": 0.99,
+    "initial_q": 0,
+    "dtype": "float32",
+    "training_steps": 5000000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 4000000,
+    "shaping_scale": 1.0
+  },
+  "study": {
+    "methods": [
+      "absolute_base",
+      "absolute_potential",
+      "relative_base",
+      "relative_potential"
+    ],
+    "training_seeds": [
+      10,
+      11,
+      12
+    ],
+    "pilot_seed": 99,
+    "pilot_steps": 100000,
+    "checkpoint_interval": 500000,
+    "development": {
+      "start": 3700000,
+      "count": 200
+    },
+    "final": {
+      "start": 3800000,
+      "count": 500
+    },
+    "stress": {
+      "start": 3900000,
+      "count": 200
+    },
+    "demo_seeds": [
+      3601000,
+      3601001,
+      3601002
+    ],
+    "display_training_seed": 10,
+    "output": "results/tracking_improvement"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "paired_scenarios": 203,
+  "archived_models": {
+    "historical_base": {
+      "path": "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\continuous_tracking\\base\\q_table.npz",
+      "original_npy_sha256": "bf0f11b1b63e67b762f68613b5ee708e573fe0e7f9b0dea775e61c4063e530e3",
+      "package_sha256": "7a690cefc2020606f7bb3eb761089e8fa5c42ac154ce18cd8cd80f5733d38ada",
+      "source_hashes_verified": true,
+      "training_steps": 20000000,
+      "training_seed": 0
+    },
+    "historical_potential": {
+      "path": "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\continuous_tracking\\potential\\q_table.npz",
+      "original_npy_sha256": "00501ffd0a01aba31aaf80bdf73a9efecd380e18dca27250f678e683368ac259",
+      "package_sha256": "e06444ca75c958e1b2b4b9ae458ed9e163b3ea3cb40add062f919ef81f3a83be",
+      "source_hashes_verified": true,
+      "training_steps": 20000000,
+      "training_seed": 0
+    }
+  },
+  "original_scores_reproduced": true,
+  "files_sha256": {
+    "historical_base_demo_traces.csv": "a1f664f549df06355c6bd25860c34af8011208cb44f2361d01a73e4351cd25ce",
+    "historical_base_demo_windows.csv": "b9f507601b4ffcb77892d630adb315ea8cf728012c2194ca6c83f4d02c79a038",
+    "historical_base_windows.csv": "9bf9f5c6cb2d8ffc4b41ea74a08061396e64b688964c36feac70b566abb12ea3",
+    "historical_potential_demo_traces.csv": "1c30b354a87be1708c0981879d7771119bd8c06b058edef256a5e03fde91aa66",
+    "historical_potential_demo_windows.csv": "209857a6e6fd595a6af4632d126d0b2c9604b7835e1c5b55a428fdc034256f9f",
+    "historical_potential_windows.csv": "7441cd8a16dd5fc9e5a75aca8a8f1444ca006e8f4a053dbbd485e36fcdde9800",
+    "random_demo_traces.csv": "484090a46e2a97e9c0cd86e73dca60851c4409db2840979fb16af207f905cb7d",
+    "random_demo_windows.csv": "86d4bf7214fc16c5245f298ffb9dd3d87c1b085c007fd8b2e28c8c93a1af7005",
+    "random_windows.csv": "40b82c71a2bc84297d2c4a6d9f3e2610224159c0a138820bf5f9f5d79c702a4f",
+    "rule_demo_traces.csv": "866b18e5fe641f811d54c50e107b7347b0dfc92655945d5c2b0a1308500d2f5b",
+    "rule_demo_windows.csv": "c140aec4a615964556f902035509c8be30937a8ec06952631a0cd8ece1002a97",
+    "rule_windows.csv": "5994d8388559978cbb6e7f7c32b2af2afecc41a7f5385bd663e5200c8574c80a",
+    "summary.json": "9d436d6423fc559a7c123e1b2c5c80f4e9d80390d8313f749879852c02abdec7"
+  }
+}

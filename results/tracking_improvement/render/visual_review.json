@@ -1,0 +1,75 @@
+{
+  "review_method": "Inspected decoded start/middle/end contact sheets and a full-resolution middle frame.",
+  "clips": [
+    {
+      "clip": "seed3601000_main_comparison",
+      "inspected_decoded_ticks": [
+        0,
+        150,
+        300
+      ],
+      "checks": [
+        "matching target positions across panels",
+        "visible fixed 0..24 grid",
+        "English policy and budget labels",
+        "actual motion arrows and clipping",
+        "hit stars at pre-motion shot coordinates",
+        "continued motion and increasing counters after hits"
+      ],
+      "review_sheet_sha256": "de3c9305d536ddaddeeb85796671d628064179681aedef849ed01b30136fac2c"
+    },
+    {
+      "clip": "seed3601001_main_comparison",
+      "inspected_decoded_ticks": [
+        0,
+        150,
+        300
+      ],
+      "checks": [
+        "matching target positions across panels",
+        "visible fixed 0..24 grid",
+        "English policy and budget labels",
+        "actual motion arrows and clipping",
+        "hit stars at pre-motion shot coordinates",
+        "continued motion and increasing counters after hits"
+      ],
+      "review_sheet_sha256": "168a61506ab38e88580e2733f9ebc9dfcdf0ac36b870b80c2d5d1fc51a48877d"
+    },
+    {
+      "clip": "seed3601002_main_comparison",
+      "inspected_decoded_ticks": [
+        0,
+        150,
+        300
+      ],
+      "checks": [
+        "matching target positions across panels",
+        "visible fixed 0..24 grid",
+        "English policy and budget labels",
+        "actual motion arrows and clipping",
+        "hit stars at pre-motion shot coordinates",
+        "continued motion and increasing counters after hits"
+      ],
+      "review_sheet_sha256": "53f9b83d97c63432d97597b3e6bf2297af6f448eba8083fe9583f1cdab30af36"
+    },
+    {
+      "clip": "seed3601000_six_policy_comparison",
+      "inspected_decoded_ticks": [
+        0,
+        150,
+        300
+      ],
+      "checks": [
+        "matching target positions across panels",
+        "visible fixed 0..24 grid",
+        "English policy and budget labels",
+        "actual motion arrows and clipping",
+        "hit stars at pre-motion shot coordinates",
+        "continued motion and increasing counters after hits"
+      ],
+      "review_sheet_sha256": "d2cb5b0bf840296dcab6d6e3c50da58fd174ac375c3b72fd96bfba959bc0984c"
+    }
+  ],
+  "passed": true,
+  "gui_playback_verified": false
+}

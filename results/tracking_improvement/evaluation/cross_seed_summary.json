@@ -1,0 +1,932 @@
+{
+  "groups": {
+    "final": {
+      "absolute_base": {
+        "mean_distance": {
+          "mean": 16.46901777777778,
+          "sample_sd": 0.10489184807501754,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "mean": 0.008475555555555556,
+          "sample_sd": 0.0003662017254242578,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "mean": 0.9150222222222223,
+          "sample_sd": 0.0038377674837409407,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "mean": 31.0,
+          "sample_sd": 0.0,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "mean": 133.2313333333333,
+          "sample_sd": 4.001611841912372,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "mean": 0.17666666666666667,
+          "sample_sd": 0.011547005383792509,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "mean": 0.012000690479156438,
+          "sample_sd": 0.0013168897801025987,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "mean": 170.14333333333335,
+          "sample_sd": 7.381009506384159,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "mean": -27.823333333333398,
+          "sample_sd": 0.7462046189439736,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "mean": 0.10591973087884876,
+          "sample_sd": 0.006614317568242623,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "mean": 18.852294849631672,
+          "sample_sd": 0.07143160573887967,
+          "defined_seeds": 3
+        }
+      },
+      "absolute_potential": {
+        "mean_distance": {
+          "mean": 7.531442222222222,
+          "sample_sd": 0.06389537327479938,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "mean": 0.25808222222222227,
+          "sample_sd": 0.00350948133764224,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "mean": 0.5250911111111111,
+          "sample_sd": 0.006177580732269203,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "mean": 21.0,
+          "sample_sd": 0.0,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "mean": 46.71533333333333,
+          "sample_sd": 0.5342072007501713,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "mean": 21.872666666666664,
+          "sample_sd": 0.23492410121852955,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "mean": 0.7491345935724395,
+          "sample_sd": 0.00446996471451661,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "mean": 38.37866666666667,
+          "sample_sd": 1.5893550054450791,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "mean": 196.40199999999928,
+          "sample_sd": 2.36127338527329,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "mean": 0.6427603606970985,
+          "sample_sd": 0.01274631861487059,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "mean": 10.8284041178028,
+          "sample_sd": 0.1785173463869753,
+          "defined_seeds": 3
+        }
+      },
+      "relative_base": {
+        "mean_distance": {
+          "mean": 1.5016422222222223,
+          "sample_sd": 0.03372717884129341,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "mean": 0.6165466666666667,
+          "sample_sd": 0.040215938797115415,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "mean": 0.025213333333333334,
+          "sample_sd": 0.0026929042562507366,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "mean": 4.0,
+          "sample_sd": 0.0,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "mean": 6.196666666666666,
+          "sample_sd": 0.1933942432786802,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "mean": 84.442,
+          "sample_sd": 0.13009227494359604,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "mean": 0.9939644365874803,
+          "sample_sd": 0.004309841096542614,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "mean": 8.858666666666666,
+          "sample_sd": 0.18236593249105892,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "mean": 828.9060000000036,
+          "sample_sd": 1.1613578259950603,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "mean": 0.9995172016383996,
+          "sample_sd": 0.00031803295264935404,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "mean": 1.272204831098444,
+          "sample_sd": 0.012281599879971765,
+          "defined_seeds": 3
+        }
+      },
+      "relative_potential": {
+        "mean_distance": {
+          "mean": 1.4402977777777777,
+          "sample_sd": 0.022003961596174557,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "mean": 0.6054022222222223,
+          "sample_sd": 0.019512517160169916,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "mean": 0.02338,
+          "sample_sd": 0.0014683475216870309,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "mean": 3.6666666666666665,
+          "sample_sd": 0.5773502691896258,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "mean": 5.364,
+          "sample_sd": 0.09378699270154728,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "mean": 84.48933333333333,
+          "sample_sd": 0.11609191760554562,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "mean": 0.9949271509565195,
+          "sample_sd": 0.0030400882685530694,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "mean": 8.287333333333335,
+          "sample_sd": 0.02274496281230878,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "mean": 829.4620000000035,
+          "sample_sd": 1.1686214100383479,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "mean": 0.999922129296516,
+          "sample_sd": 7.13696786269198e-05,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "mean": 1.2567552835272313,
+          "sample_sd": 0.004146817858092745,
+          "defined_seeds": 3
+        }
+      }
+    },
+    "stress": {
+      "absolute_base": {
+        "mean_distance": {
+          "mean": 16.494138888888887,
+          "sample_sd": 0.05752409237618338,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "mean": 0.007216666666666667,
+          "sample_sd": 0.0003320809807528546,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "mean": 0.9204833333333333,
+          "sample_sd": 0.0007131697631778072,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "mean": 30.333333333333332,
+          "sample_sd": 0.5773502691896258,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "mean": 128.49666666666667,
+          "sample_sd": 0.8407486742976974,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "mean": 0.11833333333333333,
+          "sample_sd": 0.03883726732577014,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "mean": 0.007718718614323303,
+          "sample_sd": 0.0025252975694748866,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "mean": 177.25833333333333,
+          "sample_sd": 4.617145582861053,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "mean": -29.005000000000063,
+          "sample_sd": 0.966863485710358,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "mean": 0.09789434798670116,
+          "sample_sd": 0.003567080222999131,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "mean": 18.957369782046545,
+          "sample_sd": 0.028865667779743517,
+          "defined_seeds": 3
+        }
+      },
+      "absolute_potential": {
+        "mean_distance": {
+          "mean": 8.400966666666667,
+          "sample_sd": 0.039218111603923585,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "mean": 0.18447777777777777,
+          "sample_sd": 0.0014377193874456256,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "mean": 0.5911333333333333,
+          "sample_sd": 0.0008976822006330423,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "mean": 22.0,
+          "sample_sd": 0.0,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "mean": 50.38999999999999,
+          "sample_sd": 0.8662563131083106,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "mean": 15.003333333333332,
+          "sample_sd": 0.33993871996778086,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "mean": 0.6624927220451381,
+          "sample_sd": 0.007468576611787259,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "mean": 40.528333333333336,
+          "sample_sd": 2.1228067112512465,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "mean": 127.39166666666654,
+          "sample_sd": 3.4713914117156146,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "mean": 0.5844354143578377,
+          "sample_sd": 0.004160008359810005,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "mean": 12.077601280630466,
+          "sample_sd": 0.026426235143711948,
+          "defined_seeds": 3
+        }
+      },
+      "relative_base": {
+        "mean_distance": {
+          "mean": 1.6734,
+          "sample_sd": 0.0283723456908307,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "mean": 0.5596333333333333,
+          "sample_sd": 0.03480601400779914,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "mean": 0.02901111111111111,
+          "sample_sd": 0.0037000500497115403,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "mean": 4.333333333333333,
+          "sample_sd": 0.5773502691896258,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "mean": 6.281666666666666,
+          "sample_sd": 0.07285830998131444,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "mean": 73.64833333333333,
+          "sample_sd": 0.33129795250398486,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "mean": 0.9906719225806704,
+          "sample_sd": 0.007020414440905108,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "mean": 9.025,
+          "sample_sd": 0.15499999999999975,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "mean": 720.7866666666687,
+          "sample_sd": 3.1033865910217435,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "mean": 0.999852234946435,
+          "sample_sd": 0.00014776505356484115,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "mean": 1.6049255017854944,
+          "sample_sd": 0.027309198018127492,
+          "defined_seeds": 3
+        }
+      },
+      "relative_potential": {
+        "mean_distance": {
+          "mean": 1.6220944444444445,
+          "sample_sd": 0.01929818884228759,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "mean": 0.5499944444444445,
+          "sample_sd": 0.015711446051749598,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "mean": 0.027455555555555556,
+          "sample_sd": 0.0015847654342146299,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "mean": 4.0,
+          "sample_sd": 0.0,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "mean": 5.533333333333332,
+          "sample_sd": 0.023094010767585053,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "mean": 73.71,
+          "sample_sd": 0.11135528725659997,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "mean": 0.9910023428324722,
+          "sample_sd": 0.006383287469344401,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "mean": 8.64,
+          "sample_sd": 0.1775528090456476,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "mean": 721.4283333333354,
+          "sample_sd": 0.7939196013032034,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "mean": 0.9999753724910726,
+          "sample_sd": 4.265609672624025e-05,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "mean": 1.5942125354020442,
+          "sample_sd": 0.008161037733533322,
+          "defined_seeds": 3
+        }
+      }
+    }
+  },
+  "paired_relative_minus_absolute": {
+    "final": {
+      "base": {
+        "mean_distance": {
+          "per_seed": {
+            "10": -15.013700000000002,
+            "11": -15.062199999999999,
+            "12": -14.826226666666667
+          },
+          "mean": -14.967375555555556,
+          "sample_sd": 0.12462070103287767,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "per_seed": {
+            "10": 0.6542066666666667,
+            "11": 0.5857933333333334,
+            "12": 0.5842133333333334
+          },
+          "mean": 0.6080711111111112,
+          "sample_sd": 0.039962372487313796,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "per_seed": {
+            "10": -0.8884,
+            "11": -0.8960466666666667,
+            "12": -0.88498
+          },
+          "mean": -0.889808888888889,
+          "sample_sd": 0.005666260116135135,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "per_seed": {
+            "10": -27,
+            "11": -27,
+            "12": -27
+          },
+          "mean": -27.0,
+          "sample_sd": 0.0,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "per_seed": {
+            "10": -128.432,
+            "11": -130.326,
+            "12": -122.346
+          },
+          "mean": -127.03466666666667,
+          "sample_sd": 4.169473028253484,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "per_seed": {
+            "10": 84.402,
+            "11": 84.19,
+            "12": 84.204
+          },
+          "mean": 84.26533333333333,
+          "sample_sd": 0.11856362567555886,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "per_seed": {
+            "10": 0.9777370836166044,
+            "11": 0.9804749940349602,
+            "12": 0.987679160673407
+          },
+          "mean": 0.9819637461083239,
+          "sample_sd": 0.005135514687235223,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "per_seed": {
+            "10": -162.87,
+            "11": -167.924,
+            "12": -153.06
+          },
+          "mean": -161.28466666666665,
+          "sample_sd": 7.557750017917592,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "per_seed": {
+            "10": 857.1360000000037,
+            "11": 856.1680000000038,
+            "12": 856.8840000000037
+          },
+          "mean": 856.729333333337,
+          "sample_sd": 0.5021925261623286,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "per_seed": {
+            "10": 0.8913236462178199,
+            "11": 0.9013222445451572,
+            "12": 0.8881465215156754
+          },
+          "mean": 0.8935974707595508,
+          "sample_sd": 0.0068758728807575805,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "per_seed": {
+            "10": -17.558379666401905,
+            "11": -17.67116759332804,
+            "12": -17.510722795869736
+          },
+          "mean": -17.580090018533227,
+          "sample_sd": 0.08239622442872328,
+          "defined_seeds": 3
+        }
+      },
+      "potential": {
+        "mean_distance": {
+          "per_seed": {
+            "10": -6.0295733333333335,
+            "11": -6.054740000000001,
+            "12": -6.189120000000001
+          },
+          "mean": -6.091144444444446,
+          "sample_sd": 0.08577731280818165,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "per_seed": {
+            "10": 0.33324000000000004,
+            "11": 0.33493333333333336,
+            "12": 0.37378666666666666
+          },
+          "mean": 0.34732,
+          "sample_sd": 0.022936437774375006,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "per_seed": {
+            "10": -0.4944266666666667,
+            "11": -0.5027066666666666,
+            "12": -0.508
+          },
+          "mean": -0.5017111111111111,
+          "sample_sd": 0.006841212801294263,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "per_seed": {
+            "10": -17,
+            "11": -17,
+            "12": -18
+          },
+          "mean": -17.333333333333332,
+          "sample_sd": 0.5773502691896258,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "per_seed": {
+            "10": -40.93,
+            "11": -41.142,
+            "12": -41.982
+          },
+          "mean": -41.351333333333336,
+          "sample_sd": 0.5563643889874085,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "per_seed": {
+            "10": 62.726000000000006,
+            "11": 62.337999999999994,
+            "12": 62.786
+          },
+          "mean": 62.61666666666667,
+          "sample_sd": 0.24318991207148366,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "per_seed": {
+            "10": 0.24282941037818073,
+            "11": 0.24531869307146947,
+            "12": 0.24922956870259005
+          },
+          "mean": 0.2457925573840801,
+          "sample_sd": 0.003226285353847507,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "per_seed": {
+            "10": -28.284000000000002,
+            "11": -30.71,
+            "12": -31.28
+          },
+          "mean": -30.091333333333335,
+          "sample_sd": 1.5909322214768706,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "per_seed": {
+            "10": 633.8720000000043,
+            "11": 630.5000000000043,
+            "12": 634.8080000000043
+          },
+          "mean": 633.0600000000043,
+          "sample_sd": 2.2658826094923703,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "per_seed": {
+            "10": 0.34242863150025693,
+            "11": 0.36434144746063635,
+            "12": 0.36471522683735924
+          },
+          "mean": 0.3571617685994175,
+          "sample_sd": 0.012760639652564918,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "per_seed": {
+            "10": -9.36223893846657,
+            "11": -9.65719758912302,
+            "12": -9.695509975237117
+          },
+          "mean": -9.57164883427557,
+          "sample_sd": 0.1823632037432192,
+          "defined_seeds": 3
+        }
+      }
+    },
+    "stress": {
+      "base": {
+        "mean_distance": {
+          "per_seed": {
+            "10": -14.8434,
+            "11": -14.767199999999999,
+            "12": -14.851616666666665
+          },
+          "mean": -14.820738888888888,
+          "sample_sd": 0.046547694576320194,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "per_seed": {
+            "10": 0.5929833333333333,
+            "11": 0.5327833333333334,
+            "12": 0.5314833333333334
+          },
+          "mean": 0.5524166666666668,
+          "sample_sd": 0.035137776442645444,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "per_seed": {
+            "10": -0.8874666666666667,
+            "11": -0.8946833333333334,
+            "12": -0.8922666666666667
+          },
+          "mean": -0.8914722222222222,
+          "sample_sd": 0.0036733398870681436,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "per_seed": {
+            "10": -25,
+            "11": -26,
+            "12": -27
+          },
+          "mean": -26.0,
+          "sample_sd": 1.0,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "per_seed": {
+            "10": -122.01999999999998,
+            "11": -121.55499999999999,
+            "12": -123.07
+          },
+          "mean": -122.21499999999999,
+          "sample_sd": 0.7760959992165934,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "per_seed": {
+            "10": 73.955,
+            "11": 73.285,
+            "12": 73.35000000000001
+          },
+          "mean": 73.53000000000002,
+          "sample_sd": 0.3694928957368444,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "per_seed": {
+            "10": 0.9813640492592576,
+            "11": 0.9766120264052155,
+            "12": 0.990883536234568
+          },
+          "mean": 0.9829532039663471,
+          "sample_sd": 0.007267259298705739,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "per_seed": {
+            "10": -173.385,
+            "11": -167.16,
+            "12": -164.155
+          },
+          "mean": -168.23333333333332,
+          "sample_sd": 4.707680780738355,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "per_seed": {
+            "10": 753.1350000000022,
+            "11": 746.4900000000022,
+            "12": 749.7500000000022
+          },
+          "mean": 749.7916666666688,
+          "sample_sd": 3.3226959435574708,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "per_seed": {
+            "10": 0.9059475434059845,
+            "11": 0.9009974141115626,
+            "12": 0.898928703361655
+          },
+          "mean": 0.901957886959734,
+          "sample_sd": 0.0036066480228914384,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "per_seed": {
+            "10": -17.39667528629479,
+            "11": -17.37000369412634,
+            "12": -17.290653860362024
+          },
+          "mean": -17.352444280261054,
+          "sample_sd": 0.055148757471711204,
+          "defined_seeds": 3
+        }
+      },
+      "potential": {
+        "mean_distance": {
+          "per_seed": {
+            "10": -6.793000000000001,
+            "11": -6.7279,
+            "12": -6.815716666666667
+          },
+          "mean": -6.778872222222223,
+          "sample_sd": 0.04558110699417948,
+          "defined_seeds": 3
+        },
+        "close_fraction": {
+          "per_seed": {
+            "10": 0.35795,
+            "11": 0.35653333333333326,
+            "12": 0.3820666666666667
+          },
+          "mean": 0.36551666666666666,
+          "sample_sd": 0.014350212929121043,
+          "defined_seeds": 3
+        },
+        "far_fraction": {
+          "per_seed": {
+            "10": -0.5628166666666666,
+            "11": -0.5656333333333333,
+            "12": -0.5625833333333333
+          },
+          "mean": -0.5636777777777778,
+          "sample_sd": 0.0016975745224464451,
+          "defined_seeds": 3
+        },
+        "distance_p95": {
+          "per_seed": {
+            "10": -18,
+            "11": -18,
+            "12": -18
+          },
+          "mean": -18.0,
+          "sample_sd": 0.0,
+          "defined_seeds": 3
+        },
+        "mean_longest_far_streak": {
+          "per_seed": {
+            "10": -45.870000000000005,
+            "11": -44.39,
+            "12": -44.309999999999995
+          },
+          "mean": -44.85666666666666,
+          "sample_sd": 0.8784835418682244,
+          "defined_seeds": 3
+        },
+        "hits_per_episode": {
+          "per_seed": {
+            "10": 59.055,
+            "11": 58.54,
+            "12": 58.525
+          },
+          "mean": 58.70666666666667,
+          "sample_sd": 0.3017587336488103,
+          "defined_seeds": 3
+        },
+        "pooled_shot_accuracy": {
+          "per_seed": {
+            "10": 0.3318614159078779,
+            "11": 0.3368272248827586,
+            "12": 0.31684022157136627
+          },
+          "mean": 0.32850962078733426,
+          "sample_sd": 0.010406535121738518,
+          "defined_seeds": 3
+        },
+        "mean_first_acquisition_tick": {
+          "per_seed": {
+            "10": -30.189999999999998,
+            "11": -31.45,
+            "12": -34.025
+          },
+          "mean": -31.888333333333332,
+          "sample_sd": 1.9547143866389622,
+          "defined_seeds": 3
+        },
+        "mean_base_return": {
+          "per_seed": {
+            "10": 597.3000000000021,
+            "11": 592.9900000000022,
+            "12": 591.8200000000024
+          },
+          "mean": 594.0366666666689,
+          "sample_sd": 2.8860411177480754,
+          "defined_seeds": 3
+        },
+        "recovery_fraction": {
+          "per_seed": {
+            "10": 0.4109346139637976,
+            "11": 0.4189878093830809,
+            "12": 0.41669745105282596
+          },
+          "mean": 0.41553995813323485,
+          "sample_sd": 0.004149497741832023,
+          "defined_seeds": 3
+        },
+        "mean_capped_recovery_lag": {
+          "per_seed": {
+            "10": -10.467824159586257,
+            "11": -10.513852973771703,
+            "12": -10.4684891023273
+          },
+          "mean": -10.483388745228421,
+          "sample_sd": 0.02638489061499493,
+          "defined_seeds": 3
+        }
+      }
+    }
+  },
+  "practical_target_components": {
+    "distance_reduced_at_least_10_percent": true,
+    "close_gain_at_least_5_percentage_points": true,
+    "far_fraction_no_worse": true,
+    "hits_at_least_90_percent_of_control": true,
+    "accuracy_at_least_85_percent": true
+  },
+  "practical_target_achieved": true,
+  "aspirational_targets": {
+    "mean_distance_at_most_1_5": true,
+    "close_fraction_at_least_75_percent": false,
+    "far_fraction_at_most_5_percent": true,
+    "mean_capped_acquisition_at_most_15": true
+  }
+}

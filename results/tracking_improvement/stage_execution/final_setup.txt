@@ -1,0 +1,9 @@
+OS: Windows-11-10.0.26200-SP0
+Python: 3.13.9 (C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.venv\Scripts\python.exe)
+MPLCONFIGDIR: C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.mplconfig
+numpy: 2.5.4
+matplotlib: 3.11.2
+State combinations: 1,250; Q values: 7,500; float32 element bytes: 30,000
+NumPy zero Q-table nbytes: 30,000
+Training runs: 2 reward modes x 3 seeds = 6; total interaction steps: 600,000
+All configuration and dependency checks passed.

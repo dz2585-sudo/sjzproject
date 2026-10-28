@@ -1,0 +1,108 @@
+{
+  "base_commit": "43aa7cc9e02a91ba7a5ee9cd0986a62a269e56ff",
+  "commands": [
+    {
+      "name": "setup",
+      "command": [
+        "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+        "scripts/check_setup.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.708276699995622
+    },
+    {
+      "name": "tests",
+      "command": [
+        "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.7235246999189258
+    },
+    {
+      "name": "integrity",
+      "command": [
+        "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+        "scripts/verify_tracking_publication.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 19.81159310019575
+    }
+  ],
+  "publication_verification": {
+    "complete": true,
+    "copied_files_verified": 547,
+    "formal_runs": 12,
+    "formal_interactions": 60000000,
+    "development_summaries": 132,
+    "development_windows": 26400,
+    "development_ticks": 7920000,
+    "independent_splits": {
+      "final": {
+        "windows": 8000,
+        "paired_scenarios": 500
+      },
+      "stress": {
+        "windows": 3200,
+        "paired_scenarios": 200
+      }
+    },
+    "gifs": [
+      {
+        "path": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+        "sha256": "4c759251ff0475eb1ef29ed4f127bbc95a2f1afa53f74f0d4e16fdf0ce9de4ad",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+        "sha256": "692942586e54286db501de4eb9416710790f33b53697d51b852565e02d0e88a0",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601002_main_comparison.gif",
+        "sha256": "239d87cf029159002b1cae8f85c05a3a2748c7fae0c47d5b694a3a41036c4270",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+        "sha256": "6ebec9ad02e42ca9f7f98a5b7436dc6086703652d70767683683a9aa152c6dbc",
+        "frames": 301,
+        "duration_ms": 20070
+      }
+    ],
+    "relative_links_verified": 53,
+    "largest_study_file_bytes": 14504765,
+    "pilot_binaries_intentionally_excluded": 8,
+    "original_training_source_bundle_verified": true,
+    "previously_documented_source_differences": [
+      "aimrl/tracking25/agent.py",
+      "aimrl/tracking25/workflow.py",
+      "aimrl/tracking25/__main__.py"
+    ],
+    "recorded_audit_unchanged": true,
+    "training_or_result_regeneration": false
+  },
+  "modified_existing_paths": [
+    ".gitignore",
+    "README.md",
+    "provenance/source_compatibility.json"
+  ],
+  "all_other_previous_tracked_files_unchanged": true,
+  "original_local_selected_files_unchanged": true,
+  "original_excluded_pilot_binaries_present_and_unchanged": true,
+  "secret_pattern_scan_passed": true,
+  "new_paths_descriptive": true,
+  "new_text_english": true,
+  "no_retraining": true,
+  "new_protocol_or_audit_changes": false
+}

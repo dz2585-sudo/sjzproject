@@ -1,0 +1,8 @@
+{
+  "reason": "Post-training figure review clarified the new-model 5M budget; numerical data unchanged.",
+  "script_sha256": "15afb3049b8363732fcd24a0fa7fd2c43e6c9fac145fd148d674d8ac50a1475c",
+  "source_records_sha256": "d0ac6df8b573f2d9e48ac86d561764f4e9289b16defd9144e2fd32ce0a07846a",
+  "previous_figure_sha256": "e3917def6ac784b4da3dfd62d948f1d89a62cc99462b8eb42c59827bf4314c13",
+  "figure_sha256": "7b95028d863e560542be6b91ac8f6ddc9cdecf94b04486af55738c56aa32ae5b",
+  "frozen_training_sources_or_protocol_modified": false
+}

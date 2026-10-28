@@ -1,0 +1,91 @@
+{
+  "method": "relative_base",
+  "representation": "relative",
+  "indexing_version": "tracking_relative_offsets_v1",
+  "reward_mode": "base",
+  "training_seed": 10,
+  "interactions": 5000000,
+  "pilot": false,
+  "complete_windows": 16666,
+  "partial_ticks": 200,
+  "environment_seed": 15201278624210326492,
+  "elapsed_seconds": 102.7237008002121,
+  "process_lifetime_peak_working_set_bytes": 447238144,
+  "timing_scope": "Training, validation, update-count diagnostics, compression and exact reload checks",
+  "q_shape": [
+    49,
+    49,
+    4,
+    2,
+    10
+  ],
+  "q_element_bytes": 768320,
+  "counter_bytes": 768320,
+  "q_array_sha256": "b3e3088f7a19cde25bb455a3d0c372592918e10cee660dd9b103a0a03457195e",
+  "counts_array_sha256": "caaef475889d05cec1e09d35e758798e4bfc62c1f03720da959b8c860de1fb1c",
+  "source_sha256": {
+    "aimrl/tracking_research/agent.py": "14b3a9391a6b84a54d3b6ded87c455f3373bfac4211678dd768a1205eb5a85b5",
+    "aimrl/tracking_research/audit.py": "626c3f16c8618781f574e798bd124b55ee669049dd428fe4c30b8bd995c0aa43",
+    "aimrl/tracking_research/evaluate.py": "dbaef1407827c281cb8292345d1a36cde441e44e8e836d13f34b85e379f31a8d",
+    "aimrl/tracking_research/io.py": "6ee3470948240368b9877dc8e40d0a5e966a5b0477055bd192b902e7e270fb0c",
+    "aimrl/tracking_research/render.py": "7452314e07f4a610934b653c4d38fc41fcba727d90f24a367e342b7943decdfe",
+    "aimrl/tracking_research/report.py": "cec673dd3f7efda557541a88b2dab717c6d698040f471ce0293dc1f056fc168a",
+    "aimrl/tracking_research/workflow.py": "ca13b3740e347ce2bf590224eed159044c4b0f22b9a0be18d07c440f612a9003",
+    "aimrl/tracking_research/__init__.py": "7763e60ffba48d7eb5a6f6ba61d5ac85e9c948479e2c2fb5e778ac3fdf1a45ff",
+    "aimrl/tracking_research/__main__.py": "2769d6a31403f144cdd6a1a4bd862ecadd454245231f8c373ace4a20eec0150a",
+    "aimrl/tracking25/agent.py": "69e50493bfb2ea9ae4fccfd5aa9977831f0d1ab683623f8e6036351dda1e0538",
+    "aimrl/tracking25/env.py": "fea8ce62da85985fe9afbddcd5733c90484c25be903c61c3abd5449bad139a2c",
+    "aimrl/tracking25/evaluate.py": "d5faea87151f892b025e5d51c7cc19a9c2edecdcb397095f7cb86cd3a079004c",
+    "aimrl/tracking25/metrics.py": "82828e20a497e8c24833c5ba1ed1cbe400c678d7ca86eff2d59a77fd00737536",
+    "aimrl/tracking25/policies.py": "1dc5d00ee7af61c59cd56a17d840479ebb4ae1b5a8efba86f45b2531e739d2d4",
+    "aimrl/tracking25/render.py": "5b3ba1ffb31850c811f517cb7c746b9e9f8c62617faed7effb18810ac5baddf2",
+    "aimrl/tracking25/workflow.py": "08d63a9eb48a26d8f87b0bcace901fdd0aeef37ba12e770fadc088cbd60f46be",
+    "aimrl/tracking25/__init__.py": "6947ec770e6e27a15a582bc21cf7023dedef404b935469188db383b1788ce929",
+    "aimrl/tracking25/__main__.py": "e58a7dfbaa5db07f14cb949ceb03b8e212fa4dbfe54e3c442dafd3c0f3a7b90e",
+    "configs/tracking_research.json": "a470bdf03b46b520f1f720b0ec6772dbd29d4604d937e8fe10b912ca0ef2c7fe",
+    "tests/test_tracking_research.py": "7919c52d88dd25861da30fabb08b3f65a396dd2d41c45887e6b16dff9b0362db"
+  },
+  "reload_exact": true,
+  "coverage": {
+    "state_rows": 19208,
+    "state_action_pairs": 192080,
+    "visited_rows": 18789,
+    "visited_pairs": 174567,
+    "visited_row_fraction": 0.978186172428155,
+    "visited_pair_fraction": 0.9088244481466056,
+    "zero_pair_fraction": 0.09117555185339443,
+    "update_sum": 5000000,
+    "visited_pair_quantiles": [
+      1.0,
+      2.0,
+      5.0,
+      12.0,
+      49.0,
+      69297.0
+    ],
+    "visited_row_quantiles": [
+      1.0,
+      22.0,
+      51.0,
+      119.0,
+      528.0,
+      84547.0
+    ],
+    "quantile_probabilities": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      0.95,
+      1
+    ]
+  },
+  "files_sha256": {
+    "attempt.json": "07694a4c0e6b0c3c63b01b16dd9470aa95016da16d5448ef84bc6885c072ffeb",
+    "q_table.npz": "09bef5876738e44753ae0027267e34812bd84db3e467911a509512409334d7da",
+    "run_config.json": "57980c0df08337aab7b2e89abda6a341be728859442cdcf18c535d550002ea65",
+    "training_windows.csv": "056c3599deea9defdb1c795f242ce5da7878d3a123f514df2f46558723a5407b",
+    "validation.json": "b2f239a9e2102c7cda3355109a049dcd08a00d24bd2f3aa385e46e30068a3e79",
+    "visitation.npz": "8bfa74a81a88f50ed54b0d879ee9063233bd9fcda7cfdeb7cef10ce966ed8cd1"
+  }
+}

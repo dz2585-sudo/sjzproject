@@ -124,6 +124,15 @@
       "reason": "Verified post-experiment explanatory/path migration or lossless-artifact I/O adaptation; environment, learning rules, numerical results and frozen hashes are unchanged.",
       "verified_original": "original_local_file",
       "original_path": "spec.md"
+    },
+    {
+      "path": "README.md",
+      "recorded_sha256": "e3207dafba0f8f4f120a31901825314362ad6a7d8f536188c92169e64654590d",
+      "current_sha256": "946e26af31ced5a622c92bc505f24c954b8a43a30dc72ab8a74a5f4ea9b7a9de",
+      "reason": "Later publication-only README/navigation update for the completed tracking representation study. Original README bytes verified against the preserved Git blob; no experiment, numerical record, model, frozen protocol or training source changes.",
+      "verified_original": "preserved_git_blob",
+      "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
+      "git_blob": "104488c00c7be3580e1c85acb0ba68885592d7b8"
     }
   ],
   "retired_evidence": [

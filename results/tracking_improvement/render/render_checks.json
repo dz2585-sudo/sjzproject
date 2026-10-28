@@ -1,0 +1,176 @@
+{
+  "clips": [
+    {
+      "path": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+      "scenario_seed": 3601000,
+      "frames": 301,
+      "duration_ms": 20070,
+      "actual_frame_durations_ms": [
+        60,
+        70
+      ],
+      "dimensions": [
+        1080,
+        990
+      ],
+      "elapsed_seconds": 17.534631999908015,
+      "policies": {
+        "historical_potential": {
+          "last_tick": 300,
+          "hits": 65,
+          "shots": 70
+        },
+        "relative_base": {
+          "last_tick": 300,
+          "hits": 80,
+          "shots": 82
+        },
+        "relative_potential": {
+          "last_tick": 300,
+          "hits": 83,
+          "shots": 86
+        },
+        "rule": {
+          "last_tick": 300,
+          "hits": 36,
+          "shots": 36
+        }
+      },
+      "all_targets_paired": true,
+      "actual_displacement_arrows_checked": true,
+      "gui_verified": false
+    },
+    {
+      "path": "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+      "scenario_seed": 3601001,
+      "frames": 301,
+      "duration_ms": 20070,
+      "actual_frame_durations_ms": [
+        60,
+        70
+      ],
+      "dimensions": [
+        1080,
+        990
+      ],
+      "elapsed_seconds": 17.192624900024384,
+      "policies": {
+        "historical_potential": {
+          "last_tick": 300,
+          "hits": 78,
+          "shots": 88
+        },
+        "relative_base": {
+          "last_tick": 300,
+          "hits": 90,
+          "shots": 90
+        },
+        "relative_potential": {
+          "last_tick": 300,
+          "hits": 91,
+          "shots": 91
+        },
+        "rule": {
+          "last_tick": 300,
+          "hits": 52,
+          "shots": 52
+        }
+      },
+      "all_targets_paired": true,
+      "actual_displacement_arrows_checked": true,
+      "gui_verified": false
+    },
+    {
+      "path": "results/tracking_improvement/render/seed3601002_main_comparison.gif",
+      "scenario_seed": 3601002,
+      "frames": 301,
+      "duration_ms": 20070,
+      "actual_frame_durations_ms": [
+        60,
+        70
+      ],
+      "dimensions": [
+        1080,
+        990
+      ],
+      "elapsed_seconds": 17.062335200142115,
+      "policies": {
+        "historical_potential": {
+          "last_tick": 300,
+          "hits": 79,
+          "shots": 88
+        },
+        "relative_base": {
+          "last_tick": 300,
+          "hits": 92,
+          "shots": 92
+        },
+        "relative_potential": {
+          "last_tick": 300,
+          "hits": 91,
+          "shots": 93
+        },
+        "rule": {
+          "last_tick": 300,
+          "hits": 49,
+          "shots": 49
+        }
+      },
+      "all_targets_paired": true,
+      "actual_displacement_arrows_checked": true,
+      "gui_verified": false
+    },
+    {
+      "path": "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+      "scenario_seed": 3601000,
+      "frames": 301,
+      "duration_ms": 20070,
+      "actual_frame_durations_ms": [
+        60,
+        70
+      ],
+      "dimensions": [
+        1620,
+        990
+      ],
+      "elapsed_seconds": 25.346827800152823,
+      "policies": {
+        "absolute_base": {
+          "last_tick": 300,
+          "hits": 0,
+          "shots": 9
+        },
+        "absolute_potential": {
+          "last_tick": 300,
+          "hits": 19,
+          "shots": 28
+        },
+        "relative_base": {
+          "last_tick": 300,
+          "hits": 80,
+          "shots": 82
+        },
+        "relative_potential": {
+          "last_tick": 300,
+          "hits": 83,
+          "shots": 86
+        },
+        "rule": {
+          "last_tick": 300,
+          "hits": 36,
+          "shots": 36
+        },
+        "random": {
+          "last_tick": 300,
+          "hits": 0,
+          "shots": 32
+        }
+      },
+      "all_targets_paired": true,
+      "actual_displacement_arrows_checked": true,
+      "gui_verified": false
+    }
+  ],
+  "gui_verified": false,
+  "all_frames_decoded": true
+}

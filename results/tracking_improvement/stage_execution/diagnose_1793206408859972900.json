@@ -1,0 +1,6 @@
+{
+  "command": "python -m aimrl.tracking_research --config configs/tracking_research.json --stage diagnose",
+  "exit_code": 0,
+  "elapsed_seconds": 6.86161100002937,
+  "peak_working_set_bytes": 290385920
+}
