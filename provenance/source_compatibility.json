@@ -133,6 +133,15 @@
       "verified_original": "preserved_git_blob",
       "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
       "git_blob": "104488c00c7be3580e1c85acb0ba68885592d7b8"
+    },
+    {
+      "path": "README.md",
+      "recorded_sha256": "e3207dafba0f8f4f120a31901825314362ad6a7d8f536188c92169e64654590d",
+      "current_sha256": "267c9d572df6d7fdd06265075921ece0c3b8623cac21c4a2543c5d082a87196a",
+      "reason": "Documentation-only progress, results and artifact-navigation organization. Tables are reproduced from published numerical summaries; existing experiment artifacts, protocols and executable source bytes are unchanged. The original README is verified against its preserved Git blob.",
+      "verified_original": "preserved_git_blob",
+      "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
+      "git_blob": "104488c00c7be3580e1c85acb0ba68885592d7b8"
     }
   ],
   "retired_evidence": [

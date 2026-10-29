@@ -1,0 +1,222 @@
+{
+  "complete": true,
+  "scope": "Documentation, result-table presentation, navigation and historical path explanations only.",
+  "base_commit": "d72d6e591249762b52c25892c01fa3857713672c",
+  "changed_paths": [
+    "README.md",
+    "docs/project_history.md",
+    "docs/artifact_paths.md",
+    "provenance/source_compatibility.json",
+    "provenance/documentation_organization_checks.json"
+  ],
+  "progress_milestones": 10,
+  "new_narrative_files": [
+    "README.md",
+    "docs/project_history.md",
+    "docs/artifact_paths.md"
+  ],
+  "numerical_table_blocks_verified": 11,
+  "table_sources": [
+    {
+      "table": "LATEST_TABLE",
+      "source_paths": [
+        "results/tracking_improvement/evaluation/cross_seed_summary.json"
+      ],
+      "source_sha256": {
+        "results/tracking_improvement/evaluation/cross_seed_summary.json": "a2e0825a14ad465bc690c8a6a65b368b0ca7f584729613207bf0dfa902621832"
+      }
+    },
+    {
+      "table": "STRESS_TABLE",
+      "source_paths": [
+        "results/tracking_improvement/evaluation/cross_seed_summary.json"
+      ],
+      "source_sha256": {
+        "results/tracking_improvement/evaluation/cross_seed_summary.json": "a2e0825a14ad465bc690c8a6a65b368b0ca7f584729613207bf0dfa902621832"
+      }
+    },
+    {
+      "table": "REFERENCE_TABLE",
+      "source_paths": [
+        "results/tracking_improvement/evaluation/final/historical_base_summary.json",
+        "results/tracking_improvement/evaluation/final/historical_potential_summary.json",
+        "results/tracking_improvement/evaluation/final/rule_summary.json",
+        "results/tracking_improvement/evaluation/final/random_summary.json"
+      ],
+      "source_sha256": {
+        "results/tracking_improvement/evaluation/final/historical_base_summary.json": "1383043791212961929ff461ffcb011bc24e06977d7159ab0ae6a342aff717a0",
+        "results/tracking_improvement/evaluation/final/historical_potential_summary.json": "e97b2aa42ae962099a5258f532e4047e208ab53c695e06702de1485190a69874",
+        "results/tracking_improvement/evaluation/final/rule_summary.json": "e63158949c337bc2f70a654ac7514853327eefeec25390a0d1193b1dc46f754a",
+        "results/tracking_improvement/evaluation/final/random_summary.json": "b491a969f729cea2452340212469844471a28a14d970491b53ef4f4acb3d3682"
+      }
+    },
+    {
+      "table": "TARGET_TABLE",
+      "source_paths": [
+        "results/tracking_improvement/evaluation/cross_seed_summary.json"
+      ],
+      "source_sha256": {
+        "results/tracking_improvement/evaluation/cross_seed_summary.json": "a2e0825a14ad465bc690c8a6a65b368b0ca7f584729613207bf0dfa902621832"
+      }
+    },
+    {
+      "table": "ENV_TABLE",
+      "source_paths": [
+        "results/environment_baselines/rule_policy_diagnostic.csv",
+        "results/environment_baselines/random_policy_diagnostic.csv"
+      ],
+      "source_sha256": {
+        "results/environment_baselines/rule_policy_diagnostic.csv": "4a251913fcc677462cfb6429c48fe099d4738cd841d59b9aee2724498f4b97c0",
+        "results/environment_baselines/random_policy_diagnostic.csv": "49aa272258e695f628afc182356fc51258a8c966671c64b93b1025eee0dc4a75"
+      }
+    },
+    {
+      "table": "QLEARNING_TABLE",
+      "source_paths": [
+        "results/q_learning_development/base_seed0/validation.csv"
+      ],
+      "source_sha256": {
+        "results/q_learning_development/base_seed0/validation.csv": "037389ddff533ae260a4be495a26e9635cc90feb44bcc9f8d44cdcf7a5d669cc"
+      }
+    },
+    {
+      "table": "SHAPING_TABLE",
+      "source_paths": [
+        "results/reward_shaping_development/comparison/comparison.csv"
+      ],
+      "source_sha256": {
+        "results/reward_shaping_development/comparison/comparison.csv": "ef7ffbb30336ceaffe7fcead83d8fe621e4346a350c83ca820f9f709af36edee"
+      }
+    },
+    {
+      "table": "GRID5_TABLE",
+      "source_paths": [
+        "results/grid5_benchmark/test/learned_summary.csv",
+        "results/grid5_benchmark/test/baseline_summary.csv"
+      ],
+      "source_sha256": {
+        "results/grid5_benchmark/test/learned_summary.csv": "adf38c0716ebff8f135e6a17a8963a5289d44f6ca8b0845f53525a9b69573e4c",
+        "results/grid5_benchmark/test/baseline_summary.csv": "821b32140855a3c7f5188faccca7a49e4e2a808c3f3ccd532b70af6aef507698"
+      }
+    },
+    {
+      "table": "GRID25_TABLE",
+      "source_paths": [
+        "results/grid25_development/summary/comparison.csv"
+      ],
+      "source_sha256": {
+        "results/grid25_development/summary/comparison.csv": "5f569a1eacfd060d385f88e37e6ea1d91785920c887b4ed70ec55bfa5c7e24b0"
+      }
+    },
+    {
+      "table": "CONTINUOUS_TABLE",
+      "source_paths": [
+        "results/continuous_tracking/evaluation/comparison.csv"
+      ],
+      "source_sha256": {
+        "results/continuous_tracking/evaluation/comparison.csv": "b734c25407f159f532f89c181a9563e6fa41d4cbad952c4a983b33ee1d562656"
+      }
+    },
+    {
+      "table": "MIGRATION_TABLE",
+      "source_paths": [
+        "provenance/archive_manifest.json"
+      ],
+      "source_sha256": {
+        "provenance/archive_manifest.json": "5a59255d2cefeaaa748a18c979017a6414f09708d8901d88df69b20ba26b8188"
+      }
+    }
+  ],
+  "relative_link_occurrences_verified": 186,
+  "unique_relative_targets_verified": 80,
+  "embedded_images_verified_against_repository_tree": [
+    {
+      "source": "README.md",
+      "path": "results/tracking_improvement/render/final_comparison.png",
+      "git_blob": "f1be3b004fd1ea12da1a476457cb8e4168c2ea34",
+      "bytes": 154197
+    },
+    {
+      "source": "README.md",
+      "path": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+      "git_blob": "fa7a4ea79077a95482cc03daf112171fa8babc30",
+      "bytes": 10407865
+    },
+    {
+      "source": "README.md",
+      "path": "results/grid5_benchmark/summary/learning_curves.png",
+      "git_blob": "23d530ab2a5a45bee29762c3de0902857ceca38c",
+      "bytes": 88560
+    },
+    {
+      "source": "README.md",
+      "path": "results/grid25_development/demo/demo_comparison.gif",
+      "git_blob": "d2de8b31baf8c2e2e0e21d8d1311d251814a6484",
+      "bytes": 4980529
+    },
+    {
+      "source": "README.md",
+      "path": "results/grid25_development/summary/learning_curves.png",
+      "git_blob": "b6a08f88cc89bdaed81768eccb7ed44375013547",
+      "bytes": 128102
+    },
+    {
+      "source": "README.md",
+      "path": "results/continuous_tracking/render/seed3601000_comparison.gif",
+      "git_blob": "103c8c6a40fd25b6dbf9d294408385436d4dbf06",
+      "bytes": 11410210
+    },
+    {
+      "source": "README.md",
+      "path": "results/tracking_improvement/render/learning_curves.png",
+      "git_blob": "b3a7b48f811531e9c3ecd91902ca218560c635a3",
+      "bytes": 308921
+    }
+  ],
+  "unique_gif_paths_verified": [
+    "results/continuous_tracking/render/seed3601000_comparison.gif",
+    "results/continuous_tracking/render/seed3601001_comparison.gif",
+    "results/continuous_tracking/render/seed3601002_comparison.gif",
+    "results/grid25_development/demo/demo_comparison.gif",
+    "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+    "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+    "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+    "results/tracking_improvement/render/seed3601002_main_comparison.gif"
+  ],
+  "link_validation_basis": "Pinned recursive Git tree plus the exact planned documentation files; in-page anchors checked against Markdown headings.",
+  "relative_link_failures": [],
+  "external_reference_urls": [
+    "https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf"
+  ],
+  "external_urls_rechecked": false,
+  "source_summary_bytes_match_pinned_git_blobs": true,
+  "table_values_generated_from_source_summaries": true,
+  "historical_readme_blob_verified": "104488c00c7be3580e1c85acb0ba68885592d7b8",
+  "previous_compatibility_mappings_preserved": true,
+  "added_compatibility_paths": [
+    "README.md"
+  ],
+  "executable_source_acceptance_changed": false,
+  "new_narrative_english": true,
+  "new_narrative_provider_names_absent": true,
+  "new_paths_descriptive": true,
+  "artifact_locations_changed": false,
+  "experiments_retrained": false,
+  "experimental_artifacts_or_figures_regenerated": false,
+  "historical_protocols_audits_or_results_edited": false,
+  "tests_rerun_for_documentation_revision": false,
+  "checks_performed": [
+    "11 table blocks matched to pinned source summaries",
+    "Relative links and heading anchors",
+    "All eight real GIF paths and all embedded image blobs",
+    "Balanced fences and details blocks",
+    "Narrative language and terminology",
+    "Exact README-only provenance extension"
+  ],
+  "file_sha256": {
+    "README.md": "267c9d572df6d7fdd06265075921ece0c3b8623cac21c4a2543c5d082a87196a",
+    "docs/project_history.md": "ddc4c58ea7ec0edab92f4c8055fc2f41b453dbb75bc3d9250bea73fe074df634",
+    "docs/artifact_paths.md": "cbd057b372684b14d547d186e325649247ee1d5e23a0665d21bc1512f11d6001",
+    "provenance/source_compatibility.json": "5b01e6764f4e3a521687a6c84434e969b9f9f0ef6f24129f438e34d444074c22"
+  }
+}
