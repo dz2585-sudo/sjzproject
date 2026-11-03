@@ -1,0 +1,530 @@
+{
+  "schema": "aimrl_windows_acceptance_v1",
+  "date_local": "2026-11-03",
+  "timezone": "America/New_York",
+  "complete": true,
+  "base_commit": "9743ceb9073d5b993336b64b49e3b53d58cc4076",
+  "environment": {
+    "os": "Windows",
+    "architecture": "AMD64",
+    "python": "3.13.9",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2",
+      "Pillow": "13.0.0"
+    },
+    "fresh_environment_packages": [
+      "contourpy==1.4.0",
+      "cycler==0.12.1",
+      "fonttools==4.68.0",
+      "kiwisolver==1.5.1",
+      "matplotlib==3.11.2",
+      "numpy==2.5.4",
+      "packaging==26.3",
+      "pillow==13.0.0",
+      "pyparsing==3.3.3",
+      "python-dateutil==4.0.0",
+      "tzdata==2026.6"
+    ]
+  },
+  "command_path_base": "Command arguments are relative to each working directory. Working directories and local log paths are relative to the publication checkout.",
+  "commands": [
+    {
+      "name": "fresh_venv_initial",
+      "command": [
+        "python",
+        "-m",
+        "venv",
+        ".tmp/publication-fix-20261103-120247/clean-venv"
+      ],
+      "working_directory": "../..",
+      "exit_code": 1,
+      "log": "../publication-fix-20261103-120247/clean-venv.log",
+      "result": "The ensurepip bootstrap failed with the default temporary directory."
+    },
+    {
+      "name": "fresh_venv_workspace_temp",
+      "command": [
+        "python",
+        "-m",
+        "venv",
+        ".tmp/publication-fix-20261103-120247/pinned-venv"
+      ],
+      "working_directory": "../..",
+      "exit_code": 0,
+      "log": "../publication-fix-20261103-120247/pinned-venv.log",
+      "result": "Bootstrap succeeded with TEMP and TMP redirected to the validation directory."
+    },
+    {
+      "name": "pinned_install_restricted",
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "--disable-pip-version-check",
+        "--no-cache-dir",
+        "--retries",
+        "0",
+        "--timeout",
+        "10",
+        "install",
+        "-r",
+        "requirements-reproduction.txt"
+      ],
+      "working_directory": ".",
+      "exit_code": 1,
+      "log": "../publication-fix-20261103-120247/pinned-install.log",
+      "result": "The restricted installation could not resolve the pinned NumPy wheel."
+    },
+    {
+      "name": "pinned_install_network",
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "--disable-pip-version-check",
+        "--no-cache-dir",
+        "--retries",
+        "0",
+        "--timeout",
+        "10",
+        "install",
+        "-v",
+        "-r",
+        "requirements-reproduction.txt"
+      ],
+      "working_directory": ".",
+      "exit_code": 0,
+      "log": "../publication-fix-20261103-120247/pinned-install-network.log",
+      "result": "The network-enabled retry installed the same pinned versions in the fresh virtual environment."
+    },
+    {
+      "name": "tests_initial",
+      "exit_code": 1,
+      "seconds": 20.322,
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "working_directory": ".",
+      "environment": "existing_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/tests-initial.log",
+      "result": "The isolated copy initially omitted a frozen test source. Including the tests directory fixed the fixture."
+    },
+    {
+      "name": "runtime",
+      "exit_code": 0,
+      "seconds": 0.533,
+      "command": [
+        "python",
+        "-c",
+        "import sys,numpy,matplotlib,PIL; print(sys.version); print(numpy.__version__,matplotlib.__version__,PIL.__version__)"
+      ],
+      "working_directory": ".",
+      "environment": "existing_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/runtime.log"
+    },
+    {
+      "name": "setup",
+      "exit_code": 0,
+      "seconds": 0.569,
+      "command": [
+        "python",
+        "scripts/check_setup.py"
+      ],
+      "working_directory": ".",
+      "environment": "existing_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/setup.log"
+    },
+    {
+      "name": "tests",
+      "exit_code": 0,
+      "seconds": 58.218,
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "working_directory": ".",
+      "environment": "existing_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/tests.log"
+    },
+    {
+      "name": "verify",
+      "exit_code": 0,
+      "seconds": 15.353,
+      "command": [
+        "python",
+        "-m",
+        "aimrl.reproduce",
+        "--mode",
+        "verify",
+        "--output",
+        ".tmp/windows-acceptance-20261103-120247/verify-final"
+      ],
+      "working_directory": ".",
+      "environment": "existing_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/verify.log"
+    },
+    {
+      "name": "verify_optimized",
+      "exit_code": 0,
+      "seconds": 15.396,
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "aimrl.reproduce",
+        "--mode",
+        "verify",
+        "--output",
+        ".tmp/windows-acceptance-20261103-120247/verify-optimized-final"
+      ],
+      "working_directory": ".",
+      "environment": "existing_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/verify_optimized.log"
+    },
+    {
+      "name": "relative_final",
+      "exit_code": 0,
+      "seconds": 11.404,
+      "command": [
+        "python",
+        "-m",
+        "aimrl.reproduce",
+        "--mode",
+        "evaluate",
+        "--methods",
+        "relative_base",
+        "relative_potential",
+        "--seeds",
+        "10",
+        "--split",
+        "final",
+        "--output",
+        ".tmp/windows-acceptance-20261103-120247/relative_final"
+      ],
+      "working_directory": ".",
+      "environment": "existing_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/relative_final.log"
+    },
+    {
+      "command": [
+        "python",
+        "-c",
+        "import sys,numpy,matplotlib,PIL; print(sys.version); print(numpy.__version__,matplotlib.__version__,PIL.__version__)"
+      ],
+      "name": "clean_runtime",
+      "seconds": 0.897,
+      "exit_code": 0,
+      "working_directory": ".",
+      "environment": "fresh_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/clean_runtime.log"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "name": "clean_pip_check",
+      "seconds": 0.787,
+      "exit_code": 0,
+      "working_directory": ".",
+      "environment": "fresh_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/clean_pip_check.log"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "name": "clean_freeze",
+      "seconds": 0.543,
+      "exit_code": 0,
+      "working_directory": ".",
+      "environment": "fresh_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/clean_freeze.log"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check_setup.py"
+      ],
+      "name": "clean_setup",
+      "seconds": 0.58,
+      "exit_code": 0,
+      "working_directory": ".",
+      "environment": "fresh_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/clean_setup.log"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "aimrl.reproduce",
+        "--mode",
+        "evaluate",
+        "--methods",
+        "relative_potential",
+        "--seeds",
+        "10",
+        "--split",
+        "development",
+        "--limit",
+        "3",
+        "--output",
+        ".tmp/windows-acceptance-20261103-120247/clean_development"
+      ],
+      "name": "clean_development",
+      "seconds": 2.391,
+      "exit_code": 0,
+      "working_directory": ".",
+      "environment": "fresh_windows",
+      "log": ".tmp/windows-acceptance-20261103-120247/clean_development.log"
+    },
+    {
+      "name": "history_and_media",
+      "command": [
+        "python",
+        ".tmp/publication-fix-20261103-120247/check_candidate.py"
+      ],
+      "working_directory": "../..",
+      "environment": "existing_windows",
+      "exit_code": 0,
+      "log": "../publication-fix-20261103-120247/candidate-checks.log"
+    }
+  ],
+  "unit_tests": {
+    "total_passed": 74,
+    "publication_regressions": 4,
+    "isolated_python_modes": [
+      "standard",
+      "optimized"
+    ],
+    "direct_cli_cases": 8,
+    "checkout_runner_failure_cases": 6,
+    "direct_cli_expected_and_verified_exit_codes": {
+      "valid": 0,
+      "wrong_protocol_sha256": 1,
+      "missing_required_file": 1,
+      "modified_required_file": 1
+    },
+    "checkout_runner_failure_exit_code": 1,
+    "failure_session_complete": false,
+    "failure_success_report_written": false
+  },
+  "full_publication_verification": {
+    "standard_exit_code": 0,
+    "optimized_exit_code": 0,
+    "reports_identical": true,
+    "complete": true,
+    "copied_files_verified": 547,
+    "formal_runs": 12,
+    "formal_interactions": 60000000,
+    "development_summaries": 132,
+    "development_windows": 26400,
+    "development_ticks": 7920000,
+    "independent_splits": {
+      "final": {
+        "windows": 8000,
+        "paired_scenarios": 500
+      },
+      "stress": {
+        "windows": 3200,
+        "paired_scenarios": 200
+      }
+    },
+    "gifs": [
+      {
+        "path": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+        "sha256": "4c759251ff0475eb1ef29ed4f127bbc95a2f1afa53f74f0d4e16fdf0ce9de4ad",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+        "sha256": "692942586e54286db501de4eb9416710790f33b53697d51b852565e02d0e88a0",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601002_main_comparison.gif",
+        "sha256": "239d87cf029159002b1cae8f85c05a3a2748c7fae0c47d5b694a3a41036c4270",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+        "sha256": "6ebec9ad02e42ca9f7f98a5b7436dc6086703652d70767683683a9aa152c6dbc",
+        "frames": 301,
+        "duration_ms": 20070
+      }
+    ],
+    "relative_links_verified": 116,
+    "largest_study_file_bytes": 14504765,
+    "pilot_binaries_intentionally_excluded": 8,
+    "original_training_source_bundle_verified": true,
+    "previously_documented_source_differences": [
+      "aimrl/tracking25/agent.py",
+      "aimrl/tracking25/workflow.py",
+      "aimrl/tracking25/__main__.py"
+    ],
+    "recorded_audit_unchanged": true,
+    "training_or_result_regeneration": false
+  },
+  "final_saved_model_replay": {
+    "split": "final",
+    "scenarios_per_instance": 500,
+    "policy_instances": 4,
+    "evaluation_interactions": 600000,
+    "paired_scenarios": 500,
+    "full_split": true,
+    "recorded_comparison_performed": true,
+    "metric_differences": {
+      "relative_base_seed10": {
+        "mean_distance": 0.0,
+        "close_fraction": 0.0,
+        "far_fraction": 0.0,
+        "hits_per_episode": 0.0,
+        "shots_per_episode": 0.0,
+        "misses_per_episode": 0.0,
+        "pooled_shot_accuracy": 0.0,
+        "mean_base_return": 0.0,
+        "mean_first_acquisition_tick": 0.0
+      },
+      "relative_potential_seed10": {
+        "mean_distance": 0.0,
+        "close_fraction": 0.0,
+        "far_fraction": 0.0,
+        "hits_per_episode": 0.0,
+        "shots_per_episode": 0.0,
+        "misses_per_episode": 0.0,
+        "pooled_shot_accuracy": 0.0,
+        "mean_base_return": 0.0,
+        "mean_first_acquisition_tick": 0.0
+      },
+      "rule": {
+        "mean_distance": 0.0,
+        "close_fraction": 0.0,
+        "far_fraction": 0.0,
+        "hits_per_episode": 0.0,
+        "shots_per_episode": 0.0,
+        "misses_per_episode": 0.0,
+        "pooled_shot_accuracy": 0.0,
+        "mean_base_return": 0.0,
+        "mean_first_acquisition_tick": 0.0
+      },
+      "random": {
+        "mean_distance": 0.0,
+        "close_fraction": 0.0,
+        "far_fraction": 0.0,
+        "hits_per_episode": 0.0,
+        "shots_per_episode": 0.0,
+        "misses_per_episode": 0.0,
+        "pooled_shot_accuracy": 0.0,
+        "mean_base_return": 0.0,
+        "mean_first_acquisition_tick": 0.0
+      }
+    },
+    "all_compared_metrics_match": true
+  },
+  "fresh_environment_development_replay": {
+    "policies": [
+      "relative_potential_seed10",
+      "rule",
+      "random"
+    ],
+    "split": "development",
+    "scenarios_per_instance": 3,
+    "policy_instances": 3,
+    "evaluation_interactions": 2700,
+    "paired_scenarios": 3,
+    "full_split": false,
+    "recorded_comparison_performed": false,
+    "metric_differences": {},
+    "all_compared_metrics_match": null
+  },
+  "preservation_and_readme_media_checks": {
+    "head": "9743ceb9073d5b993336b64b49e3b53d58cc4076",
+    "tracked_blobs_unchanged": 922,
+    "tracked_result_blobs_unchanged": 853,
+    "original_files_matching_previous_audit": 921,
+    "tracked_changes": [
+      "README.md",
+      "provenance/source_compatibility.json",
+      "scripts/verify_tracking_publication.py"
+    ],
+    "relative_markdown_link_occurrences": {
+      "README.md": 97,
+      "docs/reproduction.md": 2
+    },
+    "readme_media": {
+      "results/tracking_improvement/render/final_comparison.png": 1,
+      "results/tracking_improvement/render/seed3601000_main_comparison.gif": 301,
+      "results/tracking_improvement/render/seed3601001_main_comparison.gif": 301,
+      "results/tracking_improvement/render/seed3601002_main_comparison.gif": 301,
+      "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif": 301,
+      "results/environment_baselines/rule_policy_preview.png": 1,
+      "results/q_learning_development/base_seed0/learning_curve.png": 1,
+      "results/reward_shaping_development/comparison/comparison.png": 1,
+      "results/grid5_benchmark/summary/learning_curves.png": 1,
+      "results/grid25_development/demo/demo_comparison.gif": 101,
+      "results/grid25_development/summary/learning_curves.png": 1,
+      "results/continuous_tracking/render/seed3601000_comparison.gif": 301,
+      "results/continuous_tracking/render/learning_curves.png": 1,
+      "results/continuous_tracking/render/speed_choices.png": 1,
+      "results/tracking_improvement/render/learning_curves.png": 1,
+      "results/tracking_improvement/render/boundary_speed_diagnostics.png": 1,
+      "results/tracking_improvement/render/distance_tails.png": 1,
+      "results/tracking_improvement/render/coverage.png": 1,
+      "results/tracking_improvement/render/speed_choices.png": 1,
+      "results/continuous_tracking/render/seed3601001_comparison.gif": 301,
+      "results/continuous_tracking/render/seed3601002_comparison.gif": 301
+    }
+  },
+  "original_review_record": "provenance/reproduction_update_checks.json",
+  "prior_windows_acceptance": {
+    "date_local": "2026-10-31",
+    "unit_tests_passed_after_fix": 70,
+    "initial_test_exit_code": 1,
+    "initial_failure": "Windows sandbox denied access to the system temporary directory.",
+    "fix": "Place the isolated reproduction test fixtures in the checkout .tmp directory."
+  },
+  "not_verified_in_this_acceptance": [
+    "Complete twelve-model final/stress replay",
+    "Formal 60M retraining",
+    "Linux and macOS execution of this update",
+    "Native GUI playback"
+  ],
+  "file_sha256": {
+    "README.md": "26c5e8950063215321d7236e7d15c7735e1041a1ab6e0919f373eb0d707c0b50",
+    "aimrl/reproduce.py": "4829681ed77a0ff1d4180c869bf1da610babd1718fbe36879a74c26b906640f5",
+    "docs/reproduction.md": "ca3a203a38d8d1867f2590eef732897969b15e400aad46e81dcb8b07280bbe90",
+    "provenance/reproduction_update_checks.json": "8254f290b4773c4a928781e1ef42117fcd43aa1fa5475ad6c97ba686da69a8be",
+    "provenance/source_compatibility.json": "730925dba42f57a69b21c0ef7c784cf6aa4d25ae3da986b4e5af81989cb22b0f",
+    "requirements-reproduction.txt": "3fb2b0f708469c8129db769b720e0b1ca5c12049c10afc77e31c3692fc18aba9",
+    "requirements.txt": "af9c9ea6a882ecdb9816a50416e4e777ff38447e9caf3b8e4c630ce2f227d324",
+    "results/tracking_improvement/protocol.json": "d8b311ede69ff0ce87c6f2902b3a37befe8651e580850e74a5a56c9d89fae8f3",
+    "scripts/verify_tracking_publication.py": "2bb758b48114d613a6e69ed9daa1a6903ffa1f3680679cf75f6994643bb61433",
+    "tests/test_reproduce.py": "9de5f3c36bb9e30bbce46b803d7e3ac4c7b7f61cd0029fd83b46b5bcda40f4ed",
+    "tests/test_verify_tracking_publication.py": "b151f21feae5a5b34c8cca28498ad4eb78cdebac551d570a08a8ca588dcc0f9b"
+  },
+  "file_hash_scope": "Nine other pending files plus the base dependency file and frozen study protocol. This record excludes itself."
+}

@@ -325,14 +325,16 @@ For example, the current saved Relative Potential model for training seed 10 is 
 
 ## Installation and verification
 
+**Fresh-checkout reproduction:** use the [supported reproduction guide](docs/reproduction.md) for verified saved-model evaluation and independent fresh training. The new `aimrl.reproduce` entry point records its own session and avoids original-workspace-only startup files. The historical commands remain execution records.
+
 The recorded Windows environment used Python 3.13.9, NumPy 2.5.4, Matplotlib 3.11.2, and Pillow 13.0.0. No GPU or deep-learning framework is required. Use the existing working environment when available. From a normal clone of the repository root, a new Windows PowerShell environment can be prepared with:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-reproduction.txt
 .\.venv\Scripts\python.exe scripts/check_setup.py
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py" -v
-.\.venv\Scripts\python.exe scripts/verify_tracking_publication.py
+.\.venv\Scripts\python.exe -m aimrl.reproduce --mode verify --output .tmp/reproduction/publication_check
 ```
 
 The publication verifier checks the published models, records, source bundle, figures/GIFs, and links without training. Some historical retired-evidence checks require full Git history; a source ZIP alone cannot satisfy those checks. The original research audit also records its original workspace, pilot arrays, and startup snapshot; the [publication guide](provenance/tracking_improvement_publication.md) explains the appropriate verifier for a published checkout.
@@ -361,3 +363,11 @@ This command writes a short trace; it does not open an interactive game window. 
 - Remaining work is the course-format final report and presentation, followed, if pursued, by a separately specified boundary-aware or tracking-objective study. A 50 by 50 extension has not been executed. Interactive GUI playback remains unverified.
 
 Potential-based shaping follows Ng, Harada, and Russell (1999), [Policy Invariance under Reward Transformations](https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf). The potential form does not provide a finite-budget or optimality guarantee for a lossy relative observation. Full technical references are in the [specification](spec.md).
+
+## Reproduction workflow update
+
+A separate checkout runner now supports `verify`, `evaluate`, and `train` modes with protected fresh output directories. It preserves the published learning implementation and historical evidence while recording new source/configuration provenance. Memory telemetry is platform-specific and best effort. New replay summaries clarify that the historical clipping diagnostic measures fully blocked moves.
+
+Windows acceptance on 2026-11-03 passed all 74 tests. Complete publication verification passed in standard Python and with `python -O`. A separate fresh Windows virtual environment passed the pinned install, dependency check, setup check, and a limited development replay. The full final-split replay covered Relative Base and Relative Potential (seed 10), Rule, and Random, for 2,000 windows and 36 exact metric matches. The full twelve-model final/stress replay, formal 60M retraining, other platforms for this update, and native GUI playback remain unverified in this acceptance. The course-format paper and member-contribution statement are still pending.
+
+See the [reproduction guide and acceptance evidence](docs/reproduction.md).

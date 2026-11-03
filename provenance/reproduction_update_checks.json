@@ -1,0 +1,104 @@
+{
+  "base_commit": "9743ceb9073d5b993336b64b49e3b53d58cc4076",
+  "scope": "Additive reproduction workflow; no formal retraining or remote publication",
+  "setup_exit_code": 0,
+  "unit_tests": 70,
+  "unit_tests_exit_code": 0,
+  "parity_methods": [
+    "absolute_base",
+    "absolute_potential",
+    "relative_base",
+    "relative_potential"
+  ],
+  "parity_steps_per_method_per_runner": 1001,
+  "parity_fields": [
+    "Q array",
+    "counter array",
+    "training-window CSV bytes"
+  ],
+  "saved_model_replay": {
+    "split": "final",
+    "scenarios_per_instance": 500,
+    "policy_instances": 4,
+    "evaluation_interactions": 600000,
+    "paired_scenarios": 500,
+    "full_split": true,
+    "recorded_comparison_performed": true,
+    "metric_differences": {
+      "relative_base_seed10": {
+        "mean_distance": 0.0,
+        "close_fraction": 0.0,
+        "far_fraction": 0.0,
+        "hits_per_episode": 0.0,
+        "shots_per_episode": 0.0,
+        "misses_per_episode": 0.0,
+        "pooled_shot_accuracy": 0.0,
+        "mean_base_return": 0.0,
+        "mean_first_acquisition_tick": 0.0
+      },
+      "relative_potential_seed10": {
+        "mean_distance": 0.0,
+        "close_fraction": 0.0,
+        "far_fraction": 0.0,
+        "hits_per_episode": 0.0,
+        "shots_per_episode": 0.0,
+        "misses_per_episode": 0.0,
+        "pooled_shot_accuracy": 0.0,
+        "mean_base_return": 0.0,
+        "mean_first_acquisition_tick": 0.0
+      },
+      "rule": {
+        "mean_distance": 0.0,
+        "close_fraction": 0.0,
+        "far_fraction": 0.0,
+        "hits_per_episode": 0.0,
+        "shots_per_episode": 0.0,
+        "misses_per_episode": 0.0,
+        "pooled_shot_accuracy": 0.0,
+        "mean_base_return": 0.0,
+        "mean_first_acquisition_tick": 0.0
+      },
+      "random": {
+        "mean_distance": 0.0,
+        "close_fraction": 0.0,
+        "far_fraction": 0.0,
+        "hits_per_episode": 0.0,
+        "shots_per_episode": 0.0,
+        "misses_per_episode": 0.0,
+        "pooled_shot_accuracy": 0.0,
+        "mean_base_return": 0.0,
+        "mean_first_acquisition_tick": 0.0
+      }
+    },
+    "all_compared_metrics_match": true
+  },
+  "runtime": {
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "Pillow": "12.3.0"
+  },
+  "source_config_compatibility_check": true,
+  "prior_compatibility_entries_preserved": true,
+  "executable_compatibility_entries_added": 0,
+  "modified_existing_files": [
+    "README.md",
+    "provenance/source_compatibility.json"
+  ],
+  "relative_links_checked": 97,
+  "source_files_sha256": {
+    "README.md": "b71486d480dda0c6587c0591760d6fea6c443eb990d30e8fab36a6f0d0e069a0",
+    "provenance/source_compatibility.json": "72d7cce60d064de31ba10de4d999eadf4005a25f16030612157c903887b47de4",
+    "aimrl/reproduce.py": "d09b89d8664c9d895f572563ea82eff40848cc2f3fce08ead135b08ad2a52c4b",
+    "tests/test_reproduce.py": "8ea288e057490fe5d58b0e0f13060d615e4e1d5d8c0b1e91a38aa7e391f6ec87",
+    "docs/reproduction.md": "42aa201bf6476f43cb7d4bca95f962184d492d1708ee888396fc50bc708b4ac0",
+    "requirements-reproduction.txt": "3fb2b0f708469c8129db769b720e0b1ca5c12049c10afc77e31c3692fc18aba9"
+  },
+  "not_executed": [
+    "native Windows execution of new runner",
+    "fresh installation of pinned dependencies",
+    "full publication verifier on a complete clone",
+    "full 60-million-step replication",
+    "GUI playback"
+  ],
+  "figure_visually_reviewed": true
+}

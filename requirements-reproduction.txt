@@ -1,0 +1,3 @@
+# Explicit rendering dependency for the recorded Windows environment.
+-r requirements.txt
+Pillow==13.0.0

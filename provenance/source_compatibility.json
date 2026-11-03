@@ -142,6 +142,15 @@
       "verified_original": "preserved_git_blob",
       "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
       "git_blob": "104488c00c7be3580e1c85acb0ba68885592d7b8"
+    },
+    {
+      "path": "README.md",
+      "recorded_sha256": "e3207dafba0f8f4f120a31901825314362ad6a7d8f536188c92169e64654590d",
+      "current_sha256": "26c5e8950063215321d7236e7d15c7735e1041a1ab6e0919f373eb0d707c0b50",
+      "reason": "Documentation-only update of the checkout reproduction guide, pinned installation command, and measured Windows acceptance. The original README is verified against the preserved Git blob.",
+      "verified_original": "preserved_git_blob",
+      "git_commit": "0d0c1b09391bc2910be3f00b07a1fa77e2c4632f",
+      "git_blob": "104488c00c7be3580e1c85acb0ba68885592d7b8"
     }
   ],
   "retired_evidence": [
