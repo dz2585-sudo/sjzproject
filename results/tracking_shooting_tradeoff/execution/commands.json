@@ -1,0 +1,75 @@
+[
+  {
+    "stage": "setup",
+    "elapsed_seconds": 1.327,
+    "exit_code": 0,
+    "command": [
+      "python",
+      "scripts/check_setup.py"
+    ]
+  },
+  {
+    "stage": "smoke",
+    "elapsed_seconds": 1.262,
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "aimrl.tracking_tradeoff",
+      "--phase",
+      "smoke",
+      "--output",
+      "results/tracking_shooting_tradeoff",
+      "--kernel",
+      "../tradeoff-build/tradeoff.dll"
+    ]
+  },
+  {
+    "stage": "tests",
+    "elapsed_seconds": 92.831,
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ]
+  },
+  {
+    "stage": "train",
+    "elapsed_seconds": 120.753,
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "aimrl.tracking_tradeoff",
+      "--phase",
+      "train",
+      "--output",
+      "results/tracking_shooting_tradeoff",
+      "--kernel",
+      "../tradeoff-build/tradeoff.dll"
+    ]
+  },
+  {
+    "stage": "evaluate",
+    "elapsed_seconds": 7.147,
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "aimrl.tracking_tradeoff",
+      "--phase",
+      "evaluate",
+      "--output",
+      "results/tracking_shooting_tradeoff",
+      "--kernel",
+      "../tradeoff-build/tradeoff.dll"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "aimrl.tracking_tradeoff",
+    "--phase",
+    "report",
+    "--output",
+    "results/tracking_shooting_tradeoff",
+    "--kernel",
+    "../tradeoff-build/tradeoff.dll"
+  ],
+  "complete": true,
+  "exit_code": 0,
+  "elapsed_seconds": 30.484806600026786
+}

@@ -1,0 +1,41 @@
+{
+  "failures": [
+    {
+      "stage": "build",
+      "additional_training_interactions": 0,
+      "reason": "Restricted compiler cache writes failed. Approved rebuild succeeded.",
+      "exit_code": 1
+    },
+    {
+      "stage": "targeted_tests",
+      "additional_training_interactions": 0,
+      "reason": "An accidental NUL in the new Python source prevented import. Replaced with an escaped separator and reran successfully.",
+      "exit_code": 1
+    }
+  ],
+  "setup_exit_code": 0,
+  "compiler": "Zig 0.15.2",
+  "targeted_test_count": 5,
+  "targeted_exit_code": 0,
+  "tests_exit_code": 0,
+  "compiler_flags": [
+    "cc",
+    "-std=c11",
+    "-O3",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-shared"
+  ],
+  "seed_search": {
+    "checked": {
+      "json_files": 214,
+      "csv_seed_files": 468,
+      "csv_seed_values": 214878
+    },
+    "conflicts": [],
+    "conflict_count": 0
+  },
+  "test_count": 79,
+  "smoke_exit_code": 0,
+  "seed_search_exit_code": 0
+}

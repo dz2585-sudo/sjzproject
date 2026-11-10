@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "splits": {
+    "final": {
+      "policies": 43,
+      "scenarios": 500,
+      "windows": 21500
+    },
+    "stress": {
+      "policies": 43,
+      "scenarios": 200,
+      "windows": 8600
+    }
+  },
+  "elapsed_seconds": 21.320987799670547,
+  "workers": 6,
+  "paired_physical_states_checked_each_tick": true,
+  "learner_snapshots_unchanged": true,
+  "training_interactions": 0
+}

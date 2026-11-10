@@ -1,0 +1,805 @@
+{
+  "complete": true,
+  "runs": [
+    {
+      "condition": "reference",
+      "seed": 20,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "cac994503a3fe713449b39280abe97020c1d52e99ac92674ff361a0279aba66b",
+      "counts_sha256": "28660588935558a11ad162ac842bbad8537d1ae1d97826d498e1504050de1782",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 303669805735526269881730979970387545053,
+          "inc": 84211794259467465671257808615804203671
+        },
+        "has_uint32": 0,
+        "uinteger": 1498902788
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 99855392060315079854674334465332384861,
+          "inc": 57407566958423561023892655185697469953
+        },
+        "has_uint32": 1,
+        "uinteger": 2726263996
+      },
+      "elapsed_seconds": 5.5677097998559475,
+      "memory": {
+        "available": true,
+        "bytes": 51404800,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "reference",
+      "seed": 21,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "b482e9477e91ebe899b671db27c83f81fab5a91ade543498b5c527920d6b695f",
+      "counts_sha256": "a926235a232dff88868f66e346074217386f6a5398970c3e3b3139d383ab16b2",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 162378760433929010698414130009982432027,
+          "inc": 127949718677759220542231139505247837305
+        },
+        "has_uint32": 0,
+        "uinteger": 3563343532
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 169032206193377835551355360295257895651,
+          "inc": 77363980888112384726933709817230438843
+        },
+        "has_uint32": 0,
+        "uinteger": 1252324946
+      },
+      "elapsed_seconds": 6.184555900283158,
+      "memory": {
+        "available": true,
+        "bytes": 51900416,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "reference",
+      "seed": 22,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "eb7b7b9b8be57c6de1ff5bbc4e3ce4f2603d71a9c66b1c17d82bf9542c1596e5",
+      "counts_sha256": "2221182a9a0f458a66afd565da4aafd37a2515efe69e0f22cb8d8c0d81bd1fa3",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 208057408774504577132955078474812879189,
+          "inc": 210814969177138417688541707240858696469
+        },
+        "has_uint32": 0,
+        "uinteger": 704854989
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 203432060478696011873617901002568885368,
+          "inc": 28343777644171770313566215251651629823
+        },
+        "has_uint32": 1,
+        "uinteger": 3397983437
+      },
+      "elapsed_seconds": 4.552635400090367,
+      "memory": {
+        "available": true,
+        "bytes": 51900416,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_0p1",
+      "seed": 20,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "033d098d40a76d1d41bcd60ac02f3be4e59dba03ff6de58218a2f5e01d2c7d10",
+      "counts_sha256": "d946d750a89a7bb87870ee8ad13228de1a87581497913124d4ea99eacebee119",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 303669805735526269881730979970387545053,
+          "inc": 84211794259467465671257808615804203671
+        },
+        "has_uint32": 0,
+        "uinteger": 1498902788
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 99855392060315079854674334465332384861,
+          "inc": 57407566958423561023892655185697469953
+        },
+        "has_uint32": 1,
+        "uinteger": 2726263996
+      },
+      "elapsed_seconds": 5.4927328997291625,
+      "memory": {
+        "available": true,
+        "bytes": 51900416,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_0p1",
+      "seed": 21,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "506ed6491b22ccf666473a3de4009b8bac8f65aaa8118ae8a9ec783352bff67e",
+      "counts_sha256": "f533a6b9201cd07bab9075a150c5fe582dfa3e5d26c2dde8e0fe4559d8f09f4a",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 162378760433929010698414130009982432027,
+          "inc": 127949718677759220542231139505247837305
+        },
+        "has_uint32": 0,
+        "uinteger": 3563343532
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 169032206193377835551355360295257895651,
+          "inc": 77363980888112384726933709817230438843
+        },
+        "has_uint32": 0,
+        "uinteger": 1252324946
+      },
+      "elapsed_seconds": 5.835925400257111,
+      "memory": {
+        "available": true,
+        "bytes": 51900416,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_0p1",
+      "seed": 22,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "ec32bb2dae47a4e3a42b26c66c18310808cf99112ecf58a665c29c0cf55a39ec",
+      "counts_sha256": "304b76a3ca514c29a4d0e711c83e83603a1be9238953dd91ce2d38533c13ee2d",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 208057408774504577132955078474812879189,
+          "inc": 210814969177138417688541707240858696469
+        },
+        "has_uint32": 0,
+        "uinteger": 704854989
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 203432060478696011873617901002568885368,
+          "inc": 28343777644171770313566215251651629823
+        },
+        "has_uint32": 1,
+        "uinteger": 3397983437
+      },
+      "elapsed_seconds": 5.756158200092614,
+      "memory": {
+        "available": true,
+        "bytes": 51900416,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_0p3",
+      "seed": 20,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "6a9bcb545d612b15f4da6c819633142477193d4fdf2d4ea33d8daaf1580ea362",
+      "counts_sha256": "dbcd2aa8434f2f73f191968e612f0be27d5fdac72580dd7ecfd1cac418624a35",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 303669805735526269881730979970387545053,
+          "inc": 84211794259467465671257808615804203671
+        },
+        "has_uint32": 0,
+        "uinteger": 1498902788
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 99855392060315079854674334465332384861,
+          "inc": 57407566958423561023892655185697469953
+        },
+        "has_uint32": 1,
+        "uinteger": 2726263996
+      },
+      "elapsed_seconds": 5.98782919999212,
+      "memory": {
+        "available": true,
+        "bytes": 51970048,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_0p3",
+      "seed": 21,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "a4eff507f6cb705027fa3d42c1168fb70f9337cd448d104b61892c043783dbe1",
+      "counts_sha256": "1bb97f6f073e97ecbc96f6e9179a44ebc3827d35720fe61f8f5109a2520bed51",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 162378760433929010698414130009982432027,
+          "inc": 127949718677759220542231139505247837305
+        },
+        "has_uint32": 0,
+        "uinteger": 3563343532
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 169032206193377835551355360295257895651,
+          "inc": 77363980888112384726933709817230438843
+        },
+        "has_uint32": 0,
+        "uinteger": 1252324946
+      },
+      "elapsed_seconds": 5.684048799797893,
+      "memory": {
+        "available": true,
+        "bytes": 52068352,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_0p3",
+      "seed": 22,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "06763e40865bd01c7f94cb527bd56b3cfe3de9060ca304acecd54d71db8a7de7",
+      "counts_sha256": "4aeefe655f4792d175b88d525d5da539fddea98e1b8809944d541c78c959930e",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 208057408774504577132955078474812879189,
+          "inc": 210814969177138417688541707240858696469
+        },
+        "has_uint32": 0,
+        "uinteger": 704854989
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 203432060478696011873617901002568885368,
+          "inc": 28343777644171770313566215251651629823
+        },
+        "has_uint32": 1,
+        "uinteger": 3397983437
+      },
+      "elapsed_seconds": 5.895194200333208,
+      "memory": {
+        "available": true,
+        "bytes": 52088832,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_1p0",
+      "seed": 20,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "edea15e9af297c906d3fd544a3a6ea333b159a12a02389f40e9ccf9abe888c85",
+      "counts_sha256": "b1b6d887800f88f186e576153b8c013796bb800d8c9698359c742a56f0b2eee1",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 303669805735526269881730979970387545053,
+          "inc": 84211794259467465671257808615804203671
+        },
+        "has_uint32": 0,
+        "uinteger": 1498902788
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 99855392060315079854674334465332384861,
+          "inc": 57407566958423561023892655185697469953
+        },
+        "has_uint32": 1,
+        "uinteger": 2726263996
+      },
+      "elapsed_seconds": 3.949763000011444,
+      "memory": {
+        "available": true,
+        "bytes": 52260864,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_1p0",
+      "seed": 21,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "6d43c10807d128280fb01c91b6174818bb386abc448198abf7aeea58f9138e24",
+      "counts_sha256": "db85cf82319a64eaaf3aca8df8628e2839e9247438e022d9c51b8ba1c0e124ce",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 162378760433929010698414130009982432027,
+          "inc": 127949718677759220542231139505247837305
+        },
+        "has_uint32": 0,
+        "uinteger": 3563343532
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 169032206193377835551355360295257895651,
+          "inc": 77363980888112384726933709817230438843
+        },
+        "has_uint32": 0,
+        "uinteger": 1252324946
+      },
+      "elapsed_seconds": 5.188040599692613,
+      "memory": {
+        "available": true,
+        "bytes": 52674560,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "distance_1p0",
+      "seed": 22,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "d5704311c25cab7b18b98095cdec7d8f36dd876fb307856aad4eabf8589371dd",
+      "counts_sha256": "31d4450b7bb428f058fe3c140673827b0aa126965b671674957084c79e228f29",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 208057408774504577132955078474812879189,
+          "inc": 210814969177138417688541707240858696469
+        },
+        "has_uint32": 0,
+        "uinteger": 704854989
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 203432060478696011873617901002568885368,
+          "inc": 28343777644171770313566215251651629823
+        },
+        "has_uint32": 1,
+        "uinteger": 3397983437
+      },
+      "elapsed_seconds": 5.465896800160408,
+      "memory": {
+        "available": true,
+        "bytes": 52674560,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_0p5",
+      "seed": 20,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "b9b68bae2931dbb55b218b4ba591e32dbc36f43fa71fdec07d7dacb941e36166",
+      "counts_sha256": "c14e90a2f45e2e272526cc10ceed632da51d5b838f804794478ee8aa81d9a795",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 303669805735526269881730979970387545053,
+          "inc": 84211794259467465671257808615804203671
+        },
+        "has_uint32": 0,
+        "uinteger": 1498902788
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 99855392060315079854674334465332384861,
+          "inc": 57407566958423561023892655185697469953
+        },
+        "has_uint32": 1,
+        "uinteger": 2726263996
+      },
+      "elapsed_seconds": 5.389226899947971,
+      "memory": {
+        "available": true,
+        "bytes": 52674560,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_0p5",
+      "seed": 21,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "f1b1c69558fb72677d1cdef2c47289441d994112f23ed5eb15ac66842ed31493",
+      "counts_sha256": "4f881b948bb9853507b1fe0f87a7338b690f0d5f4d740707e24137981b0c6ff7",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 162378760433929010698414130009982432027,
+          "inc": 127949718677759220542231139505247837305
+        },
+        "has_uint32": 0,
+        "uinteger": 3563343532
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 169032206193377835551355360295257895651,
+          "inc": 77363980888112384726933709817230438843
+        },
+        "has_uint32": 0,
+        "uinteger": 1252324946
+      },
+      "elapsed_seconds": 6.074032600037754,
+      "memory": {
+        "available": true,
+        "bytes": 52674560,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_0p5",
+      "seed": 22,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "d05e6a45bdd01c1fc2f2419db304345d155da64580b91126efce73aec6f49ca5",
+      "counts_sha256": "fdd99001e440c1720c4b37f11c636045ceec5bec2cce78539c318f7dc7689eff",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 208057408774504577132955078474812879189,
+          "inc": 210814969177138417688541707240858696469
+        },
+        "has_uint32": 0,
+        "uinteger": 704854989
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 203432060478696011873617901002568885368,
+          "inc": 28343777644171770313566215251651629823
+        },
+        "has_uint32": 1,
+        "uinteger": 3397983437
+      },
+      "elapsed_seconds": 5.7271765996702015,
+      "memory": {
+        "available": true,
+        "bytes": 52776960,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_2p0",
+      "seed": 20,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "509f03f84999e86cb222e85c6fe9567d7293d516483ac2513d745cf52fd8e3cb",
+      "counts_sha256": "7004b20677e317910cf8c39e667f46b300b1e8818158c50fde1ea29621165dd6",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 303669805735526269881730979970387545053,
+          "inc": 84211794259467465671257808615804203671
+        },
+        "has_uint32": 0,
+        "uinteger": 1498902788
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 99855392060315079854674334465332384861,
+          "inc": 57407566958423561023892655185697469953
+        },
+        "has_uint32": 1,
+        "uinteger": 2726263996
+      },
+      "elapsed_seconds": 6.036428600084037,
+      "memory": {
+        "available": true,
+        "bytes": 52776960,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_2p0",
+      "seed": 21,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "d0814b823e252b588f9647f584f12f2db0905acda1601f99fdee5647142f6db7",
+      "counts_sha256": "fa797ac190e8c1ac70105caa178173c90854029a234c3a4e474b6093a6d83800",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 162378760433929010698414130009982432027,
+          "inc": 127949718677759220542231139505247837305
+        },
+        "has_uint32": 0,
+        "uinteger": 3563343532
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 169032206193377835551355360295257895651,
+          "inc": 77363980888112384726933709817230438843
+        },
+        "has_uint32": 0,
+        "uinteger": 1252324946
+      },
+      "elapsed_seconds": 6.096924900077283,
+      "memory": {
+        "available": true,
+        "bytes": 52776960,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_2p0",
+      "seed": 22,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "ae52eefae9b2f061f13163f86ccd68dc6321b8b7dac1de40fe1363a1491ea952",
+      "counts_sha256": "fcc93f97bbbe14ecb6d5ea86d565ee502afacbc67dcee50a01ffe85544c7963c",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 208057408774504577132955078474812879189,
+          "inc": 210814969177138417688541707240858696469
+        },
+        "has_uint32": 0,
+        "uinteger": 704854989
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 203432060478696011873617901002568885368,
+          "inc": 28343777644171770313566215251651629823
+        },
+        "has_uint32": 1,
+        "uinteger": 3397983437
+      },
+      "elapsed_seconds": 5.065775299910456,
+      "memory": {
+        "available": true,
+        "bytes": 52776960,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_5p0",
+      "seed": 20,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "b0bbc0fd725e28bf1156079157381eaa7cf435ac96f13dd417533b7125275772",
+      "counts_sha256": "c7d2f09456f3c57dbf442ddcdb5c95737902424c7a66dd74f571840aa715c0b8",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 303669805735526269881730979970387545053,
+          "inc": 84211794259467465671257808615804203671
+        },
+        "has_uint32": 0,
+        "uinteger": 1498902788
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 99855392060315079854674334465332384861,
+          "inc": 57407566958423561023892655185697469953
+        },
+        "has_uint32": 1,
+        "uinteger": 2726263996
+      },
+      "elapsed_seconds": 5.06554410001263,
+      "memory": {
+        "available": true,
+        "bytes": 52817920,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_5p0",
+      "seed": 21,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "d93e035d298da41f94c3030b4611d73150cf9d0484dbaa0434d07bd5450cf854",
+      "counts_sha256": "9e09f66413aaa943677fa515534af997f2fbf215b03832eb1a2e5e057f5aa985",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 162378760433929010698414130009982432027,
+          "inc": 127949718677759220542231139505247837305
+        },
+        "has_uint32": 0,
+        "uinteger": 3563343532
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 169032206193377835551355360295257895651,
+          "inc": 77363980888112384726933709817230438843
+        },
+        "has_uint32": 0,
+        "uinteger": 1252324946
+      },
+      "elapsed_seconds": 5.3932237001135945,
+      "memory": {
+        "available": true,
+        "bytes": 52817920,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    },
+    {
+      "condition": "close_5p0",
+      "seed": 22,
+      "interactions": 5000000,
+      "smoke": false,
+      "full_windows": 16666,
+      "partial_windows": 1,
+      "partial_ticks": 200,
+      "checkpoints": 11,
+      "reload_exact": true,
+      "q_sha256": "14aa576fb46055304fe3d54ca6bbbc7c4dba7fbbdb747dc5704e9187dfb9248c",
+      "counts_sha256": "3fc3567a8d5c399967c6960e470a2d70ccc4b82b95d323976f356696ea0ec5a5",
+      "environment_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 208057408774504577132955078474812879189,
+          "inc": 210814969177138417688541707240858696469
+        },
+        "has_uint32": 0,
+        "uinteger": 704854989
+      },
+      "exploration_rng_final": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 203432060478696011873617901002568885368,
+          "inc": 28343777644171770313566215251651629823
+        },
+        "has_uint32": 1,
+        "uinteger": 3397983437
+      },
+      "elapsed_seconds": 4.59703140007332,
+      "memory": {
+        "available": true,
+        "bytes": 52817920,
+        "metric": "windows_peak_working_set",
+        "scope": "process lifetime; not an attributed stage delta"
+      }
+    }
+  ],
+  "interactions": 105000000,
+  "elapsed_seconds": 115.26595730008557
+}

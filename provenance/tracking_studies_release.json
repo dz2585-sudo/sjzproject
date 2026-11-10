@@ -1,0 +1,45 @@
+{
+  "schema": "aimrl_tracking_studies_release_v1",
+  "redacted_tradeoff_setup_log": {
+    "historical_path": "execution/setup.log",
+    "historical_bytes": 507,
+    "historical_sha256": "ace03f4c533deb14851ae4b587f85053f0fac07fafbe720e67b57edd61a98e9f",
+    "public_repository_status": "omitted",
+    "reason": "The original transcript contains machine-specific paths. Two path lines were omitted from the separately published copy.",
+    "replacement_path": "provenance/tracking_tradeoff_setup_public.txt",
+    "replacement_sha256": "a235f80e3cac59ed982660031bae39c20ded7bd0c68035d7e9e3d580546ec82d"
+  },
+  "guard_checkout_adapter": {
+    "original_sources_path": "provenance/tracking_fire_guard_original_sources.zip",
+    "original_sources_zip_sha256": "a35be3f23f68c87e18203b6ea3d519b715cbcf43c637844b4b2f3bc5a29695d7",
+    "original_source_sha256": {
+      "__main__.py": "1fb4f42c2fc15f08b7145bd7c7e7dd72a622ff6f4115ff65c4a4fb64129acc9c",
+      "history.py": "789fe303e26e0348fdb02c19e09f6b696f27590a381430794a7561e8ede30781",
+      "study.py": "3c7de00af385966d7e9605beaac4c4bf1ba5619da4de7cdd2c4d45834707bcab"
+    },
+    "checkout_source_sha256": {
+      "__main__.py": "7684b5fb302173acd0abd5b51ccf2204a17a6dcdb0f0fa58e8b245d478bd6612",
+      "history.py": "10be36876da2ddc51f1ffbea9e9fa2b36183746a1b52a24b54c89d5d3270bca0",
+      "study.py": "a35321e13ec5b3f7570cbfc74471cfe493a4bdc79673681450adbb1dbc9b0bf8"
+    },
+    "scope": "Acknowledge the single redacted transcript on clean checkouts, separate intentional route reuse from seed collisions, and verify separately rebuilt kernels through opt-in read-only parity. Guard and training computations are unchanged."
+  },
+  "native_build": {
+    "compiler": "Zig 0.15.2",
+    "language": "C11",
+    "command": [
+      "zig",
+      "cc",
+      "-std=c11",
+      "-O3",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-shared",
+      "aimrl/tracking_tradeoff/kernel.c",
+      "-o",
+      ".tmp/tradeoff-rebuild/tradeoff.dll"
+    ],
+    "source_sha256": "ec1d977c6b81a038c3599f3eabec660444d539b6cbad3b36f09c50ced2bf3c17",
+    "historical_kernel_sha256": "3459cdad660f25a20d34413b9eac3139f9e472f5c601639825ec7129904fec5e"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "close_2p0",
+  "seed": 21,
+  "interactions": 5000000,
+  "smoke": false,
+  "full_windows": 16666,
+  "partial_windows": 1,
+  "partial_ticks": 200,
+  "checkpoints": 11,
+  "reload_exact": true,
+  "q_sha256": "d0814b823e252b588f9647f584f12f2db0905acda1601f99fdee5647142f6db7",
+  "counts_sha256": "fa797ac190e8c1ac70105caa178173c90854029a234c3a4e474b6093a6d83800",
+  "environment_rng_final": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 162378760433929010698414130009982432027,
+      "inc": 127949718677759220542231139505247837305
+    },
+    "has_uint32": 0,
+    "uinteger": 3563343532
+  },
+  "exploration_rng_final": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 169032206193377835551355360295257895651,
+      "inc": 77363980888112384726933709817230438843
+    },
+    "has_uint32": 0,
+    "uinteger": 1252324946
+  },
+  "elapsed_seconds": 6.096924900077283,
+  "memory": {
+    "available": true,
+    "bytes": 52776960,
+    "metric": "windows_peak_working_set",
+    "scope": "process lifetime; not an attributed stage delta"
+  }
+}

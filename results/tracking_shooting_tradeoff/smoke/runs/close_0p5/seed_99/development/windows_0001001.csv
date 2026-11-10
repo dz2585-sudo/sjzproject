@@ -1,0 +1,4 @@
+scenario_seed,ticks,distance_sum,close_ticks,hits,shots,misses,base_return,first_close_tick,acquired,longest_far_streak,alignment_opportunities,aligned_shots,unaligned_shots,hit_nonclose,target_sha256
+4100000,300,4252,5,0,3,3,-18.0,105,1,62,0,0,3,0,1699313f9041a184c4047562e37bce28f1376388e099308478b67d7ae812322a
+4100001,300,6500,0,0,0,0,-15.0,300,0,151,0,0,0,0,5050fac6c756c2cd7a3cbc3d49b4380b293d04b885614126bc818d74d813a6b7
+4100002,300,7706,2,0,1,1,-16.0,58,1,237,0,0,1,0,ff0b309d6d1ccd51b11dc14aeaeceb3a9f69e5a98ce6c0ad498e7b422ada1e75

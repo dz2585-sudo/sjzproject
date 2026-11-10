@@ -1,0 +1,291 @@
+{
+  "runs": 21,
+  "training_interactions": 105000000,
+  "complete_training_windows": 349986,
+  "partial_training_windows": 21,
+  "checkpoints": 231,
+  "development_windows": 46200,
+  "training_reward_identities": 350007,
+  "final_windows": 11000,
+  "stress_windows": 4400,
+  "exact_checkpoint_reloads": 231,
+  "max_reward_identity_error": 1.8189894035458565e-12,
+  "unchanged_historical_files": 931,
+  "historical_readme_sha256": "26c5e8950063215321d7236e7d15c7735e1041a1ab6e0919f373eb0d707c0b50",
+  "historical_results_unchanged": 853,
+  "training_and_evaluation_targets_paired": true,
+  "evaluation_snapshots_unchanged": true,
+  "final_only_after_selection": true,
+  "frozen_head": "f094b3a25021a7fa7bacffad91e8967b09fdd374",
+  "gifs": [
+    {
+      "scenario_seed": 4400000,
+      "path": "demos/scenario_4400000.gif",
+      "sha256": "8f2d0240788ce3cb9de77c27b8afce709dac133862adc43fcc3842d1be8b1237",
+      "frames": 301,
+      "duration_ms": 20070,
+      "target_paths_paired": true,
+      "distinct_crosshair_paths": 4,
+      "decoded_pixels_match_every_frame": true,
+      "sample_rgb_sha256": {
+        "0": "d18ddde6644dfa1c73c3e44af60d85616a14b97b8ad0e7f88ffa80ac7b26c370",
+        "150": "4d48e64c33080b4a528a6bdf9de5b067c6bb40c9655295adbdd1120f1a8ca7a4",
+        "300": "c28da29ffa8872f34c841b8ef54ede165e5084cfff76b582256b59069f03963c"
+      },
+      "panels": {
+        "reference": {
+          "hits": 85,
+          "shots": 86,
+          "close_fraction": 0.6
+        },
+        "distance_0p3": {
+          "hits": 88,
+          "shots": 89,
+          "close_fraction": 0.66
+        },
+        "close_5p0": {
+          "hits": 86,
+          "shots": 120,
+          "close_fraction": 0.7866666666666666
+        },
+        "rule": {
+          "hits": 38,
+          "shots": 38,
+          "close_fraction": 0.7766666666666666
+        }
+      }
+    },
+    {
+      "scenario_seed": 4400001,
+      "path": "demos/scenario_4400001.gif",
+      "sha256": "f9865eeda6855d78f8128cabecad975511fe4ffbe7e45a158ce53b50b69d55f0",
+      "frames": 301,
+      "duration_ms": 20070,
+      "target_paths_paired": true,
+      "distinct_crosshair_paths": 4,
+      "decoded_pixels_match_every_frame": true,
+      "sample_rgb_sha256": {
+        "0": "8ab9245de15f2e2c607c1d6759814c9ed0241420ec32ca86ff659969398ea5e9",
+        "150": "4c876c0f27d1e40a44203b935943789a0a06708823da1f616d80be607f173220",
+        "300": "c5af8523d6e2f959d5f90134f45de482cacd5115015fd94d355f3ba584a25cff"
+      },
+      "panels": {
+        "reference": {
+          "hits": 78,
+          "shots": 78,
+          "close_fraction": 0.5366666666666666
+        },
+        "distance_0p3": {
+          "hits": 79,
+          "shots": 79,
+          "close_fraction": 0.5566666666666666
+        },
+        "close_5p0": {
+          "hits": 78,
+          "shots": 80,
+          "close_fraction": 0.5833333333333334
+        },
+        "rule": {
+          "hits": 73,
+          "shots": 73,
+          "close_fraction": 0.5866666666666667
+        }
+      }
+    },
+    {
+      "scenario_seed": 4400002,
+      "path": "demos/scenario_4400002.gif",
+      "sha256": "4be3df63e80ff5419cb56d17fe46868980b849ba7b0d342c0f4934e854895ba5",
+      "frames": 301,
+      "duration_ms": 20070,
+      "target_paths_paired": true,
+      "distinct_crosshair_paths": 4,
+      "decoded_pixels_match_every_frame": true,
+      "sample_rgb_sha256": {
+        "0": "9b4d89812b15c0332d7d8af013e6479df5049d3acc148472d90e2bb79012c628",
+        "150": "f44d4ce02a46e5f6c8ae279ff1ec7769be33914fcc57a6c614c8fb35ef7c5c24",
+        "300": "a7cbe682197151b68b4e2ed36eb1901d0b9451486ad566c791cabdb3ee832606"
+      },
+      "panels": {
+        "reference": {
+          "hits": 84,
+          "shots": 84,
+          "close_fraction": 0.58
+        },
+        "distance_0p3": {
+          "hits": 81,
+          "shots": 82,
+          "close_fraction": 0.63
+        },
+        "close_5p0": {
+          "hits": 82,
+          "shots": 105,
+          "close_fraction": 0.7466666666666667
+        },
+        "rule": {
+          "hits": 32,
+          "shots": 32,
+          "close_fraction": 0.77
+        }
+      }
+    }
+  ],
+  "complete": true,
+  "preflight": {
+    "failures": [
+      {
+        "stage": "build",
+        "additional_training_interactions": 0,
+        "reason": "Restricted compiler cache writes failed. Approved rebuild succeeded.",
+        "exit_code": 1
+      },
+      {
+        "stage": "targeted_tests",
+        "additional_training_interactions": 0,
+        "reason": "An accidental NUL in the new Python source prevented import. Replaced with an escaped separator and reran successfully.",
+        "exit_code": 1
+      }
+    ],
+    "setup_exit_code": 0,
+    "compiler": "Zig 0.15.2",
+    "targeted_test_count": 5,
+    "targeted_exit_code": 0,
+    "tests_exit_code": 0,
+    "compiler_flags": [
+      "cc",
+      "-std=c11",
+      "-O3",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-shared"
+    ],
+    "seed_search": {
+      "checked": {
+        "json_files": 214,
+        "csv_seed_files": 468,
+        "csv_seed_values": 214878
+      },
+      "conflicts": [],
+      "conflict_count": 0
+    },
+    "test_count": 79,
+    "smoke_exit_code": 0,
+    "seed_search_exit_code": 0
+  },
+  "training_stage": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.tracking_tradeoff",
+      "--phase",
+      "train",
+      "--output",
+      "results/tracking_shooting_tradeoff",
+      "--kernel",
+      "../tradeoff-build/tradeoff.dll"
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "elapsed_seconds": 120.31737179961056
+  },
+  "evaluation_stage": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.tracking_tradeoff",
+      "--phase",
+      "evaluate",
+      "--output",
+      "results/tracking_shooting_tradeoff",
+      "--kernel",
+      "../tradeoff-build/tradeoff.dll"
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "elapsed_seconds": 6.5855935998260975
+  },
+  "formal_failed_runs": 0,
+  "additional_failed_training_interactions": 0,
+  "presentation_source_sha256": {
+    "aimrl/tracking_tradeoff/analysis.py": "e1c8163b321aa4aa86424d5df86d7d7000c9916af5567e1cd7069eb48e618c73",
+    "aimrl/tracking_tradeoff/visuals.py": "2c8ad8fd918facabeec0df86ba755e963d92a6649faf2beae0c174c818de6e5c",
+    "aimrl/tracking_tradeoff/report.py": "7cd03b2b49b9c85ab6419611846982659ebbe5d0617423255b236a2f2a5e204e"
+  },
+  "outputs_sha256": {
+    "figures/alignment_and_shooting.png": "337bebdd22d8422c0942974848a70baaccd293b1f412b946e5a3ff79dad5240c",
+    "figures/close_hits_tradeoff.png": "889714df3cf2e0ef74b2006d591f1c24577dae4a1cb420efbb7439c842496325",
+    "figures/distance_hits_tradeoff.png": "518f840dc36c50ec934beaa507385904e792164d3f9375646fe5aacf7b9aa74b",
+    "figures/learning_curves.png": "7e8df8bf73ebd7874c64e71ff3f60920876cf14c7627ca408c7582ccfa8df3d1",
+    "figures/weight_response.png": "218d538fef1a20cf4e870253525284a40941efd9b86048776bc8d8d7a0273a6e"
+  },
+  "postflight": {
+    "git_head_unchanged": true,
+    "staged_diff_empty": true,
+    "readme_append_only": true,
+    "relative_links_verified": 122,
+    "final_tests_passed": 79,
+    "final_tests_exit_code": 0,
+    "historical_publication_verify_exit_code": 0,
+    "visual_review": {
+      "state": "passed",
+      "scope": "Final objective and learning figures plus decoded GIF snapshots",
+      "native_gui_playback_tested": false
+    },
+    "extra_failed_attempts": [
+      {
+        "stage": "first_render_visual_review",
+        "render_command_exit_code": 0,
+        "issue": "Default font omitted Greek weight glyphs in GIF panel labels.",
+        "correction": "Re-rendered the same trajectories with explicit ASCII weight labels and short path tails.",
+        "archived_relative_to_checkout": "../tradeoff-build/first-render",
+        "additional_training_interactions": 0
+      }
+    ],
+    "report_stage": {
+      "command": [
+        "python",
+        "-m",
+        "aimrl.tracking_tradeoff",
+        "--phase",
+        "report",
+        "--output",
+        "results/tracking_shooting_tradeoff",
+        "--kernel",
+        "../tradeoff-build/tradeoff.dll"
+      ],
+      "complete": true,
+      "exit_code": 0,
+      "elapsed_seconds": 30.484806600026786
+    },
+    "final_test_command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "historical_verify_command": [
+      "python",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "results/tracking_shooting_tradeoff/execution/historical_publication_check.json"
+    ],
+    "seed_audit_repeat": {
+      "checked": {
+        "json_files": 214,
+        "csv_seed_files": 468,
+        "csv_seed_values": 214878
+      },
+      "conflict_count": 0,
+      "conflicts": []
+    }
+  },
+  "output_payload": {
+    "files_excluding_inventory_and_checks": 706,
+    "bytes_excluding_inventory_and_checks": 239851865
+  }
+}

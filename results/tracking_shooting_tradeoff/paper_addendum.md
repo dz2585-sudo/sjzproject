@@ -1,0 +1,24 @@
+# Paper addendum · Scalar rewards for tracking and shooting
+
+Sustained pursuit and successful firing can reward different behavior when the agent must choose between a movement and a shot on each tick. We tested whether weighting proximity could improve both objectives under fixed mechanics and a fixed training budget.
+
+Seven scalar rewards were compared on a fixed 25×25 continuing tracking task with a relative tabular observation, ten actions, a common distance potential, and the same 5M-interaction budget. Three matched training seeds (20, 21, 22) started from zero for each condition. Distance penalty weights were 0.1, 0.3 and 1.0. Close bonus weights were 0.5, 2.0 and 5.0. The reference had zero added weight. The stress set changed both target event probabilities from 0.05 to 0.10. Performance used common post-motion distance and close fraction, hit frequency, and pooled within-seed shot accuracy. The policies shared exact target trajectories on each evaluation split.
+
+| Condition | Mean distance D | Close C (%) | Hits H / window | Accuracy A (%) |
+| --- | ---: | ---: | ---: | ---: |
+| reference | 1.517 ± 0.142 | 58.50 ± 4.73 | 81.33 ± 4.95 | 99.36 ± 0.78 |
+| distance_0p1 | 1.423 ± 0.015 | 60.56 ± 1.99 | 84.07 ± 0.10 | 95.61 ± 6.88 |
+| distance_0p3 | 1.474 ± 0.066 | 59.69 ± 2.97 | 80.97 ± 5.02 | 99.03 ± 0.43 |
+| distance_1p0 | 1.523 ± 0.064 | 65.57 ± 6.62 | 80.62 ± 4.97 | 95.70 ± 6.26 |
+| close_0p5 | 1.398 ± 0.021 | 65.12 ± 2.18 | 84.44 ± 0.15 | 95.69 ± 6.03 |
+| close_2p0 | 1.355 ± 0.015 | 69.39 ± 0.74 | 81.73 ± 4.98 | 90.61 ± 15.49 |
+| close_5p0 | 1.336 ± 0.058 | 72.77 ± 1.90 | 81.52 ± 5.07 | 86.70 ± 11.30 |
+| rule | 1.375 | 72.42 | 44.59 | 100.00 |
+
+No condition reached the prespecified simultaneous target. `distance_0p1`, `close_0p5`, `close_2p0`, `close_5p0` improved both raw C and H, below at least one gate. No condition met all retention gates. `distance_0p3` had the largest positive close gain among weights meeting the distance, accuracy and hit-retention gates (+1.19 pp C, -0.043 D, -0.45% H). The criterion required at least five percentage points of close gain, at least two percent more hits, no increase in mean distance, and at least 98% shot accuracy. The retention criterion allowed at most two percent fewer hits. Three training seeds are the replicates. The uncertainty shown is sample SD across seeds.
+
+Rule fired on 100.00% of aligned ticks, compared with 100.00% for the reference. Rule reached alignment on 14.86% of ticks, versus 27.11% for the reference. The reference therefore recorded +36.74 hits per window relative to Rule, reflecting how frequently each policy reached alignment. `distance_0p3` reached alignment on 26.99% of ticks and fired on 100.00% of those opportunities. It recorded 80.97 hits per window and 59.69% close ticks. `close_5p0` reached alignment on 27.17% of ticks and fired on 100.00% of those opportunities. It recorded 81.52 hits per window and 72.77% close ticks. A hit tests the pre-motion target while Fire holds the crosshair fixed. Its post-motion distance equals the target's net displacement, which can be 2 on a speed-two tick or 0 when reflection returns the target to its starting cell. In the reference, 55,462 of 121,996 hit ticks had net displacement above one (45.34%). Every observed window satisfied close ticks + such hits ≤ total ticks. That identity applies to each realized trajectory. The policy can still alter how often it gets aligned, how often it shoots when aligned, and which target-motion contexts it occupies. Because firing and moving are mutually exclusive, a hit can give up the chance to follow the target on the same tick.
+
+Across all final-set policies and seeds, aligned firing was 100%, so the hit decomposition assigns all observed hit changes to how often the crosshair reached alignment. The distance sweep was non-monotonic. The 0.1 penalty produced more aligned opportunities and 4.19 misses per window versus 0.50 for the reference, while 0.3 stayed closest to the reference shot mix and met the accuracy and retention gates. The 1.0 penalty improved C while raising mean D and missing the accuracy gate. The bonus sweep increased C at every weight. The 0.5 bonus alone cleared the D, C and +2% H gates together but fell below the accuracy gate (95.69%). At 5.0, the share of stays fell from 16.00% to 10.54%. Firing at pre-distance one rose from 0.22% to 10.17%. Those shots cannot hit under the existing rule. Average misses rose to 13.98 per window. The larger close bonus improved tracking, with little further hit gain and poorer shot selection.
+
+The reward sweep describes empirical non-dominance among the trained policies. Conditional action and wall/speed slices describe behavior along the realized trajectories. A controlled action-space comparison is needed to test how much of the observed trade-off is attributable to exclusive movement and firing.

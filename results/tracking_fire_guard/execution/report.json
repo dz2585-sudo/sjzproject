@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "aimrl.tracking_fire_guard",
+    "--phase",
+    "report",
+    "--output",
+    "results/tracking_fire_guard"
+  ],
+  "complete": true,
+  "exit_code": 0,
+  "elapsed_seconds": 5.873963499907404
+}

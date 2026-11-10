@@ -1,0 +1,334 @@
+{
+  "complete": true,
+  "training_interactions": 0,
+  "prior_files_unchanged": 708,
+  "historical_reconciliation": {
+    "previous_per_seed_rows": 44,
+    "previous_comparison_rows": 16,
+    "previous_paired_rows": 42,
+    "prior_hashes_verified": 708,
+    "training_interactions": 105000000,
+    "full_windows": 349986,
+    "partial_windows": 21,
+    "partial_ticks": 4200,
+    "checkpoints": 231,
+    "development_windows": 46200,
+    "inner_training_seconds": 115.26595730008557,
+    "sum_per_run_seconds": 115.00585430022329,
+    "phase_seconds": 120.31737179961056,
+    "outer_command_seconds": 120.753,
+    "backend": "Zig 0.15.2 C11 Windows library called from Python via ctypes. Python owns resets, NumPy PCG64, checkpoints, logging and evaluation orchestration.",
+    "historical_python_training_parity": "Exact 1,001-step zero-weight Python parity and each weight in a greedy-heavy regime, including Q, counts and RNG states. These historical tests were audited, not rerun during this inference-only study.",
+    "previous_command_exit_codes": {
+      "setup": 0,
+      "smoke": 0,
+      "tests": 0,
+      "train": 0,
+      "evaluate": 0
+    },
+    "kernel_sha256": "3459cdad660f25a20d34413b9eac3139f9e472f5c601639825ec7129904fec5e"
+  },
+  "gate": {
+    "complete": true,
+    "models": 21,
+    "scenarios_per_model": 10,
+    "paired_windows": 210,
+    "paired_ticks": 63000,
+    "target_rng_state_compared_every_gate_tick": true,
+    "native_python_read_only_ticks_matched": 126000,
+    "removed_misses": 926,
+    "training_interactions": 0,
+    "learner_snapshots_unchanged": true
+  },
+  "evaluation": {
+    "complete": true,
+    "splits": {
+      "final": {
+        "policies": 43,
+        "scenarios": 500,
+        "windows": 21500
+      },
+      "stress": {
+        "policies": 43,
+        "scenarios": 200,
+        "windows": 8600
+      }
+    },
+    "elapsed_seconds": 21.320987799670547,
+    "workers": 6,
+    "paired_physical_states_checked_each_tick": true,
+    "learner_snapshots_unchanged": true,
+    "training_interactions": 0
+  },
+  "saved_evaluation_audit": {
+    "learned_paired_windows_rechecked": 14700,
+    "paired_seed_contrasts": 42,
+    "zero_shot_windows": {
+      "final": {
+        "original": 0,
+        "guard": 0
+      },
+      "stress": {
+        "original": 0,
+        "guard": 0
+      }
+    },
+    "zero_shot_accuracy": "NA",
+    "exact_invariants": [
+      "D",
+      "C",
+      "H",
+      "physical state",
+      "target trajectory"
+    ],
+    "training_interactions": 0
+  },
+  "q_diagnostic_totals": {
+    "final": {
+      "events": 59622,
+      "fire_stay_ties": 0,
+      "max_action_ties": 90,
+      "positive_q_gap": 59622,
+      "q_gap_median": 1.104705810546875,
+      "q_gap_min": 0.022674560546875,
+      "q_gap_max": 472.50403594970703,
+      "fire_updates_median": 12364.0,
+      "stay_updates_median": 40318.0,
+      "fire_zero_updates": 103,
+      "stay_zero_updates": 11,
+      "either_zero_updates": 114,
+      "either_below_10_updates": 581,
+      "both_at_least_100_updates": 58809,
+      "by_pre_distance": {
+        "1": 58057,
+        "2": 600,
+        "3": 175,
+        "4": 17,
+        "5": 36,
+        "6": 12,
+        "7": 27,
+        "8": 1,
+        "9": 18,
+        "10": 7,
+        "11": 15,
+        "12": 16,
+        "13": 18,
+        "14": 14,
+        "15": 20,
+        "16": 16,
+        "17": 25,
+        "18": 17,
+        "19": 25,
+        "20": 12,
+        "21": 22,
+        "22": 35,
+        "23": 40,
+        "24": 37,
+        "25": 41,
+        "26": 27,
+        "27": 34,
+        "28": 33,
+        "29": 30,
+        "30": 28,
+        "31": 31,
+        "32": 23,
+        "33": 14,
+        "34": 19,
+        "35": 16,
+        "36": 18,
+        "37": 16,
+        "38": 10,
+        "39": 12,
+        "40": 6,
+        "41": 1,
+        "44": 1
+      }
+    },
+    "stress": {
+      "events": 22769,
+      "fire_stay_ties": 0,
+      "max_action_ties": 25,
+      "positive_q_gap": 22769,
+      "q_gap_median": 1.104705810546875,
+      "q_gap_min": 0.015906333923339844,
+      "q_gap_max": 472.50403594970703,
+      "fire_updates_median": 12364,
+      "stay_updates_median": 40318,
+      "fire_zero_updates": 28,
+      "stay_zero_updates": 6,
+      "either_zero_updates": 34,
+      "either_below_10_updates": 205,
+      "both_at_least_100_updates": 22446,
+      "by_pre_distance": {
+        "1": 22026,
+        "2": 320,
+        "3": 109,
+        "4": 10,
+        "5": 27,
+        "6": 3,
+        "7": 13,
+        "8": 5,
+        "9": 5,
+        "10": 7,
+        "11": 4,
+        "12": 11,
+        "13": 4,
+        "14": 4,
+        "15": 7,
+        "16": 4,
+        "17": 15,
+        "18": 5,
+        "19": 12,
+        "20": 11,
+        "21": 12,
+        "22": 16,
+        "23": 14,
+        "24": 6,
+        "25": 16,
+        "26": 2,
+        "27": 9,
+        "28": 11,
+        "29": 16,
+        "30": 12,
+        "31": 11,
+        "32": 4,
+        "33": 4,
+        "34": 10,
+        "35": 3,
+        "36": 5,
+        "37": 3,
+        "38": 3,
+        "39": 3,
+        "40": 5,
+        "41": 1,
+        "43": 1
+      }
+    }
+  },
+  "objective_frontiers": {
+    "D": [
+      "close_5p0",
+      "close_2p0",
+      "close_0p5"
+    ],
+    "C": [
+      "close_0p5",
+      "close_2p0",
+      "close_5p0"
+    ]
+  },
+  "demo": {
+    "path": "demo/synchronized_fire_guard.gif",
+    "sha256": "a10b0c6c54650d378c4c086b356d250bb44a89555221c25d0ea014c147db64c9",
+    "frames": 301,
+    "duration_ms": 20070,
+    "samples": {
+      "0": "662f87cb7998d34329576e16097bd687da2758f020add74f956aa61901fd1a2f",
+      "57": "894b5f381a11a11eba1c9a9b3ac16b37b520aef9cd8926f917cd616eb2ec0a43",
+      "150": "79e4baffb77c8a237ed00ad80276806e045faf91e8558dbf827e09fba0cac7df",
+      "300": "f31a98ddd6919bdb5fe3b5398b5658ddaf2d3c8342fdba2742cf9a4eb5989dd0"
+    },
+    "removed_misses": 34,
+    "hits_each": 86,
+    "decoded_pixels_and_timing_exact": true
+  },
+  "report_sources_sha256": {
+    "analysis.py": "9afdbf517d5d8ef6fc230fea9655a81ba05c99cb1099450677058f2dd4fd6619",
+    "visuals.py": "2ff577628a46ff6ddbf4e5aa2a0c368a81ec88eecd6c0775d71f47d19c518335",
+    "report.py": "5cdcf563cb887e093170867c995779cb5cf1dd09af693997230415985d946249"
+  },
+  "execution_records": {
+    "setup": {
+      "command": [
+        "python",
+        "-m",
+        "aimrl.tracking_fire_guard",
+        "--phase",
+        "setup",
+        "--output",
+        "results/tracking_fire_guard",
+        "--workers",
+        "6"
+      ],
+      "complete": true,
+      "exit_code": 0,
+      "elapsed_seconds": 12.43516830028966
+    },
+    "gate": {
+      "command": [
+        "python",
+        "-m",
+        "aimrl.tracking_fire_guard",
+        "--phase",
+        "gate",
+        "--output",
+        "results/tracking_fire_guard",
+        "--workers",
+        "6",
+        "--prior-kernel",
+        "../tradeoff-build/tradeoff.dll"
+      ],
+      "complete": true,
+      "exit_code": 0,
+      "elapsed_seconds": 3.2116697002202272
+    },
+    "evaluate": {
+      "command": [
+        "python",
+        "-m",
+        "aimrl.tracking_fire_guard",
+        "--phase",
+        "evaluate",
+        "--output",
+        "results/tracking_fire_guard",
+        "--workers",
+        "6"
+      ],
+      "complete": true,
+      "exit_code": 0,
+      "elapsed_seconds": 21.334429300390184
+    },
+    "report": {
+      "command": [
+        "python",
+        "-m",
+        "aimrl.tracking_fire_guard",
+        "--phase",
+        "report",
+        "--output",
+        "results/tracking_fire_guard"
+      ],
+      "complete": true,
+      "exit_code": 0,
+      "elapsed_seconds": 5.873963499907404
+    }
+  },
+  "postflight": {
+    "complete": true,
+    "relative_links_checked": 13,
+    "prior_payload_hashes_verified": 708,
+    "older_result_hashes_verified": 853,
+    "targeted_test_count": 3,
+    "targeted_test_exit_code": 0,
+    "targeted_test_command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_tracking_fire_guard.py",
+      "-v"
+    ],
+    "targeted_test_source_sha256": "82aa1f41b1125bec3e1581c068d139de865000f45aa29a1805fef543a93e09c6",
+    "presentation_revision": "Clarified pre/post distance labels on filtered frames and moved overlapping plot labels.",
+    "visual_reviewed": true,
+    "native_gui_playback_tested": false,
+    "git_head_and_index_preserved": true
+  },
+  "payload": {
+    "files_excluding_inventory_and_checks": 174,
+    "bytes_excluding_inventory_and_checks": 24032623
+  }
+}

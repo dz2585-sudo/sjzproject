@@ -1,0 +1,151 @@
+{
+  "config": {
+    "project": {
+      "name": "AimRL Tracking\u2013Shooting Trade-off",
+      "schema": "tracking25_v2"
+    },
+    "environment": {
+      "grid_size": 25,
+      "minimum_reset_distance": 12,
+      "turn_probability": 0.05,
+      "speed_toggle_probability": 0.05,
+      "episode_ticks": 300
+    },
+    "actions": [
+      "left_slow",
+      "right_slow",
+      "up_slow",
+      "down_slow",
+      "stay",
+      "fire",
+      "left_fast",
+      "right_fast",
+      "up_fast",
+      "down_fast"
+    ],
+    "rewards": {
+      "step": -0.05,
+      "hit": 10.0,
+      "miss": -1.0
+    },
+    "learning": {
+      "alpha": 0.15,
+      "gamma": 0.99,
+      "initial_q": 0,
+      "dtype": "float32",
+      "training_steps": 5000000,
+      "epsilon_start": 1.0,
+      "epsilon_end": 0.05,
+      "epsilon_decay_steps": 4000000,
+      "shaping_scale": 1.0
+    },
+    "tradeoff": {
+      "conditions": {
+        "reference": [
+          0,
+          0
+        ],
+        "distance_0p1": [
+          0.1,
+          0
+        ],
+        "distance_0p3": [
+          0.3,
+          0
+        ],
+        "distance_1p0": [
+          1.0,
+          0
+        ],
+        "close_0p5": [
+          0,
+          0.5
+        ],
+        "close_2p0": [
+          0,
+          2.0
+        ],
+        "close_5p0": [
+          0,
+          5.0
+        ]
+      },
+      "training_seeds": [
+        20,
+        21,
+        22
+      ],
+      "smoke_seed": 99,
+      "checkpoint_interval": 500000,
+      "development": {
+        "start": 4100000,
+        "count": 200
+      },
+      "final": {
+        "start": 4200000,
+        "count": 500
+      },
+      "stress": {
+        "start": 4300000,
+        "count": 200,
+        "turn_probability": 0.1,
+        "speed_toggle_probability": 0.1
+      },
+      "demo_seeds": [
+        4400000,
+        4400001,
+        4400002
+      ],
+      "display_training_seed": 20,
+      "boundary_cells": 3,
+      "thresholds": {
+        "close_gain": 0.05,
+        "simultaneous_hits_ratio": 1.02,
+        "retention_hits_ratio": 0.98,
+        "minimum_accuracy": 0.98
+      }
+    }
+  },
+  "config_sha256": "3702797895f17215ba56ed3ce413c5be537e336f5362e38c3b58fe51ff0c0ed5",
+  "git_head": "f094b3a25021a7fa7bacffad91e8967b09fdd374",
+  "git_remote": "https://github.com/dz2585-sudo/sjzproject.git",
+  "git_status_at_freeze": "?? aimrl/tracking_tradeoff/\n?? configs/tracking_shooting_tradeoff.json\n?? results/tracking_shooting_tradeoff/\n?? tests/test_tracking_tradeoff.py",
+  "source_sha256": {
+    "aimrl/tracking_tradeoff/kernel.c": "ec1d977c6b81a038c3599f3eabec660444d539b6cbad3b36f09c50ced2bf3c17",
+    "aimrl/tracking_tradeoff/core.py": "7f7c7f97e4d7c4ebf9a1e5fe49957f564e3011075c829688263466150196b99d",
+    "aimrl/tracking_tradeoff/study.py": "c34458c4f078d8f463f5bb3aeb9e8f1d9b60d75b2904e5e15ed05ff25d9398e7",
+    "aimrl/tracking_tradeoff/__main__.py": "9fdec80892f07768fc72219bc751a9e94e13dbd0f9c9a208de6317af5ec78bb1",
+    "aimrl/tracking_tradeoff/__init__.py": "725547d757eb687266a6c54a69f16bc6bc8e1bc8c5d9699af4b7eda096dd9853",
+    "aimrl/tracking25/env.py": "fea8ce62da85985fe9afbddcd5733c90484c25be903c61c3abd5449bad139a2c",
+    "aimrl/tracking25/agent.py": "e4ae5beae23875d6ee4a3b475f32b37c7babfe09ad41ee417ea577d663163107",
+    "aimrl/tracking25/policies.py": "1dc5d00ee7af61c59cd56a17d840479ebb4ae1b5a8efba86f45b2531e739d2d4",
+    "aimrl/tracking_research/agent.py": "14b3a9391a6b84a54d3b6ded87c455f3373bfac4211678dd768a1205eb5a85b5",
+    "aimrl/tracking_research/io.py": "6ee3470948240368b9877dc8e40d0a5e966a5b0477055bd192b902e7e270fb0c",
+    "aimrl/reproduce.py": "4829681ed77a0ff1d4180c869bf1da610babd1718fbe36879a74c26b906640f5",
+    "tests/test_tracking_tradeoff.py": "f8a2e208f7b9fa8651474514244a05438582c1fbd7fbab7636072ee630d97271"
+  },
+  "kernel_sha256": "3459cdad660f25a20d34413b9eac3139f9e472f5c601639825ec7129904fec5e",
+  "runtime": {
+    "python": "3.13.9",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2",
+      "Pillow": "13.0.0"
+    }
+  },
+  "historical_inventory": "historical_sha256_before.json",
+  "state": "Relative offset, heading, speed. Lowest action ID breaks exact Q ties.",
+  "training_rng": "SeedSequence(training_seed).spawn(2). Environment child yields uint64 reset seed; action child supplies PCG64.",
+  "target_draws": "Three doubles per tick in original order. Window resets use original TrackingEnv.",
+  "reward": "base - lambda*d_post + beta*(d_post <= 1) + gamma*(-d_post) - (-d_pre)",
+  "bootstrap": "Actual next state on every update, including hit, truncation and budget stop.",
+  "evaluation": "D/C use post-motion distance. H is hits per 300 ticks. A pools hits and shots within each seed.",
+  "boundary": "Either object at most three cells from an edge before the action.",
+  "selection": "Final development checkpoint only. Per family screen H >= 0.98*H0 and A >= 0.98, then max C, min D, max H, min weight. If no candidate passes, same order without screen.",
+  "demonstration": "Fixed demo seeds, reference, selected distance, selected close, and Rule. Learned panels all use training seed 20.",
+  "diagnostics": "Final scenario 4200000, seed 20 and Rule. First movement crossing target on same axis, first stay, first three consecutive post-motion ticks at distance exactly one.",
+  "pareto": "D-H and C-H dominance assessed separately among all measured means including Rule.",
+  "seed_collision_check": "Historical seed-bearing configurations, protocols and records inspected before the freeze."
+}

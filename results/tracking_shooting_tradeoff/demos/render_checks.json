@@ -1,0 +1,113 @@
+[
+  {
+    "scenario_seed": 4400000,
+    "path": "demos/scenario_4400000.gif",
+    "sha256": "8f2d0240788ce3cb9de77c27b8afce709dac133862adc43fcc3842d1be8b1237",
+    "frames": 301,
+    "duration_ms": 20070,
+    "target_paths_paired": true,
+    "distinct_crosshair_paths": 4,
+    "decoded_pixels_match_every_frame": true,
+    "sample_rgb_sha256": {
+      "0": "d18ddde6644dfa1c73c3e44af60d85616a14b97b8ad0e7f88ffa80ac7b26c370",
+      "150": "4d48e64c33080b4a528a6bdf9de5b067c6bb40c9655295adbdd1120f1a8ca7a4",
+      "300": "c28da29ffa8872f34c841b8ef54ede165e5084cfff76b582256b59069f03963c"
+    },
+    "panels": {
+      "reference": {
+        "hits": 85,
+        "shots": 86,
+        "close_fraction": 0.6
+      },
+      "distance_0p3": {
+        "hits": 88,
+        "shots": 89,
+        "close_fraction": 0.66
+      },
+      "close_5p0": {
+        "hits": 86,
+        "shots": 120,
+        "close_fraction": 0.7866666666666666
+      },
+      "rule": {
+        "hits": 38,
+        "shots": 38,
+        "close_fraction": 0.7766666666666666
+      }
+    }
+  },
+  {
+    "scenario_seed": 4400001,
+    "path": "demos/scenario_4400001.gif",
+    "sha256": "f9865eeda6855d78f8128cabecad975511fe4ffbe7e45a158ce53b50b69d55f0",
+    "frames": 301,
+    "duration_ms": 20070,
+    "target_paths_paired": true,
+    "distinct_crosshair_paths": 4,
+    "decoded_pixels_match_every_frame": true,
+    "sample_rgb_sha256": {
+      "0": "8ab9245de15f2e2c607c1d6759814c9ed0241420ec32ca86ff659969398ea5e9",
+      "150": "4c876c0f27d1e40a44203b935943789a0a06708823da1f616d80be607f173220",
+      "300": "c5af8523d6e2f959d5f90134f45de482cacd5115015fd94d355f3ba584a25cff"
+    },
+    "panels": {
+      "reference": {
+        "hits": 78,
+        "shots": 78,
+        "close_fraction": 0.5366666666666666
+      },
+      "distance_0p3": {
+        "hits": 79,
+        "shots": 79,
+        "close_fraction": 0.5566666666666666
+      },
+      "close_5p0": {
+        "hits": 78,
+        "shots": 80,
+        "close_fraction": 0.5833333333333334
+      },
+      "rule": {
+        "hits": 73,
+        "shots": 73,
+        "close_fraction": 0.5866666666666667
+      }
+    }
+  },
+  {
+    "scenario_seed": 4400002,
+    "path": "demos/scenario_4400002.gif",
+    "sha256": "4be3df63e80ff5419cb56d17fe46868980b849ba7b0d342c0f4934e854895ba5",
+    "frames": 301,
+    "duration_ms": 20070,
+    "target_paths_paired": true,
+    "distinct_crosshair_paths": 4,
+    "decoded_pixels_match_every_frame": true,
+    "sample_rgb_sha256": {
+      "0": "9b4d89812b15c0332d7d8af013e6479df5049d3acc148472d90e2bb79012c628",
+      "150": "f44d4ce02a46e5f6c8ae279ff1ec7769be33914fcc57a6c614c8fb35ef7c5c24",
+      "300": "a7cbe682197151b68b4e2ed36eb1901d0b9451486ad566c791cabdb3ee832606"
+    },
+    "panels": {
+      "reference": {
+        "hits": 84,
+        "shots": 84,
+        "close_fraction": 0.58
+      },
+      "distance_0p3": {
+        "hits": 81,
+        "shots": 82,
+        "close_fraction": 0.63
+      },
+      "close_5p0": {
+        "hits": 82,
+        "shots": 105,
+        "close_fraction": 0.7466666666666667
+      },
+      "rule": {
+        "hits": 32,
+        "shots": 32,
+        "close_fraction": 0.77
+      }
+    }
+  }
+]

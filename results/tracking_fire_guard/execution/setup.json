@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "aimrl.tracking_fire_guard",
+    "--phase",
+    "setup",
+    "--output",
+    "results/tracking_fire_guard",
+    "--workers",
+    "6"
+  ],
+  "complete": true,
+  "exit_code": 0,
+  "elapsed_seconds": 12.43516830028966
+}

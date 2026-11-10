@@ -1,14 +1,14 @@
 # AimRL: Grid Aiming and Continuous Tracking
 
-A CPU-based reinforcement-learning research project for ELEN E6885. The project studies how reward shaping and state representation affect learning to aim at and continuously follow a moving target. The simulator supplies coordinates directly; the learned controller selects its actions without a rule-policy override.
+A CPU-based reinforcement-learning research project for ELEN E6885. The project studies how reward shaping and state representation affect learning to aim at and continuously follow a moving target. The simulator supplies coordinates directly. The original learned controller is evaluated separately from the inference-only firing guard.
 
-**Current status:** the small-grid benchmark, larger-grid trial, continuous-tracking development, and three-seed representation study are complete and published. The latest study contains **12 fresh runs, 60,000,000 formal interactions, and 400,000 separate disposable pilot interactions**. A course-format final paper remains to be completed.
+**Current status:** the small-grid benchmark, larger-grid trial, continuous-tracking development, and three-seed representation study are complete and published. The representation study contains **12 fresh runs and 60,000,000 formal interactions**. The follow-up reward study completed **21 runs and 105,000,000 interactions**, and the firing guard study reused **21 frozen models with zero new training updates**. A course-format final paper remains to be completed.
 
-[Latest results](#latest-results) · [Progress, step by step](#progress-step-by-step) · [Demonstrations](#demonstrations) · [Artifact locations and path changes](#artifact-locations-and-path-changes) · [Installation and verification](#installation-and-verification) · [Limitations and next work](#limitations-and-next-work)
+[Representation benchmark](#representation-benchmark) · [Reward trade-offs](#trackingshooting-reward-trade-offs) · [Firing guard](#q-learning-with-a-firing-guard) · [Progress, step by step](#progress-step-by-step) · [Demonstrations](#demonstrations) · [Artifact locations and path changes](#artifact-locations-and-path-changes) · [Installation and verification](#installation-and-verification) · [Limitations and next work](#limitations-and-next-work)
 
 The [detailed research history](docs/project_history.md) records the reasoning behind each change. The [artifact guide](docs/artifact_paths.md) explains exact file locations, historical-to-current path mappings, and how to open the demonstrations.
 
-## Latest results
+## Representation benchmark
 
 ### Matched representation study
 
@@ -90,6 +90,8 @@ Each item states the motivation, implementation, observed result, and resulting 
 | 8. Representation study | Can shared relative-position values improve finite-budget learning? | Four methods by three seeds, coverage diagnostics, final/stress tests, and four GIFs | Both relative methods improved sharply; close tracking and boundary behavior still need work |
 | 9. Publication and evidence organization | Can every displayed result be found and checked? | Descriptive archives, compressed models, exact provenance, and publication verification | Code, reports, numerical records, and animations are available in the repository |
 | 10. Progress and presentation index | Can a reader follow the reasoning and find every result from one page? | This overview, complete decision history, and path/GIF guide | Each study is linked to its metrics, figures, models, and limitations |
+| [Tracking–shooting reward trade-offs](docs/tracking_shooting_tradeoff.md) | Can proximity weights improve tracking and hits under the same mechanics? | 21 matched runs, 105M updates, two held-out splits, and three demonstrations | Some weights improve proximity and hits. Original shot accuracy prevents a full simultaneous pass. |
+| [Q-learning with a firing guard](docs/tracking_fire_guard.md) | Can a deterministic guard remove misses without altering tracking? | Paired replay of 21 frozen models on new Final and Stress scenarios, with zero training | The guard preserves motion and hits. Guarded close bonus 0.5 passes the full mean Final screen. |
 
 ### 1. Feasibility and specification
 
@@ -245,7 +247,7 @@ The rule maintained better proximity and accuracy; Potential fired more often an
 
 **Implemented.** Relative state `(xt-xc+24, yt-yc+24, heading, speed-1)`; Absolute/Relative crossed with Base/Potential; three seeds per method; five million interactions per run. Physics, action IDs, rewards, tie handling, and the four-million-step epsilon-decay schedule were matched within this new study. Four disposable pilots checked execution; their Q values were not transferred into formal runs.
 
-**Results.** The [latest-results tables](#latest-results) give the final and stress findings. Relative Potential achieved mean distance 1.440 cells, 2.338% far ticks, approximately 84.489 hits/window, and 99.493% accuracy. It did not meet the 75% close-tracking target. Near-boundary mean distance was 1.531 cells versus 1.325 in the interior; these policy-dependent slices describe an association, not an isolated causal effect of aliasing.
+**Results.** The [representation benchmark tables](#representation-benchmark) give the final and stress findings. Relative Potential achieved mean distance 1.440 cells, 2.338% far ticks, approximately 84.489 hits/window, and 99.493% accuracy. It did not meet the 75% close-tracking target. Near-boundary mean distance was 1.531 cells versus 1.325 in the interior. These policy-dependent slices describe an association and do not isolate the causal effect of aliasing.
 
 ![Matched representation-study learning curves](results/tracking_improvement/render/learning_curves.png)
 
@@ -371,3 +373,87 @@ A separate checkout runner now supports `verify`, `evaluate`, and `train` modes 
 Windows acceptance on 2026-11-03 passed all 74 tests. Complete publication verification passed in standard Python and with `python -O`. A separate fresh Windows virtual environment passed the pinned install, dependency check, setup check, and a limited development replay. The full final-split replay covered Relative Base and Relative Potential (seed 10), Rule, and Random, for 2,000 windows and 36 exact metric matches. The full twelve-model final/stress replay, formal 60M retraining, other platforms for this update, and native GUI playback remain unverified in this acceptance. The course-format paper and member-contribution statement are still pending.
 
 See the [reproduction guide and acceptance evidence](docs/reproduction.md).
+
+## Tracking–shooting reward trade-offs
+
+The reward study changed the proximity component of the training reward under fixed dynamics, action space, relative state and Q-learning settings. It completed **21 runs × 5,000,000 interactions = 105,000,000 training updates**, with seeds 20, 21 and 22 for each condition. Nearness bonuses changed both the tracking and shooting behavior learned by the original policies.
+
+D is mean post-motion Manhattan distance, C is the fraction of post-motion ticks within one cell, and H is hits per 300-tick window. Learned entries show **mean ± sample SD across the three training seeds**. Rule is a fixed policy on the same paired scenarios. A seed mean averages seed-level hits/actual shots with equal seed weights. A pooled sums hits and actual shots across seeds before division. Zero actual shots yield NA.
+
+### Reward study Final (500 scenarios, 4200000–4200499)
+
+| Condition | D (cells) | C (%) | H / 300 ticks | A seed mean (%) | A pooled (%) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `reference` | 1.517 ± 0.142 | 58.50 ± 4.73 | 81.33 ± 4.95 | 99.36 ± 0.78 | 99.39 |
+| `distance_0p1` | 1.423 ± 0.015 | 60.56 ± 1.99 | 84.07 ± 0.10 | 95.61 ± 6.88 | 95.26 |
+| `distance_0p3` | 1.474 ± 0.066 | 59.69 ± 2.97 | 80.97 ± 5.02 | 99.03 ± 0.43 | 99.05 |
+| `distance_1p0` | 1.523 ± 0.064 | 65.57 ± 6.62 | 80.62 ± 4.97 | 95.70 ± 6.26 | 95.31 |
+| `close_0p5` | 1.398 ± 0.021 | 65.12 ± 2.18 | 84.44 ± 0.15 | 95.69 ± 6.03 | 95.42 |
+| `close_2p0` | 1.355 ± 0.015 | 69.39 ± 0.74 | 81.73 ± 4.98 | 90.61 ± 15.49 | 88.30 |
+| `close_5p0` | 1.336 ± 0.058 | 72.77 ± 1.90 | 81.52 ± 5.07 | 86.70 ± 11.30 | 85.36 |
+| `rule` | 1.375 | 72.42 | 44.59 | 100.00 | 100.00 |
+
+Close bonus 0.5 improved D by 0.119 cells, C by 6.62 percentage points and H by 3.83% versus the matched reference. Its 95.69% mean accuracy missed the 98% gate. No original condition met the full simultaneous or retention screen. Distance penalty 0.3 kept accuracy above 98%, lowered D and lost 0.45% of hits, with a 1.19-point C gain below the +5-point gate.
+
+### Reward study Stress (200 scenarios, 4300000–4300199)
+
+| Condition | D (cells) | C (%) | H / 300 ticks | A seed mean (%) | A pooled (%) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `reference` | 1.688 ± 0.120 | 53.33 ± 3.89 | 71.25 ± 4.00 | 99.08 ± 1.00 | 99.11 |
+| `distance_0p1` | 1.603 ± 0.007 | 55.24 ± 1.60 | 73.36 ± 0.18 | 94.72 ± 7.87 | 94.28 |
+| `distance_0p3` | 1.618 ± 0.065 | 54.73 ± 2.67 | 70.86 ± 4.18 | 98.28 ± 0.82 | 98.31 |
+| `distance_1p0` | 1.644 ± 0.086 | 60.25 ± 6.04 | 70.79 ± 3.95 | 95.10 ± 6.75 | 94.67 |
+| `close_0p5` | 1.587 ± 0.024 | 59.24 ± 1.80 | 73.81 ± 0.37 | 95.37 ± 5.35 | 95.15 |
+| `close_2p0` | 1.547 ± 0.011 | 63.14 ± 0.75 | 71.65 ± 4.00 | 90.13 ± 15.70 | 87.76 |
+| `close_5p0` | 1.531 ± 0.057 | 66.42 ± 1.73 | 71.22 ± 3.91 | 86.16 ± 11.71 | 84.79 |
+| `rule` | 1.469 | 68.36 | 42.45 | 100.00 | 100.00 |
+
+Stress uses 0.10 turn and speed-toggle probabilities. The prespecified pass decisions apply to Final.
+
+![Reward study close fraction versus hits](results/tracking_shooting_tradeoff/figures/close_hits_tradeoff.png)
+
+![Reward study four-policy demonstration on the same target route](results/tracking_shooting_tradeoff/demos/scenario_4400000.gif)
+
+[English report](results/tracking_shooting_tradeoff/results_summary.md) · [Paper addendum](results/tracking_shooting_tradeoff/paper_addendum.md) · [Models and checkpoints](results/tracking_shooting_tradeoff/runs) · [Per-seed data](results/tracking_shooting_tradeoff/per_seed.csv) · [Paired differences](results/tracking_shooting_tradeoff/paired_differences.csv) · [Final and Stress windows](results/tracking_shooting_tradeoff/evaluation) · [Distance–hits plot](results/tracking_shooting_tradeoff/figures/distance_hits_tradeoff.png) · [Learning curves](results/tracking_shooting_tradeoff/figures/learning_curves.png) · [Demo 4400001](results/tracking_shooting_tradeoff/demos/scenario_4400001.gif) · [Demo 4400002](results/tracking_shooting_tradeoff/demos/scenario_4400002.gif) · [Protocol](results/tracking_shooting_tradeoff/protocol.json) · [Execution checks](results/tracking_shooting_tradeoff/execution_checks.json) · [Build and reproduction commands](docs/tracking_shooting_tradeoff.md)
+
+## Q-learning with a firing guard
+
+The inference study reused **21 frozen reward-study models with zero new training updates**. The original variant executes the greedy action. **Q-learning + firing guard** queries the same policy once and executes Stay only when it proposes Fire while unaligned. Both variants produced exactly the same physical trajectories, D, C and H. The guard removed unaligned shots and the corresponding miss penalties. Rule remains the same single fixed comparator.
+
+### Firing guard Final (500 new scenarios, 4500000–4500499)
+
+| Condition | D (cells) | C (%) | H / 300 ticks | A seed mean original → guard (%) | A pooled original → guard (%) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `reference` | 1.526 ± 0.135 | 58.41 ± 4.69 | 81.22 ± 4.78 | 99.32 ± 0.86 → 100.00 ± 0.00 | 99.35 → 100.00 |
+| `distance_0p1` | 1.434 ± 0.013 | 60.47 ± 2.03 | 83.90 ± 0.05 | 95.43 ± 7.17 → 100.00 ± 0.00 | 95.06 → 100.00 |
+| `distance_0p3` | 1.484 ± 0.076 | 59.67 ± 3.05 | 80.85 ± 5.00 | 99.00 ± 0.43 → 100.00 ± 0.00 | 99.02 → 100.00 |
+| `distance_1p0` | 1.520 ± 0.073 | 65.73 ± 6.84 | 80.41 ± 4.92 | 95.53 ± 6.50 → 100.00 ± 0.00 | 95.11 → 100.00 |
+| `close_0p5` | 1.404 ± 0.021 | 65.20 ± 2.17 | 84.21 ± 0.09 | 95.59 ± 6.21 → 100.00 ± 0.00 | 95.31 → 100.00 |
+| `close_2p0` | 1.357 ± 0.011 | 69.71 ± 0.75 | 81.58 ± 4.88 | 90.36 ± 15.88 → 100.00 ± 0.00 | 87.94 → 100.00 |
+| `close_5p0` | 1.340 ± 0.053 | 73.19 ± 1.81 | 81.29 ± 4.97 | 86.20 ± 11.70 → 100.00 ± 0.00 | 84.79 → 100.00 |
+| `rule` | 1.381 | 73.01 | 43.48 | 100.00 | 100.00 |
+
+Against the **guarded** reference, `close_0p5` with the guard lowered D by 0.122 cells, increased C by 6.79 percentage points and increased H by 3.69%, with 100% observed shot accuracy. It was the only condition meeting all four simultaneous gates on the **cross-seed Final means**. The other guarded retention passes were `distance_1p0`, `close_2p0` and `close_5p0`. The distance-1.0 condition lost 0.99% of hits. Close-5.0 had the largest close gain among the retention passes, at 14.77 points and +0.10% hits. Neither the previous Final nor the new Final yielded a full pass for an original policy.
+
+The thresholds require D no larger than reference, C at least 5 percentage points higher and A at least 98%. The simultaneous screen requires at least 2% more hits. The retention screen permits a hit loss of at most 2%. These are group-level Final decisions. The table does not assert a pass for each seed or for Stress.
+
+### Firing guard Stress (200 new scenarios, 4600000–4600199)
+
+| Condition | D (cells) | C (%) | H / 300 ticks | A seed mean original → guard (%) | A pooled original → guard (%) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `reference` | 1.683 ± 0.123 | 53.35 ± 4.10 | 71.23 ± 4.16 | 99.06 ± 1.00 → 100.00 ± 0.00 | 99.10 → 100.00 |
+| `distance_0p1` | 1.582 ± 0.008 | 55.22 ± 1.54 | 73.44 ± 0.17 | 94.66 ± 7.94 → 100.00 ± 0.00 | 94.20 → 100.00 |
+| `distance_0p3` | 1.603 ± 0.060 | 54.67 ± 2.90 | 70.90 ± 4.28 | 98.25 ± 0.77 → 100.00 ± 0.00 | 98.28 → 100.00 |
+| `distance_1p0` | 1.603 ± 0.075 | 60.35 ± 6.22 | 70.85 ± 4.06 | 95.07 ± 6.82 → 100.00 ± 0.00 | 94.64 → 100.00 |
+| `close_0p5` | 1.575 ± 0.021 | 59.25 ± 1.79 | 73.78 ± 0.33 | 95.22 ± 5.86 → 100.00 ± 0.00 | 94.95 → 100.00 |
+| `close_2p0` | 1.536 ± 0.015 | 63.28 ± 0.79 | 71.60 ± 4.14 | 89.93 ± 16.11 → 100.00 ± 0.00 | 87.43 → 100.00 |
+| `close_5p0` | 1.517 ± 0.054 | 66.58 ± 1.75 | 71.27 ± 4.04 | 85.72 ± 12.08 → 100.00 ± 0.00 | 84.26 → 100.00 |
+| `rule` | 1.457 | 68.72 | 41.70 | 100.00 | 100.00 |
+
+Stress uses the same target event probabilities as the earlier stress condition. The guard's 100% observed accuracy is conditional on actually firing. The two objective projections are unchanged because D, C and H are invariant.
+
+![Original and guarded objective points coincide](results/tracking_fire_guard/figures/objective_tradeoffs.png)
+
+![Synchronized original and firing guard replay](results/tracking_fire_guard/demo/synchronized_fire_guard.gif)
+
+[English report](results/tracking_fire_guard/results_summary.md) · [Paper addendum](results/tracking_fire_guard/paper_addendum.md) · [Frozen models](results/tracking_shooting_tradeoff/runs) · [Full comparison](results/tracking_fire_guard/comparison.csv) · [Per-seed data](results/tracking_fire_guard/per_seed.csv) · [Paired guard effects](results/tracking_fire_guard/paired_differences.csv) · [Final and Stress windows](results/tracking_fire_guard/evaluation) · [Threshold decisions](results/tracking_fire_guard/thresholds.csv) · [Accuracy and misses](results/tracking_fire_guard/figures/accuracy_and_misses.png) · [Q diagnostics](results/tracking_fire_guard/q_diagnostics_by_condition.csv) · [Protocol](results/tracking_fire_guard/protocol.json) · [Execution checks](results/tracking_fire_guard/execution_checks.json) · [Reproduction commands](docs/tracking_fire_guard.md)

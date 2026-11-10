@@ -1,0 +1,291 @@
+{
+  "schema": "aimrl_tracking_studies_publication_checks_v1",
+  "complete": true,
+  "verified_study_tree": "a6bd7db270103dba533e760aa62c926dba586000",
+  "verification_scope": "The staged checkout test covers all study inputs. The publication checks and self-excluding upload inventory were added after that checkout test.",
+  "commands": [
+    {
+      "stage": "setup",
+      "command": [
+        "python",
+        "scripts/check_setup.py"
+      ],
+      "exit_code": 0,
+      "input": "publication worktree"
+    },
+    {
+      "stage": "tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "input": "publication worktree"
+    },
+    {
+      "stage": "legacy-standard",
+      "command": [
+        "python",
+        "scripts/verify_tracking_publication.py",
+        "--output",
+        ".tmp/legacy-standard.json"
+      ],
+      "exit_code": 0,
+      "input": "publication worktree"
+    },
+    {
+      "stage": "legacy-optimized",
+      "command": [
+        "python",
+        "-O",
+        "scripts/verify_tracking_publication.py",
+        "--output",
+        ".tmp/legacy-optimized.json"
+      ],
+      "exit_code": 0,
+      "input": "publication worktree"
+    },
+    {
+      "stage": "public-evidence",
+      "command": [
+        "python",
+        "scripts/verify_tracking_studies.py",
+        "--public-tree",
+        "--output",
+        ".tmp/study-verification"
+      ],
+      "exit_code": 0,
+      "input": "staged checkout"
+    },
+    {
+      "stage": "public-reward-seeds",
+      "command": [
+        "python",
+        "scripts/check_tracking_tradeoff_seeds.py"
+      ],
+      "exit_code": 0,
+      "input": "staged checkout"
+    },
+    {
+      "stage": "public-guard-setup",
+      "command": [
+        "python",
+        "-m",
+        "aimrl.tracking_fire_guard",
+        "--phase",
+        "setup",
+        "--output",
+        ".tmp/guard-replication"
+      ],
+      "exit_code": 0,
+      "input": "staged checkout"
+    },
+    {
+      "stage": "public-guard-gate",
+      "command": [
+        "python",
+        "-m",
+        "aimrl.tracking_fire_guard",
+        "--phase",
+        "gate",
+        "--output",
+        ".tmp/guard-replication",
+        "--prior-kernel",
+        ".tmp/guard-kernel-build/tradeoff.dll",
+        "--rebuilt-kernel"
+      ],
+      "exit_code": 0,
+      "input": "staged checkout"
+    }
+  ],
+  "command_paths": "Commands use repository-relative examples. Actual verification outputs were isolated outside the study result folders.",
+  "unit_tests": {
+    "passed": 82,
+    "native_kernel": "Rebuilt Zig 0.15.2 C11 DLL"
+  },
+  "legacy_standard_and_optimized_reports_identical": true,
+  "legacy_publication_verifier": {
+    "complete": true,
+    "copied_files_verified": 547,
+    "formal_runs": 12,
+    "formal_interactions": 60000000,
+    "development_summaries": 132,
+    "development_windows": 26400,
+    "development_ticks": 7920000,
+    "independent_splits": {
+      "final": {
+        "windows": 8000,
+        "paired_scenarios": 500
+      },
+      "stress": {
+        "windows": 3200,
+        "paired_scenarios": 200
+      }
+    },
+    "gifs": [
+      {
+        "path": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+        "sha256": "4c759251ff0475eb1ef29ed4f127bbc95a2f1afa53f74f0d4e16fdf0ce9de4ad",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+        "sha256": "692942586e54286db501de4eb9416710790f33b53697d51b852565e02d0e88a0",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601002_main_comparison.gif",
+        "sha256": "239d87cf029159002b1cae8f85c05a3a2748c7fae0c47d5b694a3a41036c4270",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+        "sha256": "6ebec9ad02e42ca9f7f98a5b7436dc6086703652d70767683683a9aa152c6dbc",
+        "frames": 301,
+        "duration_ms": 20070
+      }
+    ],
+    "relative_links_verified": 148,
+    "largest_study_file_bytes": 14504765,
+    "pilot_binaries_intentionally_excluded": 8,
+    "original_training_source_bundle_verified": true,
+    "previously_documented_source_differences": [
+      "aimrl/tracking25/agent.py",
+      "aimrl/tracking25/workflow.py",
+      "aimrl/tracking25/__main__.py"
+    ],
+    "recorded_audit_unchanged": true,
+    "training_or_result_regeneration": false
+  },
+  "new_study_verification": {
+    "complete": true,
+    "inventories": {
+      "tracking_shooting_tradeoff": {
+        "verified_payload_files": 705,
+        "documented_omissions": [
+          "execution/setup.log"
+        ]
+      },
+      "tracking_fire_guard": {
+        "verified_payload_files": 174,
+        "documented_omissions": []
+      }
+    },
+    "reward_study": {
+      "runs": 21,
+      "training_interactions": 105000000,
+      "complete_training_windows": 349986,
+      "partial_training_windows": 21,
+      "checkpoints": 231,
+      "development_windows": 46200,
+      "training_reward_identities": 350007,
+      "final_windows": 11000,
+      "stress_windows": 4400,
+      "exact_checkpoint_reloads": 231,
+      "max_reward_identity_error": 1.8189894035458565e-12,
+      "unchanged_historical_files": 931,
+      "historical_readme_sha256": "26c5e8950063215321d7236e7d15c7735e1041a1ab6e0919f373eb0d707c0b50",
+      "historical_results_unchanged": 853,
+      "training_and_evaluation_targets_paired": true,
+      "evaluation_snapshots_unchanged": true,
+      "final_only_after_selection": true,
+      "frozen_head": "f094b3a25021a7fa7bacffad91e8967b09fdd374"
+    },
+    "guard_study": {
+      "learned_paired_windows_rechecked": 14700,
+      "paired_seed_contrasts": 42,
+      "zero_shot_windows": {
+        "final": {
+          "original": 0,
+          "guard": 0
+        },
+        "stress": {
+          "original": 0,
+          "guard": 0
+        }
+      },
+      "zero_shot_accuracy": "NA",
+      "exact_invariants": [
+        "D",
+        "C",
+        "H",
+        "physical state",
+        "target trajectory"
+      ],
+      "training_interactions": 0
+    },
+    "decoded_gifs": [
+      {
+        "path": "results/tracking_shooting_tradeoff/demos/scenario_4400000.gif",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_shooting_tradeoff/demos/scenario_4400001.gif",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_shooting_tradeoff/demos/scenario_4400002.gif",
+        "frames": 301,
+        "duration_ms": 20070
+      },
+      {
+        "path": "results/tracking_fire_guard/demo/synchronized_fire_guard.gif",
+        "frames": 301,
+        "duration_ms": 20070
+      }
+    ],
+    "relative_links_checked": 187,
+    "training_interactions_this_check": 0
+  },
+  "clean_checkout_reward_seed_audit": {
+    "checked": {
+      "json_files": 107,
+      "csv_seed_files": 234,
+      "csv_seed_values": 107439
+    },
+    "conflict_count": 0,
+    "conflicts": []
+  },
+  "clean_checkout_rebuilt_guard_gate": {
+    "complete": true,
+    "models": 21,
+    "scenarios_per_model": 10,
+    "paired_windows": 210,
+    "paired_ticks": 63000,
+    "target_rng_state_compared_every_gate_tick": true,
+    "native_python_read_only_ticks_matched": 126000,
+    "removed_misses": 926,
+    "native_kernel_sha256": "d29e1eb10ceaaebfb122dfe7ad8c4bde8af97fca529b417bbbb6e1ff6ec70469",
+    "historical_kernel_sha256": "3459cdad660f25a20d34413b9eac3139f9e472f5c601639825ec7129904fec5e",
+    "native_kernel_matches_historical_binary": false,
+    "rebuilt_kernel_allowed": true,
+    "training_interactions": 0,
+    "learner_snapshots_unchanged": true
+  },
+  "omitted_local_only_path": "results/tracking_shooting_tradeoff/execution/setup.log",
+  "formal_training_interactions_this_release": 0,
+  "holdout_evaluation_rerun": false,
+  "browser_gui_playback_tested": false,
+  "corrected_preflight_attempts": [
+    {
+      "exit_code": 2,
+      "reason": "PowerShell unwrapped the single setup argument before invocation. Repeated setup with an explicit argument array."
+    },
+    {
+      "exit_code": 1,
+      "reason": "The first new evidence verifier had an escaped-link parsing error. Corrected the parser and validated the staged checkout."
+    }
+  ]
+}

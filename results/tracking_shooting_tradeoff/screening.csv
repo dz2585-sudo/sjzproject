@@ -1,0 +1,8 @@
+condition,delta_D,delta_C,delta_H,relative_H,close_gate,distance_gate,accuracy_gate,hit_gain_gate,hit_retention_gate,simultaneous,retention
+reference,0.0,0.0,0.0,0.0,False,True,True,False,True,False,False
+distance_0p1,-0.09335777777777765,0.020631111111111156,2.742666666666665,0.03372241712843049,False,True,False,True,True,False,False
+distance_0p3,-0.04297111111111129,0.011940000000000062,-0.36266666666666936,-0.004459162595494948,False,True,True,False,True,False,False
+distance_1p0,0.006104444444444246,0.07076222222222217,-0.708666666666673,-0.008713400439358754,True,False,False,False,True,False,False
+close_0p5,-0.1192133333333334,0.06622444444444442,3.1119999999999948,0.038263549624577786,True,True,False,True,True,False,False
+close_2p0,-0.1621999999999999,0.10893333333333333,0.3946666666666516,0.004852618118626584,True,True,False,False,True,False,False
+close_5p0,-0.18084444444444436,0.1427977777777778,0.18866666666666276,0.0023197481884651427,True,True,False,False,True,False,False

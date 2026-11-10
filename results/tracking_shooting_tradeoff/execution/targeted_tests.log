@@ -1,0 +1,10 @@
+test_all_weighted_updates_match_python_in_greedy_regime (test_tracking_tradeoff.TradeoffKernelTests.test_all_weighted_updates_match_python_in_greedy_regime) ... ok
+test_reload_identity_and_evaluation_isolation (test_tracking_tradeoff.TradeoffKernelTests.test_reload_identity_and_evaluation_isolation) ... ok
+test_zero_weight_matches_legacy_1001_updates (test_tracking_tradeoff.TradeoffKernelTests.test_zero_weight_matches_legacy_1001_updates) ... ok
+test_fire_before_motion_and_speed_two_reflection (test_tracking_tradeoff.TradeoffRewardTests.test_fire_before_motion_and_speed_two_reflection) ... ok
+test_reward_terms_use_post_motion_and_preserve_base (test_tracking_tradeoff.TradeoffRewardTests.test_reward_terms_use_post_motion_and_preserve_base) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.876s
+
+OK

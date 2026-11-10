@@ -1,0 +1,316 @@
+{
+  "config": {
+    "project": {
+      "name": "AimRL Tracking\u2013Shooting Trade-off",
+      "schema": "tracking25_v2"
+    },
+    "environment": {
+      "grid_size": 25,
+      "minimum_reset_distance": 12,
+      "turn_probability": 0.05,
+      "speed_toggle_probability": 0.05,
+      "episode_ticks": 300
+    },
+    "actions": [
+      "left_slow",
+      "right_slow",
+      "up_slow",
+      "down_slow",
+      "stay",
+      "fire",
+      "left_fast",
+      "right_fast",
+      "up_fast",
+      "down_fast"
+    ],
+    "rewards": {
+      "step": -0.05,
+      "hit": 10.0,
+      "miss": -1.0
+    },
+    "learning": {
+      "alpha": 0.15,
+      "gamma": 0.99,
+      "initial_q": 0,
+      "dtype": "float32",
+      "training_steps": 5000000,
+      "epsilon_start": 1.0,
+      "epsilon_end": 0.05,
+      "epsilon_decay_steps": 4000000,
+      "shaping_scale": 1.0
+    },
+    "tradeoff": {
+      "conditions": {
+        "reference": [
+          0,
+          0
+        ],
+        "distance_0p1": [
+          0.1,
+          0
+        ],
+        "distance_0p3": [
+          0.3,
+          0
+        ],
+        "distance_1p0": [
+          1.0,
+          0
+        ],
+        "close_0p5": [
+          0,
+          0.5
+        ],
+        "close_2p0": [
+          0,
+          2.0
+        ],
+        "close_5p0": [
+          0,
+          5.0
+        ]
+      },
+      "training_seeds": [
+        20,
+        21,
+        22
+      ],
+      "smoke_seed": 99,
+      "checkpoint_interval": 500000,
+      "development": {
+        "start": 4100000,
+        "count": 200
+      },
+      "final": {
+        "start": 4200000,
+        "count": 500
+      },
+      "stress": {
+        "start": 4300000,
+        "count": 200,
+        "turn_probability": 0.1,
+        "speed_toggle_probability": 0.1
+      },
+      "demo_seeds": [
+        4400000,
+        4400001,
+        4400002
+      ],
+      "display_training_seed": 20,
+      "boundary_cells": 3,
+      "thresholds": {
+        "close_gain": 0.05,
+        "simultaneous_hits_ratio": 1.02,
+        "retention_hits_ratio": 0.98,
+        "minimum_accuracy": 0.98
+      }
+    }
+  },
+  "history": {
+    "previous_per_seed_rows": 44,
+    "previous_comparison_rows": 16,
+    "previous_paired_rows": 42,
+    "prior_hashes_verified": 708,
+    "training_interactions": 105000000,
+    "full_windows": 349986,
+    "partial_windows": 21,
+    "partial_ticks": 4200,
+    "checkpoints": 231,
+    "development_windows": 46200,
+    "inner_training_seconds": 115.26595730008557,
+    "sum_per_run_seconds": 115.00585430022329,
+    "phase_seconds": 120.31737179961056,
+    "outer_command_seconds": 120.753,
+    "backend": "Zig 0.15.2 C11 Windows library called from Python via ctypes. Python owns resets, NumPy PCG64, checkpoints, logging and evaluation orchestration.",
+    "historical_python_training_parity": "Exact 1,001-step zero-weight Python parity and each weight in a greedy-heavy regime, including Q, counts and RNG states. These historical tests were audited, not rerun during this inference-only study.",
+    "previous_command_exit_codes": {
+      "setup": 0,
+      "smoke": 0,
+      "tests": 0,
+      "train": 0,
+      "evaluate": 0
+    },
+    "kernel_sha256": "3459cdad660f25a20d34413b9eac3139f9e472f5c601639825ec7129904fec5e"
+  },
+  "seed_audit": {
+    "checked": {
+      "json_files": 214,
+      "csv_seed_files": 468,
+      "csv_seed_values": 214878
+    },
+    "conflict_count": 0,
+    "conflicts": [],
+    "prior_study_scenario_rows_checked": 67686,
+    "ranges": {
+      "final": [
+        4500000,
+        500
+      ],
+      "stress": [
+        4600000,
+        200
+      ]
+    }
+  },
+  "models": [
+    {
+      "condition": "reference",
+      "training_seed": 20,
+      "sha256": "3b9cb8b4fe322677a832a5a7928e6de42f6f899834ff46f9ed8d3cee064b15b2"
+    },
+    {
+      "condition": "reference",
+      "training_seed": 21,
+      "sha256": "bace70af30ca4058a8368640997ccccd78aced89c068fce69044ea701e28506f"
+    },
+    {
+      "condition": "reference",
+      "training_seed": 22,
+      "sha256": "43087ca9221b261499b9bf09d69f2a579fc69a8f493d3c891cd85cda3c1ff74e"
+    },
+    {
+      "condition": "distance_0p1",
+      "training_seed": 20,
+      "sha256": "1f2bad5b7d3cc0bc1785687e342d2c9d738d325b50260829a9dcf177d1769def"
+    },
+    {
+      "condition": "distance_0p1",
+      "training_seed": 21,
+      "sha256": "b7d8c24aa9cc90b5ac3b28ec1150745eac457ec7cb8a1e86e66748d2d18d887f"
+    },
+    {
+      "condition": "distance_0p1",
+      "training_seed": 22,
+      "sha256": "34601100cbec31435dd8caff112dc0a60186f620f488d24a61f56f5478597ee4"
+    },
+    {
+      "condition": "distance_0p3",
+      "training_seed": 20,
+      "sha256": "da088a11842e707e202b165b157ff42995c2f8a7d371c445093c7e010bf886ad"
+    },
+    {
+      "condition": "distance_0p3",
+      "training_seed": 21,
+      "sha256": "135ebf6b73956a8130ed65e6b185bbc949f4b374b034a3fd28beb693ddca62bb"
+    },
+    {
+      "condition": "distance_0p3",
+      "training_seed": 22,
+      "sha256": "14f7ef8206e6fc78d9c0d958c32a861978fdab1c7ccdf0cdeba0082372e06833"
+    },
+    {
+      "condition": "distance_1p0",
+      "training_seed": 20,
+      "sha256": "b05ca34a59422b6bfb3794127cee32406f2c3174e698b19b0b40df1049d16a01"
+    },
+    {
+      "condition": "distance_1p0",
+      "training_seed": 21,
+      "sha256": "0586fa6ecf114a4bac8a72c8ecd3cc227fa0da0ef473c3c76bc6ffc85c7ce16b"
+    },
+    {
+      "condition": "distance_1p0",
+      "training_seed": 22,
+      "sha256": "77285ae237c8b01e49f31d57020a59ad893a2fa5cdfee5eb07e96c867adf9cdf"
+    },
+    {
+      "condition": "close_0p5",
+      "training_seed": 20,
+      "sha256": "b0c4324e058615dca75bc42f6f24e64334aa278739fd7a7fa011696134f10d0d"
+    },
+    {
+      "condition": "close_0p5",
+      "training_seed": 21,
+      "sha256": "e96f0a58d5220c05cd6d19d9ccb7dab64896cc2d22ddc2614c54db516d666636"
+    },
+    {
+      "condition": "close_0p5",
+      "training_seed": 22,
+      "sha256": "6678b6a119f3e8a8f9806c9d4df3df9af4c517e50d7d82f9dbc1b811d9c1aebe"
+    },
+    {
+      "condition": "close_2p0",
+      "training_seed": 20,
+      "sha256": "614c57616af7d23c57b7f1c54bdc74b9542cdaac8b2789d431e68a35fe1b0f11"
+    },
+    {
+      "condition": "close_2p0",
+      "training_seed": 21,
+      "sha256": "74fb84ad404ac1f3e011f754d0c13238af2699832900472c5dd58ac19cb89901"
+    },
+    {
+      "condition": "close_2p0",
+      "training_seed": 22,
+      "sha256": "4ab7cba7b4b95a71107b387d4b370417ebdf348eb3298e86c1018971f77d2c3e"
+    },
+    {
+      "condition": "close_5p0",
+      "training_seed": 20,
+      "sha256": "c672f0580009d5f7e04159939190060437adfd202eda5230432effe94316f1b9"
+    },
+    {
+      "condition": "close_5p0",
+      "training_seed": 21,
+      "sha256": "70aa16f69ef8f9f0e2c9a53ed5e2fa56ab27f761a4cd016234618f5dae5ad64c"
+    },
+    {
+      "condition": "close_5p0",
+      "training_seed": 22,
+      "sha256": "12aac35753d326068508c9f37eda3b5a2d62176c3b2898cf7b6970583bcae59d"
+    }
+  ],
+  "guard": "Query original policy once. Execute Stay only for Fire with d_pre > 0.",
+  "evaluation_backend": "Two independent Python TrackingEnv instances per scenario. Both call env.step.",
+  "accuracy": "Within seed, hits divided by actual executed shots or NA. Primary group accuracy is the mean of defined seed accuracies, plus a separately reported pooled ratio. All three seeds must be defined for a learned method to pass the accuracy gate.",
+  "threshold_reference": "Compare each weight to reference with the same variant. Also report unfiltered-to-filtered within each model.",
+  "stress": "Use prior turn and speed toggle probabilities of 0.10.",
+  "holdout": {
+    "final": [
+      4500000,
+      500
+    ],
+    "stress": [
+      4600000,
+      200
+    ]
+  },
+  "gate_scenarios": [
+    4200000,
+    4200001,
+    4200002,
+    4200003,
+    4200004,
+    4200005,
+    4200006,
+    4200007,
+    4200008,
+    4200009
+  ],
+  "native_audit_extra_stress_scenarios": [
+    4300000,
+    4300001,
+    4300002,
+    4300003,
+    4300004,
+    4300005,
+    4300006,
+    4300007,
+    4300008,
+    4300009
+  ],
+  "demo": {
+    "condition": "close_5p0",
+    "training_seed": 20,
+    "scenario_seed": 4400000,
+    "reason": "Fixed prior demonstration route and condition with the highest historical mean miss count."
+  },
+  "source_sha256": {
+    "__init__.py": "f201969f2f47d9fb87a5e9de6fdb46e80bf35090c8a6ebd8874ce408924064a1",
+    "__main__.py": "1fb4f42c2fc15f08b7145bd7c7e7dd72a622ff6f4115ff65c4a4fb64129acc9c",
+    "history.py": "789fe303e26e0348fdb02c19e09f6b696f27590a381430794a7561e8ede30781",
+    "replay.py": "6e9e14d92fefc48b0a1d82a60c8bb599cf8c241813be9f6a8815cf367fee6fc2",
+    "study.py": "3c7de00af385966d7e9605beaac4c4bf1ba5619da4de7cdd2c4d45834707bcab"
+  },
+  "git_head": "f094b3a25021a7fa7bacffad91e8967b09fdd374",
+  "training_interactions_this_study": 0
+}

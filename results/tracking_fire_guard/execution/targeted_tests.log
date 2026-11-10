@@ -1,0 +1,8 @@
+test_calls_policy_once_and_only_changes_unaligned_fire (test_tracking_fire_guard.FiringGuardTests.test_calls_policy_once_and_only_changes_unaligned_fire) ... ok
+test_fire_miss_replacement_matches_actual_rewards (test_tracking_fire_guard.FiringGuardTests.test_fire_miss_replacement_matches_actual_rewards) ... ok
+test_zero_shots_have_no_accuracy (test_tracking_fire_guard.FiringGuardTests.test_zero_shots_have_no_accuracy) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.023s
+
+OK

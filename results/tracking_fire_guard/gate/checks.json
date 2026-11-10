@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "models": 21,
+  "scenarios_per_model": 10,
+  "paired_windows": 210,
+  "paired_ticks": 63000,
+  "target_rng_state_compared_every_gate_tick": true,
+  "native_python_read_only_ticks_matched": 126000,
+  "removed_misses": 926,
+  "training_interactions": 0,
+  "learner_snapshots_unchanged": true
+}

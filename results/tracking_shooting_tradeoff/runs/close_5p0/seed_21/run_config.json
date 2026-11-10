@@ -1,0 +1,107 @@
+{
+  "project": {
+    "name": "AimRL Tracking\u2013Shooting Trade-off",
+    "schema": "tracking25_v2"
+  },
+  "environment": {
+    "grid_size": 25,
+    "minimum_reset_distance": 12,
+    "turn_probability": 0.05,
+    "speed_toggle_probability": 0.05,
+    "episode_ticks": 300
+  },
+  "actions": [
+    "left_slow",
+    "right_slow",
+    "up_slow",
+    "down_slow",
+    "stay",
+    "fire",
+    "left_fast",
+    "right_fast",
+    "up_fast",
+    "down_fast"
+  ],
+  "rewards": {
+    "step": -0.05,
+    "hit": 10.0,
+    "miss": -1.0
+  },
+  "learning": {
+    "alpha": 0.15,
+    "gamma": 0.99,
+    "initial_q": 0,
+    "dtype": "float32",
+    "training_steps": 5000000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 4000000,
+    "shaping_scale": 1.0
+  },
+  "tradeoff": {
+    "conditions": {
+      "reference": [
+        0,
+        0
+      ],
+      "distance_0p1": [
+        0.1,
+        0
+      ],
+      "distance_0p3": [
+        0.3,
+        0
+      ],
+      "distance_1p0": [
+        1.0,
+        0
+      ],
+      "close_0p5": [
+        0,
+        0.5
+      ],
+      "close_2p0": [
+        0,
+        2.0
+      ],
+      "close_5p0": [
+        0,
+        5.0
+      ]
+    },
+    "training_seeds": [
+      20,
+      21,
+      22
+    ],
+    "smoke_seed": 99,
+    "checkpoint_interval": 500000,
+    "development": {
+      "start": 4100000,
+      "count": 200
+    },
+    "final": {
+      "start": 4200000,
+      "count": 500
+    },
+    "stress": {
+      "start": 4300000,
+      "count": 200,
+      "turn_probability": 0.1,
+      "speed_toggle_probability": 0.1
+    },
+    "demo_seeds": [
+      4400000,
+      4400001,
+      4400002
+    ],
+    "display_training_seed": 20,
+    "boundary_cells": 3,
+    "thresholds": {
+      "close_gain": 0.05,
+      "simultaneous_hits_ratio": 1.02,
+      "retention_hits_ratio": 0.98,
+      "minimum_accuracy": 0.98
+    }
+  }
+}

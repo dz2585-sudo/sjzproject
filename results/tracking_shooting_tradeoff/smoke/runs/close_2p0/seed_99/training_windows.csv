@@ -1,0 +1,5 @@
+end_step,truncated,partial,ticks,distance_sum,close_ticks,hits,shots,misses,base_return,first_close_tick,acquired,longest_far_streak,alignment_opportunities,aligned_shots,unaligned_shots,hit_nonclose,target_sha256,distance_term,close_term,potential_term,training_return
+300,True,False,300,5167,7,0,24,24,-39.0,173,1,168,1,0,24,0,0b4728af86630290b133f2813578cfd8d9fda442de0972dbe3343e84bbece9ce,0.0,14.0,56.67000000000008,31.6700000000001
+600,True,False,300,4044,7,0,32,32,-47.0,190,1,90,2,0,32,0,819d43de57b26000cbd5662cbb1ff44064e21397786ffec6424e5340b9333f2a,0.0,14.0,49.440000000000055,16.440000000000072
+900,True,False,300,4832,3,0,22,22,-37.0,110,1,88,0,0,22,0,e6821aabdf9fa4964aab04b062f2b6cec53da530c96a4c6250b9da1317a452b7,0.0,6.0,39.32000000000009,8.320000000000121
+1001,False,True,101,2138,0,0,12,12,-17.05,300,0,75,0,0,12,0,ee65d8d6dc4c08795eb734cf1ee4ae190e6b2cfc85ebf233069c658c34ed9f2f,0.0,0.0,19.380000000000035,2.3300000000000454
