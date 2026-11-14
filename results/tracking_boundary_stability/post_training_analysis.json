@@ -1,0 +1,9 @@
+{
+  "source": "aimrl/tracking_boundary_stability/evidence.py",
+  "source_sha256": "f4b5fec30a7cad520de934c5ea97672e2b0d1ec00b3cfccb54d540cd0c6e2f57",
+  "executed_utc": "2026-11-13T16:32:47.278759+00:00",
+  "protocol_sha256": "fc2342f0c379f1bfd44d2a57e89f96c256fab8df45af75e91430ae2f2693593a",
+  "purpose": "Interpretation, coverage, scene breadth and transparent remaining validation limitation.",
+  "training_updates_added": 0,
+  "frozen_sources_changed": false
+}

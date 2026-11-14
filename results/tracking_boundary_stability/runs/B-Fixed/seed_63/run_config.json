@@ -1,0 +1,103 @@
+{
+  "project": {
+    "name": "AimRL Boundary Information and Update Stability",
+    "schema": "tracking25_v2"
+  },
+  "environment": {
+    "grid_size": 25,
+    "minimum_reset_distance": 12,
+    "turn_probability": 0.05,
+    "speed_toggle_probability": 0.05,
+    "episode_ticks": 300
+  },
+  "actions": [
+    "left_slow",
+    "right_slow",
+    "up_slow",
+    "down_slow",
+    "stay",
+    "fire",
+    "left_fast",
+    "right_fast",
+    "up_fast",
+    "down_fast"
+  ],
+  "rewards": {
+    "step": -0.05,
+    "hit": 10.0,
+    "miss": -1.0
+  },
+  "learning": {
+    "alpha": 0.15,
+    "gamma": 0.99,
+    "initial_q": 0,
+    "dtype": "float32",
+    "training_steps": 5000000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 4000000,
+    "shaping_scale": 1.0
+  },
+  "study": {
+    "conditions": [
+      "R-Fixed",
+      "R-Decay",
+      "B-Fixed",
+      "B-Decay"
+    ],
+    "close_weight": 0.5,
+    "decay": {
+      "scale": 1000,
+      "power": 0.6
+    },
+    "training_seeds": [
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "pilot_seed": 1060,
+    "pilot_steps": 1000000,
+    "checkpoint_interval": 500000,
+    "development": {
+      "start": 5100000,
+      "count": 200
+    },
+    "final": {
+      "start": 5200000,
+      "count": 500
+    },
+    "stress": {
+      "start": 5300000,
+      "count": 200,
+      "turn_probability": 0.1,
+      "speed_toggle_probability": 0.1
+    },
+    "demo_seeds": [
+      5400000,
+      5400001,
+      5400002
+    ],
+    "display_training_seed": 60,
+    "diagnostic": {
+      "start": 5500000,
+      "count": 16
+    },
+    "event_window": {
+      "before": 5,
+      "after": 15,
+      "recovery_horizon": 30,
+      "recovery_consecutive_close": 3,
+      "overlap": "Keep earliest event of the same type; reject later events within 30 ticks. Recovery is censored at the next event of either random type and at window end; bounce curves retain overlaps with other event types."
+    },
+    "thresholds": {
+      "C_gain": 0.05,
+      "H_retention": 0.98,
+      "H_simultaneous": 1.02,
+      "A_minimum": 0.98,
+      "C_absolute": 0.75
+    },
+    "frequent_state_min_events": 5
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "payload_files": 1819,
+  "payload_bytes": 1631094488,
+  "expected_added_or_modified_paths": 1821,
+  "excluded_from_self_hash": [
+    "provenance/latest_studies_release/manifest_scope.json",
+    "provenance/latest_studies_release/payload_manifest.csv"
+  ],
+  "future_receipts": "Post-commit/post-push verification under local .tmp is outside this commit. Git commit/tree IDs cover the two self-excluded files.",
+  "privacy": {
+    "text_files_scanned": 1418,
+    "credential_matches": 0,
+    "nonpublic_identity_emails": 0
+  },
+  "experiment_input_check": {
+    "unchanged_files_verified": 1755,
+    "archived_document_originals_verified": 0,
+    "allowed_publication_document_changes": [],
+    "documented_noncore_omissions": [],
+    "changed_experiment_core_files": [],
+    "expected_historical_hashes_modified": false
+  },
+  "links": {
+    "relative_links_checked": 232
+  },
+  "original_expected_experiment_hashes_modified": false
+}

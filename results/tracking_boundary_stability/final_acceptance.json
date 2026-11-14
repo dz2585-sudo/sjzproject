@@ -1,0 +1,19 @@
+{
+  "all_automated_checks_passed": true,
+  "full_suite_tests": 89,
+  "optimized_new_tests": 7,
+  "historical_verifiers_passed_in_both_modes": true,
+  "canonical_artifact_verifiers_passed_in_both_modes": true,
+  "original_verifier_defect_preserved_and_adapted": true,
+  "expected_hashes_changed": false,
+  "formal_interactions": 100000000,
+  "pilot_interactions": 4000000,
+  "additional_training": 0,
+  "original_failure_records": "postflight.json",
+  "source_inventory": "source_inventory.csv",
+  "decoded_gif_frames": 903,
+  "actual_player_verified": false,
+  "remaining": [
+    "Actual-player observation blocked by app access / local-file URL policy"
+  ]
+}

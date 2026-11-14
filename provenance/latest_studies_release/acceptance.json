@@ -1,0 +1,50 @@
+{
+  "complete": true,
+  "accepted_attempt": "checks/accepted/commands.json",
+  "commands": 14,
+  "command_exit_codes": {
+    "full_tests": 0,
+    "boundary_tests_O": 0,
+    "planning_tests_O": 0,
+    "publication_tests_O": 0,
+    "historical_publication": 0,
+    "historical_studies": 0,
+    "boundary_artifacts": 0,
+    "planning_artifacts": 0,
+    "historical_publication_O": 0,
+    "historical_studies_O": 0,
+    "boundary_artifacts_O": 0,
+    "planning_artifacts_O": 0,
+    "rebuilt_planning_all_DP": 0,
+    "release_links_inputs": 0
+  },
+  "full_test_count": 100,
+  "optimized_test_counts": {
+    "boundary_tests_O": 7,
+    "planning_tests_O": 7,
+    "publication_tests_O": 4
+  },
+  "first_attempt_failures_preserved": "checks/attempt_1/commands.json",
+  "first_attempt_resolution": "Shorten publication transcript paths for Windows fixtures; explicitly verify archived/current .gitignore bytes for the historical reward-study audit. No frozen core or expected experiment hashes changed.",
+  "native_rebuilt_and_parity_verified": true,
+  "new_formal_training_interactions": 0,
+  "new_formal_environment_evaluations": 0,
+  "gif_files_verified": 7,
+  "gif_frames_verified": 2107,
+  "actual_player_performed": false,
+  "runtime": {
+    "python": "3.13.9",
+    "platform": "Windows"
+  },
+  "document_changes": [
+    "README.md",
+    ".gitignore"
+  ],
+  "new_navigation_and_reproduction": [
+    "docs/research_index.md",
+    "docs/tracking_boundary_stability.md",
+    "docs/tracking_planning.md",
+    "docs/reproduce_latest_studies.md"
+  ],
+  "payload_hash_boundary": "All actual staged publication files except payload_manifest.csv and manifest_scope.json; post-push receipts remain local."
+}

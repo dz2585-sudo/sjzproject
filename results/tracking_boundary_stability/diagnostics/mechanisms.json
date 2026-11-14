@@ -1,0 +1,73 @@
+{
+  "boundary_alias": [
+    {
+      "state": [
+        10,
+        10,
+        11,
+        10,
+        0,
+        2
+      ],
+      "relative": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "next_state": [
+        10,
+        10,
+        13,
+        10,
+        0,
+        2
+      ],
+      "next_relative": [
+        3,
+        0,
+        0,
+        2
+      ],
+      "R_row": 9993,
+      "B_row": 571209
+    },
+    {
+      "state": [
+        23,
+        10,
+        24,
+        10,
+        0,
+        2
+      ],
+      "relative": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "next_state": [
+        23,
+        10,
+        22,
+        10,
+        2,
+        2
+      ],
+      "next_relative": [
+        -1,
+        0,
+        2,
+        2
+      ],
+      "R_row": 9993,
+      "B_row": 583017
+    }
+  ],
+  "paired_states": 128,
+  "frozen_table_q_hash": "dcba5ed20c670f626b3589f659d9d991167b2411706c748f7a0bb2428970893a",
+  "physical_rng_equal": true,
+  "reward_and_td_gap": 1,
+  "interpretation": "Immediate reward and frozen one-step target identities do not imply convergence of learned action values."
+}

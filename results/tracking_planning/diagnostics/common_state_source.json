@@ -1,0 +1,9 @@
+{
+  "path": "results\\tracking_boundary_stability\\diagnostics\\common_states.npz",
+  "sha256": "949cbdfd305d3268dd957c173c83e54ae8c17a085b6ca5f029032e831b2fc712",
+  "distinct_states": 8262,
+  "sampling_events": 9600,
+  "state_weighting": "Equal distinct physical states",
+  "event_weighting": "Repeated visitation events in the previously frozen common set",
+  "note": "No learned policy trajectory or new held-out future is exposed to any planner."
+}

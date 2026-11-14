@@ -2,11 +2,77 @@
 
 A CPU-based reinforcement-learning research project for ELEN E6885. The project studies how reward shaping and state representation affect learning to aim at and continuously follow a moving target. The simulator supplies coordinates directly. The original learned controller is evaluated separately from the inference-only firing guard.
 
-**Current status:** the small-grid benchmark, larger-grid trial, continuous-tracking development, and three-seed representation study are complete and published. The representation study contains **12 fresh runs and 60,000,000 formal interactions**. The follow-up reward study completed **21 runs and 105,000,000 interactions**, and the firing guard study reused **21 frozen models with zero new training updates**. A course-format final paper remains to be completed.
+**Current status:** the boundary-stability study completed 100M formal + 4M pilot interactions. The zero-training short-horizon planning study completed 20 policy instances on new Final/Stress scenarios; Hybrid reaches the 75% Final close target while retaining hits, but the relative +5pp joint gate remains unmet. A 2-cell action experiment remains future work.
 
-[Representation benchmark](#representation-benchmark) · [Reward trade-offs](#trackingshooting-reward-trade-offs) · [Firing guard](#q-learning-with-a-firing-guard) · [Progress, step by step](#progress-step-by-step) · [Demonstrations](#demonstrations) · [Artifact locations and path changes](#artifact-locations-and-path-changes) · [Installation and verification](#installation-and-verification) · [Limitations and next work](#limitations-and-next-work)
+[Research index](docs/research_index.md) · [Boundary stability](#boundary-information-and-learning-rate-stability) · [Short-horizon planning](#short-horizon-planning-with-learned-terminal-values) · [Representation benchmark](#representation-benchmark) · [Reward trade-offs](#trackingshooting-reward-trade-offs) · [Firing guard](#q-learning-with-a-firing-guard) · [Progress, step by step](#progress-step-by-step) · [Demonstrations](#demonstrations) · [Artifact locations and path changes](#artifact-locations-and-path-changes) · [Installation and verification](#installation-and-verification) · [Limitations and next work](#limitations-and-next-work)
 
 The [detailed research history](docs/project_history.md) records the reasoning behind each change. The [artifact guide](docs/artifact_paths.md) explains exact file locations, historical-to-current path mappings, and how to open the demonstrations.
+
+Earlier full representation-study rollout (historical reference; its different budget is described below):
+
+![Full continuous-tracking comparison: archived Potential, Relative Base, Relative Potential, and predictive rule](results/tracking_improvement/render/seed3601000_main_comparison.gif)
+
+## Boundary information and learning-rate stability
+
+**Question.** Does omitted boundary context or constant update size limit sustained tracking? Four conditions cross the original relative observation (already including heading and speed) or boundary-group augmentation with fixed alpha=0.15 or per-pair decay `0.15*(1+n/1000)^(-0.6)`. Rewards, actions, exploration and 5M budget are held fixed. Five paired training seeds (60–64) give **100,000,000 formal interactions**, plus an independent **4,000,000-interaction pilot**.
+
+R-Decay improves close tracking and cross-seed C stability. The much larger boundary table performs worse at the same budget; those negative results remain included. Neither the relative joint improvement gate nor the absolute C≥75% target is reached in this study. Guarded results below are recalculated from raw windows; entries are mean ± sample SD across five trained seeds.
+
+| Split | Method | Instances | D ↓ | C (%) ↑ | H / 300 ticks ↑ | A (%) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Final | R-Fixed | 5 | 1.3774 ± 0.0131 | 68.899 ± 1.561 | 84.4564 ± 0.0887 | 100.00 ± 0.00 |
+| Final | R-Decay | 5 | 1.3433 ± 0.0099 | 73.185 ± 0.042 | 84.7308 ± 0.1011 | 100.00 ± 0.00 |
+| Final | B-Fixed | 5 | 2.0311 ± 0.0767 | 56.384 ± 1.824 | 60.8400 ± 2.5377 | 100.00 ± 0.00 |
+| Final | B-Decay | 5 | 1.9200 ± 0.0165 | 57.825 ± 0.482 | 69.7932 ± 0.4381 | 100.00 ± 0.00 |
+| Stress | R-Fixed | 5 | 1.5680 ± 0.0123 | 62.447 ± 1.254 | 73.8980 ± 0.2721 | 100.00 ± 0.00 |
+| Stress | R-Decay | 5 | 1.5441 ± 0.0205 | 66.349 ± 0.197 | 74.6440 ± 0.1263 | 100.00 ± 0.00 |
+| Stress | B-Fixed | 5 | 2.2666 ± 0.0609 | 50.280 ± 1.881 | 52.2820 ± 2.1788 | 100.00 ± 0.00 |
+| Stress | B-Decay | 5 | 2.1812 ± 0.0628 | 51.788 ± 0.351 | 59.6140 ± 0.3557 | 100.00 ± 0.00 |
+
+![Boundary stability: paired training seeds](results/tracking_boundary_stability/figures/paired_seeds.png)
+
+![Boundary stability: all 301 frames, fixed scenario 5400000](results/tracking_boundary_stability/demos/scenario_5400000.gif)
+
+Each GIF has initial state plus all 300 ticks (301 frames, 20.07 s). Programmatic decoding is verified; actual-player inspection was not performed. [Study navigation](docs/tracking_boundary_stability.md) · [report](results/tracking_boundary_stability/results_summary.md) · [all data](results/tracking_boundary_stability/) · [other GIFs](results/tracking_boundary_stability/demos/) · [publication reproduction commands](docs/reproduce_latest_studies.md).
+
+## Short-horizon planning with learned terminal values
+
+**Question.** How much can stochastic feedback planning improve the existing ten-action task, and what comes from horizon versus terminal value? The study reuses frozen models: **zero new training interactions and zero Q updates**. The **20 instances** are Rule (1), R-Fixed (5), R-Decay (5), Phi-terminal Plan-H1/H2/H3 (3), zero-terminal Plan-H3-Zero (1), and learned-terminal Hybrid-H3 (5). Final has **10,000 windows**; Stress has **4,000**, totaling **4,200,000 environment ticks**.
+
+Planners observe full coordinates and a known stochastic model; R uses relative state. These information and computation advantages accompany cross-family differences. H1→H2→H3 within the same Phi family isolates horizon. Zero removes the distance terminal; Hybrid uses `max(Q_shaped)+Phi`, where `Phi=-distance` and task value = shaped value + Phi. In Stress the real turn/toggle probabilities are **0.10**, while every planning model remains **0.05**.
+
+| Split | Method | Instances | D ↓ | C (%) ↑ | H / 300 ticks ↑ | A (%) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Final | Rule | 1 | 1.3849 | 72.741 | 43.4080 | 100.00 |
+| Final | R-Fixed | 5 | 1.3848 ± 0.0137 | 68.898 ± 1.538 | 84.2240 ± 0.2003 | 100.00 ± 0.00 |
+| Final | R-Decay | 5 | 1.3465 ± 0.0091 | 73.311 ± 0.078 | 84.5276 ± 0.0611 | 100.00 ± 0.00 |
+| Final | Plan-H1 | 1 | 1.2990 | 76.615 | 50.7560 | 100.00 |
+| Final | Plan-H2 | 1 | 1.2285 | 74.516 | 87.6940 | 100.00 |
+| Final | Plan-H3 | 1 | 1.2219 | 74.753 | 88.3420 | 100.00 |
+| Final | Plan-H3-Zero | 1 | 2.4685 | 70.961 | 83.8020 | 100.00 |
+| Final | Hybrid-H3 | 5 | 1.2134 ± 0.0025 | 75.147 ± 0.026 | 88.7836 ± 0.0158 | 100.00 ± 0.00 |
+| Stress | Rule | 1 | 1.4827 | 67.910 | 41.6050 | 100.00 |
+| Stress | R-Fixed | 5 | 1.5752 ± 0.0103 | 62.481 ± 1.275 | 73.9950 ± 0.2589 | 100.00 ± 0.00 |
+| Stress | R-Decay | 5 | 1.5527 ± 0.0207 | 66.335 ± 0.216 | 74.4570 ± 0.0391 | 100.00 ± 0.00 |
+| Stress | Plan-H1 | 1 | 1.3930 | 71.960 | 47.8600 | 100.00 |
+| Stress | Plan-H2 | 1 | 1.3777 | 68.630 | 78.3700 | 100.00 |
+| Stress | Plan-H3 | 1 | 1.3709 | 68.832 | 79.1750 | 100.00 |
+| Stress | Plan-H3-Zero | 1 | 2.4651 | 65.675 | 75.2500 | 100.00 |
+| Stress | Hybrid-H3 | 5 | 1.3613 ± 0.0053 | 69.375 ± 0.076 | 79.6920 ± 0.0445 | 100.00 ± 0.00 |
+
+On this new Final, Hybrid-H3 has D=1.2134, C=75.15%, H=88.784; H is **5.04%** above the same-scene R-Decay mean. All five Hybrid instances reach C≥75% and retain at least 98% of their paired baseline hits. Stress Hybrid C is 69.38%, below 75%. The prespecified relative gate requiring **C gain ≥5 percentage points** still fails. H1's high close score comes with substantial hit loss and is not joint improvement. Pure Rule/planners are single instances and have no invented training-seed SD.
+
+**Different holdouts:** boundary-study R-Decay Final C is 73.19%; planning-study R-Decay Final C is 73.31%. Differences are computed within each study from unrounded counts, never across these tables.
+
+Planning preparation is separately charged in the precomputation record: state backups, chance terms and action-value lookups are distinct from real environment ticks. Formal online use is 1,890,000 cached planning queries, not training updates. Full measured preparation/evaluation costs and timer-resolution caveats are in the report.
+
+![Planning: horizon response with fixed state, model and terminal](results/tracking_planning/figures/horizon_response.png)
+
+![Planning: all 301 frames, fixed scenario 6400000](results/tracking_planning/demos/scenario_6400000/synchronized.gif)
+
+Programmatic decoding verified all 301 frames and their timing; actual-player inspection was not performed and no desktop/browser permission was requested. [Study navigation](docs/tracking_planning.md) · [report](results/tracking_planning/results_summary.md) · [paired results](results/tracking_planning/paired_differences.csv) · [other GIFs](results/tracking_planning/demos/) · [reproduce](docs/reproduce_latest_studies.md).
+
+**Next work:** a controlled 2-cell movement-action experiment is proposed, not completed. Preserve the current-action planning baseline and test C and H jointly; these results do not establish a theoretical ceiling.
 
 ## Representation benchmark
 
@@ -33,7 +99,6 @@ The relative table contains 192,080 Q entries and 768,320 float32 element bytes,
 
 ### See the current behavior
 
-![Full continuous-tracking comparison: archived Potential, Relative Base, Relative Potential, and predictive rule](results/tracking_improvement/render/seed3601000_main_comparison.gif)
 
 This actual rollout contains the initial frame and all 300 ticks: **301 frames, 20.07 seconds**. Red circles are targets and blue crosses are crosshairs. All panels see the same target trajectory; hits do not stop the animation. The new learned panels use the predeclared training seed 10. The archived Potential panel uses seed 0 and 20 million training interactions, while the new models use five million; this mixed-budget display illustrates behavior. The table above is the equal-budget comparison.
 

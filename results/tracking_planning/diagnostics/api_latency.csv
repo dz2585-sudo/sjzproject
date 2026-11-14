@@ -1,0 +1,21 @@
+policy,family,seed,load_seconds,first_api_call_ns,first_pass_median_ns,first_pass_p95_ns,first_pass_max_ns,warm_median_ns,warm_p95_ns,warm_max_ns,scope
+Rule,Rule,,5.00003807246685e-07,3100,2800.0,3100.0,36200,3400.0,3700.0,40200,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Fixed_s60,R-Fixed,60,0.005884700003662147,37400,6100.0,6300.0,40600,6800.0,12100.0,214000,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Fixed_s61,R-Fixed,61,0.005778099992312491,33600,6200.0,6500.0,33600,6700.0,6900.0,206100,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Fixed_s62,R-Fixed,62,0.005898900009924546,69200,6200.0,6500.0,69200,6800.0,7000.0,39500,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Fixed_s63,R-Fixed,63,0.0056280999997397885,30500,6100.0,6300.0,83500,6700.0,6800.0,139300,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Fixed_s64,R-Fixed,64,0.005472199991345406,25200,6200.0,6400.0,45300,6800.0,7000.0,54000,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Decay_s60,R-Decay,60,0.005630300001939759,28000,6100.0,6200.0,37600,6700.0,6900.0,32000,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Decay_s61,R-Decay,61,0.00569309999991674,27000,6200.0,6400.0,61100,6800.0,7000.0,38000,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Decay_s62,R-Decay,62,0.0055121000041253865,26700,6100.0,6200.0,40100,6700.0,6900.0,47600,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Decay_s63,R-Decay,63,0.0055705999984638765,25300,6100.0,6300.0,35900,6700.0,6900.0,32100,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+R-Decay_s64,R-Decay,64,0.005365899996832013,26400,6100.0,6300.0,57200,6700.0,6800.0,31200,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Plan-H1,Plan-H1,,0.0038828999968245625,8000,1700.0,1800.0,8000,2300.0,2400.0,37500,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Plan-H2,Plan-H2,,0.00395070000377018,7900,1700.0,1800.0,49600,2300.0,2400.0,6600,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Plan-H3,Plan-H3,,0.004333100005169399,6300,1700.0,1800.0,6300,2300.0,2400.0,33300,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Plan-H3-Zero,Plan-H3-Zero,,0.0041849999979604036,6200,1700.0,1800.0,141300,2300.0,2400.0,5400,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Hybrid-H3_s60,Hybrid-H3,60,0.016443400003481656,8400,1700.0,1800.0,69300,2300.0,2400.0,59200,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Hybrid-H3_s61,Hybrid-H3,61,0.01574710001295898,6500,1700.0,1800.0,36800,2300.0,2400.0,27100,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Hybrid-H3_s62,Hybrid-H3,62,0.015793499987921678,7100,1700.0,1800.0,33700,2300.0,2400.0,5500,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Hybrid-H3_s63,Hybrid-H3,63,0.015937899996060878,6900,1700.0,1800.0,8300,2300.0,2400.0,148900,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.
+Hybrid-H3_s64,Hybrid-H3,64,0.01596570000401698,7300,1700.0,1800.0,7400,2300.0,2400.0,37400,Python validated observation API; first pass is not OS-cache flushed. Full DP startup is separately charged.

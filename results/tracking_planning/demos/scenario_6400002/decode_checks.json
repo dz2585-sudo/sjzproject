@@ -1,0 +1,24 @@
+{
+  "scenario_seed": 6400002,
+  "development": false,
+  "policies": [
+    "Rule",
+    "R-Decay_s60",
+    "Plan-H3",
+    "Hybrid-H3_s60"
+  ],
+  "frames": 301,
+  "duration_ms": 20070,
+  "decoded_all_frame_pixels_and_timing": true,
+  "sha256": "9b1e2ddc07921043b92cd75992236cf1d3bb011774f206fd13be0d563fb2c505",
+  "target_sha256": "5595ce52aa8516b4c38d66c4dd34ae6799e3c6f72939110dfbe580913e6e6ac1",
+  "samples": {
+    "0": "18d270f59cf578911199ee41416c374c03d9227e4d870941bee497d06e2b65ee",
+    "150": "ba2400307f89e567cba9d339f2464492bd1d8e2bb82da7cf84f9ec01b442115d",
+    "300": "f63850c5bd5ac947f8538feda8180cd5fab046ce613ab767af6364cff88cb9fe"
+  },
+  "environment_ticks": 1200,
+  "planning_lookups": 600,
+  "new_training_interactions": 0,
+  "actual_player_check": "Not performed, as requested; no desktop/browser permissions requested."
+}

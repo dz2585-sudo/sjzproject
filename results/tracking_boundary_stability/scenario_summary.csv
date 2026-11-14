@@ -1,0 +1,7 @@
+split,condition,scenarios,C_improved_scenarios,C_worsened_scenarios,C_tied_scenarios,interpretation
+final,R-Decay,500,500,0,0,Descriptive scenario averages over the same five paired training seeds; not independent training replicates.
+final,B-Fixed,500,0,500,0,Descriptive scenario averages over the same five paired training seeds; not independent training replicates.
+final,B-Decay,500,0,500,0,Descriptive scenario averages over the same five paired training seeds; not independent training replicates.
+stress,R-Decay,200,200,0,0,Descriptive scenario averages over the same five paired training seeds; not independent training replicates.
+stress,B-Fixed,200,0,200,0,Descriptive scenario averages over the same five paired training seeds; not independent training replicates.
+stress,B-Decay,200,0,200,0,Descriptive scenario averages over the same five paired training seeds; not independent training replicates.

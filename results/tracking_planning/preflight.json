@@ -1,0 +1,115 @@
+{
+  "full_tests": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 60.01934359999723,
+    "log": "execution/preflight_full_tests.txt"
+  },
+  "new_tests_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_tracking_planning.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 4.580860300004133,
+    "log": "execution/preflight_new_tests_optimized.txt"
+  },
+  "publication": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_planning\\checks\\preflight_publication.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 12.990541400009533,
+    "log": "execution/preflight_publication.txt"
+  },
+  "publication_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_planning\\checks\\preflight_publication_optimized.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 13.090844699996524,
+    "log": "execution/preflight_publication_optimized.txt"
+  },
+  "studies": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/verify_tracking_studies.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_planning\\checks\\preflight_studies"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 11.525455700000748,
+    "log": "execution/preflight_studies.txt"
+  },
+  "studies_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/verify_tracking_studies.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_planning\\checks\\preflight_studies_optimized"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 11.570386400009738,
+    "log": "execution/preflight_studies_optimized.txt"
+  },
+  "boundary_history": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "aimrl.tracking_planning.historical_check",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_planning\\checks\\preflight_boundary_history.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 31.46641819999786,
+    "log": "execution/preflight_boundary_history.txt"
+  },
+  "boundary_history_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "-m",
+      "aimrl.tracking_planning.historical_check",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_planning\\checks\\preflight_boundary_history_optimized.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 30.188034100006917,
+    "log": "execution/preflight_boundary_history_optimized.txt"
+  },
+  "planning_validation_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "-c",
+      "from aimrl.tracking_planning.core import config,OUT; from aimrl.tracking_planning.validation import validate; validate(config(),OUT/\"validation_optimized\")"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 9.522599499992793,
+    "log": "execution/preflight_planning_validation_optimized.txt"
+  }
+}

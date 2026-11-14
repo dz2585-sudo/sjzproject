@@ -1,0 +1,79 @@
+{
+  "full_tests": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 81.73657929999172,
+    "log": "execution/preflight_retry1_full_tests.txt"
+  },
+  "optimized_new_tests": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_tracking_boundary_stability.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 3.8370971999975154,
+    "log": "execution/preflight_retry1_optimized_new_tests.txt"
+  },
+  "publication": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_boundary_stability\\checks\\preflight_retry1_publication.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 17.80340539998724,
+    "log": "execution/preflight_retry1_publication.txt"
+  },
+  "publication_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_boundary_stability\\checks\\preflight_retry1_publication_optimized.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 17.681743399996776,
+    "log": "execution/preflight_retry1_publication_optimized.txt"
+  },
+  "studies": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/verify_tracking_studies.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_boundary_stability\\checks\\preflight_retry1_studies"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 17.61665360000916,
+    "log": "execution/preflight_retry1_studies.txt"
+  },
+  "studies_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/verify_tracking_studies.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_boundary_stability\\checks\\preflight_retry1_studies_optimized"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 16.879511599996476,
+    "log": "execution/preflight_retry1_studies_optimized.txt"
+  }
+}

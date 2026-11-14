@@ -1,0 +1,10 @@
+{
+  "complete": false,
+  "decoded_complete": true,
+  "static_layout_inspected": true,
+  "windows_player_error": "Computer Use was not approved to use Google Chrome",
+  "in_app_browser_error": "Local file protocol disallowed by browser URL security policy; allowed protocols http/https.",
+  "actual_playback_observed": false,
+  "workaround_attempted": false,
+  "user_action": "Open the three delivered GIF files in an authorized local player to complete the remaining playback observation."
+}

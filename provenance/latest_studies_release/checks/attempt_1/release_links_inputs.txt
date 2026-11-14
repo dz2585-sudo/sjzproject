@@ -1,0 +1,26 @@
+PUBLICATION COPY: local paths redacted. Original log SHA-256: 13a77e028ae9215597b3bd367162c088ae29c673a8371e4ff4bb9f3972aecd76
+
+{
+  "inputs": {
+    "unchanged_files_verified": 1745,
+    "archived_document_originals_verified": 0,
+    "allowed_publication_document_changes": [],
+    "documented_noncore_omissions": [
+      "results/tracking_boundary_stability/execution/postflight_new_verify.txt",
+      "results/tracking_boundary_stability/execution/postflight_new_verify_optimized.txt",
+      "results/tracking_boundary_stability/execution/preflight_studies.txt",
+      "results/tracking_boundary_stability/execution/preflight_studies_optimized.txt",
+      "results/tracking_boundary_stability/native/boundary.pdb",
+      "results/tracking_boundary_stability/native/build_attempt_1.json",
+      "results/tracking_boundary_stability/native/build_attempt_2.json",
+      "results/tracking_boundary_stability/native/kernel.lib",
+      "results/tracking_planning/native/kernel.lib",
+      "results/tracking_planning/native/planning.pdb"
+    ],
+    "changed_experiment_core_files": [],
+    "expected_historical_hashes_modified": false
+  },
+  "links": {
+    "relative_links_checked": 232
+  }
+}

@@ -1,0 +1,12 @@
+test_compact_rows_and_alias (test_tracking_boundary_stability.BoundaryTests.test_compact_rows_and_alias) ... ok
+test_exact_expected_target_has_unit_fire_gap (test_tracking_boundary_stability.BoundaryTests.test_exact_expected_target_has_unit_fire_gap) ... ok
+test_fixed_relative_exactly_matches_published_close_0p5 (test_tracking_boundary_stability.BoundaryTests.test_fixed_relative_exactly_matches_published_close_0p5) ... ok
+test_learning_rate_uses_preupdate_count_and_bootstraps (test_tracking_boundary_stability.BoundaryTests.test_learning_rate_uses_preupdate_count_and_bootstraps) ... ok
+test_mechanism_and_nonassert_require (test_tracking_boundary_stability.BoundaryTests.test_mechanism_and_nonassert_require) ... ok
+test_native_stepwise_full_gate (test_tracking_boundary_stability.BoundaryTests.test_native_stepwise_full_gate) ... ok
+test_zero_shot_accuracy_is_na (test_tracking_boundary_stability.BoundaryTests.test_zero_shot_accuracy_is_na) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.901s
+
+OK

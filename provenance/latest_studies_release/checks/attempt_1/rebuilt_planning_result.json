@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "optimized": false,
+  "new_training_interactions": 0,
+  "Q_updates": 0,
+  "formal_windows": 14000,
+  "formal_environment_ticks": 4200000,
+  "development_windows": 4000,
+  "development_environment_ticks": 1200000,
+  "checked_policy_proposals": 5400000,
+  "formal_planning_lookups": 1890000,
+  "verified_value_backups": 65625000,
+  "verified_chance_terms": 383250000,
+  "verification_planning_recomputations": 65625000,
+  "formal_environment_replays": 0,
+  "decoded_demo_frames": 903,
+  "inventory_files": 458,
+  "protection": {
+    "unchanged_files_verified": 2962,
+    "archived_document_originals_verified": 2,
+    "allowed_publication_document_changes": [
+      ".gitignore",
+      "README.md"
+    ],
+    "documented_noncore_omissions": [
+      "results/tracking_boundary_stability/execution/postflight_new_verify.txt",
+      "results/tracking_boundary_stability/execution/postflight_new_verify_optimized.txt",
+      "results/tracking_boundary_stability/execution/preflight_studies.txt",
+      "results/tracking_boundary_stability/execution/preflight_studies_optimized.txt",
+      "results/tracking_boundary_stability/native/boundary.pdb",
+      "results/tracking_boundary_stability/native/build_attempt_1.json",
+      "results/tracking_boundary_stability/native/build_attempt_2.json",
+      "results/tracking_boundary_stability/native/kernel.lib"
+    ],
+    "changed_experiment_core_files": [],
+    "expected_historical_hashes_modified": false
+  },
+  "actual_player_check": "Not performed, as requested.",
+  "publication_adapter": "Archived documentation and named non-core omissions; complete DP reconstruction and all saved proposals still checked.",
+  "rebuilt_math_engine": {
+    "path": "planning.dll",
+    "sha256": "f304f9eae63ccde5f6585a0ab175cff5f0e80cd397d973790d8c344950c90055",
+    "source_sha256": "680b22f630fdde2e4b9bc92beef7104eed456684d1bf67f4efff5c9d0706c026"
+  }
+}

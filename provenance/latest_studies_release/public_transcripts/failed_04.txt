@@ -1,0 +1,20 @@
+PUBLICATION COPY: machine-local paths redacted.
+Original: results/tracking_boundary_stability/execution/postflight_new_verify_optimized.txt
+Original SHA-256: e779951b20b1fb4dc40a7ee8ad7baad0fda987a63eff014c29a041c23baf29dd
+Original status/messages retained; this is not the original byte stream.
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<REPOSITORY_ROOT>\aimrl\tracking_boundary_stability\__main__.py", line 3, in <module>
+    main()
+    ~~~~^^
+  File "<REPOSITORY_ROOT>\aimrl\tracking_boundary_stability\study.py", line 272, in main
+    print(json.dumps(verify(c),indent=2))
+                     ~~~~~~^^^
+  File "<REPOSITORY_ROOT>\aimrl\tracking_boundary_stability\verify.py", line 109, in verify
+    require(str(a[k])==b[k],f'Window CSV mismatch: {k}')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPOSITORY_ROOT>\aimrl\tracking_boundary_stability\core.py", line 22, in require
+    raise ValueError(message)
+ValueError: Window CSV mismatch: target_sha256

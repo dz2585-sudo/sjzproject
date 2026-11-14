@@ -1,0 +1,49 @@
+{
+  "complete": true,
+  "mechanisms": {
+    "target_states": 5000,
+    "probability_sum_max_error": 0.0,
+    "merged_duplicate_branches": 800,
+    "original_environment_steps": 1800,
+    "deterministic_steps": 300
+  },
+  "max_native_value_error": 2.8421709430404007e-13,
+  "max_shaping_constant_error": 2.8421709430404007e-13,
+  "brute_force": [
+    {
+      "terminal": "Phi",
+      "horizon": 1,
+      "value": 0.18245
+    },
+    {
+      "terminal": "Phi",
+      "horizon": 2,
+      "value": 7.486267069999999
+    },
+    {
+      "terminal": "Phi",
+      "horizon": 3,
+      "value": 9.109826920506686
+    },
+    {
+      "terminal": "Zero",
+      "horizon": 1,
+      "value": 0.425
+    },
+    {
+      "terminal": "Zero",
+      "horizon": 2,
+      "value": 9.356102468749999
+    },
+    {
+      "terminal": "Zero",
+      "horizon": 3,
+      "value": 10.171793499742577
+    }
+  ],
+  "original_python_native_environment_steps": 24000,
+  "no_hidden_future": true,
+  "all_twenty_methods": true,
+  "training_interactions": 0,
+  "elapsed_seconds": 9.047693000000436
+}

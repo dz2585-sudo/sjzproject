@@ -1,0 +1,19 @@
+{
+  "all_automated_checks_passed": true,
+  "complete_suite_tests": 96,
+  "optimized_new_tests": 7,
+  "postflight_commands": 11,
+  "new_training_interactions": 0,
+  "Q_updates": 0,
+  "formal_windows": 14000,
+  "formal_environment_ticks": 4200000,
+  "development_windows": 4000,
+  "precomputed_value_backups": 65625000,
+  "precomputed_chance_terms": 383250000,
+  "formal_planning_lookups": 1890000,
+  "protected_files": 2972,
+  "frozen_protocol_sha256": "381e2a3f380a81280a495297703feed3c8403602737e6daca7099790369258e7",
+  "actual_player_performed": false,
+  "actual_player_scope": "Intentionally not executed, as requested; decoded validation complete.",
+  "uncompleted_required_items": []
+}

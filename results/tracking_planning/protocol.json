@@ -1,0 +1,538 @@
+{
+  "frozen_utc": "2026-11-13T20:14:35.313563+00:00",
+  "config": {
+    "environment": {
+      "grid_size": 25,
+      "minimum_reset_distance": 12,
+      "turn_probability": 0.05,
+      "speed_toggle_probability": 0.05,
+      "episode_ticks": 300
+    },
+    "actions": [
+      "left_slow",
+      "right_slow",
+      "up_slow",
+      "down_slow",
+      "stay",
+      "fire",
+      "left_fast",
+      "right_fast",
+      "up_fast",
+      "down_fast"
+    ],
+    "rewards": {
+      "step": -0.05,
+      "hit": 10.0,
+      "miss": -1.0
+    },
+    "gamma": 0.99,
+    "close_weight": 0.5,
+    "planning": {
+      "turn_probability": 0.05,
+      "speed_toggle_probability": 0.05,
+      "horizons": [
+        1,
+        2,
+        3
+      ],
+      "tie_tolerance": 1e-10,
+      "terminals": [
+        "Phi",
+        "Zero",
+        "Q+Phi"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "display_training_seed": 60,
+      "development": {
+        "start": 6100000,
+        "count": 200
+      },
+      "final": {
+        "start": 6200000,
+        "count": 500
+      },
+      "stress": {
+        "start": 6300000,
+        "count": 200,
+        "turn_probability": 0.1,
+        "speed_toggle_probability": 0.1
+      },
+      "demo_seeds": [
+        6400000,
+        6400001,
+        6400002
+      ],
+      "event_window": {
+        "before": 5,
+        "after": 15,
+        "recovery_horizon": 30,
+        "recovery_consecutive_close": 3,
+        "overlap": "Keep earliest event of the same type; reject later events within 30 ticks. Recovery is censored at the next event of either random type and at window end; bounce curves retain overlaps with other event types."
+      },
+      "thresholds": {
+        "C_gain": 0.05,
+        "H_retention": 0.98,
+        "H_simultaneous": 1.02,
+        "A_minimum": 0.98,
+        "C_absolute": 0.75
+      },
+      "common_diagnostics": {
+        "source": "results/tracking_boundary_stability/diagnostics/common_states.npz",
+        "scope": "Reuse the previously frozen common physical states; no new holdout access"
+      },
+      "behavior_selection": [
+        "First pre-action speed-2 disagreement between each planner and R-Decay on the same R-Decay state; split/scenario/seed/tick lexicographic order.",
+        "First bounce on each paired route for which subsequent pre-action alignment recovery differs within 30 ticks; earliest accepted bounce, censored by route end.",
+        "First aligned R-Decay state where R-Decay proposes Fire and planner proposes movement (IDs 0-3 or 6-9); report absence explicitly."
+      ],
+      "event_overlap": "Reuse prior accepted-event rules for distance/recovery curves; alignment recovery uses first d_pre=0 within 30 ticks after a bounce, window-censored.",
+      "new_training_interactions": 0
+    }
+  },
+  "config_sha256": "5dccbad28cfeda501b16ee4b59080da148bc4c48b2281cdc41218b2b75ee3dc5",
+  "source_sha256": {
+    "aimrl/tracking_planning/__init__.py": "97f39c43abba0b5c8c87483c5f036371c64c5c6de149c47155709ec611b829e6",
+    "aimrl/tracking_planning/__main__.py": "f8c642be9688151492944f20cf8afedf611ec313077ca3f6b017632197258a9b",
+    "aimrl/tracking_planning/analysis.py": "f245b796a2204e71aafc2f7ead601162b86111eb5e21636815c001dc2d653daa",
+    "aimrl/tracking_planning/core.py": "f9f41b7ce2a135605a3a826b8b12e2b761ff95dc377555ba66efa74014d47213",
+    "aimrl/tracking_planning/evaluation.py": "a6830ce37b501236e7194c5ab06e4cca82b8dc0131c3519f35af77fdfc03b2b0",
+    "aimrl/tracking_planning/historical_check.py": "538a334eabb30f1b7f9b7a36aa6ee2a5ca46e7a5596d12b1b8660d707554eb32",
+    "aimrl/tracking_planning/kernel.c": "680b22f630fdde2e4b9bc92beef7104eed456684d1bf67f4efff5c9d0706c026",
+    "aimrl/tracking_planning/reference.py": "edf6c6f22e83969b22166d54f17e7e5f0fe2ccccbf3e34882bfab89123c5f641",
+    "aimrl/tracking_planning/report.py": "f6631a7d5669f6b1ddf4cc1093f4b23120eec7f78f900a65cc392b9b9ab872d5",
+    "aimrl/tracking_planning/study.py": "b59a88a48d33b5d3a56c9209216274943a053ddf982c1a1d1d3b202e0d76076b",
+    "aimrl/tracking_planning/validation.py": "7e9f27f672ec8d607a842c7c0bc1f919e47c446808c8145cc0a6fcd37597762e",
+    "aimrl/tracking_planning/verify.py": "92a76146326f740200934881491e00f2a7f4d03a6a06bdd53721f269a8580263",
+    "aimrl/tracking_planning/visuals.py": "7c914a5d8af84a92cba050df796e067ebb2886df120f92cd98bc72d58b556cfe",
+    "configs/tracking_planning.json": "5dccbad28cfeda501b16ee4b59080da148bc4c48b2281cdc41218b2b75ee3dc5",
+    "scripts/check_tracking_planning.py": "fa013b7f5378906ebea6003250b0bfcc61a9dddbb7f9543ee094ce374cf5cec7",
+    "tests/test_tracking_planning.py": "db773b342cc076517259709bab10a5269a49c7b695eb9a29806e240331bb1e49"
+  },
+  "kernel_sha256": "5a9aba5f06e27b37488a05a7849512744ca78eb20fe2db61cf691546e148aa35",
+  "models": [
+    {
+      "condition": "R-Fixed",
+      "seed": 60,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_60/checkpoints/step_5000000.npz",
+      "file_sha256": "2710be9651582330ce1bb0ee382120fb51583d2072f19533de06f8df89c4b205",
+      "q_sha256": "fa847f6fbac98826ca453298f5f3ccac0d2e9ce5beda2914dcda9432a1bc7b33",
+      "counts_sha256": "344bc9efd488d7eb141621b9917ced219e487636b1931dfbf0cc3034eac3ba1e"
+    },
+    {
+      "condition": "R-Fixed",
+      "seed": 61,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_61/checkpoints/step_5000000.npz",
+      "file_sha256": "be1677f8cca67006170bed84ecc305d713319c5b4cff92d4f1e44b7394f49285",
+      "q_sha256": "8c5fef7f32cb03be1cae59ec83fbd861e4c2092ccef6026d93a331179eafe22a",
+      "counts_sha256": "cb0c922ebc7b119e859173cb02d54e314cd220a63a5cf7fd46268f642930830f"
+    },
+    {
+      "condition": "R-Fixed",
+      "seed": 62,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_62/checkpoints/step_5000000.npz",
+      "file_sha256": "090e3ac02d88c586736ec7491dfc65b628095a0ce4ab2920eb032ce4fea21a7b",
+      "q_sha256": "d22ca770f7c32c8c5f07ed89115c1e975f3d90746e1d0ac8b4ac994adc27d7d2",
+      "counts_sha256": "d05d103c7183e85350c2ae2d6bc6bb4e1cdec8f9f1ec859a2f4d6569ef5777af"
+    },
+    {
+      "condition": "R-Fixed",
+      "seed": 63,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_63/checkpoints/step_5000000.npz",
+      "file_sha256": "92c7e2d911b12de47b013d085ce65bfe5549dbab390e87b87aee483d56f600f6",
+      "q_sha256": "3017e47cc7d6c22d755a0f3768f71bd844eb15755a087a0bf1478a6ff3a7919e",
+      "counts_sha256": "f22a32705becd857959781e9a0c69b6b1eefa7459a5f2c67a34e06cdc448ebce"
+    },
+    {
+      "condition": "R-Fixed",
+      "seed": 64,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_64/checkpoints/step_5000000.npz",
+      "file_sha256": "cbb4f07a816c97203564974a25eb16f65ce5e0e8271da9a7879562420fea1c2a",
+      "q_sha256": "9e0ef549cf6dd88a83b61b3a62314439ee526a10dad9d97dab44c524fb59167a",
+      "counts_sha256": "4c0dc6cecf677ea11d3a589c6390aa6f93afb01a093b4ca1f32fa7afad1d43a6"
+    },
+    {
+      "condition": "R-Decay",
+      "seed": 60,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_60/checkpoints/step_5000000.npz",
+      "file_sha256": "b17ce849d6a99ef17b857905d3fab5935de62a2ca987506bd8a559d6debb8b29",
+      "q_sha256": "98ece58a7e6e959cc9aa3409e497699cff1dad19c33db2f986e9b9652945cd72",
+      "counts_sha256": "c81e4d429dc512bf1ded6717813dd747d48531327e2633a1587e89fac70123a6"
+    },
+    {
+      "condition": "R-Decay",
+      "seed": 61,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_61/checkpoints/step_5000000.npz",
+      "file_sha256": "2a102e8b3ff0412ee4f01a4d5229dd16074b69810ea2f66569179f26c68f9235",
+      "q_sha256": "90a9f03288c3c51443f74fb5781b4389314f5cc6162e0aef13ca13340b41cab7",
+      "counts_sha256": "7c1479e75c2bd96d89e7e959713bf989aed90b665ec8175410651e1c592873ab"
+    },
+    {
+      "condition": "R-Decay",
+      "seed": 62,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_62/checkpoints/step_5000000.npz",
+      "file_sha256": "414cf25034d392bfdca761ebdbaff870db65edc0d0c49c9c8f318a78c9137ae0",
+      "q_sha256": "77dfebd7dd6287833e7b7347c4c55da64ae11926d9a1d1f01c62f100fdb0851d",
+      "counts_sha256": "6a7c738001f5a7389f7655dad3922339ec280778fe329e2e8ce2560182b59417"
+    },
+    {
+      "condition": "R-Decay",
+      "seed": 63,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_63/checkpoints/step_5000000.npz",
+      "file_sha256": "a039aecc2476d76679daa5414236a34a3288e42a08ab27d2789f81aec591fbd0",
+      "q_sha256": "0a9e4f442ed46b0760a9d8fcf9dcd4dee81ca3b8ccfc8cf24f2c1cc5649ddec6",
+      "counts_sha256": "765180966697d1368a117f63d3f8e62558b3adfc34e74edcae4d1874beb768de"
+    },
+    {
+      "condition": "R-Decay",
+      "seed": 64,
+      "step": 5000000,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_64/checkpoints/step_5000000.npz",
+      "file_sha256": "044a57200a2c325e88b49b33ae865caeabd2cae37e53ae9b3b5205e2f6df31bd",
+      "q_sha256": "b1ee11b144895d8b6693a8d5386ae102c2645ace415880b99f4d3878ce671858",
+      "counts_sha256": "f8c9d22422be0ca34a9bfa73e4a10555a1e2d25a919f5de56f1e7ba15c9c2b08"
+    }
+  ],
+  "methods": [
+    {
+      "id": "Rule",
+      "family": "Rule",
+      "seed": null,
+      "kind": "rule",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Fixed_s60",
+      "family": "R-Fixed",
+      "seed": 60,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Fixed_s61",
+      "family": "R-Fixed",
+      "seed": 61,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Fixed_s62",
+      "family": "R-Fixed",
+      "seed": 62,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Fixed_s63",
+      "family": "R-Fixed",
+      "seed": 63,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Fixed_s64",
+      "family": "R-Fixed",
+      "seed": 64,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Decay_s60",
+      "family": "R-Decay",
+      "seed": 60,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Decay_s61",
+      "family": "R-Decay",
+      "seed": 61,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Decay_s62",
+      "family": "R-Decay",
+      "seed": 62,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Decay_s63",
+      "family": "R-Decay",
+      "seed": 63,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "R-Decay_s64",
+      "family": "R-Decay",
+      "seed": 64,
+      "kind": "learned",
+      "horizon": 0,
+      "terminal": null
+    },
+    {
+      "id": "Plan-H1",
+      "family": "Plan-H1",
+      "seed": null,
+      "kind": "plan",
+      "horizon": 1,
+      "terminal": "Phi"
+    },
+    {
+      "id": "Plan-H2",
+      "family": "Plan-H2",
+      "seed": null,
+      "kind": "plan",
+      "horizon": 2,
+      "terminal": "Phi"
+    },
+    {
+      "id": "Plan-H3",
+      "family": "Plan-H3",
+      "seed": null,
+      "kind": "plan",
+      "horizon": 3,
+      "terminal": "Phi"
+    },
+    {
+      "id": "Plan-H3-Zero",
+      "family": "Plan-H3-Zero",
+      "seed": null,
+      "kind": "plan",
+      "horizon": 3,
+      "terminal": "Zero"
+    },
+    {
+      "id": "Hybrid-H3_s60",
+      "family": "Hybrid-H3",
+      "seed": 60,
+      "kind": "plan",
+      "horizon": 3,
+      "terminal": "Q+Phi"
+    },
+    {
+      "id": "Hybrid-H3_s61",
+      "family": "Hybrid-H3",
+      "seed": 61,
+      "kind": "plan",
+      "horizon": 3,
+      "terminal": "Q+Phi"
+    },
+    {
+      "id": "Hybrid-H3_s62",
+      "family": "Hybrid-H3",
+      "seed": 62,
+      "kind": "plan",
+      "horizon": 3,
+      "terminal": "Q+Phi"
+    },
+    {
+      "id": "Hybrid-H3_s63",
+      "family": "Hybrid-H3",
+      "seed": 63,
+      "kind": "plan",
+      "horizon": 3,
+      "terminal": "Q+Phi"
+    },
+    {
+      "id": "Hybrid-H3_s64",
+      "family": "Hybrid-H3",
+      "seed": 64,
+      "kind": "plan",
+      "horizon": 3,
+      "terminal": "Q+Phi"
+    }
+  ],
+  "cache_bundles": [
+    {
+      "path": "cache/92eb1dc0726e4430c0862fad7df552382227424457f0cc8c96f51a64ba76c91a/h1.npz",
+      "sha256": "78446bdf506841984ac437516ddd0f38606924871229a8f7a95c4c3377ba34a5",
+      "cache_key": "92eb1dc0726e4430c0862fad7df552382227424457f0cc8c96f51a64ba76c91a",
+      "horizon": 1
+    },
+    {
+      "path": "cache/92eb1dc0726e4430c0862fad7df552382227424457f0cc8c96f51a64ba76c91a/h2.npz",
+      "sha256": "066fe8f0839d7b30a6e962691af471967fcd0930239f98ba57940367c28a90c0",
+      "cache_key": "92eb1dc0726e4430c0862fad7df552382227424457f0cc8c96f51a64ba76c91a",
+      "horizon": 2
+    },
+    {
+      "path": "cache/92eb1dc0726e4430c0862fad7df552382227424457f0cc8c96f51a64ba76c91a/h3.npz",
+      "sha256": "d12b0c70fb5d1b9dabc8941d9e98ee04469b109e61739982d1acf7887674ac2a",
+      "cache_key": "92eb1dc0726e4430c0862fad7df552382227424457f0cc8c96f51a64ba76c91a",
+      "horizon": 3
+    },
+    {
+      "path": "cache/305814f76dc862bf619273cc19b29e4851d8967233566473941039f72c95254b/h1.npz",
+      "sha256": "29b8127f58ec33495560c08c0ae8ac0333f0b6873e20606c898ff5c15068f0a3",
+      "cache_key": "305814f76dc862bf619273cc19b29e4851d8967233566473941039f72c95254b",
+      "horizon": 1
+    },
+    {
+      "path": "cache/305814f76dc862bf619273cc19b29e4851d8967233566473941039f72c95254b/h2.npz",
+      "sha256": "3852a160184e866f83d7d05622cdd4610583f96ea3b938ab1297b530e2ced432",
+      "cache_key": "305814f76dc862bf619273cc19b29e4851d8967233566473941039f72c95254b",
+      "horizon": 2
+    },
+    {
+      "path": "cache/305814f76dc862bf619273cc19b29e4851d8967233566473941039f72c95254b/h3.npz",
+      "sha256": "ca2d1cf888561542de6f79e459a921d8cae5f26d7dabf6fc4da00e9ac68b3d25",
+      "cache_key": "305814f76dc862bf619273cc19b29e4851d8967233566473941039f72c95254b",
+      "horizon": 3
+    },
+    {
+      "path": "cache/b2c3bbac42adb40fd0f8b4360b6762c02643071db2e5e2f174ae77e40f44400b/h1.npz",
+      "sha256": "8d163040dfce0834fb58877382530edd752f8237606e7817d5e1bbc9b79dff5a",
+      "cache_key": "b2c3bbac42adb40fd0f8b4360b6762c02643071db2e5e2f174ae77e40f44400b",
+      "horizon": 1
+    },
+    {
+      "path": "cache/b2c3bbac42adb40fd0f8b4360b6762c02643071db2e5e2f174ae77e40f44400b/h2.npz",
+      "sha256": "3d05411d94bdfdd469634c8e96c0667becbe478460a51257818b0225712b94b7",
+      "cache_key": "b2c3bbac42adb40fd0f8b4360b6762c02643071db2e5e2f174ae77e40f44400b",
+      "horizon": 2
+    },
+    {
+      "path": "cache/b2c3bbac42adb40fd0f8b4360b6762c02643071db2e5e2f174ae77e40f44400b/h3.npz",
+      "sha256": "fc107e171ae2d7f26917638766ad10fb378d7230a5c9037c4be02e7aa5b51e27",
+      "cache_key": "b2c3bbac42adb40fd0f8b4360b6762c02643071db2e5e2f174ae77e40f44400b",
+      "horizon": 3
+    },
+    {
+      "path": "cache/ec9f65a221b261ba71f9743553f331a10c2c8b072dc99431b581a07d6698fcff/h1.npz",
+      "sha256": "2d4411503a6aac8400d40d7e93ce158da2adfe956c2ec0a723beb8668474eade",
+      "cache_key": "ec9f65a221b261ba71f9743553f331a10c2c8b072dc99431b581a07d6698fcff",
+      "horizon": 1
+    },
+    {
+      "path": "cache/ec9f65a221b261ba71f9743553f331a10c2c8b072dc99431b581a07d6698fcff/h2.npz",
+      "sha256": "3f73cda0cbd3f566a7228ba643e40e42903c79dedcc171e75ab968a5e7bc1431",
+      "cache_key": "ec9f65a221b261ba71f9743553f331a10c2c8b072dc99431b581a07d6698fcff",
+      "horizon": 2
+    },
+    {
+      "path": "cache/ec9f65a221b261ba71f9743553f331a10c2c8b072dc99431b581a07d6698fcff/h3.npz",
+      "sha256": "8e57f838cd5d9e801b75d4eb5f7caf3929c330b8c95abecdfe751fb2a946a4d5",
+      "cache_key": "ec9f65a221b261ba71f9743553f331a10c2c8b072dc99431b581a07d6698fcff",
+      "horizon": 3
+    },
+    {
+      "path": "cache/ce68f37d94e71ba755f381a39693d8fdfc4519474c5234efc2eef91f1f949075/h1.npz",
+      "sha256": "c56046b484f7771d636e1f887ba04b62cb0a9314217df938afeec7efa936ede0",
+      "cache_key": "ce68f37d94e71ba755f381a39693d8fdfc4519474c5234efc2eef91f1f949075",
+      "horizon": 1
+    },
+    {
+      "path": "cache/ce68f37d94e71ba755f381a39693d8fdfc4519474c5234efc2eef91f1f949075/h2.npz",
+      "sha256": "ba70f7877db59aed31a3281d137ad5b7521c1a9fa3450ff9c389149bd60c927a",
+      "cache_key": "ce68f37d94e71ba755f381a39693d8fdfc4519474c5234efc2eef91f1f949075",
+      "horizon": 2
+    },
+    {
+      "path": "cache/ce68f37d94e71ba755f381a39693d8fdfc4519474c5234efc2eef91f1f949075/h3.npz",
+      "sha256": "246b87b5b833dc710bc07ddbbedb8bad5b93eaaf8fd6bbb39485881df3aeae60",
+      "cache_key": "ce68f37d94e71ba755f381a39693d8fdfc4519474c5234efc2eef91f1f949075",
+      "horizon": 3
+    },
+    {
+      "path": "cache/b000eccbdb3cb0d239c9e57f672730b99bd41c305ecb63f00b8926f54dfff71a/h1.npz",
+      "sha256": "404e4c734b659d14731e0ec551dcf0e7296582ce892931aab8f4bd7b68cd6d4f",
+      "cache_key": "b000eccbdb3cb0d239c9e57f672730b99bd41c305ecb63f00b8926f54dfff71a",
+      "horizon": 1
+    },
+    {
+      "path": "cache/b000eccbdb3cb0d239c9e57f672730b99bd41c305ecb63f00b8926f54dfff71a/h2.npz",
+      "sha256": "bf54efd196129c9959d858c840efa4641873e482bdcc07a9c53e799e32f7fb9e",
+      "cache_key": "b000eccbdb3cb0d239c9e57f672730b99bd41c305ecb63f00b8926f54dfff71a",
+      "horizon": 2
+    },
+    {
+      "path": "cache/b000eccbdb3cb0d239c9e57f672730b99bd41c305ecb63f00b8926f54dfff71a/h3.npz",
+      "sha256": "13d0a93a8a42237978c36a7277c1956c3f04aac7e7d0b313f9f380f14b0645a9",
+      "cache_key": "b000eccbdb3cb0d239c9e57f672730b99bd41c305ecb63f00b8926f54dfff71a",
+      "horizon": 3
+    },
+    {
+      "path": "cache/6398f84cb84d0e910b71d840e3b2cd9f89a6c1a1478733949321fa7ce0c4c047/h1.npz",
+      "sha256": "f36d398aefb60a2ce1c79541af773e69c0d5919326ccafdcde73bfa532845574",
+      "cache_key": "6398f84cb84d0e910b71d840e3b2cd9f89a6c1a1478733949321fa7ce0c4c047",
+      "horizon": 1
+    },
+    {
+      "path": "cache/6398f84cb84d0e910b71d840e3b2cd9f89a6c1a1478733949321fa7ce0c4c047/h2.npz",
+      "sha256": "27feb2fa4d58fbfe6289c3b7b470db71fca03684659cc52522c5a2e231b49728",
+      "cache_key": "6398f84cb84d0e910b71d840e3b2cd9f89a6c1a1478733949321fa7ce0c4c047",
+      "horizon": 2
+    },
+    {
+      "path": "cache/6398f84cb84d0e910b71d840e3b2cd9f89a6c1a1478733949321fa7ce0c4c047/h3.npz",
+      "sha256": "78636764317b3d6074d98b611c63f01fb63590cd52ee20ac5aff4e4496b73945",
+      "cache_key": "6398f84cb84d0e910b71d840e3b2cd9f89a6c1a1478733949321fa7ce0c4c047",
+      "horizon": 3
+    }
+  ],
+  "runtime": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2",
+      "Pillow": "13.0.0"
+    }
+  },
+  "information": "Planners observe full current physical state and fixed known 0.05/0.05 model; R observes relative offsets, heading and speed. No planner receives RNG, seed, future route or actual future draws.",
+  "feedback": "Bellman maximum is inside each successor subproblem. Only root action is executed, then a new observed state is queried. Full physical-state DP tables share chance expectations across cursor-action preimages.",
+  "tie_rule": "Planning: exact maximum value, choose lowest ID within absolute 1e-10 of maximum. Frozen R: exact lowest-ID argmax. Rule: preserve original distance/displacement/action lexicographic rule.",
+  "actions": "All ten actions enumerated in every native planning backup; no Fire pruning. Every executed action receives identical firing guard.",
+  "bootstrap": "Same horizon H at every tick, including ticks 298-300. The 300-tick window is not a task termination.",
+  "training": "Zero new training interactions, zero Q updates. Planning backups, chance terms, evaluations and validations counted separately.",
+  "main_comparisons": "Within Phi family H1/H2/H3 isolates horizon. H3 vs Zero tests heuristic. Hybrid uses five distinct frozen R-Decay Q terminals and is paired by seed. Pure planners are single instances, never five independent training seeds.",
+  "metrics": "Historical post-motion D/C and hit/shot accounting; current observed speed and actual post-toggle speed are separate slices. Zero-shot A is NA. No tick-level training inference.",
+  "inference": "Five frozen learned models are training units; pure planner has no training-seed SD. Pair scenarios and keep all methods. No confidence intervals or significance claims.",
+  "selection": "No selection of model, horizon, terminal coefficient, scenario or method after Final. Main tables include all 20 fixed instances.",
+  "behavior_selection": [
+    "First pre-action speed-2 disagreement between each planner and R-Decay on the same R-Decay state; split/scenario/seed/tick lexicographic order.",
+    "First bounce on each paired route for which subsequent pre-action alignment recovery differs within 30 ticks; earliest accepted bounce, censored by route end.",
+    "First aligned R-Decay state where R-Decay proposes Fire and planner proposes movement (IDs 0-3 or 6-9); report absence explicitly."
+  ],
+  "event_definitions": {
+    "before": 5,
+    "after": 15,
+    "recovery_horizon": 30,
+    "recovery_consecutive_close": 3,
+    "overlap": "Keep earliest event of the same type; reject later events within 30 ticks. Recovery is censored at the next event of either random type and at window end; bounce curves retain overlaps with other event types."
+  },
+  "actual_player": "Not performed by request. Full programmatic GIF decoding and timing/pixel checks only.",
+  "protection": {
+    "files_verified": 2972,
+    "changed": [],
+    "git_head": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a"
+  }
+}

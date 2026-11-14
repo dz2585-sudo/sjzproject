@@ -1,0 +1,80 @@
+{
+  "publication_copy": true,
+  "original_record_sha256": "ab4792c4d103bb74f5dfdb588fe0980805413f63d398fd2e4928061dd7bd1454",
+  "path_redactions_only": true,
+  "record": {
+    "compiler_version": "0.15.2",
+    "builds": [
+      {
+        "name": "tradeoff",
+        "source": "aimrl/tracking_tradeoff/kernel.c",
+        "source_sha256": "ec1d977c6b81a038c3599f3eabec660444d539b6cbad3b36f09c50ced2bf3c17",
+        "command": [
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\tradeoff-build\\toolchain\\ziglang\\zig.exe",
+          "cc",
+          "-std=c11",
+          "-O3",
+          "-fno-fast-math",
+          "-ffp-contract=off",
+          "-shared",
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\aimrl\\tracking_tradeoff\\kernel.c",
+          "-o",
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\.tmp\\latest-release-native\\tradeoff.dll"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "elapsed_seconds": 40.65232090000063,
+        "compiler_version": "0.15.2",
+        "library": "tradeoff.dll",
+        "library_sha256": "1d6e83fbfaf8e8d72049b87884714f173243ebecae0ace6a72da36caa152aa27"
+      },
+      {
+        "name": "boundary",
+        "source": "aimrl/tracking_boundary_stability/kernel.c",
+        "source_sha256": "829b90d1873394e9f6d67726aed147bb0c383bfdb8baee1f0944d0f1ec21941c",
+        "command": [
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\tradeoff-build\\toolchain\\ziglang\\zig.exe",
+          "cc",
+          "-std=c11",
+          "-O3",
+          "-fno-fast-math",
+          "-ffp-contract=off",
+          "-shared",
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\aimrl\\tracking_boundary_stability\\kernel.c",
+          "-o",
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\.tmp\\latest-release-native\\boundary.dll"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.42172839998966083,
+        "compiler_version": "0.15.2",
+        "library": "boundary.dll",
+        "library_sha256": "0a854b74e8d21f28321571880aceb07bd3865a85f2f66685dfed7e51f89c3fa4"
+      },
+      {
+        "name": "planning",
+        "source": "aimrl/tracking_planning/kernel.c",
+        "source_sha256": "680b22f630fdde2e4b9bc92beef7104eed456684d1bf67f4efff5c9d0706c026",
+        "command": [
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\tradeoff-build\\toolchain\\ziglang\\zig.exe",
+          "cc",
+          "-std=c11",
+          "-O3",
+          "-fno-fast-math",
+          "-ffp-contract=off",
+          "-shared",
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\aimrl\\tracking_planning\\kernel.c",
+          "-o",
+          "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\.tmp\\latest-release-native\\planning.dll"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.9495214000053238,
+        "compiler_version": "0.15.2",
+        "library": "planning.dll",
+        "library_sha256": "f304f9eae63ccde5f6585a0ab175cff5f0e80cd397d973790d8c344950c90055"
+      }
+    ],
+    "flags": "C11 -O3 -fno-fast-math -ffp-contract=off -shared"
+  }
+}

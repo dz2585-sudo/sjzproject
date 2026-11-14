@@ -1,0 +1,100 @@
+{
+  "schema": "aimrl_latest_studies_publication_v1",
+  "base_commit": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a",
+  "original_documents_archive": "provenance/latest_studies_release/original_documents.zip",
+  "original_documents_archive_sha256": "4619aab3fb49ddebfbd3a5dd0638a20348f81710857cdca002d43ffce50b4cf2",
+  "documentation_changes": {
+    "README.md": {
+      "original_sha256": "f76f9f0a2cc42014e79432a9871f44041245b806fe8a0789a2b73f25b2678d6a",
+      "published_sha256": "fa8da94f0ee27645f4bf6e76281e98382543af1a3a1282e5d3eddee0555b02bf",
+      "scope": "Publication navigation / exclusion rules only; original bytes archived, no experiment core change."
+    },
+    ".gitignore": {
+      "original_sha256": "6ee7b1dfb13b13eac5b78128fb59aa945b270f1fa5a6b5be460a89cd0215438f",
+      "published_sha256": "b201bbdd243ad3e7ceae6cf8b7e53ad9cafc5c9df5b0b1da6eec8a6e0c8350a7",
+      "scope": "Publication navigation / exclusion rules only; original bytes archived, no experiment core change."
+    }
+  },
+  "omissions": {
+    "results/tracking_boundary_stability/execution/preflight_studies.txt": {
+      "kind": "redacted_failure_transcript",
+      "original_sha256": "7a7874c4ce9f383db24dca79c90434cbc0621ab2b0b09368751702c9cb3d3bba",
+      "original_bytes": 1098,
+      "reason": "Machine-local failed command transcript; original retained locally, clearly labelled path-redacted publication copy supplied.",
+      "replacement_path": "provenance/latest_studies_release/public_transcripts/failed_01.txt",
+      "replacement_sha256": "b0e52d0bd314c40b7538d53ab15efc3e882cc94ccb1391b7ed53795124bf06b1"
+    },
+    "results/tracking_boundary_stability/execution/preflight_studies_optimized.txt": {
+      "kind": "redacted_failure_transcript",
+      "original_sha256": "7a7874c4ce9f383db24dca79c90434cbc0621ab2b0b09368751702c9cb3d3bba",
+      "original_bytes": 1098,
+      "reason": "Machine-local failed command transcript; original retained locally, clearly labelled path-redacted publication copy supplied.",
+      "replacement_path": "provenance/latest_studies_release/public_transcripts/failed_02.txt",
+      "replacement_sha256": "dd7540d512f7750b4931919742ce8b2c38611c3402ae4a6a9a7763f75974f9dd"
+    },
+    "results/tracking_boundary_stability/execution/postflight_new_verify.txt": {
+      "kind": "redacted_failure_transcript",
+      "original_sha256": "e779951b20b1fb4dc40a7ee8ad7baad0fda987a63eff014c29a041c23baf29dd",
+      "original_bytes": 1062,
+      "reason": "Machine-local failed command transcript; original retained locally, clearly labelled path-redacted publication copy supplied.",
+      "replacement_path": "provenance/latest_studies_release/public_transcripts/failed_03.txt",
+      "replacement_sha256": "b7056b0771620a690fbddb2171a0c2276cda4cdad4b03515297e2d365db8eeeb"
+    },
+    "results/tracking_boundary_stability/execution/postflight_new_verify_optimized.txt": {
+      "kind": "redacted_failure_transcript",
+      "original_sha256": "e779951b20b1fb4dc40a7ee8ad7baad0fda987a63eff014c29a041c23baf29dd",
+      "original_bytes": 1062,
+      "reason": "Machine-local failed command transcript; original retained locally, clearly labelled path-redacted publication copy supplied.",
+      "replacement_path": "provenance/latest_studies_release/public_transcripts/failed_04.txt",
+      "replacement_sha256": "1911cff1143870cbc5b5189f23e7fb7c264a509ddb7ab30c646f37a178e63e47"
+    },
+    "results/tracking_boundary_stability/native/build_attempt_1.json": {
+      "kind": "redacted_failure_transcript",
+      "original_sha256": "920d6f941fe7e8cd9010007bcbc1d7668b35094d2a856b5c7d8726b7b5748623",
+      "original_bytes": 1003,
+      "reason": "Machine-local failed command transcript; original retained locally, clearly labelled path-redacted publication copy supplied.",
+      "replacement_path": "provenance/latest_studies_release/public_transcripts/failed_05.txt",
+      "replacement_sha256": "366735318f39ffd0061af7d3da94ce34b13943eae3919a73ade3c89825e08cc5"
+    },
+    "results/tracking_boundary_stability/native/build_attempt_2.json": {
+      "kind": "redacted_failure_transcript",
+      "original_sha256": "04c2f1755e9b6fab618ad7d4e7529f6384a31d371c8be987106bcb933c06e229",
+      "original_bytes": 87953,
+      "reason": "Machine-local failed command transcript; original retained locally, clearly labelled path-redacted publication copy supplied.",
+      "replacement_path": "provenance/latest_studies_release/public_transcripts/failed_06.txt",
+      "replacement_sha256": "56f8873c45405fdc1ecf10365a59a422b5b86296f81ab8ec8ac7ed9e2b2e2698"
+    },
+    "results/tracking_boundary_stability/native/boundary.pdb": {
+      "kind": "native_intermediate",
+      "original_sha256": "f0f15b08dcdc4ca95ab95bb5cd34dde3b7f2b0333f07043b3270a00319a975e2",
+      "original_bytes": 995328,
+      "reason": "Compiler debug/import intermediate; not needed to load the frozen DLL or rebuild from included C11 source."
+    },
+    "results/tracking_boundary_stability/native/kernel.lib": {
+      "kind": "native_intermediate",
+      "original_sha256": "1b9d6b49e3f02352acadda33cb1cda1d0246df8740a1eac141613703fcd68f0c",
+      "original_bytes": 1338,
+      "reason": "Compiler debug/import intermediate; not needed to load the frozen DLL or rebuild from included C11 source."
+    },
+    "results/tracking_planning/native/kernel.lib": {
+      "kind": "native_intermediate",
+      "original_sha256": "f8d9e20939bffe64c66fef75ceb64868765d58a937a24ffd58a764b214754a9f",
+      "original_bytes": 1666,
+      "reason": "Compiler debug/import intermediate; not needed to load the frozen DLL or rebuild from included C11 source."
+    },
+    "results/tracking_planning/native/planning.pdb": {
+      "kind": "native_intermediate",
+      "original_sha256": "0baa3210737477765eb1ef7043b849cd5ed42ee90e4052a8d59d60d03c5a29fb",
+      "original_bytes": 991232,
+      "reason": "Compiler debug/import intermediate; not needed to load the frozen DLL or rebuild from included C11 source."
+    }
+  },
+  "identity": {
+    "name": "dz2585-sudo",
+    "email": "232613424+dz2585-sudo@users.noreply.github.com"
+  },
+  "core_policy": "No frozen environment, action, learning, model, protocol or expected experiment hash changes.",
+  "privacy": "No credential/token/private-key matches; only public noreply author email. Frozen protocol/runtime metadata retains research-related workspace/toolchain paths to preserve evidence bytes. Verbose failed transcripts get labelled path-redacted public copies. No unrelated personal files are published.",
+  "native": "Original frozen boundary.dll and planning.dll are retained with hashes. Only PDB/LIB intermediates are omitted. Rebuild C11 without fast-math or FP contraction; read-only parity can use rebuilt engines.",
+  "hash_scope": "Publication payload manifest excludes only itself and manifest_scope.json. Post-push receipts are local and cannot be included in their own commit."
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "scenario_seed": 6400000,
+    "development": false,
+    "policies": [
+      "Rule",
+      "R-Decay_s60",
+      "Plan-H3",
+      "Hybrid-H3_s60"
+    ],
+    "frames": 301,
+    "duration_ms": 20070,
+    "decoded_all_frame_pixels_and_timing": true,
+    "sha256": "98f77d3aa939eb62042d91a974edf0f4f54ec52e5938fb0439fb396ac080e522",
+    "target_sha256": "50b29571d8f3458baa4dd5010585e1defe82ec3e6e6c0486039af6b325d595ce",
+    "samples": {
+      "0": "e75c5664318826c52b15b1c69ee1467bd142e281aedbce8511dc1963b8649cf8",
+      "150": "9aa62ed200592d26280ed5cbc7b2109a03eb8a05a702d76d2e52e213568225bc",
+      "300": "8a9e79ba234bbf8a0b8ef56c077136cf37846a4c9ff63e28025e63e3d72f01c5"
+    },
+    "environment_ticks": 1200,
+    "planning_lookups": 600,
+    "new_training_interactions": 0,
+    "actual_player_check": "Not performed, as requested; no desktop/browser permissions requested."
+  },
+  {
+    "scenario_seed": 6400001,
+    "development": false,
+    "policies": [
+      "Rule",
+      "R-Decay_s60",
+      "Plan-H3",
+      "Hybrid-H3_s60"
+    ],
+    "frames": 301,
+    "duration_ms": 20070,
+    "decoded_all_frame_pixels_and_timing": true,
+    "sha256": "dc89bdfe4126fe8e4d02686a50cae1107094473fc745b32bfc72d0f6977cff8c",
+    "target_sha256": "ad84fc6bea08509c031f5e8971cb4d346ecf0e872fbbd8257c357a8b7413b0ff",
+    "samples": {
+      "0": "a5f5f49c3f0f64062086ad5eadb86374869636762501283c3a82bf3d523b5424",
+      "150": "97aca292f75ee40020a7852ae2a86071114842e6cd756b5e2498d624743416da",
+      "300": "ff4e8eaf47a49affd6bcfcb72768a1ebe7bf40ec5f93cb6d0383512eeec44669"
+    },
+    "environment_ticks": 1200,
+    "planning_lookups": 600,
+    "new_training_interactions": 0,
+    "actual_player_check": "Not performed, as requested; no desktop/browser permissions requested."
+  },
+  {
+    "scenario_seed": 6400002,
+    "development": false,
+    "policies": [
+      "Rule",
+      "R-Decay_s60",
+      "Plan-H3",
+      "Hybrid-H3_s60"
+    ],
+    "frames": 301,
+    "duration_ms": 20070,
+    "decoded_all_frame_pixels_and_timing": true,
+    "sha256": "9b1e2ddc07921043b92cd75992236cf1d3bb011774f206fd13be0d563fb2c505",
+    "target_sha256": "5595ce52aa8516b4c38d66c4dd34ae6799e3c6f72939110dfbe580913e6e6ac1",
+    "samples": {
+      "0": "18d270f59cf578911199ee41416c374c03d9227e4d870941bee497d06e2b65ee",
+      "150": "ba2400307f89e567cba9d339f2464492bd1d8e2bb82da7cf84f9ec01b442115d",
+      "300": "f63850c5bd5ac947f8538feda8180cd5fab046ce613ab767af6364cff88cb9fe"
+    },
+    "environment_ticks": 1200,
+    "planning_lookups": 600,
+    "new_training_interactions": 0,
+    "actual_player_check": "Not performed, as requested; no desktop/browser permissions requested."
+  }
+]

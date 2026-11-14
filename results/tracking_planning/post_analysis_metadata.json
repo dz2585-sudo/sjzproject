@@ -1,0 +1,10 @@
+{
+  "source": "aimrl/tracking_planning/post_analysis.py",
+  "source_sha256": "f6b6d1f04722eccd7703de337ee4daae6b73fbb670cc61ea35b8c5079b62e605",
+  "added_after_formal_evaluation": true,
+  "scope": "Descriptive interpretation only; no change to primary calculations, thresholds or policies.",
+  "protocol_sha256": "381e2a3f380a81280a495297703feed3c8403602737e6daca7099790369258e7",
+  "new_training_interactions": 0,
+  "formal_replays": 0,
+  "executed_utc": "2026-11-13T20:23:54.350643+00:00"
+}

@@ -1,0 +1,419 @@
+{
+  "complete": true,
+  "checks": [
+    {
+      "split": "final",
+      "condition": "R-Fixed",
+      "seed": 60,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Decay",
+      "seed": 60,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Fixed",
+      "seed": 60,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Decay",
+      "seed": 60,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Fixed",
+      "seed": 61,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Decay",
+      "seed": 61,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Fixed",
+      "seed": 61,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Decay",
+      "seed": 61,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Fixed",
+      "seed": 62,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Decay",
+      "seed": 62,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Fixed",
+      "seed": 62,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Decay",
+      "seed": 62,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Fixed",
+      "seed": 63,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Decay",
+      "seed": 63,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Fixed",
+      "seed": 63,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Decay",
+      "seed": 63,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Fixed",
+      "seed": 64,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "R-Decay",
+      "seed": 64,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Fixed",
+      "seed": 64,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "final",
+      "condition": "B-Decay",
+      "seed": 64,
+      "scenarios": 500,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Fixed",
+      "seed": 60,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Decay",
+      "seed": 60,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Fixed",
+      "seed": 60,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Decay",
+      "seed": 60,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Fixed",
+      "seed": 61,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Decay",
+      "seed": 61,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Fixed",
+      "seed": 61,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Decay",
+      "seed": 61,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Fixed",
+      "seed": 62,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Decay",
+      "seed": 62,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Fixed",
+      "seed": 62,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Decay",
+      "seed": 62,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Fixed",
+      "seed": 63,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Decay",
+      "seed": 63,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Fixed",
+      "seed": 63,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Decay",
+      "seed": 63,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Fixed",
+      "seed": 64,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "R-Decay",
+      "seed": 64,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Fixed",
+      "seed": 64,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    },
+    {
+      "split": "stress",
+      "condition": "B-Decay",
+      "seed": 64,
+      "scenarios": 200,
+      "guard_trajectory_exact": true,
+      "guard_reward_unit": true,
+      "python_scenarios_checked": 2,
+      "frozen_model_unchanged": true
+    }
+  ],
+  "history": {
+    "files_verified": 1843,
+    "changed": [],
+    "head": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a",
+    "identity": {
+      "name": "dz2585-sudo",
+      "email": "232613424+dz2585-sudo@users.noreply.github.com"
+    }
+  },
+  "independent_python_windows": 80,
+  "formal_models": 20,
+  "paired_target_scenarios": 700,
+  "raw_and_guard_windows": 28000,
+  "evaluation_ticks": 8400000
+}

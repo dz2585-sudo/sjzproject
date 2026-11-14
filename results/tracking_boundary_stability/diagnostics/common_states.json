@@ -1,0 +1,24 @@
+{
+  "distinct": 8262,
+  "events": 9600,
+  "seeds": [
+    5500000,
+    5500001,
+    5500002,
+    5500003,
+    5500004,
+    5500005,
+    5500006,
+    5500007,
+    5500008,
+    5500009,
+    5500010,
+    5500011,
+    5500012,
+    5500013,
+    5500014,
+    5500015
+  ],
+  "construction": "Pre-action physical states from Rule and independent uniform-random rollouts, 300 ticks each. Frozen before pilot and Final access.",
+  "weighting": "state: one per distinct physical state; event: frequency in these fixed rollouts."
+}

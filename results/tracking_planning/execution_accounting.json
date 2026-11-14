@@ -1,0 +1,15 @@
+{
+  "training_interactions": 0,
+  "Q_updates": 0,
+  "formal_environment_ticks": 4200000,
+  "development_environment_ticks": 1200000,
+  "formal_planning_lookups": 1890000,
+  "development_planning_lookups": 540000,
+  "demonstration_environment_ticks": 3600,
+  "demonstration_planning_lookups": 1800,
+  "layout_test_environment_ticks": 1200,
+  "layout_test_planning_lookups": 600,
+  "precomputed_value_backups": 65625000,
+  "precomputed_transition_terms": 383250000,
+  "validation": "Separate checks.json files record their actual original/native environment-step counts. Existing unit-test toy training is validation, never study training."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "representation": "R",
+    "axis_keys": 49,
+    "rows": 19208,
+    "state_action_pairs": 192080,
+    "q_bytes": 768320,
+    "counts_bytes": 768320,
+    "index_map_bytes": 2500,
+    "index_sha256": "6fcda3c9514d0a505d2d1e5cd6692e7d779bb8f03508b5524b75b6162806c2d6",
+    "physical_states_checked": 3125000,
+    "one_to_one_keys": true
+  },
+  {
+    "representation": "B",
+    "axis_keys": 369,
+    "rows": 1089288,
+    "state_action_pairs": 10892880,
+    "q_bytes": 43571520,
+    "counts_bytes": 43571520,
+    "index_map_bytes": 2500,
+    "index_sha256": "fc4769d11c7e42bc80b61a210a9ee568751d4d085135b564d5b5a4ea4361c34f",
+    "physical_states_checked": 3125000,
+    "one_to_one_keys": true
+  }
+]

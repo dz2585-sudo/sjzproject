@@ -1,0 +1,13 @@
+{
+  "head": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a",
+  "branch": "main",
+  "remote_main": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a",
+  "initial_status": "?? aimrl/tracking_boundary_stability/\n?? aimrl/tracking_planning/\n?? configs/tracking_boundary_stability.json\n?? configs/tracking_planning.json\n?? provenance/latest_studies_release/\n?? results/tracking_boundary_stability/\n?? results/tracking_planning/\n?? scripts/check_tracking_planning.py\n?? scripts/run_boundary_stability_checks.py\n?? tests/test_tracking_boundary_stability.py\n?? tests/test_tracking_planning.py\n",
+  "author": "dz2585-sudo <232613424+dz2585-sudo@users.noreply.github.com> 1794619812 -0500",
+  "committer": "dz2585-sudo <232613424+dz2585-sudo@users.noreply.github.com> 1794619812 -0500",
+  "original_documents_archive_sha256": "4619aab3fb49ddebfbd3a5dd0638a20348f81710857cdca002d43ffce50b4cf2",
+  "experiment_files": 1755,
+  "new_training_interactions_this_publication": 0,
+  "new_formal_environment_evaluations": 0,
+  "agents_files": []
+}

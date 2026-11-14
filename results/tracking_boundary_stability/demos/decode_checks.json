@@ -1,0 +1,50 @@
+[
+  {
+    "scenario": 5400000,
+    "path": "demos/scenario_5400000.gif",
+    "sha256": "96bdbf5ac0b798cdfc5e8bae05be04a509ba1cae743fe46d9a808e6b95b564c2",
+    "frames": 301,
+    "duration_ms": 20070,
+    "decoded_all_pixels_exact": true,
+    "decoded_timing_exact": true,
+    "target_sha256": "9063419a56bcbf72200b29996c5ef52d4a45a0109eb0434ef7b2762e92f9f985",
+    "samples": {
+      "0": "04a17929d31320af233838301511f77aa7fcf9756186e3b4daa8df481efda1ad",
+      "150": "a86286d56959649a168fc3801aff10b4d51a4b5ddf9b8a4b04c82386c8698f12",
+      "300": "f694eb191e28582d58ffd591cd2f633746ddbcfbce504950a0c244781ee7c774"
+    },
+    "actual_player_check": "See player_check.json; decoding alone is not a player check."
+  },
+  {
+    "scenario": 5400001,
+    "path": "demos/scenario_5400001.gif",
+    "sha256": "fd9f3f64fe881b938def10b6e0b2b40717e89b8665b22f0d2a70242b470a38e5",
+    "frames": 301,
+    "duration_ms": 20070,
+    "decoded_all_pixels_exact": true,
+    "decoded_timing_exact": true,
+    "target_sha256": "b387376867a165c54eea4d708bc2c1ca9cf420f5c3db98728701e4ac1fee8ad0",
+    "samples": {
+      "0": "e018e84428661f2ebce2eea50608e0e36af08d62c34ce8adddd4deadfe3944c8",
+      "150": "b01b104c34038859103dbd434c38752930b8d41198e6fbe368080cf24791b40a",
+      "300": "84ccfd65dea4305b438548d878d3d554d0ca2abe298a637f952a46bbb0695388"
+    },
+    "actual_player_check": "See player_check.json; decoding alone is not a player check."
+  },
+  {
+    "scenario": 5400002,
+    "path": "demos/scenario_5400002.gif",
+    "sha256": "18c3b2a4ca540d49620c6006b37bfc392624479dfeea078fe9164f5268a5b8cf",
+    "frames": 301,
+    "duration_ms": 20070,
+    "decoded_all_pixels_exact": true,
+    "decoded_timing_exact": true,
+    "target_sha256": "3483bd6ca2f90785bde93b059a870cb8c61549b40f6c35a0455219822caa4b2a",
+    "samples": {
+      "0": "8b5668675ea54ca3831e6c0546e348f9a464e2f7feaa89f6bb542a1bcc49f331",
+      "150": "da7ce0918d2f720e0b50fb5b0a8c8c9d738ec29656ae05e8add59349dbf0fdab",
+      "300": "b3d0adb1cb508662a0979bb8cffd9325e2ee10229bc2d91a67d1edaf33f2635f"
+    },
+    "actual_player_check": "See player_check.json; decoding alone is not a player check."
+  }
+]

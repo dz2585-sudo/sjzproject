@@ -1,0 +1,27 @@
+PUBLICATION COPY: machine-local paths redacted.
+Original: results/tracking_boundary_stability/native/build_attempt_1.json
+Original SHA-256: 920d6f941fe7e8cd9010007bcbc1d7668b35094d2a856b5c7d8726b7b5748623
+Original status/messages retained; this is not the original byte stream.
+
+{
+  "command": [
+    "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\tradeoff-build\\toolchain\\ziglang\\zig.exe",
+    "cc",
+    "-shared",
+    "-O3",
+    "-std=c11",
+    "-ffp-contract=off",
+    "-fno-fast-math",
+    "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\aimrl\\tracking_boundary_stability\\kernel.c",
+    "-o",
+    "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_boundary_stability\\native\\boundary.dll",
+    "--cache-dir",
+    "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\.tmp\\boundary-build\\local",
+    "--global-cache-dir",
+    "<USER_HOME>\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\.tmp\\boundary-build\\global"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "error: Unknown Clang option: '--cache-dir'\n",
+  "compiler_version": "0.15.2"
+}

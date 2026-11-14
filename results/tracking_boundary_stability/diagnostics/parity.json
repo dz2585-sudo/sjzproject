@@ -1,0 +1,366 @@
+{
+  "complete": true,
+  "runs": [
+    {
+      "condition": "R-Fixed",
+      "case": "exploration",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        60,
+        53,
+        51,
+        110,
+        118,
+        354,
+        419
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "R-Fixed",
+      "case": "late_epsilon",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        60,
+        53,
+        51,
+        4,
+        6,
+        18,
+        973
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "R-Fixed",
+      "case": "forced",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        72,
+        337,
+        390,
+        101,
+        100,
+        400,
+        400
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "R-Decay",
+      "case": "exploration",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        60,
+        53,
+        51,
+        110,
+        118,
+        354,
+        419
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "R-Decay",
+      "case": "late_epsilon",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        60,
+        53,
+        51,
+        4,
+        6,
+        18,
+        973
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "R-Decay",
+      "case": "forced",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        72,
+        337,
+        390,
+        101,
+        100,
+        400,
+        400
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "B-Fixed",
+      "case": "exploration",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        60,
+        53,
+        51,
+        110,
+        118,
+        354,
+        419
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "B-Fixed",
+      "case": "late_epsilon",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        60,
+        53,
+        51,
+        4,
+        6,
+        18,
+        973
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "B-Fixed",
+      "case": "forced",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        72,
+        337,
+        390,
+        101,
+        100,
+        400,
+        400
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "B-Decay",
+      "case": "exploration",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        60,
+        53,
+        51,
+        110,
+        118,
+        354,
+        419
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "B-Decay",
+      "case": "late_epsilon",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        60,
+        53,
+        51,
+        4,
+        6,
+        18,
+        973
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    },
+    {
+      "condition": "B-Decay",
+      "case": "forced",
+      "updates": 1001,
+      "actions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        72,
+        337,
+        390,
+        101,
+        100,
+        400,
+        400
+      ],
+      "q_counts_rng_exact": true,
+      "tail_ticks": 101,
+      "max_debug_tolerance": 2e-13,
+      "window_truncation_bootstraps": true
+    }
+  ],
+  "total_real_updates": 12012
+}

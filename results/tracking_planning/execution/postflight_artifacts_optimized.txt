@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "optimized": true,
+  "new_training_interactions": 0,
+  "Q_updates": 0,
+  "formal_windows": 14000,
+  "formal_environment_ticks": 4200000,
+  "development_windows": 4000,
+  "development_environment_ticks": 1200000,
+  "checked_policy_proposals": 5400000,
+  "formal_planning_lookups": 1890000,
+  "verified_value_backups": 65625000,
+  "verified_chance_terms": 383250000,
+  "verification_planning_recomputations": 65625000,
+  "formal_environment_replays": 0,
+  "decoded_demo_frames": 903,
+  "inventory_files": 0,
+  "protection": {
+    "files_verified": 2972,
+    "changed": [],
+    "git_head": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a"
+  },
+  "actual_player_check": "Not performed, as requested."
+}

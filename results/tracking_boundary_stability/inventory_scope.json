@@ -1,0 +1,14 @@
+{
+  "files": 980,
+  "bytes": 816966546,
+  "excludes": [
+    "output_inventory.csv",
+    "inventory_scope.json",
+    "verification_python.json",
+    "verification_optimized.json",
+    "postflight.json",
+    "execution/postflight_*",
+    "checks/postflight*"
+  ],
+  "reason": "Avoid circular verification receipts; frozen protocol/models and history remain individually checked."
+}

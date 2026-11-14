@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "scenarios": 200,
+  "policy_instances": 20,
+  "windows": 4000,
+  "environment_ticks": 1200000,
+  "new_training_interactions": 0,
+  "final_access": false,
+  "selection": false,
+  "protection": {
+    "files_verified": 2972,
+    "changed": [],
+    "git_head": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a"
+  }
+}

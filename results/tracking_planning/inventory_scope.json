@@ -1,0 +1,15 @@
+{
+  "files": 460,
+  "bytes": 775492918,
+  "excludes": [
+    "output_inventory.csv",
+    "inventory_scope.json",
+    "verification_python.json",
+    "verification_optimized.json",
+    "postflight.json",
+    "execution/postflight*",
+    "checks/postflight*",
+    "validation_optimized/*"
+  ],
+  "reason": "Mutable verification receipts cannot hash themselves. Protocol, input models, mathematical cache arrays and all protected historical files remain separately checked."
+}

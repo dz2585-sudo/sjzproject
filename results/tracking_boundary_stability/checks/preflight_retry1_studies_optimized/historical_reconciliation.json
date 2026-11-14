@@ -1,0 +1,27 @@
+{
+  "previous_per_seed_rows": 44,
+  "previous_comparison_rows": 16,
+  "previous_paired_rows": 42,
+  "prior_hashes_verified": 708,
+  "prior_publication_omissions": [],
+  "training_interactions": 105000000,
+  "full_windows": 349986,
+  "partial_windows": 21,
+  "partial_ticks": 4200,
+  "checkpoints": 231,
+  "development_windows": 46200,
+  "inner_training_seconds": 115.26595730008557,
+  "sum_per_run_seconds": 115.00585430022329,
+  "phase_seconds": 120.31737179961056,
+  "outer_command_seconds": 120.753,
+  "backend": "Zig 0.15.2 C11 Windows library called from Python via ctypes. Python owns resets, NumPy PCG64, checkpoints, logging and evaluation orchestration.",
+  "historical_python_training_parity": "Exact 1,001-step zero-weight Python parity and each weight in a greedy-heavy regime, including Q, counts and RNG states. These historical tests were audited, not rerun during this inference-only study.",
+  "previous_command_exit_codes": {
+    "setup": 0,
+    "smoke": 0,
+    "tests": 0,
+    "train": 0,
+    "evaluate": 0
+  },
+  "kernel_sha256": "3459cdad660f25a20d34413b9eac3139f9e472f5c601639825ec7129904fec5e"
+}

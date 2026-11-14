@@ -1,0 +1,7 @@
+{
+  "performance_counter_frequency_hz": 10000000,
+  "period_ns": 100.0,
+  "native_zero_median": "Below clock resolution, not zero execution time",
+  "compile_seconds": 20.8836314999935,
+  "full_study_precompute_and_storage_seconds": 26.27256050000142
+}

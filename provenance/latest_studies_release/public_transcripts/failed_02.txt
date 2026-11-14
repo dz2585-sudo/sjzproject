@@ -1,0 +1,18 @@
+PUBLICATION COPY: machine-local paths redacted.
+Original: results/tracking_boundary_stability/execution/preflight_studies_optimized.txt
+Original SHA-256: 7a7874c4ce9f383db24dca79c90434cbc0621ab2b0b09368751702c9cb3d3bba
+Original status/messages retained; this is not the original byte stream.
+
+Traceback (most recent call last):
+  File "<REPOSITORY_ROOT>\scripts\verify_tracking_studies.py", line 180, in <module>
+    main()
+    ~~~~^^
+  File "<REPOSITORY_ROOT>\scripts\verify_tracking_studies.py", line 166, in main
+    inventories={p.name:verify_inventory(p,args.public_tree) for p in (PRIOR,GUARD)}
+                        ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "<REPOSITORY_ROOT>\scripts\verify_tracking_studies.py", line 42, in verify_inventory
+    require(not path.exists(), 'Machine-local setup log must be absent in the public tree')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPOSITORY_ROOT>\aimrl\tracking_fire_guard\replay.py", line 33, in require
+    raise ValueError(message)
+ValueError: Machine-local setup log must be absent in the public tree

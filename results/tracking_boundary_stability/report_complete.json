@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "training_interactions_repeated": 0,
+  "reports": [
+    "results_summary.md",
+    "paper_addendum.md",
+    "REPRODUCE.md"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "full_tests": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 76.23217440000735,
+    "log": "execution/preflight_full_tests.txt"
+  },
+  "optimized_new_tests": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_tracking_boundary_stability.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 3.7730855000118027,
+    "log": "execution/preflight_optimized_new_tests.txt"
+  },
+  "publication": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "results/tracking_boundary_stability/checks/preflight_publication.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 16.469997099993634,
+    "log": "execution/preflight_publication.txt"
+  },
+  "publication_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "results/tracking_boundary_stability/checks/preflight_publication_optimized.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 16.234629500002484,
+    "log": "execution/preflight_publication_optimized.txt"
+  },
+  "studies": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/verify_tracking_studies.py",
+      "--public-tree",
+      "--output",
+      "results/tracking_boundary_stability/checks/preflight_studies"
+    ],
+    "returncode": 1,
+    "elapsed_seconds": 0.5284081999998307,
+    "log": "execution/preflight_studies.txt"
+  },
+  "studies_optimized": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/verify_tracking_studies.py",
+      "--public-tree",
+      "--output",
+      "results/tracking_boundary_stability/checks/preflight_studies_optimized"
+    ],
+    "returncode": 1,
+    "elapsed_seconds": 0.993199899996398,
+    "log": "execution/preflight_studies_optimized.txt"
+  }
+}

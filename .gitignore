@@ -29,3 +29,17 @@ credentials.json
 results/tracking_improvement/pilots/**/q_table.npz
 results/tracking_improvement/pilots/**/visitation.npz
 results/tracking_improvement/**/*.npy
+
+# Local native intermediates from the two latest studies; frozen DLLs are published.
+results/tracking_boundary_stability/native/*.pdb
+results/tracking_boundary_stability/native/*.lib
+results/tracking_planning/native/*.pdb
+results/tracking_planning/native/*.lib
+
+# Original machine-local failed transcripts; labelled publication copies are in provenance.
+results/tracking_boundary_stability/execution/preflight_studies.txt
+results/tracking_boundary_stability/execution/preflight_studies_optimized.txt
+results/tracking_boundary_stability/execution/postflight_new_verify.txt
+results/tracking_boundary_stability/execution/postflight_new_verify_optimized.txt
+results/tracking_boundary_stability/native/build_attempt_1.json
+results/tracking_boundary_stability/native/build_attempt_2.json

@@ -1,0 +1,156 @@
+test_all_movement_and_boundaries (test_env.EnvironmentTests.test_all_movement_and_boundaries) ... ok
+test_direction_can_change_without_motion (test_env.EnvironmentTests.test_direction_can_change_without_motion) ... ok
+test_hit_before_target_motion (test_env.EnvironmentTests.test_hit_before_target_motion) ... ok
+test_lifecycle_and_invalid_actions_do_not_consume_randomness (test_env.EnvironmentTests.test_lifecycle_and_invalid_actions_do_not_consume_randomness) ... ok
+test_limit_and_hit_priority (test_env.EnvironmentTests.test_limit_and_hit_priority) ... ok
+test_miss_then_target_enters_crosshair (test_env.EnvironmentTests.test_miss_then_target_enters_crosshair) ... ok
+test_reproducibility_and_rng_isolation (test_env.EnvironmentTests.test_reproducibility_and_rng_isolation) ... ok
+test_reset_and_snapshots (test_env.EnvironmentTests.test_reset_and_snapshots) ... ok
+test_rule_policy (test_env.EnvironmentTests.test_rule_policy) ... ok
+test_target_bounces_at_both_edges (test_env.EnvironmentTests.test_target_bounces_at_both_edges) ... ok
+test_baselines_have_no_training_seed (test_experiments.ExperimentTests.test_baselines_have_no_training_seed) ... ok
+test_consecutive_threshold (test_experiments.ExperimentTests.test_consecutive_threshold) ... ok
+test_evaluation_override_and_frozen_agent (test_experiments.ExperimentTests.test_evaluation_override_and_frozen_agent) ... ok
+test_missing_duplicate_and_unexpected_keys (test_experiments.ExperimentTests.test_missing_duplicate_and_unexpected_keys) ... ok
+test_sample_standard_deviation (test_experiments.ExperimentTests.test_sample_standard_deviation) ... ok
+test_action_selection_and_greedy_rng_isolation (test_learning.LearningTests.test_action_selection_and_greedy_rng_isolation) ... ok
+test_budget_end_is_not_environment_termination (test_learning.LearningTests.test_budget_end_is_not_environment_termination) ... step 0: success=0.0%, mean steps=50.00, misses=0.00
+ok
+test_direction_mapping (test_learning.LearningTests.test_direction_mapping) ... ok
+test_epsilon_global_boundaries (test_learning.LearningTests.test_epsilon_global_boundaries) ... ok
+test_save_load_and_rejections (test_learning.LearningTests.test_save_load_and_rejections) ... ok
+test_short_training_reproducible_and_validation_isolated (test_learning.LearningTests.test_short_training_reproducible_and_validation_isolated) ... Completed 1 steps in 0.06s; reload verified.
+step 0: success=0.0%, mean steps=50.00, misses=0.00
+step 5: success=0.0%, mean steps=50.00, misses=0.00
+step 10: success=0.0%, mean steps=50.00, misses=0.00
+step 15: success=0.0%, mean steps=50.00, misses=0.00
+step 20: success=0.0%, mean steps=50.00, misses=0.00
+Completed 21 steps in 0.07s; reload verified.
+step 0: success=0.0%, mean steps=50.00, misses=0.00
+step 5: success=0.0%, mean steps=50.00, misses=0.00
+step 10: success=0.0%, mean steps=50.00, misses=0.00
+step 15: success=0.0%, mean steps=50.00, misses=0.00
+step 20: success=0.0%, mean steps=50.00, misses=0.00
+Completed 21 steps in 0.06s; reload verified.
+step 0: success=0.0%, mean steps=50.00, misses=0.00
+ok
+test_update_and_termination_vs_truncation (test_learning.LearningTests.test_update_and_termination_vs_truncation) ... ok
+test_validation_freezes_q_and_rng (test_learning.LearningTests.test_validation_freezes_q_and_rng) ... ok
+test_only_exact_recorded_compatibility_is_accepted (test_provenance.ProvenanceTests.test_only_exact_recorded_compatibility_is_accepted) ... ok
+test_original_source_requires_no_compatibility_record (test_provenance.ProvenanceTests.test_original_source_requires_no_compatibility_record) ... ok
+test_historical_path_maps_to_published_artifact (test_publication.PublicationTests.test_historical_path_maps_to_published_artifact) ... ok
+test_lossless_model_package_and_missing_npy_resolution (test_publication.PublicationTests.test_lossless_model_package_and_missing_npy_resolution) ... ok
+test_missing_historical_evidence_is_not_silently_accepted (test_publication.PublicationTests.test_missing_historical_evidence_is_not_silently_accepted) ... ok
+test_cli_train_then_evaluate_from_external_directory (test_reproduce.ReproductionTests.test_cli_train_then_evaluate_from_external_directory) ... ok
+test_failed_session_is_recorded (test_reproduce.ReproductionTests.test_failed_session_is_recorded) ... ok
+test_load_replay_isolation_and_checksum_rejection (test_reproduce.ReproductionTests.test_load_replay_isolation_and_checksum_rejection) ... Completed 21 steps in 0.06s; reload verified.
+relative_potential seed 99: 1001 training updates; exact reload passed
+ok
+test_output_protection_and_partial_preservation (test_reproduce.ReproductionTests.test_output_protection_and_partial_preservation) ... ok
+test_short_runs_match_archived_learning_for_all_four_methods (test_reproduce.ReproductionTests.test_short_runs_match_archived_learning_for_all_four_methods) ... Pilot absolute_base seed99 step0: distance=18.169, close=0.444%, hits=0.00
+Pilot absolute_base seed99 step1,001: distance=18.169, close=0.444%, hits=0.00
+Completed absolute_base seed99: 1,001 updates in 1.82s
+absolute_base seed 99: 1001 training updates; exact reload passed
+Pilot absolute_potential seed99 step0: distance=18.169, close=0.444%, hits=0.00
+Pilot absolute_potential seed99 step1,001: distance=18.169, close=0.444%, hits=0.00
+Completed absolute_potential seed99: 1,001 updates in 1.80s
+absolute_potential seed 99: 1001 training updates; exact reload passed
+Pilot relative_base seed99 step0: distance=18.169, close=0.444%, hits=0.00
+Pilot relative_base seed99 step1,001: distance=18.159, close=0.444%, hits=0.00
+Completed relative_base seed99: 1,001 updates in 0.17s
+relative_base seed 99: 1001 training updates; exact reload passed
+Pilot relative_potential seed99 step0: distance=18.169, close=0.444%, hits=0.00
+Pilot relative_potential seed99 step1,001: distance=18.014, close=0.556%, hits=0.00
+Completed relative_potential seed99: 1,001 updates in 0.12s
+relative_potential seed 99: 1001 training updates; exact reload passed
+ok
+test_telemetry_failure_is_nonfatal (test_reproduce.ReproductionTests.test_telemetry_failure_is_nonfatal) ... ok
+test_unknown_source_change_is_rejected (test_reproduce.ReproductionTests.test_unknown_source_change_is_rejected) ... ok
+test_base_and_zero_scale (test_rewards.RewardTests.test_base_and_zero_scale) ... ok
+test_discounted_telescoping_terminal_and_truncated (test_rewards.RewardTests.test_discounted_telescoping_terminal_and_truncated) ... ok
+test_fixed_transition_single_update (test_rewards.RewardTests.test_fixed_transition_single_update) ... ok
+test_hand_calculated_transitions (test_rewards.RewardTests.test_hand_calculated_transitions) ... ok
+test_potential (test_rewards.RewardTests.test_potential) ... ok
+test_termination_ignores_next_potential_and_bootstrap (test_rewards.RewardTests.test_termination_ignores_next_potential_and_bootstrap) ... ok
+test_training_zero_scale_and_potential_reproducibility (test_rewards.RewardTests.test_training_zero_scale_and_potential_reproducibility) ... step 0: success=0.0%, mean steps=50.00, misses=0.00
+step 100: success=0.0%, mean steps=50.00, misses=0.00
+step 200: success=0.0%, mean steps=50.00, misses=0.00
+step 300: success=0.0%, mean steps=50.00, misses=0.00
+Completed 300 steps in 0.09s; reload verified.
+step 0: success=0.0%, mean steps=50.00, misses=0.00
+step 100: success=0.0%, mean steps=50.00, misses=0.00
+step 200: success=0.0%, mean steps=50.00, misses=0.00
+step 300: success=0.0%, mean steps=50.00, misses=0.00
+Completed 300 steps in 0.09s; reload verified.
+step 0: success=0.0%, mean steps=50.00, misses=0.00
+step 100: success=0.0%, mean steps=50.00, misses=0.00
+step 200: success=0.0%, mean steps=50.00, misses=0.00
+step 300: success=0.0%, mean steps=50.00, misses=0.00
+Completed 300 steps in 0.09s; reload verified.
+step 0: success=0.0%, mean steps=50.00, misses=0.00
+step 100: success=0.0%, mean steps=50.00, misses=0.00
+step 200: success=0.0%, mean steps=50.00, misses=0.00
+step 300: success=0.0%, mean steps=50.00, misses=0.00
+Completed 300 steps in 0.08s; reload verified.
+step 0: success=0.0%, mean steps=50.00, misses=0.00
+ok
+test_transformation_pure_and_environment_identical (test_rewards.RewardTests.test_transformation_pure_and_environment_identical) ... ok
+test_truncation_retains_tail_and_bootstraps (test_rewards.RewardTests.test_truncation_retains_tail_and_bootstraps) ... ok
+test_bounded_full_grid_table_budget (test_tracking25.TrackingTests.test_bounded_full_grid_table_budget) ... ok
+test_exact_300_ticks_and_hit_at_truncation (test_tracking25.TrackingTests.test_exact_300_ticks_and_hit_at_truncation) ... ok
+test_greedy_ties_epsilon_and_model_schema (test_tracking25.TrackingTests.test_greedy_ties_epsilon_and_model_schema) ... ok
+test_hit_moves_target_and_play_continues (test_tracking25.TrackingTests.test_hit_moves_target_and_play_continues) ... ok
+test_null_accuracy_and_recovery_edge_cases (test_tracking25.TrackingTests.test_null_accuracy_and_recovery_edge_cases) ... ok
+test_perpendicular_turn_speed_toggle_and_unit_reflection (test_tracking25.TrackingTests.test_perpendicular_turn_speed_toggle_and_unit_reflection) ... ok
+test_predictive_rule_clipped_ties_and_no_future_rng (test_tracking25.TrackingTests.test_predictive_rule_clipped_ties_and_no_future_rng) ... ok
+test_reset_feasibility_and_indexing (test_tracking25.TrackingTests.test_reset_feasibility_and_indexing) ... ok
+test_shaping_once_and_truncation_bootstrap (test_tracking25.TrackingTests.test_shaping_once_and_truncation_bootstrap) ... ok
+test_short_training_repeatability_and_validation_isolation (test_tracking25.TrackingTests.test_short_training_repeatability_and_validation_isolation) ... Completed 300 steps in 0.07s; reload verified.
+potential step 0: distance=5.667, close=0.000%, hits/window=0.000, accuracy=None
+potential step 10: distance=5.667, close=0.000%, hits/window=0.000, accuracy=None
+potential step 20: distance=5.667, close=0.000%, hits/window=0.000, accuracy=None
+potential completed 20 interactions in 0.016s; exact reload verified.
+potential step 0: distance=5.667, close=0.000%, hits/window=0.000, accuracy=None
+potential step 10: distance=5.667, close=0.000%, hits/window=0.000, accuracy=None
+potential step 20: distance=5.667, close=0.000%, hits/window=0.000, accuracy=None
+potential completed 20 interactions in 0.016s; exact reload verified.
+potential completed 20 interactions in 0.012s; exact reload verified.
+ok
+test_slow_fast_clipping_and_invalid_immutability (test_tracking25.TrackingTests.test_slow_fast_clipping_and_invalid_immutability) ... ok
+test_target_paths_independent_of_actions_and_global_rng (test_tracking25.TrackingTests.test_target_paths_independent_of_actions_and_global_rng) ... ok
+test_compact_rows_and_alias (test_tracking_boundary_stability.BoundaryTests.test_compact_rows_and_alias) ... ok
+test_exact_expected_target_has_unit_fire_gap (test_tracking_boundary_stability.BoundaryTests.test_exact_expected_target_has_unit_fire_gap) ... ok
+test_learning_rate_uses_preupdate_count_and_bootstraps (test_tracking_boundary_stability.BoundaryTests.test_learning_rate_uses_preupdate_count_and_bootstraps) ... ok
+test_mechanism_and_nonassert_require (test_tracking_boundary_stability.BoundaryTests.test_mechanism_and_nonassert_require) ... ok
+test_native_stepwise_full_gate (test_tracking_boundary_stability.BoundaryTests.test_native_stepwise_full_gate) ... ok
+test_calls_policy_once_and_only_changes_unaligned_fire (test_tracking_fire_guard.FiringGuardTests.test_calls_policy_once_and_only_changes_unaligned_fire) ... ok
+test_fire_miss_replacement_matches_actual_rewards (test_tracking_fire_guard.FiringGuardTests.test_fire_miss_replacement_matches_actual_rewards) ... ok
+test_zero_shots_have_no_accuracy (test_tracking_fire_guard.FiringGuardTests.test_zero_shots_have_no_accuracy) ... ok
+test_absolute_fixture_matches_v2_actions_updates_rng (test_tracking_research.ResearchTests.test_absolute_fixture_matches_v2_actions_updates_rng) ... ok
+test_boundary_clipping_alias (test_tracking_research.ResearchTests.test_boundary_clipping_alias) ... ok
+test_boundary_reflection_alias (test_tracking_research.ResearchTests.test_boundary_reflection_alias) ... ok
+test_evaluation_isolation_pairing_and_empty_diagnostics (test_tracking_research.ResearchTests.test_evaluation_isolation_pairing_and_empty_diagnostics) ... ok
+test_hits_truncation_and_partial_keep_actual_next_bootstrap (test_tracking_research.ResearchTests.test_hits_truncation_and_partial_keep_actual_next_bootstrap) ... ok
+test_model_provenance_reload_and_rejection (test_tracking_research.ResearchTests.test_model_provenance_reload_and_rejection) ... ok
+test_relative_index_sign_range_shape_dtype (test_tracking_research.ResearchTests.test_relative_index_sign_range_shape_dtype) ... ok
+test_synthetic_histogram_streak_and_denominators (test_tracking_research.ResearchTests.test_synthetic_histogram_streak_and_denominators) ... ok
+test_all_weighted_updates_match_python_in_greedy_regime (test_tracking_tradeoff.TradeoffKernelTests.test_all_weighted_updates_match_python_in_greedy_regime) ... ok
+test_reload_identity_and_evaluation_isolation (test_tracking_tradeoff.TradeoffKernelTests.test_reload_identity_and_evaluation_isolation) ... ok
+test_zero_weight_matches_legacy_1001_updates (test_tracking_tradeoff.TradeoffKernelTests.test_zero_weight_matches_legacy_1001_updates) ... ok
+test_fire_before_motion_and_speed_two_reflection (test_tracking_tradeoff.TradeoffRewardTests.test_fire_before_motion_and_speed_two_reflection) ... ok
+test_reward_terms_use_post_motion_and_preserve_base (test_tracking_tradeoff.TradeoffRewardTests.test_reward_terms_use_post_motion_and_preserve_base) ... ok
+test_25x25_boundaries_and_target_bounce (test_trial25.Trial25Tests.test_25x25_boundaries_and_target_bounce) ... ok
+test_cap_and_saved_trajectory_final_state (test_trial25.Trial25Tests.test_cap_and_saved_trajectory_final_state) ... ok
+test_configuration_and_record_errors_are_rejected (test_trial25.Trial25Tests.test_configuration_and_record_errors_are_rejected) ... ok
+test_exact_hit_before_motion_and_step_100_priority (test_trial25.Trial25Tests.test_exact_hit_before_motion_and_step_100_priority) ... ok
+test_loader_uses_saved_25x25_configuration (test_trial25.Trial25Tests.test_loader_uses_saved_25x25_configuration) ... ok
+test_requested_configuration_and_q_size (test_trial25.Trial25Tests.test_requested_configuration_and_q_size) ... ok
+test_missing_required_file (test_verify_tracking_publication.PublicationVerifierTests.test_missing_required_file) ... ok
+test_modified_required_file (test_verify_tracking_publication.PublicationVerifierTests.test_modified_required_file) ... ok
+test_valid_publication (test_verify_tracking_publication.PublicationVerifierTests.test_valid_publication) ... ok
+test_wrong_protocol_digest (test_verify_tracking_publication.PublicationVerifierTests.test_wrong_protocol_digest) ... ok
+
+----------------------------------------------------------------------
+Ran 87 tests in 75.744s
+
+OK

@@ -1,0 +1,21 @@
+policy,load_seconds,first_query_ns,pass1_median_ns,pass1_p95_ns,pass1_max_ns,pass2_median_ns,pass2_p95_ns,pass2_max_ns,states,scope
+Rule,6.00004568696022e-07,2700,2800.0,3100.0,10200,2900.0,3100.0,69500,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Fixed_s60,0.016216499992879108,56300,6100.0,6300.0,15000,6100.0,6200.0,9400,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Fixed_s61,0.0057338000042364,29400,6100.0,6444.999999999999,11500,6000.0,6200.0,8700,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Fixed_s62,0.0054767000110587105,25700,6000.0,6300.0,47500,6100.0,6300.0,9700,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Fixed_s63,0.005858000004081987,24800,6100.0,6300.0,12400,6100.0,6700.0,118100,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Fixed_s64,0.005605099999229424,25700,5900.0,6200.0,11500,6000.0,6200.0,9400,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Decay_s60,0.005401100002927706,24900,6100.0,6300.0,11600,6000.0,6200.0,8800,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Decay_s61,0.005305800004862249,24200,6000.0,6200.0,13900,6000.0,6200.0,12300,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Decay_s62,0.005407900011050515,23900,6000.0,6200.0,10400,6100.0,6200.0,10600,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Decay_s63,0.005790800001705065,28400,6000.0,6300.0,11700,6100.0,6300.0,14200,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+R-Decay_s64,0.005581199991866015,27600,6000.0,6600.0,11500,6100.0,6200.0,8800,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Plan-H1,0.004068800000823103,10200,1700.0,1800.0,8100,1700.0,1800.0,3100,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Plan-H2,0.0038563999987673014,7300,1700.0,1900.0,6900,1700.0,1800.0,1900,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Plan-H3,0.004009099997347221,6700,1700.0,1800.0,8000,1700.0,1800.0,1900,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Plan-H3-Zero,0.004207499994663522,7500,1700.0,1900.0,2900,1700.0,1800.0,5900,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Hybrid-H3_s60,0.016125499998452142,6600,1700.0,1800.0,2400,1700.0,1800.0,1900,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Hybrid-H3_s61,0.01630719999957364,7100,1600.0,1800.0,6900,1700.0,1800.0,1900,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Hybrid-H3_s62,0.016273700006422587,7200,1700.0,1800.0,7300,1700.0,1800.0,1900,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Hybrid-H3_s63,0.016716500002075918,7600,1600.0,1700.0,2600,1700.0,1800.0,2000,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.
+Hybrid-H3_s64,0.016402799999923445,7100,1600.0,1700.0,2400,1700.0,1800.0,6800,512,Identical preconverted tuple inputs and timing boundaries in both passes; no OS-cache flush; no environment steps.

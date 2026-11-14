@@ -1,0 +1,17 @@
+PUBLICATION COPY: local paths redacted. Original log SHA-256: 242e235bd2190c607879d18d92b4d62984297eda9f41aa0bcabaa305e16038a7
+
+Traceback (most recent call last):
+  File "<REPOSITORY_ROOT>\.tmp\latest-release-view\scripts\verify_tracking_studies.py", line 180, in <module>
+    main()
+    ~~~~^^
+  File "<REPOSITORY_ROOT>\.tmp\latest-release-view\scripts\verify_tracking_studies.py", line 168, in main
+    tradeoff,guard=verify_recomputed(output)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<REPOSITORY_ROOT>\.tmp\latest-release-view\scripts\verify_tracking_studies.py", line 79, in verify_recomputed
+    tradeoff=audit_tradeoff(config,PRIOR)
+  File "<REPOSITORY_ROOT>\.tmp\latest-release-view\aimrl\tracking_tradeoff\analysis.py", line 149, in audit
+    require(sha(ROOT / path) == digest, f'Historical file changed: {path}')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPOSITORY_ROOT>\.tmp\latest-release-view\aimrl\tracking_tradeoff\study.py", line 31, in require
+    raise ValueError(message)
+ValueError: Historical file changed: .gitignore

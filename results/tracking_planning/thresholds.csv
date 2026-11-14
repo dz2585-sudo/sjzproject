@@ -1,0 +1,97 @@
+split,level,candidate,baseline,baseline_seed,D_nonincrease,C_plus_5pp,H_retains_98pct,H_plus_2pct,A_at_least_98pct,practical_pass,simultaneous_pass,absolute_C75,absolute_C75_and_H_retained,D_difference,C_difference,H_ratio
+final,family_mean,Rule,R-Decay mean,,False,False,False,False,True,False,False,False,False,0.03838000000000008,-0.005701333333333225,0.51353640704338
+final,family_mean,R-Fixed,R-Decay mean,,False,False,True,False,True,False,False,False,False,0.0383,-0.04413199999999984,0.996408273747273
+final,family_mean,R-Decay,R-Decay mean,,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+final,family_mean,Plan-H1,R-Decay mean,,True,False,False,False,True,False,False,True,False,-0.047573333333333245,0.03303200000000006,0.600466593160104
+final,family_mean,Plan-H2,R-Decay mean,,True,False,True,True,True,False,False,False,False,-0.11803999999999992,0.012045333333333463,1.037459953908546
+final,family_mean,Plan-H3,R-Decay mean,,True,False,True,True,True,False,False,False,False,-0.1246666666666667,0.014418666666666802,1.0451260889934175
+final,family_mean,Plan-H3-Zero,R-Decay mean,,False,False,True,False,True,False,False,False,False,1.12196,-0.023501333333333263,0.9914158215778044
+final,family_mean,Hybrid-H3,R-Decay mean,,True,False,True,True,True,False,False,True,True,-0.13317200000000007,0.018352000000000146,1.0503504180882932
+final,pure_vs_each_model,Rule,R-Decay_s60,60,False,False,False,False,True,False,False,False,False,0.0374133333333333,-0.005606666666666649,0.5135704313669813
+final,pure_vs_each_model,Rule,R-Decay_s61,61,False,False,False,False,True,False,False,False,False,0.04186666666666672,-0.006020000000000025,0.514117870001895
+final,pure_vs_each_model,Rule,R-Decay_s62,62,False,False,False,False,True,False,False,False,False,0.03498666666666672,-0.005666666666666598,0.5135218265704483
+final,pure_vs_each_model,Rule,R-Decay_s63,63,False,False,False,False,True,False,False,False,False,0.02649333333333348,-0.004526666666666679,0.5131090569517011
+final,pure_vs_each_model,Rule,R-Decay_s64,64,False,False,False,False,True,False,False,False,False,0.05113999999999996,-0.006686666666666619,0.5133639244997399
+final,model_pair,R-Fixed_s60,R-Decay_s60,60,False,False,True,False,True,False,False,False,False,0.023346666666666627,-0.036846666666666694,0.9946522798797944
+final,model_pair,R-Fixed_s61,R-Decay_s61,61,False,False,True,False,True,False,False,False,False,0.046426666666666616,-0.0381866666666667,0.9946228917945802
+final,model_pair,R-Fixed_s62,R-Decay_s62,62,False,False,True,False,True,False,False,False,False,0.05601333333333325,-0.07152666666666663,0.9964982846326748
+final,model_pair,R-Fixed_s63,R-Decay_s63,63,False,False,True,False,True,False,False,False,False,0.01777333333333342,-0.034386666666666676,0.9978013664625642
+final,model_pair,R-Fixed_s64,R-Decay_s64,64,False,False,True,False,True,False,False,False,False,0.04793999999999987,-0.03971333333333327,0.998462557358437
+final,model_pair,R-Decay_s60,R-Decay_s60,60,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+final,model_pair,R-Decay_s61,R-Decay_s61,61,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+final,model_pair,R-Decay_s62,R-Decay_s62,62,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+final,model_pair,R-Decay_s63,R-Decay_s63,63,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+final,model_pair,R-Decay_s64,R-Decay_s64,64,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+final,pure_vs_each_model,Plan-H1,R-Decay_s60,60,True,False,False,False,True,False,False,True,False,-0.04854000000000003,0.03312666666666664,0.6005063770379309
+final,pure_vs_each_model,Plan-H1,R-Decay_s61,61,True,False,False,False,True,False,False,True,False,-0.04408666666666661,0.03271333333333326,0.6011464847451203
+final,pure_vs_each_model,Plan-H1,R-Decay_s62,62,True,False,False,False,True,False,False,True,False,-0.050966666666666605,0.03306666666666669,0.6004495445403999
+final,pure_vs_each_model,Plan-H1,R-Decay_s63,63,True,False,False,False,True,False,False,True,False,-0.059459999999999846,0.03420666666666661,0.5999669022908343
+final,pure_vs_each_model,Plan-H1,R-Decay_s64,64,True,False,False,False,True,False,False,True,False,-0.03481333333333336,0.03204666666666667,0.6002649131936232
+final,pure_vs_each_model,Plan-H2,R-Decay_s60,60,True,False,True,True,True,False,False,False,False,-0.1190066666666667,0.01214000000000004,1.0375286907550696
+final,pure_vs_each_model,Plan-H2,R-Decay_s61,61,True,False,True,True,True,False,False,False,False,-0.11455333333333328,0.011726666666666663,1.0386346408944476
+final,pure_vs_each_model,Plan-H2,R-Decay_s62,62,True,False,True,True,True,False,False,False,False,-0.12143333333333328,0.01208000000000009,1.0374304980480302
+final,pure_vs_each_model,Plan-H2,R-Decay_s63,63,True,False,True,True,True,False,False,False,False,-0.12992666666666652,0.01322000000000001,1.0365966098489325
+final,pure_vs_each_model,Plan-H2,R-Decay_s64,64,True,False,True,True,True,False,False,False,False,-0.10528000000000004,0.01106000000000007,1.037111500070959
+final,pure_vs_each_model,Plan-H3,R-Decay_s60,60,True,False,True,True,True,False,False,False,False,-0.12563333333333349,0.014513333333333378,1.0451953337592579
+final,pure_vs_each_model,Plan-H3,R-Decay_s61,61,True,False,True,True,True,False,False,False,False,-0.12118000000000007,0.014100000000000001,1.046309456130377
+final,pure_vs_each_model,Plan-H3,R-Decay_s62,62,True,False,True,True,True,False,False,False,False,-0.12806000000000006,0.014453333333333429,1.0450964154737963
+final,pure_vs_each_model,Plan-H3,R-Decay_s63,63,True,False,True,True,True,False,False,False,False,-0.1365533333333333,0.015593333333333348,1.0442563653987091
+final,pure_vs_each_model,Plan-H3,R-Decay_s64,64,True,False,True,True,True,False,False,False,False,-0.11190666666666682,0.013433333333333408,1.0447750603150574
+final,pure_vs_each_model,Plan-H3-Zero,R-Decay_s60,60,False,False,True,False,True,False,False,False,False,1.1209933333333333,-0.023406666666666687,0.9914815077731242
+final,pure_vs_each_model,Plan-H3-Zero,R-Decay_s61,61,False,False,True,False,True,False,False,False,False,1.1254466666666667,-0.023820000000000063,0.9925383740761797
+final,pure_vs_each_model,Plan-H3-Zero,R-Decay_s62,62,False,False,True,False,True,False,False,False,False,1.1185666666666667,-0.023466666666666636,0.9913876730154976
+final,pure_vs_each_model,Plan-H3-Zero,R-Decay_s63,63,False,False,True,False,True,False,False,False,False,1.1100733333333335,-0.022326666666666717,0.9905907941086078
+final,pure_vs_each_model,Plan-H3-Zero,R-Decay_s64,64,False,False,True,False,True,False,False,False,False,1.13472,-0.024486666666666657,0.9910828326789348
+final,model_pair,Hybrid-H3_s60,R-Decay_s60,60,True,False,True,True,True,False,False,True,True,-0.13114000000000003,0.018086666666666695,1.0504010790090152
+final,model_pair,Hybrid-H3_s61,R-Decay_s61,61,True,False,True,True,True,False,False,True,True,-0.12793333333333345,0.018193333333333284,1.0517813151411788
+final,model_pair,Hybrid-H3_s62,R-Decay_s62,62,True,False,True,True,True,False,False,True,True,-0.1360866666666667,0.018206666666666704,1.0503253282858158
+final,model_pair,Hybrid-H3_s63,R-Decay_s63,63,True,False,True,True,True,False,False,True,True,-0.14761333333333315,0.01981333333333335,1.0495283576443888
+final,model_pair,Hybrid-H3_s64,R-Decay_s64,64,True,False,True,True,True,False,False,True,True,-0.12308666666666679,0.01746000000000003,1.0497185297317755
+stress,family_mean,Rule,R-Decay mean,,True,False,False,False,True,False,False,False,False,-0.0700533333333333,0.015753333333333286,0.558778892515143
+stress,family_mean,R-Fixed,R-Decay mean,,False,False,True,False,True,False,False,False,False,0.02251000000000003,-0.03853333333333342,0.9937950763527942
+stress,family_mean,R-Decay,R-Decay mean,,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+stress,family_mean,Plan-H1,R-Decay mean,,True,True,False,False,True,False,False,False,False,-0.15966999999999998,0.056253333333333266,0.64278711202439
+stress,family_mean,Plan-H2,R-Decay mean,,True,False,True,True,True,False,False,False,False,-0.17506999999999984,0.02295333333333327,1.05255382301194
+stress,family_mean,Plan-H3,R-Decay mean,,True,False,True,True,True,False,False,False,False,-0.18178666666666654,0.024969999999999937,1.0633654323972226
+stress,family_mean,Plan-H3-Zero,R-Decay mean,,False,False,True,False,True,False,False,False,False,0.9123300000000003,-0.006596666666666806,1.0106504425373035
+stress,family_mean,Hybrid-H3,R-Decay mean,,True,False,True,True,True,False,False,False,False,-0.19140999999999986,0.030403333333333227,1.0703090374310007
+stress,pure_vs_each_model,Rule,R-Decay_s60,60,True,False,False,False,True,False,False,False,False,-0.07326666666666681,0.016066666666666674,0.5584563758389262
+stress,pure_vs_each_model,Rule,R-Decay_s61,61,True,False,False,False,True,False,False,False,False,-0.053200000000000136,0.013966666666666683,0.5591694106578858
+stress,pure_vs_each_model,Rule,R-Decay_s62,62,True,False,False,False,True,False,False,False,False,-0.0693166666666667,0.01598333333333335,0.558944045140055
+stress,pure_vs_each_model,Rule,R-Decay_s63,63,True,False,False,False,True,False,False,False,False,-0.10288333333333344,0.019066666666666676,0.5585313464894617
+stress,pure_vs_each_model,Rule,R-Decay_s64,64,True,False,False,False,True,False,False,False,False,-0.05160000000000009,0.01368333333333338,0.5587939023571284
+stress,model_pair,R-Fixed_s60,R-Decay_s60,60,False,False,True,False,True,False,False,False,False,0.008316666666666528,-0.03156666666666674,0.99
+stress,model_pair,R-Fixed_s61,R-Decay_s61,61,False,False,True,False,True,False,False,False,False,0.05131666666666668,-0.03544999999999998,0.9903232309656609
+stress,model_pair,R-Fixed_s62,R-Decay_s62,62,False,False,True,False,True,False,False,False,False,0.03248333333333342,-0.06101666666666672,0.9952979109289983
+stress,model_pair,R-Fixed_s63,R-Decay_s63,63,True,False,True,False,True,False,False,False,False,-0.018550000000000066,-0.028233333333333333,0.9962411061887502
+stress,model_pair,R-Fixed_s64,R-Decay_s64,64,False,False,True,False,True,False,False,False,False,0.03898333333333337,-0.03639999999999999,0.9971123497414546
+stress,model_pair,R-Decay_s60,R-Decay_s60,60,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+stress,model_pair,R-Decay_s61,R-Decay_s61,61,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+stress,model_pair,R-Decay_s62,R-Decay_s62,62,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+stress,model_pair,R-Decay_s63,R-Decay_s63,63,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+stress,model_pair,R-Decay_s64,R-Decay_s64,64,True,False,True,False,True,False,False,False,False,0.0,0.0,1.0
+stress,pure_vs_each_model,Plan-H1,R-Decay_s60,60,True,True,False,False,True,False,False,False,False,-0.1628833333333335,0.056566666666666654,0.6424161073825503
+stress,pure_vs_each_model,Plan-H1,R-Decay_s61,61,True,True,False,False,True,False,False,False,False,-0.1428166666666668,0.05446666666666666,0.6432363416437067
+stress,pure_vs_each_model,Plan-H1,R-Decay_s62,62,True,True,False,False,True,False,False,False,False,-0.15893333333333337,0.05648333333333333,0.6429770941089541
+stress,pure_vs_each_model,Plan-H1,R-Decay_s63,63,True,True,False,False,True,False,False,False,False,-0.19250000000000012,0.05956666666666666,0.642502349308632
+stress,pure_vs_each_model,Plan-H1,R-Decay_s64,64,True,True,False,False,True,False,False,False,False,-0.14121666666666677,0.05418333333333336,0.6428043784836478
+stress,pure_vs_each_model,Plan-H2,R-Decay_s60,60,True,False,True,True,True,False,False,False,False,-0.17828333333333335,0.023266666666666658,1.0519463087248322
+stress,pure_vs_each_model,Plan-H2,R-Decay_s61,61,True,False,True,True,True,False,False,False,False,-0.15821666666666667,0.021166666666666667,1.0532894294738258
+stress,pure_vs_each_model,Plan-H2,R-Decay_s62,62,True,False,True,True,True,False,False,False,False,-0.17433333333333323,0.023183333333333334,1.0528649156982604
+stress,pure_vs_each_model,Plan-H2,R-Decay_s63,63,True,False,True,True,True,False,False,False,False,-0.20789999999999997,0.02626666666666666,1.0520875285273192
+stress,pure_vs_each_model,Plan-H2,R-Decay_s64,64,True,False,True,True,True,False,False,False,False,-0.15661666666666663,0.020883333333333365,1.0525820965683972
+stress,pure_vs_each_model,Plan-H3,R-Decay_s60,60,True,False,True,True,True,False,False,False,False,-0.18500000000000005,0.025283333333333324,1.062751677852349
+stress,pure_vs_each_model,Plan-H3,R-Decay_s61,61,True,False,True,True,True,False,False,False,False,-0.16493333333333338,0.023183333333333334,1.0641085948524964
+stress,pure_vs_each_model,Plan-H3,R-Decay_s62,62,True,False,True,True,True,False,False,False,False,-0.18104999999999993,0.0252,1.0636797205615638
+stress,pure_vs_each_model,Plan-H3,R-Decay_s63,63,True,False,True,True,True,False,False,False,False,-0.21461666666666668,0.028283333333333327,1.0628943482346624
+stress,pure_vs_each_model,Plan-H3,R-Decay_s64,64,True,False,True,True,True,False,False,False,False,-0.16333333333333333,0.02290000000000003,1.0633939963736485
+stress,pure_vs_each_model,Plan-H3-Zero,R-Decay_s60,60,False,False,True,False,True,False,False,False,False,0.9091166666666668,-0.0062833333333334185,1.0100671140939597
+stress,pure_vs_each_model,Plan-H3-Zero,R-Decay_s61,61,False,False,True,False,True,False,False,False,False,0.9291833333333335,-0.00838333333333341,1.0113567636583563
+stress,pure_vs_each_model,Plan-H3-Zero,R-Decay_s62,62,False,False,True,False,True,False,False,False,False,0.9130666666666669,-0.006366666666666743,1.010949150265332
+stress,pure_vs_each_model,Plan-H3-Zero,R-Decay_s63,63,False,False,True,False,True,False,False,False,False,0.8795000000000002,-0.003283333333333416,1.0102027117733925
+stress,pure_vs_each_model,Plan-H3-Zero,R-Decay_s64,64,False,False,True,False,True,False,False,False,False,0.9307833333333335,-0.008666666666666711,1.0106775904909007
+stress,model_pair,Hybrid-H3_s60,R-Decay_s60,60,True,False,True,True,True,False,False,False,False,-0.1895500000000001,0.030033333333333356,1.0693959731543625
+stress,model_pair,Hybrid-H3_s61,R-Decay_s61,61,True,False,True,True,True,False,False,False,False,-0.16938333333333344,0.02795000000000003,1.0710973724884079
+stress,model_pair,Hybrid-H3_s62,R-Decay_s62,62,True,False,True,True,True,False,False,False,False,-0.1902166666666667,0.030466666666666642,1.0710015449721233
+stress,model_pair,Hybrid-H3_s63,R-Decay_s63,63,True,False,True,True,True,False,False,False,False,-0.22871666666666668,0.03481666666666661,1.0705463820647068
+stress,model_pair,Hybrid-H3_s64,R-Decay_s64,64,True,False,True,True,True,False,False,False,False,-0.17918333333333325,0.028750000000000053,1.0695050701766167

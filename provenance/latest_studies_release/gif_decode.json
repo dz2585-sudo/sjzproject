@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "gifs": [
+    {
+      "path": "results/tracking_boundary_stability/demos/scenario_5400000.gif",
+      "sha256": "96bdbf5ac0b798cdfc5e8bae05be04a509ba1cae743fe46d9a808e6b95b564c2",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_boundary_stability/demos/scenario_5400001.gif",
+      "sha256": "fd9f3f64fe881b938def10b6e0b2b40717e89b8665b22f0d2a70242b470a38e5",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_boundary_stability/demos/scenario_5400002.gif",
+      "sha256": "18c3b2a4ca540d49620c6006b37bfc392624479dfeea078fe9164f5268a5b8cf",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_planning/demos/scenario_6400000/synchronized.gif",
+      "sha256": "98f77d3aa939eb62042d91a974edf0f4f54ec52e5938fb0439fb396ac080e522",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_planning/demos/scenario_6400001/synchronized.gif",
+      "sha256": "dc89bdfe4126fe8e4d02686a50cae1107094473fc745b32bfc72d0f6977cff8c",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_planning/demos/scenario_6400002/synchronized.gif",
+      "sha256": "9b1e2ddc07921043b92cd75992236cf1d3bb011774f206fd13be0d563fb2c505",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_planning/development_demo/synchronized.gif",
+      "sha256": "87ed82c83fd376527f20dd55336a4effefe58252b67373d171ddac86258f5151",
+      "frames": 301,
+      "duration_ms": 20070
+    }
+  ],
+  "player_check": "Not performed; no Chrome or desktop permission requested."
+}

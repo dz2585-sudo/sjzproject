@@ -1,0 +1,163 @@
+{
+  "config": {
+    "project": {
+      "name": "AimRL Boundary Information and Update Stability",
+      "schema": "tracking25_v2"
+    },
+    "environment": {
+      "grid_size": 25,
+      "minimum_reset_distance": 12,
+      "turn_probability": 0.05,
+      "speed_toggle_probability": 0.05,
+      "episode_ticks": 300
+    },
+    "actions": [
+      "left_slow",
+      "right_slow",
+      "up_slow",
+      "down_slow",
+      "stay",
+      "fire",
+      "left_fast",
+      "right_fast",
+      "up_fast",
+      "down_fast"
+    ],
+    "rewards": {
+      "step": -0.05,
+      "hit": 10.0,
+      "miss": -1.0
+    },
+    "learning": {
+      "alpha": 0.15,
+      "gamma": 0.99,
+      "initial_q": 0,
+      "dtype": "float32",
+      "training_steps": 5000000,
+      "epsilon_start": 1.0,
+      "epsilon_end": 0.05,
+      "epsilon_decay_steps": 4000000,
+      "shaping_scale": 1.0
+    },
+    "study": {
+      "conditions": [
+        "R-Fixed",
+        "R-Decay",
+        "B-Fixed",
+        "B-Decay"
+      ],
+      "close_weight": 0.5,
+      "decay": {
+        "scale": 1000,
+        "power": 0.6
+      },
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "pilot_seed": 1060,
+      "pilot_steps": 1000000,
+      "checkpoint_interval": 500000,
+      "development": {
+        "start": 5100000,
+        "count": 200
+      },
+      "final": {
+        "start": 5200000,
+        "count": 500
+      },
+      "stress": {
+        "start": 5300000,
+        "count": 200,
+        "turn_probability": 0.1,
+        "speed_toggle_probability": 0.1
+      },
+      "demo_seeds": [
+        5400000,
+        5400001,
+        5400002
+      ],
+      "display_training_seed": 60,
+      "diagnostic": {
+        "start": 5500000,
+        "count": 16
+      },
+      "event_window": {
+        "before": 5,
+        "after": 15,
+        "recovery_horizon": 30,
+        "recovery_consecutive_close": 3,
+        "overlap": "Keep earliest event of the same type; reject later events within 30 ticks. Recovery is censored at the next event of either random type and at window end; bounce curves retain overlaps with other event types."
+      },
+      "thresholds": {
+        "C_gain": 0.05,
+        "H_retention": 0.98,
+        "H_simultaneous": 1.02,
+        "A_minimum": 0.98,
+        "C_absolute": 0.75
+      },
+      "frequent_state_min_events": 5
+    }
+  },
+  "config_sha256": "db59f15bc39f845f3e987aec78832e88beaaf4abc3d02b0b1f851b8557e6c2e0",
+  "source_sha256": {
+    "aimrl/tracking_boundary_stability/analysis.py": "142f9797d97ca31e00eb1c93713c539e17a7094c40ff85358070bb60bb07720d",
+    "aimrl/tracking_boundary_stability/core.py": "5eaffd72386b090c3c2edfd4fb1b76251c1befab04b717cbc9135b8ccae84730",
+    "aimrl/tracking_boundary_stability/diagnostics.py": "83b5ebaf3883173789af3391a0f5c581699fb1bc617ddbf1aada6d26ee4c3b58",
+    "aimrl/tracking_boundary_stability/report.py": "07b08c2e918439f357103224c34721fc2466b4b41dfeb5a4760921b2d83afcc1",
+    "aimrl/tracking_boundary_stability/study.py": "e1fb79d61af0d37c537da34345de0e73e77144aaca8960c306abffe4867cd52e",
+    "aimrl/tracking_boundary_stability/verify.py": "0b524cff5df878e0af467faee34ae713f4c2e5640a98fb7d984a92d46e6bb2e8",
+    "aimrl/tracking_boundary_stability/visuals.py": "91141d90191aa51ba3bf9f33f65410a8db1db1610909a4ad06f7aaec9e0466fe",
+    "aimrl/tracking_boundary_stability/__init__.py": "78f04b2461c40b3d8dd37d9db87d0b508a9770dc900c80095fd04c24a3354c21",
+    "aimrl/tracking_boundary_stability/__main__.py": "8280be7ef65ad75bd2377a399671041a229d563c883d942ec53dc0cd1f0523d1",
+    "aimrl/tracking_boundary_stability/kernel.c": "829b90d1873394e9f6d67726aed147bb0c383bfdb8baee1f0944d0f1ec21941c",
+    "configs/tracking_boundary_stability.json": "db59f15bc39f845f3e987aec78832e88beaaf4abc3d02b0b1f851b8557e6c2e0",
+    "tests/test_tracking_boundary_stability.py": "a78a00f5899941aa8c8fafd704886f47b9ca012df15acbc12fb6fd56968245e2",
+    "scripts/run_boundary_stability_checks.py": "286c9e467cb61236cbd1d67dfd475f960b5ad51d6560f8911b2e4b5523b7c3e0"
+  },
+  "kernel_sha256": "bdcf77fd502288988d2702c01c09e8f41b3e0b3ab4c3902663946d1bb5862538",
+  "frozen_utc": "2026-11-13T16:23:19.136102+00:00",
+  "git_head": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a",
+  "runtime": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2",
+      "Pillow": "13.0.0"
+    }
+  },
+  "seed_audit_sha256": "79630403e51303db386a42d642989d74f29b52aa996ea821df09d63ca8971b5a",
+  "common_states_sha256": "949cbdfd305d3268dd957c173c83e54ae8c17a085b6ca5f029032e831b2fc712",
+  "rng": "SeedSequence(seed).spawn(2): first child generates uint64 reset seed; second owns action PCG64. Three target doubles per tick, unchanged order.",
+  "state": "R: relative dx,dy,heading,speed. B: append both objects x/y boundary groups, valid axis-key enumeration. B remains approximate aggregation.",
+  "update": "Float32 Q and increments; float64 reward, target and alpha. Counts uint32, increment after each actual update. No guard in training selection or bootstrap.",
+  "bootstrap": "Actual next state including window truncation and partial budget tail. Continuing-task semantics.",
+  "selection": "Every main result uses exactly step 5,000,000. No condition, checkpoint or seed selection. Demo seed 60.",
+  "primary": "Guarded 5M models against paired R-Fixed. Raw models study shooting ranking. Final and Stress reported separately.",
+  "inference": "Five paired training seeds are the independent training units. Sample SD ddof=1. No tick-level confidence intervals. Descriptive policy-specific event slices.",
+  "factorial": "Bfixed-Rfixed; Bdecay-Rdecay; Rdecay-Rfixed; Bdecay-Bfixed; interaction=(Bdecay-Bfixed)-(Rdecay-Rfixed).",
+  "event_definitions": {
+    "before": 5,
+    "after": 15,
+    "recovery_horizon": 30,
+    "recovery_consecutive_close": 3,
+    "overlap": "Keep earliest event of the same type; reject later events within 30 ticks. Recovery is censored at the next event of either random type and at window end; bounce curves retain overlaps with other event types."
+  },
+  "diagnostic_weighting": "Distinct physical states equal-weight and frequency of fixed common-state sampling events; exact conditional six-outcome Bellman expectation for Stay and unaligned Fire.",
+  "history": {
+    "files_verified": 1843,
+    "changed": [],
+    "head": "f27e90de2888bbd39bdfefcc7f7c8d7d6821b67a",
+    "identity": {
+      "name": "dz2585-sudo",
+      "email": "232613424+dz2585-sudo@users.noreply.github.com"
+    }
+  },
+  "pilot_interactions": 4000000,
+  "formal_interactions_planned": 100000000
+}

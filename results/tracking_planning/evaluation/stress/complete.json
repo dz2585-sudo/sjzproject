@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "policy_instances": 20,
+  "windows": 4000,
+  "environment_ticks": 1200000,
+  "actual_planning_decisions": 540000,
+  "new_training_interactions": 0,
+  "Q_updates": 0,
+  "elapsed_seconds": 4.171340300003067,
+  "real_environment": {
+    "grid_size": 25,
+    "minimum_reset_distance": 12,
+    "turn_probability": 0.1,
+    "speed_toggle_probability": 0.1,
+    "episode_ticks": 300
+  },
+  "fixed_planning_probabilities": [
+    0.05,
+    0.05
+  ]
+}

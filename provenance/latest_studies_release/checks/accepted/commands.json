@@ -1,0 +1,259 @@
+{
+  "full_tests": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 95.95596849999856,
+    "test_count": 100,
+    "log": "full_tests.txt",
+    "original_log_sha256": "0cdda0bf456675b61e265ef35061aa1fe9666f0fec025b4430dce0a89cefbce0",
+    "public_log": "provenance/latest_studies_release/checks/accepted/full_tests.txt",
+    "public_log_sha256": "15d9784dcf929cc419120ed7deefe5ce958afc688b4a186737c82d3367ad483a",
+    "command_paths_redacted": true
+  },
+  "boundary_tests_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_tracking_boundary_stability.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 4.0581669000093825,
+    "test_count": 7,
+    "log": "boundary_tests_O.txt",
+    "original_log_sha256": "98dec82fa632a7f5ae98e03abb852ddd74b305a01c4cfc12e4d93325e489d90a",
+    "public_log": "provenance/latest_studies_release/checks/accepted/boundary_tests_O.txt",
+    "public_log_sha256": "f3106a8b3686eda60b37c44155be13465957239892854a0cd48c7f39d2ea9616",
+    "command_paths_redacted": true
+  },
+  "planning_tests_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_tracking_planning.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 3.660317899979418,
+    "test_count": 7,
+    "log": "planning_tests_O.txt",
+    "original_log_sha256": "2fe6ea7a0375653d21ba60c8f8f97b155d1bef3ba7000b9b3e1476b456fbab57",
+    "public_log": "provenance/latest_studies_release/checks/accepted/planning_tests_O.txt",
+    "public_log_sha256": "c641a7db21d0057df0ca5a0fba3b0ee9cb41362df0ea337027bc8b9c55dabaa3",
+    "command_paths_redacted": true
+  },
+  "publication_tests_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_latest_publication.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 3.983862199995201,
+    "test_count": 4,
+    "log": "publication_tests_O.txt",
+    "original_log_sha256": "679a2da0c8126042d25eafc091dce6f95754e4e082111a6f55b364b56abd2362",
+    "public_log": "provenance/latest_studies_release/checks/accepted/publication_tests_O.txt",
+    "public_log_sha256": "6570e3c43431d03fb77e3fd0d9227cf0e1d80f8c8a447ae8e51f054bbd637a8a",
+    "command_paths_redacted": true
+  },
+  "historical_publication": {
+    "command": [
+      "python",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\historical_publication.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 22.194938500004355,
+    "test_count": null,
+    "log": "historical_publication.txt",
+    "original_log_sha256": "619065d2009abfe56f4f46307560378d62697e21473feb9995bc3d709746048e",
+    "public_log": "provenance/latest_studies_release/checks/accepted/historical_publication.txt",
+    "public_log_sha256": "abc484e98eaca3f92ba1c59099d6df0968187b278c7115e0bc18ba97a9269720",
+    "command_paths_redacted": true
+  },
+  "historical_studies": {
+    "command": [
+      "python",
+      "scripts/reproduce_latest_studies.py",
+      "verify-history",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\historical_studies"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 25.541918800008716,
+    "test_count": null,
+    "log": "historical_studies.txt",
+    "original_log_sha256": "ec32d10fb023c65475276ef9cc9f3f00dd156a471735a176c467446bd9f0d537",
+    "public_log": "provenance/latest_studies_release/checks/accepted/historical_studies.txt",
+    "public_log_sha256": "77942ed1925d988461264993239f93af5267616f6827b9c82bfad54a653f5851",
+    "command_paths_redacted": true
+  },
+  "boundary_artifacts": {
+    "command": [
+      "python",
+      "scripts/reproduce_latest_studies.py",
+      "verify-boundary",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\boundary"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 45.452387199999066,
+    "test_count": null,
+    "log": "boundary_artifacts.txt",
+    "original_log_sha256": "7da9d67d19e99b74d627923bc1b2a628af033006fc6d2fbe48033c790b846dea",
+    "public_log": "provenance/latest_studies_release/checks/accepted/boundary_artifacts.txt",
+    "public_log_sha256": "006b7f93e5dccda735e1659271e43b6f38dbdb248664388e4badcd5e1b570424",
+    "command_paths_redacted": true
+  },
+  "planning_artifacts": {
+    "command": [
+      "python",
+      "scripts/reproduce_latest_studies.py",
+      "verify-planning",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\planning"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 29.78673260001233,
+    "test_count": null,
+    "log": "planning_artifacts.txt",
+    "original_log_sha256": "3450b272a4579ebc91feeabecf6bbbdc21c3011468939c55039cc9b02de71e72",
+    "public_log": "provenance/latest_studies_release/checks/accepted/planning_artifacts.txt",
+    "public_log_sha256": "abb9e843e96a5cf0f8aaa12e407e1679e44c259e9bd27b404a56f74b75563636",
+    "command_paths_redacted": true
+  },
+  "historical_publication_O": {
+    "command": [
+      "python",
+      "-O",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\historical_publication_O.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 23.996856199984904,
+    "test_count": null,
+    "log": "historical_publication_O.txt",
+    "original_log_sha256": "619065d2009abfe56f4f46307560378d62697e21473feb9995bc3d709746048e",
+    "public_log": "provenance/latest_studies_release/checks/accepted/historical_publication_O.txt",
+    "public_log_sha256": "abc484e98eaca3f92ba1c59099d6df0968187b278c7115e0bc18ba97a9269720",
+    "command_paths_redacted": true
+  },
+  "historical_studies_O": {
+    "command": [
+      "python",
+      "-O",
+      "scripts/reproduce_latest_studies.py",
+      "verify-history",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\historical_studies_O"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 19.676293600001372,
+    "test_count": null,
+    "log": "historical_studies_O.txt",
+    "original_log_sha256": "ec32d10fb023c65475276ef9cc9f3f00dd156a471735a176c467446bd9f0d537",
+    "public_log": "provenance/latest_studies_release/checks/accepted/historical_studies_O.txt",
+    "public_log_sha256": "77942ed1925d988461264993239f93af5267616f6827b9c82bfad54a653f5851",
+    "command_paths_redacted": true
+  },
+  "boundary_artifacts_O": {
+    "command": [
+      "python",
+      "-O",
+      "scripts/reproduce_latest_studies.py",
+      "verify-boundary",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\boundary_O"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 49.583848499984015,
+    "test_count": null,
+    "log": "boundary_artifacts_O.txt",
+    "original_log_sha256": "5d2e2e16843c45115f3d8b3974fe0295f086b4155a37ebf1fd6a970c3c5f577e",
+    "public_log": "provenance/latest_studies_release/checks/accepted/boundary_artifacts_O.txt",
+    "public_log_sha256": "5d36f5bd8ebd7781fc2ec5317ef59652d1da14caf0ebae29676d6efbe94d9738",
+    "command_paths_redacted": true
+  },
+  "planning_artifacts_O": {
+    "command": [
+      "python",
+      "-O",
+      "scripts/reproduce_latest_studies.py",
+      "verify-planning",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\planning_O"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 29.219071200001054,
+    "test_count": null,
+    "log": "planning_artifacts_O.txt",
+    "original_log_sha256": "ba6cb1e75b122e45b626d22dbbaecdf23cdf9dddfb31682a5084c7dcf2073e9a",
+    "public_log": "provenance/latest_studies_release/checks/accepted/planning_artifacts_O.txt",
+    "public_log_sha256": "18343247d67a7f450180d72f3e235c25325867307c5f1e5e388c33db48a7a004",
+    "command_paths_redacted": true
+  },
+  "rebuilt_planning_all_DP": {
+    "command": [
+      "python",
+      "scripts/reproduce_latest_studies.py",
+      "verify-planning",
+      "--planning-library",
+      "<REPOSITORY_ROOT>\\.tmp\\latest-release-native\\planning.dll",
+      "--output",
+      "<REPOSITORY_ROOT>\\.tmp\\pub2\\.tmp\\release-checks\\rebuilt_planning"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 28.104836399987107,
+    "test_count": null,
+    "log": "rebuilt_planning_all_DP.txt",
+    "original_log_sha256": "23155ea1feaed0b45f04be8dfa8a547dfac008b68e1e2793e321aa35f3844385",
+    "public_log": "provenance/latest_studies_release/checks/accepted/rebuilt_planning_all_DP.txt",
+    "public_log_sha256": "c40e3dd0170e54bba6721d5e0bffa78df5c19c6c2d2e3e7c8a3df4037ddaec28",
+    "command_paths_redacted": true
+  },
+  "release_links_inputs": {
+    "command": [
+      "python",
+      "-c",
+      "import json; from aimrl.latest_publication import verify_release_inputs,check_links; print(json.dumps({\"inputs\":verify_release_inputs(),\"links\":check_links()},indent=2))"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 3.6391363000147976,
+    "test_count": null,
+    "log": "release_links_inputs.txt",
+    "original_log_sha256": "13a77e028ae9215597b3bd367162c088ae29c673a8371e4ff4bb9f3972aecd76",
+    "public_log": "provenance/latest_studies_release/checks/accepted/release_links_inputs.txt",
+    "public_log_sha256": "4386dc2aeb651d19d8f94fe7629b4e658a08da644cbccea896a3ed126d67d742",
+    "command_paths_redacted": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\tradeoff-build\\toolchain\\ziglang\\zig.exe",
+    "cc",
+    "-shared",
+    "-O3",
+    "-std=c11",
+    "-ffp-contract=off",
+    "-fno-fast-math",
+    "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\aimrl\\tracking_planning\\kernel.c",
+    "-o",
+    "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_planning\\native\\planning.dll"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "elapsed_seconds": 20.8836314999935,
+  "compiler_version": "0.15.2"
+}
