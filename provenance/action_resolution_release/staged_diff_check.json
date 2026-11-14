@@ -1,0 +1,35 @@
+{
+  "normal_command": [
+    "git",
+    "-c",
+    "core.whitespace=trailing-space,space-before-tab,cr-at-eol",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "normal_returncode": 2,
+  "normal_stdout": "aimrl/tracking_action_resolution/visuals.py:131: new blank line at EOF.\nresults/tracking_action_resolution/execution/setup_attempt_1.txt:516: new blank line at EOF.\n",
+  "frozen_EOF_exemptions": [
+    {
+      "path": "aimrl/tracking_action_resolution/visuals.py",
+      "sha256": "626bae7190c9be1c78c98e6297ae4651d7d21fac043588b43cc08c50c868db10",
+      "reason": "Original frozen trailing blank line preserved; no source/evidence byte rewritten."
+    },
+    {
+      "path": "results/tracking_action_resolution/execution/setup_attempt_1.txt",
+      "sha256": "1dd8e9685ff9ca7e9eb22a8a2ff79cf34905c56aaaec7ad4d4e970b81d14994b",
+      "reason": "Original frozen trailing blank line preserved; no source/evidence byte rewritten."
+    }
+  ],
+  "adjusted_command": [
+    "git",
+    "-c",
+    "core.whitespace=trailing-space,space-before-tab,cr-at-eol,-blank-at-eof",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "adjusted_returncode": 0,
+  "rule": "The unadjusted CRLF-aware check is required to contain only these two exact frozen EOF warnings. Then check every staged file with EOF blanks allowed; other whitespace checks remain enabled.",
+  "line_endings": "Existing * -text preserves frozen CRLF bytes; cr-at-eol recognizes CRLF."
+}

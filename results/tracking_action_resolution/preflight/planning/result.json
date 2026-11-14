@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "optimized": false,
+  "new_training_interactions": 0,
+  "Q_updates": 0,
+  "formal_windows": 14000,
+  "formal_environment_ticks": 4200000,
+  "development_windows": 4000,
+  "development_environment_ticks": 1200000,
+  "checked_policy_proposals": 5400000,
+  "formal_planning_lookups": 1890000,
+  "verified_value_backups": 65625000,
+  "verified_chance_terms": 383250000,
+  "verification_planning_recomputations": 65625000,
+  "formal_environment_replays": 0,
+  "decoded_demo_frames": 903,
+  "inventory_files": 460,
+  "protection": {
+    "unchanged_files_verified": 2970,
+    "archived_document_originals_verified": 2,
+    "allowed_publication_document_changes": [
+      ".gitignore",
+      "README.md"
+    ],
+    "documented_noncore_omissions": [],
+    "changed_experiment_core_files": [],
+    "expected_historical_hashes_modified": false
+  },
+  "actual_player_check": "Not performed, as requested.",
+  "publication_adapter": "Archived documentation and named non-core omissions; complete DP reconstruction and all saved proposals still checked."
+}

@@ -1,0 +1,33 @@
+{
+  "payload_files": 617,
+  "actual_added_or_modified_paths": 619,
+  "payload_bytes": 725575862,
+  "excluded_from_self_hash": [
+    "provenance/action_resolution_release/manifest_scope.json",
+    "provenance/action_resolution_release/payload_manifest.csv"
+  ],
+  "future_receipts": "Post-commit/push evidence stays in ignored local .tmp; Git commit/tree identifiers cover the two excluded manifest files.",
+  "frozen_scientific_changes": [],
+  "document_changes": [
+    ".gitignore",
+    "README.md",
+    "docs/reproduce_latest_studies.md",
+    "docs/research_index.md",
+    "docs/tracking_planning.md"
+  ],
+  "omissions": {
+    "results/tracking_action_resolution/delivery_state.json": {
+      "kind": "private_identity_snapshot",
+      "original_sha256": "b7c47f17da37103e8621ca4c48573df8e13fd9f6491d790a62d612324a56c061",
+      "original_bytes": 749,
+      "replacement_path": "provenance/action_resolution_release/public_delivery_state.txt",
+      "replacement_sha256": "e8f7743d649759cca7ebd3fc84e5988e0f8ce2aed957bdf780e08a0db05b77ac",
+      "reason": "Global personal Git name/email are unrelated to the required public repository author identity. Original retained locally, not changed."
+    }
+  },
+  "privacy": {
+    "text_files_scanned": 540,
+    "credential_matches": 0,
+    "nonpublic_emails": 0
+  }
+}

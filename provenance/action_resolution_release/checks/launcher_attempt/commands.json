@@ -1,0 +1,235 @@
+{
+  "full_tests": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "tests",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\full_tests"
+    ],
+    "returncode": 0,
+    "test_count": 111,
+    "elapsed_seconds": 69.2804138000065,
+    "log_sha256": "81c7c86079d65d91482b247d7164ea3955930b3bf1acfaf86a250b221a3c15a5"
+  },
+  "action_tests_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "tests-O",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\action_tests_O"
+    ],
+    "returncode": 0,
+    "test_count": 9,
+    "elapsed_seconds": 0.9356258999905549,
+    "log_sha256": "3921bfe7b9eaabe1a2498c29909417b8f3a5405d1c0af939ce006bb037f766a0"
+  },
+  "release_tests_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_action_publication.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "test_count": 3,
+    "elapsed_seconds": 0.5507881999947131,
+    "log_sha256": "4bb3b70db63e3947521c82376b1b9e4d6b133f715083e79f47c6ce33a8723468"
+  },
+  "representation": {
+    "command": [
+      "python",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\representation.json"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 13.811681100021815,
+    "log_sha256": "1603a86bcf668961c72bc0cfa1e337a285daee4cda2f92583fdf3e8ead94efa5"
+  },
+  "history": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "history",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\history",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 12.51635439999518,
+    "log_sha256": "a6b7cd2ff3e363eeec726e63328fd27024b2dca00a7d9f82ff173aea7ca33b97"
+  },
+  "boundary": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "boundary",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\boundary",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 34.544706300017424,
+    "log_sha256": "abb56815638f09012228891993f4d0e0e18eba81ec8c1847220f00b7fe806ce9"
+  },
+  "planning": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "planning",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\planning",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 17.550524999998743,
+    "log_sha256": "2d292f35b53f66ba13cb68dc225495f89c44757c11d5f8fd2d5759a60f3bf6c8"
+  },
+  "action": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "action",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\action",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 29.813177800009726,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "representation_O": {
+    "command": [
+      "python",
+      "-O",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\representation_O.json"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 13.466779499984113,
+    "log_sha256": "1603a86bcf668961c72bc0cfa1e337a285daee4cda2f92583fdf3e8ead94efa5"
+  },
+  "history_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "history",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\history_O",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 12.625634299998637,
+    "log_sha256": "a6b7cd2ff3e363eeec726e63328fd27024b2dca00a7d9f82ff173aea7ca33b97"
+  },
+  "boundary_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "boundary",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\boundary_O",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 33.80142479998176,
+    "log_sha256": "25b42feab20fdc718a5bbbda3c2120e05e4739855108e21fc3972ceb52fc9c89"
+  },
+  "planning_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "planning",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\planning_O",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 17.98691510001663,
+    "log_sha256": "d27b8d29bf58872738b5e9d33da5ce12aa836bd9cb9578ddd4299f90de099bde"
+  },
+  "action_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "action",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\action_O",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 30.210900399979437,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "saved_trace_GIF_pixels": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "gifs",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\gifs"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 18.422315899981186,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "protected_inputs_links": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "inputs",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks_final\\inputs"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 7.7439256999932695,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "_publication_copy": "Machine-local paths redacted; original hash in log_mapping.json. Numerical fields unchanged."
+}

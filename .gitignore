@@ -43,3 +43,6 @@ results/tracking_boundary_stability/execution/postflight_new_verify.txt
 results/tracking_boundary_stability/execution/postflight_new_verify_optimized.txt
 results/tracking_boundary_stability/native/build_attempt_1.json
 results/tracking_boundary_stability/native/build_attempt_2.json
+
+# Private pre-publication identity snapshot; labelled redacted release copy is published.
+results/tracking_action_resolution/delivery_state.json

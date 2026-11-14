@@ -1,0 +1,58 @@
+{
+  "complete": true,
+  "commands": 15,
+  "all_returncodes_zero": true,
+  "full_tests": 112,
+  "full_tests_skipped": 0,
+  "optimized_action_tests": 9,
+  "optimized_adapter_tests": 3,
+  "all_Bellman_layers_rebuilt_normal_and_optimized": true,
+  "monotonicity_comparisons_each_pass": 56250000,
+  "monotonicity_violations": 0,
+  "GIF_files": 3,
+  "GIF_frames_each": 301,
+  "GIF_duration_ms_each": 20070,
+  "all_GIF_pixels_saved_trace_verified": true,
+  "actual_player": false,
+  "formal_training_interactions": 0,
+  "frozen_Q_updates": 0,
+  "formal_environment_replay_ticks": 0,
+  "formal_saved_windows_recomputed_each_pass": 8400,
+  "clean_view": {
+    "selected_files": 432,
+    "view_files": 4089,
+    "view": ".tmp/ap",
+    "all_files_copied_and_byte_verified": true,
+    "privacy_credentials": [],
+    "private_emails": [],
+    "omissions": [
+      "results/tracking_action_resolution/delivery_state.json"
+    ]
+  },
+  "relative_links": 403,
+  "historical_unchanged": 3657,
+  "allowed_old_document_changes": [
+    ".gitignore",
+    "README.md",
+    "docs/reproduce_latest_studies.md",
+    "docs/research_index.md",
+    "docs/tracking_planning.md"
+  ],
+  "frozen_research_changes": [],
+  "initial_failures": "Preserved attempt_1: explicit historical-contract argument was not chained by the initial publication adapter; fixed and regression-tested. The native unit gate was enabled in the accepted full run. No historical hash/protocol/scientific byte was changed.",
+  "actual_added_or_modified_files": 619,
+  "added_files": 614,
+  "modified_existing_files": [
+    ".gitignore",
+    "README.md",
+    "docs/reproduce_latest_studies.md",
+    "docs/research_index.md",
+    "docs/tracking_planning.md"
+  ],
+  "text_files_scanned": 540,
+  "credential_matches": 0,
+  "nonpublic_emails": 0,
+  "author": "dz2585-sudo <232613424+dz2585-sudo@users.noreply.github.com>",
+  "committer": "dz2585-sudo <232613424+dz2585-sudo@users.noreply.github.com>",
+  "final_scope": "All selected bytes match the clean directory; generated check receipts and manifests receive final hash/link checks after the full numerical suite."
+}

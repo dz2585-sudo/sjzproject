@@ -1,0 +1,14 @@
+{
+  "baseline_files": 3662,
+  "unchanged_files": 3657,
+  "documents": [
+    ".gitignore",
+    "README.md",
+    "docs/reproduce_latest_studies.md",
+    "docs/research_index.md",
+    "docs/tracking_planning.md"
+  ],
+  "omissions": [],
+  "old_expected_hashes_modified": false,
+  "scientific_core_files_changed": []
+}

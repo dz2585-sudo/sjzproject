@@ -1,0 +1,235 @@
+{
+  "full_tests": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "tests",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\full_tests"
+    ],
+    "returncode": 0,
+    "test_count": 111,
+    "elapsed_seconds": 98.60257509999792,
+    "log_sha256": "79c508785547e2a323a5a85a26413efc7bc0a7246ef6cb8ec4efb122fd9edfa5"
+  },
+  "action_tests_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "tests-O",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\action_tests_O"
+    ],
+    "returncode": 0,
+    "test_count": 9,
+    "elapsed_seconds": 2.166018099989742,
+    "log_sha256": "4aee8f47cca0ad73894a18f24feaddf8165566733cbe604ad4f53c663c0072a6"
+  },
+  "release_tests_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_action_publication.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "test_count": 2,
+    "elapsed_seconds": 0.8714107000268996,
+    "log_sha256": "1e93cd842e4d2836a744870b9c17e76819d9c5dd3d6c437224a7df02bf3381cc"
+  },
+  "representation": {
+    "command": [
+      "python",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\representation.json"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 20.304429000010714,
+    "log_sha256": "1603a86bcf668961c72bc0cfa1e337a285daee4cda2f92583fdf3e8ead94efa5"
+  },
+  "history": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "history",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\history",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 17.35428490000777,
+    "log_sha256": "a6b7cd2ff3e363eeec726e63328fd27024b2dca00a7d9f82ff173aea7ca33b97"
+  },
+  "boundary": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "boundary",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\boundary",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 1,
+    "test_count": null,
+    "elapsed_seconds": 0.539713500009384,
+    "log_sha256": "28efd225d9c7aadf97e40508b48a5d7442ab207cc9553d62e29b8bf447cfbf30"
+  },
+  "planning": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "planning",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\planning",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 1,
+    "test_count": null,
+    "elapsed_seconds": 1.0576749999891035,
+    "log_sha256": "81a47da9efafd37302173278572c87b3d5830c6a44d31a225d3af3d30a1a7782"
+  },
+  "action": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "action",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\action",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 40.57487499999115,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "representation_O": {
+    "command": [
+      "python",
+      "-O",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\representation_O.json"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 20.372843599994667,
+    "log_sha256": "1603a86bcf668961c72bc0cfa1e337a285daee4cda2f92583fdf3e8ead94efa5"
+  },
+  "history_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "history",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\history_O",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 18.41753000000608,
+    "log_sha256": "a6b7cd2ff3e363eeec726e63328fd27024b2dca00a7d9f82ff173aea7ca33b97"
+  },
+  "boundary_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "boundary",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\boundary_O",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 1,
+    "test_count": null,
+    "elapsed_seconds": 0.8951983000151813,
+    "log_sha256": "28efd225d9c7aadf97e40508b48a5d7442ab207cc9553d62e29b8bf447cfbf30"
+  },
+  "planning_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "planning",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\planning_O",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 1,
+    "test_count": null,
+    "elapsed_seconds": 1.2651704000018071,
+    "log_sha256": "81a47da9efafd37302173278572c87b3d5830c6a44d31a225d3af3d30a1a7782"
+  },
+  "action_O": {
+    "command": [
+      "python",
+      "-O",
+      "-m",
+      "aimrl.action_publication",
+      "action",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\action_O",
+      "--native-directory",
+      "<REBUILT_NATIVE>"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 38.28434420001577,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "saved_trace_GIF_pixels": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "gifs",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\gifs"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 22.342226500011748,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "protected_inputs_links": {
+    "command": [
+      "python",
+      "-m",
+      "aimrl.action_publication",
+      "inputs",
+      "--output",
+      "<CLEAN_CHECKOUT>\\.tmp\\checks\\inputs"
+    ],
+    "returncode": 0,
+    "test_count": null,
+    "elapsed_seconds": 9.463892500003567,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "_publication_copy": "Machine-local paths redacted; original hash in log_mapping.json. Numerical fields unchanged."
+}

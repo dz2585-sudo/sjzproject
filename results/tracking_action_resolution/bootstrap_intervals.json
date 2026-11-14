@@ -1,0 +1,178 @@
+[
+  {
+    "split": "final",
+    "terminal": "Plan",
+    "metric": "D",
+    "lower_95": -0.10220049999999985,
+    "upper_95": -0.08928583333333341,
+    "replicates": 2000,
+    "source_models": 1,
+    "paired_scenarios": 500,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "final",
+    "terminal": "Plan",
+    "metric": "C",
+    "lower_95": 0.006952666666666699,
+    "upper_95": 0.010660000000000003,
+    "replicates": 2000,
+    "source_models": 1,
+    "paired_scenarios": 500,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "final",
+    "terminal": "Plan",
+    "metric": "H",
+    "lower_95": 22.93795,
+    "upper_95": 24.15215,
+    "replicates": 2000,
+    "source_models": 1,
+    "paired_scenarios": 500,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "final",
+    "terminal": "Plan",
+    "metric": "A",
+    "lower_95": 0.0,
+    "upper_95": 0.0,
+    "replicates": 2000,
+    "source_models": 1,
+    "paired_scenarios": 500,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "final",
+    "terminal": "Hybrid",
+    "metric": "D",
+    "lower_95": -0.13274966666666665,
+    "upper_95": -0.1221713,
+    "replicates": 2000,
+    "source_models": 5,
+    "paired_scenarios": 500,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "final",
+    "terminal": "Hybrid",
+    "metric": "C",
+    "lower_95": 0.010603900000000012,
+    "upper_95": 0.013792066666666693,
+    "replicates": 2000,
+    "source_models": 5,
+    "paired_scenarios": 500,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "final",
+    "terminal": "Hybrid",
+    "metric": "H",
+    "lower_95": 23.32227,
+    "upper_95": 24.53001,
+    "replicates": 2000,
+    "source_models": 5,
+    "paired_scenarios": 500,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "final",
+    "terminal": "Hybrid",
+    "metric": "A",
+    "lower_95": 0.0,
+    "upper_95": 0.0,
+    "replicates": 2000,
+    "source_models": 5,
+    "paired_scenarios": 500,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "stress",
+    "terminal": "Plan",
+    "metric": "D",
+    "lower_95": -0.1353670833333333,
+    "upper_95": -0.1133470833333334,
+    "replicates": 2000,
+    "source_models": 1,
+    "paired_scenarios": 200,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "stress",
+    "terminal": "Plan",
+    "metric": "C",
+    "lower_95": 0.01699958333333335,
+    "upper_95": 0.02415041666666667,
+    "replicates": 2000,
+    "source_models": 1,
+    "paired_scenarios": 200,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "stress",
+    "terminal": "Plan",
+    "metric": "H",
+    "lower_95": 23.049749999999996,
+    "upper_95": 24.614999999999995,
+    "replicates": 2000,
+    "source_models": 1,
+    "paired_scenarios": 200,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "stress",
+    "terminal": "Plan",
+    "metric": "A",
+    "lower_95": 0.0,
+    "upper_95": 0.0,
+    "replicates": 2000,
+    "source_models": 1,
+    "paired_scenarios": 200,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "stress",
+    "terminal": "Hybrid",
+    "metric": "D",
+    "lower_95": -0.17186358333333343,
+    "upper_95": -0.1542663333333333,
+    "replicates": 2000,
+    "source_models": 5,
+    "paired_scenarios": 200,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "stress",
+    "terminal": "Hybrid",
+    "metric": "C",
+    "lower_95": 0.01968333333333332,
+    "upper_95": 0.02555366666666667,
+    "replicates": 2000,
+    "source_models": 5,
+    "paired_scenarios": 200,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "stress",
+    "terminal": "Hybrid",
+    "metric": "H",
+    "lower_95": 23.545975,
+    "upper_95": 25.161099999999998,
+    "replicates": 2000,
+    "source_models": 5,
+    "paired_scenarios": 200,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  },
+  {
+    "split": "stress",
+    "terminal": "Hybrid",
+    "metric": "A",
+    "lower_95": 0.0,
+    "upper_95": 0.0,
+    "replicates": 2000,
+    "source_models": 5,
+    "paired_scenarios": 200,
+    "method": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks."
+  }
+]

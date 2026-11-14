@@ -1,0 +1,56 @@
+{
+  "complete": true,
+  "copied_files_verified": 547,
+  "formal_runs": 12,
+  "formal_interactions": 60000000,
+  "development_summaries": 132,
+  "development_windows": 26400,
+  "development_ticks": 7920000,
+  "independent_splits": {
+    "final": {
+      "windows": 8000,
+      "paired_scenarios": 500
+    },
+    "stress": {
+      "windows": 3200,
+      "paired_scenarios": 200
+    }
+  },
+  "gifs": [
+    {
+      "path": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+      "sha256": "4c759251ff0475eb1ef29ed4f127bbc95a2f1afa53f74f0d4e16fdf0ce9de4ad",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+      "sha256": "692942586e54286db501de4eb9416710790f33b53697d51b852565e02d0e88a0",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_improvement/render/seed3601002_main_comparison.gif",
+      "sha256": "239d87cf029159002b1cae8f85c05a3a2748c7fae0c47d5b694a3a41036c4270",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+      "sha256": "6ebec9ad02e42ca9f7f98a5b7436dc6086703652d70767683683a9aa152c6dbc",
+      "frames": 301,
+      "duration_ms": 20070
+    }
+  ],
+  "relative_links_verified": 163,
+  "largest_study_file_bytes": 14504765,
+  "pilot_binaries_intentionally_excluded": 8,
+  "original_training_source_bundle_verified": true,
+  "previously_documented_source_differences": [
+    "aimrl/tracking25/agent.py",
+    "aimrl/tracking25/workflow.py",
+    "aimrl/tracking25/__main__.py"
+  ],
+  "recorded_audit_unchanged": true,
+  "training_or_result_regeneration": false
+}

@@ -1,0 +1,12 @@
+development Plan-H3-A10: D=1.220333 C=0.747067 H=88.1900
+development Plan-H3-A14: D=1.117050 C=0.757083 H=112.1050
+development Hybrid-H3-A10_s60: D=1.213567 C=0.750783 H=88.5750
+development Hybrid-H3-A10_s61: D=1.213600 C=0.750983 H=88.5450
+development Hybrid-H3-A10_s62: D=1.209100 C=0.751250 H=88.6650
+development Hybrid-H3-A10_s63: D=1.207600 C=0.751533 H=88.6350
+development Hybrid-H3-A10_s64: D=1.206767 C=0.751900 H=88.6850
+development Hybrid-H3-A14_s60: D=1.083483 C=0.762767 H=112.8350
+development Hybrid-H3-A14_s61: D=1.083817 C=0.762933 H=112.8400
+development Hybrid-H3-A14_s62: D=1.083650 C=0.762750 H=112.8600
+development Hybrid-H3-A14_s63: D=1.082567 C=0.763183 H=112.8850
+development Hybrid-H3-A14_s64: D=1.082567 C=0.762950 H=112.8700

@@ -1,0 +1,35 @@
+{
+  "runs": [
+    {
+      "run": "attempt_1",
+      "commands": 15,
+      "wall_seconds_sum": 292.5121868000715,
+      "successful_action_full_array_passes": 2,
+      "successful_old_planning_full_array_passes": 0,
+      "note": "All receipts retained."
+    },
+    {
+      "run": "launcher_attempt",
+      "commands": 15,
+      "wall_seconds_sum": 313.2611681999697,
+      "successful_action_full_array_passes": 2,
+      "successful_old_planning_full_array_passes": 2,
+      "note": "launcher_attempt used a stale copy at launch; only the accepted run checks the final source set."
+    },
+    {
+      "run": "accepted",
+      "commands": 15,
+      "wall_seconds_sum": 314.29537890010397,
+      "successful_action_full_array_passes": 2,
+      "successful_old_planning_full_array_passes": 2,
+      "note": "All receipts retained."
+    }
+  ],
+  "action_reconstruction_backups": 675000000,
+  "old_planning_reconstruction_backups": 262500000,
+  "setup_precomputation_repeated": false,
+  "formal_environment_replay_ticks": 0,
+  "formal_training_interactions": 0,
+  "Q_updates": 0,
+  "definition": "Read-only verification passes are charged separately from the original scientific precomputation and evaluation; short unit-test fixture work is not included in dense-array counters."
+}

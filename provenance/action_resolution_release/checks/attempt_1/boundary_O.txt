@@ -1,0 +1,32 @@
+PUBLICATION COPY — machine-local paths redacted; original hash in log_mapping.json.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<CLEAN_CHECKOUT>\aimrl\action_publication.py", line 173, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "<CLEAN_CHECKOUT>\aimrl\action_publication.py", line 159, in main
+    elif a.phase=='boundary':old.boundary_verify(out/'boundary')
+                             ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "<CLEAN_CHECKOUT>\aimrl\latest_publication.py", line 103, in boundary_verify
+    canonical.main()
+    ~~~~~~~~~~~~~~^^
+  File "<CLEAN_CHECKOUT>\aimrl\tracking_boundary_stability\verify_artifacts.py", line 44, in main
+    result=frozen.verify(c)
+  File "<CLEAN_CHECKOUT>\aimrl\tracking_boundary_stability\verify.py", line 46, in verify
+    check_protocol(c);history=history_check()
+                              ~~~~~~~~~~~~~^^
+  File "<CLEAN_CHECKOUT>\aimrl\latest_publication.py", line 91, in history
+    result=verify_protected(read_json(out/'historical_sha256_before.json'))
+  File "<CLEAN_CHECKOUT>\aimrl\latest_publication.py", line 60, in verify_protected
+    if path.is_file():verify_document(relative,expected,root,release);documents.append(relative)
+                      ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<CLEAN_CHECKOUT>\aimrl\action_publication.py", line 48, in chained
+    return old_document(relative,expected,root,release)
+  File "<CLEAN_CHECKOUT>\aimrl\latest_publication.py", line 45, in verify_document
+    require(sha(root/relative)==entry['published_sha256'],'Published document changed after review: '+relative)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<CLEAN_CHECKOUT>\aimrl\latest_publication.py", line 20, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Published document changed after review: .gitignore

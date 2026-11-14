@@ -1,0 +1,15 @@
+PUBLICATION COPY — machine-local paths redacted; original hash in log_mapping.json.
+test_cache_separation (test_tracking_action_resolution.ActionResolutionTests.test_cache_separation) ... ok
+test_invalid_actions_fail_closed (test_tracking_action_resolution.ActionResolutionTests.test_invalid_actions_fail_closed) ... ok
+test_one_tick_medium (test_tracking_action_resolution.ActionResolutionTests.test_one_tick_medium) ... ok
+test_python_mechanics_and_rng (test_tracking_action_resolution.ActionResolutionTests.test_python_mechanics_and_rng) ... ok
+test_reference_subset_and_shaping (test_tracking_action_resolution.ActionResolutionTests.test_reference_subset_and_shaping) ... ok
+test_saved_int16_state_index_is_widened (test_tracking_action_resolution.ActionResolutionTests.test_saved_int16_state_index_is_widened) ... ok
+test_schema_is_append_only (test_tracking_action_resolution.ActionResolutionTests.test_schema_is_append_only) ... ok
+test_terminal_is_original_ten_max (test_tracking_action_resolution.ActionResolutionTests.test_terminal_is_original_ten_max) ... ok
+test_twelve_instances (test_tracking_action_resolution.ActionResolutionTests.test_twelve_instances) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.394s
+
+OK

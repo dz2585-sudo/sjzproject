@@ -1,0 +1,87 @@
+{
+  "complete": true,
+  "inventories": {
+    "tracking_shooting_tradeoff": {
+      "verified_payload_files": 705,
+      "documented_omissions": [
+        "execution/setup.log"
+      ]
+    },
+    "tracking_fire_guard": {
+      "verified_payload_files": 174,
+      "documented_omissions": []
+    }
+  },
+  "reward_study": {
+    "runs": 21,
+    "training_interactions": 105000000,
+    "complete_training_windows": 349986,
+    "partial_training_windows": 21,
+    "checkpoints": 231,
+    "development_windows": 46200,
+    "training_reward_identities": 350007,
+    "final_windows": 11000,
+    "stress_windows": 4400,
+    "exact_checkpoint_reloads": 231,
+    "max_reward_identity_error": 1.8189894035458565e-12,
+    "unchanged_historical_files": 930,
+    "historical_readme_sha256": "26c5e8950063215321d7236e7d15c7735e1041a1ab6e0919f373eb0d707c0b50",
+    "historical_results_unchanged": 853,
+    "training_and_evaluation_targets_paired": true,
+    "evaluation_snapshots_unchanged": true,
+    "final_only_after_selection": true,
+    "frozen_head": "f094b3a25021a7fa7bacffad91e8967b09fdd374"
+  },
+  "guard_study": {
+    "learned_paired_windows_rechecked": 14700,
+    "paired_seed_contrasts": 42,
+    "zero_shot_windows": {
+      "final": {
+        "original": 0,
+        "guard": 0
+      },
+      "stress": {
+        "original": 0,
+        "guard": 0
+      }
+    },
+    "zero_shot_accuracy": "NA",
+    "exact_invariants": [
+      "D",
+      "C",
+      "H",
+      "physical state",
+      "target trajectory"
+    ],
+    "training_interactions": 0
+  },
+  "decoded_gifs": [
+    {
+      "path": "results/tracking_shooting_tradeoff/demos/scenario_4400000.gif",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/demos/scenario_4400001.gif",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/demos/scenario_4400002.gif",
+      "frames": 301,
+      "duration_ms": 20070
+    },
+    {
+      "path": "results/tracking_fire_guard/demo/synchronized_fire_guard.gif",
+      "frames": 301,
+      "duration_ms": 20070
+    }
+  ],
+  "relative_links_checked": 219,
+  "training_interactions_this_check": 0,
+  "publication_document_exceptions_verified": [
+    ".gitignore"
+  ],
+  "old_expected_hashes_modified": false,
+  "_publication_copy": "Machine-local paths redacted; original hash in log_mapping.json. Numerical fields unchanged."
+}

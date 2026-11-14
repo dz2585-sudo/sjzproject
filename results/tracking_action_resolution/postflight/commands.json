@@ -1,0 +1,27 @@
+{
+  "new_artifacts": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "aimrl.tracking_action_resolution",
+      "verify"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 45.03188809999847,
+    "test_count": null,
+    "log_sha256": "ef9e4a7be1ed5d54f6ae52ea90f0b3da8d1d3947cdf371445bfb7ebb9d1a3bf2"
+  },
+  "new_artifacts_O": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "-m",
+      "aimrl.tracking_action_resolution",
+      "verify"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 44.84285830002045,
+    "test_count": null,
+    "log_sha256": "65c669e226b3cae933190a250ae56e60d0b849cf793aba92a8c5523f01e094fa"
+  }
+}

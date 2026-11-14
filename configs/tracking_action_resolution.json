@@ -1,0 +1,114 @@
+{
+  "environment": {
+    "grid_size": 25,
+    "minimum_reset_distance": 12,
+    "turn_probability": 0.05,
+    "speed_toggle_probability": 0.05,
+    "episode_ticks": 300
+  },
+  "actions": [
+    "left_slow",
+    "right_slow",
+    "up_slow",
+    "down_slow",
+    "stay",
+    "fire",
+    "left_fast",
+    "right_fast",
+    "up_fast",
+    "down_fast",
+    "left_medium",
+    "right_medium",
+    "up_medium",
+    "down_medium"
+  ],
+  "rewards": {
+    "step": -0.05,
+    "hit": 10.0,
+    "miss": -1.0
+  },
+  "gamma": 0.99,
+  "close_weight": 0.5,
+  "planning": {
+    "turn_probability": 0.05,
+    "speed_toggle_probability": 0.05,
+    "horizons": [
+      3
+    ],
+    "tie_tolerance": 1e-10,
+    "terminals": [
+      "Phi",
+      "Q+Phi"
+    ],
+    "training_seeds": [
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "display_training_seed": 60,
+    "development": {
+      "start": 7100000,
+      "count": 200
+    },
+    "final": {
+      "start": 7200000,
+      "count": 500
+    },
+    "stress": {
+      "start": 7300000,
+      "count": 200,
+      "turn_probability": 0.1,
+      "speed_toggle_probability": 0.1
+    },
+    "demo_seeds": [
+      7400000,
+      7400001,
+      7400002
+    ],
+    "event_window": {
+      "before": 5,
+      "after": 15,
+      "recovery_horizon": 30,
+      "recovery_consecutive_close": 3,
+      "overlap": "Keep earliest event of the same type; reject later events within 30 ticks. Recovery is censored at the next event of either random type and at window end; bounce curves retain overlaps with other event types."
+    },
+    "thresholds": {
+      "C_gain": 0.05,
+      "H_retention": 0.98,
+      "H_simultaneous": 1.02,
+      "A_minimum": 0.98,
+      "C_absolute": 0.75
+    },
+    "common_diagnostics": {
+      "source": "results/tracking_boundary_stability/diagnostics/common_states.npz",
+      "scope": "Reuse the previously frozen common physical states; no new holdout access"
+    },
+    "behavior_selection": [
+      "Lexicographically first scenario/source-model/tick on A10 state with observable speed 2 where A14 chooses medium and A10 chooses another action.",
+      "First accepted target bounce where own-rollout pre-action alignment recovery differs within the next 30 ticks; same-type events suppressed within 30 ticks.",
+      "First same-state medium disagreement where A14 own-route post-distance exceeds A10 own-route distance. Save absence when none; this is descriptive, not a causal one-step counterfactual."
+    ],
+    "event_overlap": "Reuse prior accepted-event rules for distance/recovery curves; alignment recovery uses first d_pre=0 within 30 ticks after a bounce, window-censored.",
+    "new_training_interactions": 0,
+    "monotonicity_absolute_tolerance": 1e-09,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261114,
+    "bootstrap": "Resample whole paired scenarios, and for Hybrid resample the five paired source models independently; same scenario draw across all models. Percentile 95% intervals. Never resample ticks.",
+    "terminal_version": "task_max_original_A10_shaped_Q_plus_Phi_v1",
+    "action_sets": [
+      10,
+      14
+    ],
+    "extra_metrics": {
+      "first_close": "First post-motion d<=1, 1-based; no acquisition assigned 300, acquired flag retained.",
+      "longest_far": "Longest consecutive post-motion d>5 run.",
+      "phases": "Acquisition includes first close tick; sustained tracking is strictly after first close, or empty if never close.",
+      "boundary": "Any of four pre-action cursor/target coordinates within 3 cells inclusive of an edge.",
+      "overshoot": "Cursor crosses current target coordinate on its exact row/column before target motion.",
+      "reversal": "Consecutive cursor commands along same axis with opposite sign; descriptive.",
+      "medium": "IDs 10..13, nominal L1=2; actual L1 from clipping separately 0/1/2."
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "models": [
+    {
+      "seed": 60,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_60/checkpoints/step_5000000.npz",
+      "file_sha256": "b17ce849d6a99ef17b857905d3fab5935de62a2ca987506bd8a559d6debb8b29",
+      "q_sha256": "98ece58a7e6e959cc9aa3409e497699cff1dad19c33db2f986e9b9652945cd72",
+      "counts_sha256": "c81e4d429dc512bf1ded6717813dd747d48531327e2633a1587e89fac70123a6",
+      "shape": [
+        19208,
+        10
+      ],
+      "updates_in_this_study": 0
+    },
+    {
+      "seed": 61,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_61/checkpoints/step_5000000.npz",
+      "file_sha256": "2a102e8b3ff0412ee4f01a4d5229dd16074b69810ea2f66569179f26c68f9235",
+      "q_sha256": "90a9f03288c3c51443f74fb5781b4389314f5cc6162e0aef13ca13340b41cab7",
+      "counts_sha256": "7c1479e75c2bd96d89e7e959713bf989aed90b665ec8175410651e1c592873ab",
+      "shape": [
+        19208,
+        10
+      ],
+      "updates_in_this_study": 0
+    },
+    {
+      "seed": 62,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_62/checkpoints/step_5000000.npz",
+      "file_sha256": "414cf25034d392bfdca761ebdbaff870db65edc0d0c49c9c8f318a78c9137ae0",
+      "q_sha256": "77dfebd7dd6287833e7b7347c4c55da64ae11926d9a1d1f01c62f100fdb0851d",
+      "counts_sha256": "6a7c738001f5a7389f7655dad3922339ec280778fe329e2e8ce2560182b59417",
+      "shape": [
+        19208,
+        10
+      ],
+      "updates_in_this_study": 0
+    },
+    {
+      "seed": 63,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_63/checkpoints/step_5000000.npz",
+      "file_sha256": "a039aecc2476d76679daa5414236a34a3288e42a08ab27d2789f81aec591fbd0",
+      "q_sha256": "0a9e4f442ed46b0760a9d8fcf9dcd4dee81ca3b8ccfc8cf24f2c1cc5649ddec6",
+      "counts_sha256": "765180966697d1368a117f63d3f8e62558b3adfc34e74edcae4d1874beb768de",
+      "shape": [
+        19208,
+        10
+      ],
+      "updates_in_this_study": 0
+    },
+    {
+      "seed": 64,
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_64/checkpoints/step_5000000.npz",
+      "file_sha256": "044a57200a2c325e88b49b33ae865caeabd2cae37e53ae9b3b5205e2f6df31bd",
+      "q_sha256": "b1ee11b144895d8b6693a8d5386ae102c2645ace415880b99f4d3878ce671858",
+      "counts_sha256": "f8c9d22422be0ca34a9bfa73e4a10555a1e2d25a919f5de56f1e7ba15c9c2b08",
+      "shape": [
+        19208,
+        10
+      ],
+      "updates_in_this_study": 0
+    }
+  ],
+  "terminal": "max over original ten shaped Q actions + Phi",
+  "training_interactions": 0,
+  "Q_updates": 0
+}

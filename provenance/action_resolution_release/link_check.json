@@ -1,0 +1,2021 @@
+{
+  "complete": true,
+  "count": 403,
+  "links": [
+    {
+      "source": "README.md",
+      "target": "docs/research_index.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "two-cell-action-resolution-ablation"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "boundary-information-and-learning-rate-stability"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "short-horizon-planning-with-learned-terminal-values"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "representation-benchmark"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "trackingshooting-reward-trade-offs"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "q-learning-with-a-firing-guard"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "progress-step-by-step"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "demonstrations"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "artifact-locations-and-path-changes"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "installation-and-verification"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "limitations-and-next-work"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/project_history.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/artifact_paths.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_boundary_stability/figures/paired_seeds.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_boundary_stability/demos/scenario_5400000.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_boundary_stability.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_boundary_stability/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_boundary_stability",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_boundary_stability/demos",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/reproduce_latest_studies.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_planning/figures/horizon_response.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_planning/demos/scenario_6400000/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_planning.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_planning/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_planning/paired_differences.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_planning/demos",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/reproduce_latest_studies.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "two-cell-action-resolution-ablation"
+    },
+    {
+      "source": "README.md",
+      "target": "provenance/action_resolution_release/recalculated/raw_recomputed.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/behavior_fragments.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/figures/D_C_H.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/demos/scenario_7400000/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_action_resolution.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/behavior_interpretation.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/figures/paired_models.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/figures/action_usage.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/figures/high_speed_events.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_action_resolution/demos",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_action_resolution.md",
+      "anchor": "reproduction-and-publication-audits"
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/evaluation/cross_seed_summary.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/evaluation/final",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/final_comparison.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601002_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/evaluation/stress",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_shooting_tradeoff.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_fire_guard.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "spec.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "configs/base.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "scripts/check_setup.py",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "requirements.txt",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/environment_baselines/rule_policy_diagnostic.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/environment_baselines/random_policy_diagnostic.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/environment_baselines/rule_policy_preview.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/q_learning_development/base_seed0/validation.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/q_learning_development/base_seed0/learning_curve.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/q_learning_development/base_seed0/q_table.npy",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/reward_shaping_development/static_diagnostic_note.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/reward_shaping_development/comparison/comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/reward_shaping_development/comparison/comparison.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/reward_shaping_development/protocol_frozen.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid5_benchmark/summary/learning_curves.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid5_benchmark/test/learned_summary.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid5_benchmark/test/baseline_summary.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid5_benchmark/summary/paired_differences.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid5_benchmark/summary/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development/demo/demo_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development/summary/learning_curves.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "configs/trial25.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development/summary/comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development/summary/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development/demo/trajectories.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render/seed3601000_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking25_v2.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/evaluation/comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render/learning_curves.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render/speed_choices.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "anchor": "representation-benchmark"
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/learning_curves.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/boundary_speed_diagnostics.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/distance_tails.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/coverage.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/speed_choices.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/execution_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/runs",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "provenance/README.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "provenance/tracking_improvement_publication.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "provenance/tracking_improvement_publication_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601000_main_comparison_traces.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601001_main_comparison_traces.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601002_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601002_main_comparison_traces.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/render/seed3601000_six_policy_comparison_traces.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render/seed3601000_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render/seed3601001_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render/seed3601002_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking/render",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development/demo/demo_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development/demo/trajectories.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/environment_baselines",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/q_learning_development",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/reward_shaping_development",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid5_benchmark",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/environment_baselines/rule_policy_diagnostic.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/environment_baselines/random_policy_diagnostic.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/environment_baselines/rule_policy_preview.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/q_learning_development",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/reward_shaping_development",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid5_benchmark",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/grid25_development",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/continuous_tracking",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/runs/relative_potential/seed_10/q_table.npz",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_improvement/runs/relative_potential/seed_10/visitation.npz",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/artifact_paths.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/reproduction.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "provenance/tracking_improvement_publication.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "spec.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/trial25.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking25_v2.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_improvement.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "spec.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/reproduction.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/figures/close_hits_tradeoff.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/demos/scenario_4400000.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/paper_addendum.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/runs",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/per_seed.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/paired_differences.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/evaluation",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/figures/distance_hits_tradeoff.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/figures/learning_curves.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/demos/scenario_4400001.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/demos/scenario_4400002.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/execution_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_shooting_tradeoff.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/figures/objective_tradeoffs.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/demo/synchronized_fire_guard.gif",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/paper_addendum.md",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_shooting_tradeoff/runs",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/per_seed.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/paired_differences.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/evaluation",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/thresholds.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/figures/accuracy_and_misses.png",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/q_diagnostics_by_condition.csv",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "results/tracking_fire_guard/execution_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "README.md",
+      "target": "docs/tracking_fire_guard.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "README.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "docs/project_history.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/environment_baselines/rule_policy_diagnostic.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/environment_baselines/random_policy_diagnostic.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/environment_baselines/rule_policy_preview.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/q_learning_development",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/reward_shaping_development",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/grid5_benchmark",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/grid25_development",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/continuous_tracking",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "provenance/archive_manifest.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/cross_seed_summary.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/development",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/final",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/stress",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/diagnostics",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/execution_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "provenance/tracking_improvement_publication_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/learning_curves.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/development",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/final_comparison.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/final",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/cross_seed_summary.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/distance_tails.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/final",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/boundary_speed_diagnostics.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/final",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/coverage.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/runs",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/speed_choices.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/evaluation/final",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/seed3601000_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/seed3601000_main_comparison_traces.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/seed3601001_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/seed3601001_main_comparison_traces.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/seed3601002_main_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/seed3601002_main_comparison_traces.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/seed3601000_six_policy_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/render/seed3601000_six_policy_comparison_traces.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/continuous_tracking/render/seed3601000_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/continuous_tracking/render/seed3601001_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/continuous_tracking/render/seed3601002_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/grid25_development/demo/demo_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/runs/relative_potential/seed_10/q_table.npz",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/runs/relative_potential/seed_10/visitation.npz",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/tracking_improvement/runs/relative_potential/seed_10/metadata.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/continuous_tracking/base/q_table.npz",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "results/continuous_tracking/potential/q_table.npz",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "provenance/documentation_organization_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/artifact_paths.md",
+      "target": "provenance/tracking_improvement_publication.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "README.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "docs/artifact_paths.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "spec.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "configs/base.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "scripts/check_setup.py",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/environment_baselines/rule_policy_diagnostic.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/environment_baselines/random_policy_diagnostic.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/environment_baselines/rule_policy_preview.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/q_learning_development/base_seed0/validation.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/reward_shaping_development/static_diagnostic_note.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/reward_shaping_development/comparison/comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/reward_shaping_development/comparison/comparison.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/reward_shaping_development/protocol_frozen.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/grid5_benchmark/summary/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/grid5_benchmark/test/learned_summary.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/grid5_benchmark/summary/paired_differences.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/grid25_development/summary/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/grid25_development/demo/demo_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "docs/trial25.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "docs/tracking25_v2.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/continuous_tracking/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/continuous_tracking/render/seed3601000_comparison.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/tracking_improvement/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/tracking_improvement/evaluation/cross_seed_summary.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/tracking_improvement/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "results/tracking_improvement/execution_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "docs/tracking_improvement.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "provenance/README.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "provenance/tracking_improvement_publication.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "provenance/tracking_improvement_publication.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/project_history.md",
+      "target": "provenance/tracking_improvement_publication_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/reproduce_latest_studies.md",
+      "target": "docs/research_index.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/reproduce_latest_studies.md",
+      "target": "results/tracking_boundary_stability/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/reproduce_latest_studies.md",
+      "target": "results/tracking_planning/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/reproduce_latest_studies.md",
+      "target": "provenance/latest_studies_release/README.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/reproduce_latest_studies.md",
+      "target": "docs/tracking_action_resolution.md",
+      "anchor": "reproduction-and-publication-audits"
+    },
+    {
+      "source": "docs/reproduction.md",
+      "target": "provenance/reproduction_update_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/reproduction.md",
+      "target": "provenance/windows_acceptance.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "docs/tracking_action_resolution.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_action_resolution/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_action_resolution",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_action_resolution/demos",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "docs/tracking_boundary_stability.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_boundary_stability/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_boundary_stability",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_boundary_stability/demos",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "docs/tracking_planning.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_planning/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_planning",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_planning/demos",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "docs/tracking_shooting_tradeoff.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_shooting_tradeoff/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "docs/tracking_fire_guard.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_fire_guard/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "docs/tracking_improvement.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "results/tracking_improvement/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "docs/reproduce_latest_studies.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "provenance/latest_studies_release/README.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/research_index.md",
+      "target": "provenance/action_resolution_release/README.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "README.md",
+      "anchor": "two-cell-action-resolution-ablation"
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/conclusions.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/paper_addendum.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/behavior_interpretation.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "provenance/action_resolution_release/recalculated/raw_recomputed.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "provenance/action_resolution_release/recalculated/action_denominators.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/evaluation",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/paired_differences.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "aimrl/tracking_action_resolution/kernel.c",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/REPRODUCE.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/model_provenance.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_planning/cache",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/cache",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/execution_accounting.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/figures/D_C_H.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/figures/paired_models.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/figures/action_usage.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/figures/high_speed_events.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/demos/scenario_7400000/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/demos/scenario_7400001/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "results/tracking_action_resolution/demos/scenario_7400002/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_action_resolution.md",
+      "target": "provenance/action_resolution_release/README.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "results/tracking_boundary_stability/figures/paired_seeds.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "results/tracking_boundary_stability/demos/scenario_5400000.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "docs/tracking_boundary_stability.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "results/tracking_boundary_stability/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "results/tracking_boundary_stability",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "results/tracking_boundary_stability/demos",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "docs/reproduce_latest_studies.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "results/tracking_boundary_stability/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "aimrl/tracking_boundary_stability",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "configs/tracking_boundary_stability.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "tests/test_tracking_boundary_stability.py",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_boundary_stability.md",
+      "target": "results/tracking_boundary_stability/comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_fire_guard.md",
+      "target": "results/tracking_fire_guard/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_fire_guard.md",
+      "target": "results/tracking_shooting_tradeoff/runs",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_fire_guard.md",
+      "target": "results/tracking_fire_guard/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_fire_guard.md",
+      "target": "results/tracking_fire_guard/execution_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_fire_guard.md",
+      "target": "docs/tracking_shooting_tradeoff.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_fire_guard.md",
+      "target": "aimrl/tracking_tradeoff/kernel.c",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_fire_guard.md",
+      "target": "provenance/tracking_studies_release.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_fire_guard.md",
+      "target": "provenance/tracking_fire_guard_original_sources.zip",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_improvement.md",
+      "target": "results/tracking_improvement/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_improvement.md",
+      "target": "results/tracking_improvement/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_improvement.md",
+      "target": "results/tracking_improvement/execution_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "results/tracking_planning/figures/horizon_response.png",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "results/tracking_planning/demos/scenario_6400000/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "docs/tracking_planning.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "results/tracking_planning/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "results/tracking_planning/paired_differences.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "results/tracking_planning/demos",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "docs/reproduce_latest_studies.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "docs/tracking_action_resolution.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "results/tracking_planning/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "aimrl/tracking_planning",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "configs/tracking_planning.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "tests/test_tracking_planning.py",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "results/tracking_planning/per_policy.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_planning.md",
+      "target": "results/tracking_planning/thresholds.csv",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "results/tracking_shooting_tradeoff/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "results/tracking_shooting_tradeoff/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "results/tracking_shooting_tradeoff/paper_addendum.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "docs/reproduction.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "aimrl/tracking_tradeoff/kernel.c",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "docs/tracking_fire_guard.md",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "results/tracking_shooting_tradeoff/execution_checks.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "provenance/tracking_studies_release.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "provenance/tracking_studies_release.json",
+      "anchor": ""
+    },
+    {
+      "source": "docs/tracking_shooting_tradeoff.md",
+      "target": "provenance/tracking_tradeoff_setup_public.txt",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/behavior_interpretation.md",
+      "target": "results/tracking_action_resolution/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/behavior_interpretation.md",
+      "target": "results/tracking_action_resolution/action_usage.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/behavior_interpretation.md",
+      "target": "results/tracking_action_resolution/speed_boundary_slices.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/behavior_interpretation.md",
+      "target": "results/tracking_action_resolution/diagnostics/common_comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/behavior_interpretation.md",
+      "target": "results/tracking_action_resolution/mechanism_comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/behavior_interpretation.md",
+      "target": "results/tracking_action_resolution/behavior_selection.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/conclusions.md",
+      "target": "results/tracking_action_resolution/behavior_interpretation.md",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/paper_addendum.md",
+      "target": "results/tracking_action_resolution/results_summary.md",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/paper_addendum.md",
+      "target": "results/tracking_action_resolution/protocol.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/paper_addendum.md",
+      "target": "results/tracking_action_resolution/REPRODUCE.md",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/paper_addendum.md",
+      "target": "results/tracking_action_resolution/behavior_interpretation.md",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/monotonicity.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/seed_audit.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/action_usage.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/speed_boundary_slices.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/diagnostics/common_comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/behavior_selection.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/behavior_fragments.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/mechanism_comparison.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/recovery.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/high_speed_event_curves.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/evaluation/final/runtime.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/execution_accounting.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/native/build.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/historical_integrity.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/preflight/commands.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/postflight/commands.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/output_inventory.csv",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/inventory_scope.json",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/figures/D_C_H.png",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/figures/paired_models.png",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/figures/action_usage.png",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/figures/high_speed_events.png",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/demos/scenario_7400000/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/demos/scenario_7400001/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/demos/scenario_7400002/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/REPRODUCE.md",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/conclusions.md",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/paper_addendum.md",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/demos/scenario_7400000/synchronized.gif",
+      "anchor": ""
+    },
+    {
+      "source": "results/tracking_action_resolution/results_summary.md",
+      "target": "results/tracking_action_resolution/behavior_interpretation.md",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "provenance/action_resolution_release/research_input_sha256.json",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "provenance/action_resolution_release/release.json",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "provenance/action_resolution_release/original_documents.zip",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "provenance/action_resolution_release/public_delivery_state.txt",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "provenance/action_resolution_release/recalculated/raw_recomputed.json",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "provenance/action_resolution_release/recalculated/paired_aggregate_effects.csv",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "provenance/action_resolution_release/recalculated/action_denominators.csv",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "provenance/action_resolution_release/recalculated/cost_definition_check.json",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "docs/tracking_action_resolution.md",
+      "anchor": ""
+    },
+    {
+      "source": "provenance/action_resolution_release/README.md",
+      "target": "results/tracking_action_resolution/results_summary.md",
+      "anchor": ""
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+PUBLICATION COPY — machine-local paths redacted; original hash in log_mapping.json.
+test_chained_contract_passed_explicitly_by_historical_protection (test_action_publication.ActionPublicationTests.test_chained_contract_passed_explicitly_by_historical_protection) ... ok
+test_document_change_needs_original_archive_and_current_digest (test_action_publication.ActionPublicationTests.test_document_change_needs_original_archive_and_current_digest) ... ok
+test_only_private_snapshot_can_be_omitted (test_action_publication.ActionPublicationTests.test_only_private_snapshot_can_be_omitted) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.057s
+
+OK

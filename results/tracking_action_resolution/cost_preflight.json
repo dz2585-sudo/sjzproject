@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "development_windows": 2400,
+  "development_seconds": 5.074264199996833,
+  "formal_windows": 8400,
+  "formal_seconds_linear_estimate": 17.759924699988915,
+  "precomputation_seconds": 40.88657790000434,
+  "precompute_peak_working_set_bytes": 224464896,
+  "development_peak_working_set_bytes": 61628416,
+  "final_opened": false,
+  "decision": "Proceed at requested full scale; no protocol reduction or tuning."
+}

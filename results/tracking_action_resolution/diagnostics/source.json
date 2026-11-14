@@ -1,0 +1,8 @@
+{
+  "source": "results/tracking_boundary_stability/diagnostics/common_states.npz",
+  "sha256": "949cbdfd305d3268dd957c173c83e54ae8c17a085b6ca5f029032e831b2fc712",
+  "states": 8262,
+  "visitation_events": 9600,
+  "environment_ticks": 0,
+  "meaning": "Equal distinct physical states and separately prior-visitation-weighted counts. No new holdout/future exposed."
+}

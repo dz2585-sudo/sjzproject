@@ -1,0 +1,2 @@
+PUBLICATION COPY — machine-local paths redacted; original hash in log_mapping.json.
+Verified 879 payload files, 219 links and 4 complete GIFs.

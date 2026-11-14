@@ -89,3 +89,7 @@ For planning, `Phi(s)=-L1_distance`. The previous training reward was `r_task + 
 Saved GIFs contain 301 frames and 20,070 ms each. All frame pixels/timings were programmatically decoded and verified. Actual-player inspection was not performed; this publication requests no Chrome or desktop-control permission.
 
 [Research index](research_index.md) · [Boundary report](../results/tracking_boundary_stability/results_summary.md) · [Planning report](../results/tracking_planning/results_summary.md) · [Release contract and checks](../provenance/latest_studies_release/README.md)
+
+## Current publication adapter and two-cell action study
+
+The newer navigation changes are checked through `python -m aimrl.action_publication boundary --output .tmp/release-boundary` (or `planning`, `history`, `action`; also run under `python -O`). This narrow adapter verifies both archived baseline documents and reviewed current documents, then executes the historical numerical checks without changing their contracts. Receipts go to the supplied fresh directory. See [current study and exact commands](tracking_action_resolution.md#reproduction-and-publication-audits). Frozen historical commands/reports above retain their original context. Fourteen-action training has not been run.

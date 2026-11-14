@@ -2,9 +2,9 @@
 
 A CPU-based reinforcement-learning research project for ELEN E6885. The project studies how reward shaping and state representation affect learning to aim at and continuously follow a moving target. The simulator supplies coordinates directly. The original learned controller is evaluated separately from the inference-only firing guard.
 
-**Current status:** the boundary-stability study completed 100M formal + 4M pilot interactions. The zero-training short-horizon planning study completed 20 policy instances on new Final/Stress scenarios; Hybrid reaches the 75% Final close target while retaining hits, but the relative +5pp joint gate remains unmet. A 2-cell action experiment remains future work.
+**Current status:** the boundary-stability study completed 100M formal + 4M pilot interactions. The zero-training short-horizon planning study completed 20 policy instances on new Final/Stress scenarios; Hybrid reaches the 75% Final close target while retaining hits, but the relative +5pp joint gate remains unmet. The completed two-cell action ablation improves D/C/H without training; Final exceeds 75% close, Stress and the relative +5pp gate remain unmet. Fourteen-action training is future work.
 
-[Research index](docs/research_index.md) · [Boundary stability](#boundary-information-and-learning-rate-stability) · [Short-horizon planning](#short-horizon-planning-with-learned-terminal-values) · [Representation benchmark](#representation-benchmark) · [Reward trade-offs](#trackingshooting-reward-trade-offs) · [Firing guard](#q-learning-with-a-firing-guard) · [Progress, step by step](#progress-step-by-step) · [Demonstrations](#demonstrations) · [Artifact locations and path changes](#artifact-locations-and-path-changes) · [Installation and verification](#installation-and-verification) · [Limitations and next work](#limitations-and-next-work)
+[Research index](docs/research_index.md) · [Two-cell actions](#two-cell-action-resolution-ablation) · [Boundary stability](#boundary-information-and-learning-rate-stability) · [Short-horizon planning](#short-horizon-planning-with-learned-terminal-values) · [Representation benchmark](#representation-benchmark) · [Reward trade-offs](#trackingshooting-reward-trade-offs) · [Firing guard](#q-learning-with-a-firing-guard) · [Progress, step by step](#progress-step-by-step) · [Demonstrations](#demonstrations) · [Artifact locations and path changes](#artifact-locations-and-path-changes) · [Installation and verification](#installation-and-verification) · [Limitations and next work](#limitations-and-next-work)
 
 The [detailed research history](docs/project_history.md) records the reasoning behind each change. The [artifact guide](docs/artifact_paths.md) explains exact file locations, historical-to-current path mappings, and how to open the demonstrations.
 
@@ -72,7 +72,47 @@ Planning preparation is separately charged in the precomputation record: state b
 
 Programmatic decoding verified all 301 frames and their timing; actual-player inspection was not performed and no desktop/browser permission was requested. [Study navigation](docs/tracking_planning.md) · [report](results/tracking_planning/results_summary.md) · [paired results](results/tracking_planning/paired_differences.csv) · [other GIFs](results/tracking_planning/demos/) · [reproduce](docs/reproduce_latest_studies.md).
 
-**Next work:** a controlled 2-cell movement-action experiment is proposed, not completed. Preserve the current-action planning baseline and test C and H jointly; these results do not establish a theoretical ceiling.
+**Follow-up completed:** see the [two-cell action ablation](#two-cell-action-resolution-ablation) on independent scenes. A separate fourteen-action learning study remains future work; these results do not establish a theoretical ceiling.
+
+## Two-cell action resolution ablation
+
+**Question.** With the same full physical state, known model, task reward, three-step feedback planning and terminal value, do four additional one-tick two-cell moves improve tracking while retaining hits? A14 preserves original action IDs 0–9 and appends left/right/up/down medium (IDs 10–13). New actions are allowed at all three depths. Hybrid uses the same five frozen ten-action R-Decay models (seeds 60–64), without inventing Q entries for new actions. **New research training interactions=0; frozen Q updates=0.**
+
+All controls below use this study's new, paired scenes, not the earlier planning holdout. Pure Plan has one controller per action set and **no training-seed SD**; Hybrid reports five source-model means ± **sample SD (ddof=1)**. C/A and their SDs are expressed in percent/percentage-point units. A is pooled hits/shots within each source model, then averaged across models.
+
+| Split | Controller | Instances | D | C (%) | H / 300 ticks | A (%) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Final | Plan-H3-A10 | 1 | 1.2120 | 74.6447 | 88.3700 | 100.0000 |
+| Final | Plan-H3-A14 | 1 | 1.1164 | 75.5280 | 111.8980 | 100.0000 |
+| Final | Hybrid-H3-A10 | 5 | 1.2023 ± 0.0034 | 75.0547 ± 0.0492 | 88.8128 ± 0.0227 | 100.0000 ± 0.0000 |
+| Final | Hybrid-H3-A14 | 5 | 1.0745 ± 0.0004 | 76.2769 ± 0.0037 | 112.7332 ± 0.0041 | 100.0000 ± 0.0000 |
+| Stress | Plan-H3-A10 | 1 | 1.3487 | 69.6750 | 79.6100 | 100.0000 |
+| Stress | Plan-H3-A14 | 1 | 1.2240 | 71.7367 | 103.4400 | 100.0000 |
+| Stress | Hybrid-H3-A10 | 5 | 1.3422 ± 0.0052 | 70.1420 ± 0.0494 | 79.9540 ± 0.0778 | 100.0000 ± 0.0000 |
+| Stress | Hybrid-H3-A14 | 5 | 1.1794 ± 0.0009 | 72.3987 ± 0.0147 | 104.2820 ± 0.0135 | 100.0000 ± 0.0000 |
+
+| Split | Terminal | ΔD | ΔC (pp) | ΔH | H change (%) | A14 C (%) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Final | Plan | -0.095613 | +0.8833 | +23.5280 | +26.6244 | 75.5280 |
+| Final | Hybrid | -0.127820 | +1.2223 | +23.9204 | +26.9335 | 76.2769 |
+| Stress | Plan | -0.124733 | +2.0617 | +23.8300 | +29.9334 | 71.7367 |
+| Stress | Hybrid | -0.162763 | +2.2567 | +24.3280 | +30.4275 | 72.3987 |
+
+**Aggregation:** Hybrid H change is `100*(mean_m H_A14,m / mean_m H_A10,m - 1)`, a **ratio of means**. Per-model ratios are separate paired results; their arithmetic mean is not substituted. All differences use unrounded raw counts. The [publication recomputation](provenance/action_resolution_release/recalculated/raw_recomputed.json) records both formulas explicitly.
+
+D, C and H improve under both terminals; hits increase about **27%–30%**, with A=100%. All five Hybrid model pairs improve D/C/H in both splits. Final Plan-A14 and all five Hybrid-A14 instances attain absolute C≥75% and retain hits. Stress remains below 75%. Both relative joint gates still **fail ΔC≥5 percentage points**, despite passing the hit requirements. Value monotonicity passes all 56,250,000 state/terminal/depth comparisons (fixed tolerance 1e-9, minimum difference 0, zero violations); it does not guarantee each rolling trajectory or metric improves at every tick.
+
+The largest hit gain is associated with **speed-1 alignment control**: Hybrid Final medium use is 41.90% of observable-speed-1 decisions versus 2.80% at speed 2; overall use is 22.24%. Stay decreases from 13.65% to 2.10%. Speed-2 slices also improve. Crossing the *current* target coordinate increases (about +6.80pp), while immediate reversals decrease; this is not a general reduction of overshoot. All 284,127 formal medium commands move an actual two cells; clipped 1/0 cases remain supported and tested. [Fixed-rule regressions and both real routes](results/tracking_action_resolution/behavior_fragments.csv) are retained.
+
+Final: **6,000 windows**; Stress: **2,400**, totaling **2,520,000 environment ticks**. Development is separately 2,400 windows/720,000 ticks; demos 12/3,600. Offline preparation is separately 112,500,000 backups, 657,000,000 chance terms and 1,350,000,000 action-value lookups; none are training interactions. Full-state information, known dynamics and extra planning computation are part of this result. Stress real probabilities are 0.10 while the planner stays at 0.05.
+
+![Two-cell action ablation: D/C/H](results/tracking_action_resolution/figures/D_C_H.png)
+
+![Four panels, initial state and all 300 ticks](results/tracking_action_resolution/demos/scenario_7400000/synchronized.gif)
+
+Each GIF has 301 frames and 20,070 ms. Full pixel/timing decoding is verified; **actual-player inspection was not performed**. [Study guide](docs/tracking_action_resolution.md) · [frozen English report](results/tracking_action_resolution/results_summary.md) · [behavior interpretation](results/tracking_action_resolution/behavior_interpretation.md) · [paired models figure](results/tracking_action_resolution/figures/paired_models.png) · [action-use figure](results/tracking_action_resolution/figures/action_usage.png) · [high-speed events](results/tracking_action_resolution/figures/high_speed_events.png) · [all data](results/tracking_action_resolution/) · [other GIFs](results/tracking_action_resolution/demos/) · [release-safe reproduction](docs/tracking_action_resolution.md#reproduction-and-publication-audits).
+
+**Next work:** a separately frozen fourteen-action training study is justified; **no fourteen-action Q-learning has been trained here**. The present evidence concerns extra control options under full-state model-based planning with a ten-action learned terminal. These holdouts and thresholds will not be retuned.
 
 ## Representation benchmark
 

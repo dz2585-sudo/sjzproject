@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\aimrl\tracking_action_resolution\__main__.py", line 2, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\aimrl\tracking_action_resolution\study.py", line 69, in main
+    if args.phase=='setup':setup(c,args.compiler)
+                           ~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\aimrl\tracking_action_resolution\study.py", line 35, in setup
+    save_json(OUT/'model_provenance.json',dict(models=models(),terminal='max over original ten Q_shaped actions + Phi(s), Phi=-L1. Identical for A10 and A14. No fabricated Q entries.',new_training_interactions=0,Q_updates=0))
+                                                      ~~~~~~^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\aimrl\tracking_action_resolution\study.py", line 12, in models
+    a=frozen_agent('R-Decay',seed);q,counts=a.snapshot();p=model_path('R-Decay',seed)
+                                   ^^^^^^^^
+ValueError: too many values to unpack (expected 2)

@@ -1,0 +1,43 @@
+{
+  "baseline": "a5b83f569b8cd454a96403b4a4a5ef4e508e231d",
+  "original_documents_archive": "provenance/action_resolution_release/original_documents.zip",
+  "original_documents_archive_sha256": "25fb21917b4764f7f8412d0170dfa064e3df6ca14fd936359d85653af5b1a939",
+  "documentation_changes": {
+    "README.md": {
+      "original_sha256": "fa8da94f0ee27645f4bf6e76281e98382543af1a3a1282e5d3eddee0555b02bf",
+      "published_sha256": "eb7ad0eebf6dd29fb35ade62c98dbb01482dcbc80241ba80e9b22dd0e47d44a5",
+      "reason": "Current research navigation/reproduction update"
+    },
+    ".gitignore": {
+      "original_sha256": "b201bbdd243ad3e7ceae6cf8b7e53ad9cafc5c9df5b0b1da6eec8a6e0c8350a7",
+      "published_sha256": "fcc22376593031ea9e9840f70686b563ef114557b7f093bb71a8b4cce03d8168",
+      "reason": "Exclude private original identity snapshot only"
+    },
+    "docs/research_index.md": {
+      "original_sha256": "0c2b7048323c2bea1ab108cf6d519b8bdb261a32791d5138ab066ae2a98fe0b6",
+      "published_sha256": "542035470a37c490111f62b2f6432e6612f2de2d52d27ded9da43e351619c3c6",
+      "reason": "Current research navigation/reproduction update"
+    },
+    "docs/tracking_planning.md": {
+      "original_sha256": "70b2b9276f272df7c5d15c9eb774036f3a2c5a17d8fb15c95a96bdd5206c7f7c",
+      "published_sha256": "70359f0536414d93a56a603f2c669078da428e7eb051579401d0fa6193d62707",
+      "reason": "Current research navigation/reproduction update"
+    },
+    "docs/reproduce_latest_studies.md": {
+      "original_sha256": "0428802ac486f2bdfe194da56c3526f14c4d679cd7268a7bf90ef330abbeec1d",
+      "published_sha256": "a48c90ad1a9579a2fc826db7759fcc33a6fd4c5f1da8956b10c758fc80990a93",
+      "reason": "Current research navigation/reproduction update"
+    }
+  },
+  "omissions": {
+    "results/tracking_action_resolution/delivery_state.json": {
+      "kind": "private_identity_snapshot",
+      "original_sha256": "b7c47f17da37103e8621ca4c48573df8e13fd9f6491d790a62d612324a56c061",
+      "original_bytes": 749,
+      "replacement_path": "provenance/action_resolution_release/public_delivery_state.txt",
+      "replacement_sha256": "e8f7743d649759cca7ebd3fc84e5988e0f8ce2aed957bdf780e08a0db05b77ac",
+      "reason": "Global personal Git name/email are unrelated to the required public repository author identity. Original retained locally, not changed."
+    }
+  },
+  "scientific_files_modified": false
+}

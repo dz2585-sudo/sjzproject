@@ -1,0 +1,12 @@
+{
+  "unchanged_files": 3657,
+  "documents": [
+    ".gitignore",
+    "README.md",
+    "docs/reproduce_latest_studies.md",
+    "docs/research_index.md",
+    "docs/tracking_planning.md"
+  ],
+  "omissions": [],
+  "_publication_copy": "Machine-local paths redacted; original hash in log_mapping.json. Numerical fields unchanged."
+}

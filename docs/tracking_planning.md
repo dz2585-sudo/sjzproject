@@ -35,7 +35,7 @@ Planning preparation is separately charged in the precomputation record: state b
 
 Programmatic decoding verified all 301 frames and their timing; actual-player inspection was not performed and no desktop/browser permission was requested. [Study navigation](tracking_planning.md) · [report](../results/tracking_planning/results_summary.md) · [paired results](../results/tracking_planning/paired_differences.csv) · [other GIFs](../results/tracking_planning/demos/) · [reproduce](reproduce_latest_studies.md).
 
-**Next work:** a controlled 2-cell movement-action experiment is proposed, not completed. Preserve the current-action planning baseline and test C and H jointly; these results do not establish a theoretical ceiling.
+**Follow-up completed:** the [two-cell action study](tracking_action_resolution.md) evaluates A10/A14 on independent paired scenes. A separately frozen fourteen-action training study remains future work. Historical planning reports retain their original context and hashes.
 
 
 ## Same-model paired improvements

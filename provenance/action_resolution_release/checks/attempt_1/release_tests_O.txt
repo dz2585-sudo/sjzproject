@@ -1,0 +1,8 @@
+PUBLICATION COPY — machine-local paths redacted; original hash in log_mapping.json.
+test_document_change_needs_original_archive_and_current_digest (test_action_publication.ActionPublicationTests.test_document_change_needs_original_archive_and_current_digest) ... ok
+test_only_private_snapshot_can_be_omitted (test_action_publication.ActionPublicationTests.test_only_private_snapshot_can_be_omitted) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.036s
+
+OK

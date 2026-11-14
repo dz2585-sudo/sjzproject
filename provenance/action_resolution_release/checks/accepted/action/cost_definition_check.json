@@ -1,0 +1,9 @@
+{
+  "backups": 112500000,
+  "chance_terms": 657000000,
+  "action_lookups": 1350000000,
+  "new_training_interactions": 0,
+  "Q_updates": 0,
+  "definition": "One backup per cursor625 \u00d7 target5000 state and horizon. Six terminals \u00d7 3 depths \u00d7 2 action sets. Chance expectation is shared over action preimages; action lookups enumerate 10 or 14.",
+  "_publication_copy": "Machine-local paths redacted; original hash in log_mapping.json. Numerical fields unchanged."
+}

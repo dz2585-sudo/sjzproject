@@ -1,0 +1,6 @@
+Precomputed and compared all A10/A14 layers, terminal None
+Precomputed and compared all A10/A14 layers, terminal 60
+Precomputed and compared all A10/A14 layers, terminal 61
+Precomputed and compared all A10/A14 layers, terminal 62
+Precomputed and compared all A10/A14 layers, terminal 63
+Precomputed and compared all A10/A14 layers, terminal 64

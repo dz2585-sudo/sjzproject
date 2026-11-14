@@ -1,0 +1,75 @@
+{
+  "post_final_narrative_only": true,
+  "new_metrics": false,
+  "new_selected_scenes": false,
+  "frozen_experiment_sources_changed": false,
+  "script": "scripts/interpret_tracking_action_resolution.py",
+  "script_sha256": "a82b358c8888a8b499912a6024dcb82b8d912a37326048a690779f3ca67789ea",
+  "input_tables": {
+    "action_usage.csv": "40d420d5809e63dfa2a293cf0b8ea1f1385ac62c8e551ee77f0bd090a1cdd012",
+    "speed_boundary_slices.csv": "e10bf15a5ca829d0380cfbfa925ee311a49e77dabe02ec24e263e32779f31462",
+    "mechanism_comparison.csv": "7c505661768aa22e27371abb63557fd416a58968f2935230bdc7c3a11f8a4bea"
+  },
+  "summaries": [
+    {
+      "split": "final",
+      "terminal": "Plan",
+      "medium_all_pct": 24.008666666666667,
+      "medium_speed1_pct": 41.91506764820253,
+      "medium_speed2_pct": 6.303117086299935,
+      "medium_distance1_pct": 54.10302328031181,
+      "medium_boundary_pct": 22.3181366318942,
+      "medium_interior_pct": 25.91342813798188,
+      "speed1_delta_H_per300": 46.28907035681242,
+      "speed2_delta_H_per300": 1.0222345968736306,
+      "crossing_delta_pp": 5.44,
+      "reversal_delta_pp": -1.3599999999999999,
+      "wait_gt1_delta_pp": -0.03933333333333332
+    },
+    {
+      "split": "final",
+      "terminal": "Hybrid",
+      "medium_all_pct": 22.23933333333333,
+      "medium_speed1_pct": 41.898440537967474,
+      "medium_speed2_pct": 2.8007371756625967,
+      "medium_distance1_pct": 53.6019759984559,
+      "medium_boundary_pct": 21.01258914488944,
+      "medium_interior_pct": 23.61666973441135,
+      "speed1_delta_H_per300": 46.30677018383683,
+      "speed2_delta_H_per300": 1.7851318563302954,
+      "crossing_delta_pp": 6.7989333333333315,
+      "reversal_delta_pp": -0.5257333333333333,
+      "wait_gt1_delta_pp": -0.07813333333333333
+    },
+    {
+      "split": "stress",
+      "terminal": "Plan",
+      "medium_all_pct": 24.47,
+      "medium_speed1_pct": 39.41434940184098,
+      "medium_speed2_pct": 8.302973526248222,
+      "medium_distance1_pct": 53.73705538045925,
+      "medium_boundary_pct": 23.070528806189657,
+      "medium_interior_pct": 25.99401155908363,
+      "speed1_delta_H_per300": 44.578081400942935,
+      "speed2_delta_H_per300": 1.3844072030810821,
+      "crossing_delta_pp": 5.264999999999997,
+      "reversal_delta_pp": -1.9033333333333329,
+      "wait_gt1_delta_pp": -0.03833333333333336
+    },
+    {
+      "split": "stress",
+      "terminal": "Hybrid",
+      "medium_all_pct": 22.212333333333337,
+      "medium_speed1_pct": 39.19561243144424,
+      "medium_speed2_pct": 3.839561430901079,
+      "medium_distance1_pct": 53.46006222219479,
+      "medium_boundary_pct": 21.34934801170378,
+      "medium_interior_pct": 23.147999756341083,
+      "speed1_delta_H_per300": 45.049552583469634,
+      "speed2_delta_H_per300": 1.911106484854784,
+      "crossing_delta_pp": 7.471333333333334,
+      "reversal_delta_pp": -0.43333333333333324,
+      "wait_gt1_delta_pp": -0.10500000000000001
+    }
+  ]
+}

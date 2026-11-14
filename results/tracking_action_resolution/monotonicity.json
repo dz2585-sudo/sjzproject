@@ -1,0 +1,207 @@
+{
+  "complete": true,
+  "comparisons": [
+    {
+      "seed": null,
+      "horizon": 1,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 1.403,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": null,
+      "horizon": 2,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 9.102654198125,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": null,
+      "horizon": 3,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 10.289349842024302,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 60,
+      "horizon": 1,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 156.38427789874078,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 60,
+      "horizon": 2,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 139.7254426955774,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 60,
+      "horizon": 3,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 126.19781202286966,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 61,
+      "horizon": 1,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 145.63691778788564,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 61,
+      "horizon": 2,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 133.36039142467797,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 61,
+      "horizon": 3,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 120.30957792786035,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 62,
+      "horizon": 1,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 142.32517343480583,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 62,
+      "horizon": 2,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 127.73549038705414,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 62,
+      "horizon": 3,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 104.94603193847787,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 63,
+      "horizon": 1,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 162.27806459033485,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 63,
+      "horizon": 2,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 147.0884591932005,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 63,
+      "horizon": 3,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 130.91415923501324,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 64,
+      "horizon": 1,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 143.12594480094907,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 64,
+      "horizon": 2,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 130.1895188869221,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    },
+    {
+      "seed": 64,
+      "horizon": 3,
+      "states": 3125000,
+      "minimum_difference": 0.0,
+      "maximum_difference": 118.30339077296156,
+      "violations": 0,
+      "tolerance": 1e-09,
+      "exact_A10_value_policy_expected": true,
+      "negative_roundoff_count": 0
+    }
+  ],
+  "total_state_horizon_terminal_comparisons": 56250000,
+  "tolerance": 1e-09,
+  "violations": 0,
+  "value_definition": "Exact maximum stored; policy lowest ID within 1e-10 of maximum. Finite-horizon dominance does not imply rollout metric dominance."
+}

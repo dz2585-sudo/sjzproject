@@ -1,0 +1,1587 @@
+{
+  "historical_ranges": [
+    {
+      "path": "configs/tracking_boundary_stability.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "configs/tracking_boundary_stability.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "configs/tracking_boundary_stability.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "configs/tracking_boundary_stability.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "configs/tracking_planning.json",
+      "key": ".planning.development",
+      "start": 6100000,
+      "end": 6100199
+    },
+    {
+      "path": "configs/tracking_planning.json",
+      "key": ".planning.final",
+      "start": 6200000,
+      "end": 6200499
+    },
+    {
+      "path": "configs/tracking_planning.json",
+      "key": ".planning.stress",
+      "start": 6300000,
+      "end": 6300199
+    },
+    {
+      "path": "configs/tracking_research.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "configs/tracking_research.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "configs/tracking_research.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "configs/tracking_shooting_tradeoff.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "configs/tracking_shooting_tradeoff.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "configs/tracking_shooting_tradeoff.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/B-Decay/seed_1060/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/B-Decay/seed_1060/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/B-Decay/seed_1060/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/B-Decay/seed_1060/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/B-Fixed/seed_1060/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/B-Fixed/seed_1060/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/B-Fixed/seed_1060/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/B-Fixed/seed_1060/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/R-Decay/seed_1060/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/R-Decay/seed_1060/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/R-Decay/seed_1060/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/R-Decay/seed_1060/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/R-Fixed/seed_1060/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/R-Fixed/seed_1060/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/R-Fixed/seed_1060/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/pilot/R-Fixed/seed_1060/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/protocol.json",
+      "key": ".config.study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/protocol.json",
+      "key": ".config.study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/protocol.json",
+      "key": ".config.study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/protocol.json",
+      "key": ".config.study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_60/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_60/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_60/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_60/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_61/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_61/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_61/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_61/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_62/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_62/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_62/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_62/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_63/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_63/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_63/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_63/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_64/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_64/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_64/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Decay/seed_64/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_60/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_60/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_60/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_60/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_61/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_61/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_61/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_61/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_62/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_62/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_62/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_62/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_63/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_63/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_63/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_63/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_64/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_64/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_64/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/B-Fixed/seed_64/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_60/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_60/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_60/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_60/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_61/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_61/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_61/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_61/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_62/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_62/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_62/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_62/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_63/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_63/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_63/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_63/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_64/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_64/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_64/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Decay/seed_64/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_60/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_60/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_60/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_60/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_61/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_61/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_61/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_61/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_62/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_62/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_62/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_62/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_63/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_63/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_63/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_63/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_64/run_config.json",
+      "key": ".study.development",
+      "start": 5100000,
+      "end": 5100199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_64/run_config.json",
+      "key": ".study.final",
+      "start": 5200000,
+      "end": 5200499
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_64/run_config.json",
+      "key": ".study.stress",
+      "start": 5300000,
+      "end": 5300199
+    },
+    {
+      "path": "results/tracking_boundary_stability/runs/R-Fixed/seed_64/run_config.json",
+      "key": ".study.diagnostic",
+      "start": 5500000,
+      "end": 5500015
+    },
+    {
+      "path": "results/tracking_fire_guard/protocol.json",
+      "key": ".config.tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_fire_guard/protocol.json",
+      "key": ".config.tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_fire_guard/protocol.json",
+      "key": ".config.tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_improvement/pilots/absolute_base/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/pilots/absolute_base/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/pilots/absolute_base/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/pilots/absolute_potential/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/pilots/absolute_potential/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/pilots/absolute_potential/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/pilots/relative_base/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/pilots/relative_base/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/pilots/relative_base/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/pilots/relative_potential/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/pilots/relative_potential/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/pilots/relative_potential/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/protocol.json",
+      "key": ".config.study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/protocol.json",
+      "key": ".config.study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/protocol.json",
+      "key": ".config.study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_10/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_10/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_10/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_11/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_11/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_11/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_12/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_12/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_base/seed_12/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_10/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_10/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_10/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_11/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_11/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_11/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_12/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_12/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/absolute_potential/seed_12/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_10/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_10/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_10/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_11/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_11/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_11/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_12/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_12/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_base/seed_12/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_10/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_10/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_10/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_11/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_11/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_11/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_12/run_config.json",
+      "key": ".study.development",
+      "start": 3700000,
+      "end": 3700199
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_12/run_config.json",
+      "key": ".study.final",
+      "start": 3800000,
+      "end": 3800499
+    },
+    {
+      "path": "results/tracking_improvement/runs/relative_potential/seed_12/run_config.json",
+      "key": ".study.stress",
+      "start": 3900000,
+      "end": 3900199
+    },
+    {
+      "path": "results/tracking_planning/protocol.json",
+      "key": ".config.planning.development",
+      "start": 6100000,
+      "end": 6100199
+    },
+    {
+      "path": "results/tracking_planning/protocol.json",
+      "key": ".config.planning.final",
+      "start": 6200000,
+      "end": 6200499
+    },
+    {
+      "path": "results/tracking_planning/protocol.json",
+      "key": ".config.planning.stress",
+      "start": 6300000,
+      "end": 6300199
+    },
+    {
+      "path": "results/tracking_planning/seed_audit.json",
+      "key": ".ranges.development",
+      "start": 6100000,
+      "end": 6100199
+    },
+    {
+      "path": "results/tracking_planning/seed_audit.json",
+      "key": ".ranges.final",
+      "start": 6200000,
+      "end": 6200499
+    },
+    {
+      "path": "results/tracking_planning/seed_audit.json",
+      "key": ".ranges.stress",
+      "start": 6300000,
+      "end": 6300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/protocol.json",
+      "key": ".config.tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/protocol.json",
+      "key": ".config.tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/protocol.json",
+      "key": ".config.tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_20/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_20/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_20/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_21/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_21/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_21/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_22/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_22/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_0p5/seed_22/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_20/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_20/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_20/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_21/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_21/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_21/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_22/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_22/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_2p0/seed_22/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_20/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_20/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_20/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_21/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_21/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_21/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_22/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_22/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/close_5p0/seed_22/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_20/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_20/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_20/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_21/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_21/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_21/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_22/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_22/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p1/seed_22/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_20/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_20/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_20/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_21/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_21/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_21/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_22/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_22/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_0p3/seed_22/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_20/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_20/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_20/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_21/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_21/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_21/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_22/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_22/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/distance_1p0/seed_22/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_20/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_20/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_20/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_21/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_21/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_21/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_22/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_22/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/runs/reference/seed_22/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_0p5/seed_99/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_0p5/seed_99/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_0p5/seed_99/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_2p0/seed_99/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_2p0/seed_99/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_2p0/seed_99/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_5p0/seed_99/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_5p0/seed_99/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/close_5p0/seed_99/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_0p1/seed_99/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_0p1/seed_99/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_0p1/seed_99/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_0p3/seed_99/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_0p3/seed_99/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_0p3/seed_99/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_1p0/seed_99/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_1p0/seed_99/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/distance_1p0/seed_99/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/reference/seed_99/run_config.json",
+      "key": ".tradeoff.development",
+      "start": 4100000,
+      "end": 4100199
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/reference/seed_99/run_config.json",
+      "key": ".tradeoff.final",
+      "start": 4200000,
+      "end": 4200499
+    },
+    {
+      "path": "results/tracking_shooting_tradeoff/smoke/runs/reference/seed_99/run_config.json",
+      "key": ".tradeoff.stress",
+      "start": 4300000,
+      "end": 4300199
+    }
+  ],
+  "conflicts": [],
+  "new_ranges": {
+    "development": {
+      "start": 7100000,
+      "count": 200
+    },
+    "final": {
+      "start": 7200000,
+      "count": 500
+    },
+    "stress": {
+      "start": 7300000,
+      "count": 200,
+      "turn_probability": 0.1,
+      "speed_toggle_probability": 0.1
+    },
+    "demo_seeds": [
+      7400000,
+      7400001,
+      7400002
+    ]
+  },
+  "historical_files_scanned": 3662
+}

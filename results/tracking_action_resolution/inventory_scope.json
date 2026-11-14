@@ -1,0 +1,20 @@
+{
+  "files": 431,
+  "bytes": 1394905121,
+  "excluded_self_and_later_receipts": [
+    "results/tracking_action_resolution/final_acceptance.json",
+    "results/tracking_action_resolution/inventory_scope.json",
+    "results/tracking_action_resolution/output_inventory.csv",
+    "results/tracking_action_resolution/verification.json",
+    "results/tracking_action_resolution/verification_O.json"
+  ],
+  "excluded_intermediates": [
+    "*.pdb",
+    "*.lib"
+  ],
+  "boundary": "Only the five explicit root paths above are excluded. All nested verification receipts are hashed payload. The frozen generic inventory helper is followed by this metadata-only path adapter; no scientific source or historical hash changes.",
+  "post_final_metadata_scripts": [
+    "scripts/interpret_tracking_action_resolution.py",
+    "scripts/finalize_action_resolution_inventory.py"
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "full_tests": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 118.52261059999,
+    "test_count": 109,
+    "log_sha256": "c2a8b2e3fb31356e3fba8de05898327eb27f15604e1faf0c877778820c6e4100"
+  },
+  "new_tests_O": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_tracking_action_resolution.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 1.7546728999877814,
+    "test_count": 9,
+    "log_sha256": "64e3710c65300772aa817ab5969c72b352c113c89c65acbfa16b7dbc0bd378b7"
+  },
+  "new_validation": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "aimrl.tracking_action_resolution",
+      "validate",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\validation"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 31.687798800005112,
+    "test_count": null,
+    "log_sha256": "e6d06b60f78c4d16e27d8c4e7bd1dd561260228709661ca2e59316af7cd3e340"
+  },
+  "historical_publication": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\preflight\\historical_publication.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 22.30728010000894,
+    "test_count": null,
+    "log_sha256": "619065d2009abfe56f4f46307560378d62697e21473feb9995bc3d709746048e"
+  },
+  "history": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\.tmp\\arh\\scripts\\reproduce_latest_studies.py",
+      "verify-history",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\preflight\\history_clean"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 21.8476176999975,
+    "test_count": null,
+    "log_sha256": "ec32d10fb023c65475276ef9cc9f3f00dd156a471735a176c467446bd9f0d537",
+    "correction": "Run unchanged public-tree verifier on exact clean published file set. Original ignored transcripts retained; original failed receipt preserved."
+  },
+  "boundary": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/reproduce_latest_studies.py",
+      "verify-boundary",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\preflight\\boundary"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 44.82770409999648,
+    "test_count": null,
+    "log_sha256": "d644aaee23886a1ac58e2153af3739af204fb21aca3b5f8a39b746a24ce5e4e7"
+  },
+  "planning": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "scripts/reproduce_latest_studies.py",
+      "verify-planning",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\preflight\\planning"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 22.779115099983755,
+    "test_count": null,
+    "log_sha256": "d6542c4dfa484dfeaf7a613aca15b0fd92c5766ffa16e36f59ad43b1d068b92b"
+  },
+  "new_validation_O": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "-m",
+      "aimrl.tracking_action_resolution",
+      "validate",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\validation_O"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 21.074454000015976,
+    "test_count": null,
+    "log_sha256": "73244f9ddd32dda9dfb312f270e5b49aa7730f2a4d8674ffe66867076f0eb162"
+  },
+  "historical_publication_O": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/verify_tracking_publication.py",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\preflight\\historical_publication_O.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 19.55170700000599,
+    "test_count": null,
+    "log_sha256": "619065d2009abfe56f4f46307560378d62697e21473feb9995bc3d709746048e"
+  },
+  "history_O": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\.tmp\\arh\\scripts\\reproduce_latest_studies.py",
+      "verify-history",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\preflight\\history_O_clean"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 22.68088929998339,
+    "test_count": null,
+    "log_sha256": "ec32d10fb023c65475276ef9cc9f3f00dd156a471735a176c467446bd9f0d537",
+    "correction": "Run unchanged public-tree verifier on exact clean published file set. Original ignored transcripts retained; original failed receipt preserved."
+  },
+  "boundary_O": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/reproduce_latest_studies.py",
+      "verify-boundary",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\preflight\\boundary_O"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 44.577286499988986,
+    "test_count": null,
+    "log_sha256": "2c2b2513454742622c3941a18986cd5f2d5f20f72b8d3b3cb7e7d398b95edb6f"
+  },
+  "planning_O": {
+    "command": [
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.venv\\Scripts\\python.exe",
+      "-O",
+      "scripts/reproduce_latest_studies.py",
+      "verify-planning",
+      "--output",
+      "C:\\Users\\zhaod\\OneDrive\\Documents\\ChatGPT\\6885 delta force 2\\.tmp\\sjz-publication\\results\\tracking_action_resolution\\preflight\\planning_O"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 22.326683199993568,
+    "test_count": null,
+    "log_sha256": "56957b62780cbc1d5b78ece3c5cc210704775c21603032fb478574fb5ba7516b"
+  }
+}

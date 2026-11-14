@@ -1,0 +1,50 @@
+{
+  "final": {
+    "policy_instances": 12,
+    "windows": 6000,
+    "environment_ticks": 1800000,
+    "policy_lookups": 1800000,
+    "elapsed_seconds": 15.344539599987911,
+    "memory": {
+      "available": true,
+      "bytes": 75972608,
+      "metric": "windows_peak_working_set",
+      "scope": "process lifetime; not an attributed stage delta"
+    },
+    "fixed_model_probabilities": [
+      0.05,
+      0.05
+    ],
+    "real_probabilities": [
+      0.05,
+      0.05
+    ],
+    "frozen_models_unchanged": true,
+    "training_interactions": 0,
+    "Q_updates": 0
+  },
+  "stress": {
+    "policy_instances": 12,
+    "windows": 2400,
+    "environment_ticks": 720000,
+    "policy_lookups": 720000,
+    "elapsed_seconds": 6.740047300001606,
+    "memory": {
+      "available": true,
+      "bytes": 75972608,
+      "metric": "windows_peak_working_set",
+      "scope": "process lifetime; not an attributed stage delta"
+    },
+    "fixed_model_probabilities": [
+      0.05,
+      0.05
+    ],
+    "real_probabilities": [
+      0.1,
+      0.1
+    ],
+    "frozen_models_unchanged": true,
+    "training_interactions": 0,
+    "Q_updates": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "optimized": true,
+  "formal_interactions": 100000000,
+  "pilot_interactions": 4000000,
+  "final_updates": 100000000,
+  "checkpoints": 220,
+  "formal_windows": 333340,
+  "evaluation_windows": 28000,
+  "gif_frames_decoded": 903,
+  "history": {
+    "unchanged_files_verified": 1841,
+    "archived_document_originals_verified": 2,
+    "allowed_publication_document_changes": [
+      ".gitignore",
+      "README.md"
+    ],
+    "documented_noncore_omissions": [],
+    "changed_experiment_core_files": [],
+    "expected_historical_hashes_modified": false,
+    "head": "a5b83f569b8cd454a96403b4a4a5ef4e508e231d"
+  },
+  "inventory_files_verified": 980,
+  "training_interactions_this_check": 0,
+  "validation_adapter": {
+    "source": "aimrl/tracking_boundary_stability/verify_artifacts.py",
+    "source_sha256": "50e53ee846a8b8a094f0fb74d98cb9675cbbd1a93ae743f4daa8018b056c28de",
+    "frozen_verifier_sha256": "0b524cff5df878e0af467faee34ae713f4c2e5640a98fb7d984a92d46e6bb2e8",
+    "repair": "Normalize saved int16 initial state to the same six-Python-int tuple used by actual evaluation before bytes(initial[2:]) hashing.",
+    "canonical_contract_test_passed": true,
+    "expected_digests_changed": false,
+    "original_checks_disabled": 0
+  },
+  "publication_adapter": "Archived document originals and explicitly inventoried non-core omissions; all original numerical checks execute."
+}

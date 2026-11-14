@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\scripts\reproduce_latest_studies.py", line 111, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\scripts\reproduce_latest_studies.py", line 108, in main
+    args=parser.parse_args();args.run(args)
+                             ~~~~~~~~^^^^^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\scripts\reproduce_latest_studies.py", line 43, in verify_history
+    historical_studies_verify(args.output)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\aimrl\latest_publication.py", line 155, in historical_studies_verify
+    original.main()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\scripts\verify_tracking_studies.py", line 166, in main
+    inventories={p.name:verify_inventory(p,args.public_tree) for p in (PRIOR,GUARD)}
+                        ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\scripts\verify_tracking_studies.py", line 42, in verify_inventory
+    require(not path.exists(), 'Machine-local setup log must be absent in the public tree')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhaod\OneDrive\Documents\ChatGPT\6885 delta force 2\.tmp\sjz-publication\aimrl\tracking_fire_guard\replay.py", line 33, in require
+    raise ValueError(message)
+ValueError: Machine-local setup log must be absent in the public tree

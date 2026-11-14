@@ -1,0 +1,25 @@
+{
+  "scenario_seed": 7400001,
+  "development": false,
+  "policies": [
+    "Plan-H3-A10",
+    "Plan-H3-A14",
+    "Hybrid-H3-A10_s60",
+    "Hybrid-H3-A14_s60"
+  ],
+  "frames": 301,
+  "duration_ms": 20070,
+  "decoded_all_frame_pixels_and_timing": true,
+  "sha256": "db2e7413eaa4e9770c5c44d6b426349eea4f27d15cdf47576ed0f46310399f75",
+  "target_sha256": "d29026b88081f13ea0824b75325642c8ea3da600b5a160a6f7762947fc045efa",
+  "samples": {
+    "0": "197e4afdc5ed026a8003093d3f9aeff2e12a59d2cbfb9de8271b16decc6de24f",
+    "150": "856cf29a623dde61e859f7d4f11b77601100cc01e193a3b250fd3edf1dad05d5",
+    "300": "df0e01c966d829160d7ec7890d0cf2774fdef213473f576f5cf7c5678474cee4"
+  },
+  "environment_ticks": 1200,
+  "planning_lookups": 1200,
+  "new_training_interactions": 0,
+  "actual_player_check": "Not performed, as requested; no desktop/browser permissions requested.",
+  "_publication_copy": "Machine-local paths redacted; original hash in log_mapping.json. Numerical fields unchanged."
+}

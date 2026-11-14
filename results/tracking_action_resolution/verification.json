@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "environment_windows_recomputed": 8400,
+  "formal_environment_ticks": 2520000,
+  "models_unchanged": true,
+  "full_Bellman_layers_recomputed": 36,
+  "monotonicity_comparisons": 56250000,
+  "monotonicity_violations": 0,
+  "GIF_frames_decoded": 903,
+  "actual_player_check": false,
+  "history": {
+    "files_verified": 3662,
+    "changed": [],
+    "reference_commit": "a5b83f569b8cd454a96403b4a4a5ef4e508e231d"
+  },
+  "elapsed_seconds": 44.558047099999385,
+  "new_training_interactions": 0,
+  "Q_updates": 0
+}

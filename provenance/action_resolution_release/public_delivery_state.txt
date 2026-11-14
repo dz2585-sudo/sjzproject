@@ -1,0 +1,13 @@
+PUBLICATION COPY — private global Git identity redacted; repository identity retained. Original is not published; hash is in release.json.
+{
+  "head": "a5b83f569b8cd454a96403b4a4a5ef4e508e231d",
+  "identity": "user.name <GLOBAL_NAME_REDACTED>\nuser.email <GLOBAL_EMAIL_REDACTED>\nuser.name dz2585-sudo\nuser.email 232613424+dz2585-sudo@users.noreply.github.com\n",
+  "git_status": "?? aimrl/tracking_action_resolution/\n?? configs/tracking_action_resolution.json\n?? results/tracking_action_resolution/\n?? scripts/check_tracking_action_resolution.py\n?? scripts/finalize_action_resolution_inventory.py\n?? scripts/interpret_tracking_action_resolution.py\n?? tests/test_tracking_action_resolution.py\n",
+  "committed": false,
+  "pushed": false,
+  "protected_history": {
+    "files_verified": 3662,
+    "changed": [],
+    "reference_commit": "a5b83f569b8cd454a96403b4a4a5ef4e508e231d"
+  }
+}

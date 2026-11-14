@@ -1,0 +1,6 @@
+{
+  "path": ".tmp/arh",
+  "files": 3662,
+  "content_equal": true,
+  "purpose": "Exact published-file view excludes pre-existing ignored machine-local transcripts; original history checker and expected hashes unchanged. Linked/copied files are read-only checker inputs."
+}

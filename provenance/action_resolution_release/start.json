@@ -1,0 +1,11 @@
+{
+  "baseline": "a5b83f569b8cd454a96403b4a4a5ef4e508e231d",
+  "original_documents": {
+    "README.md": "fa8da94f0ee27645f4bf6e76281e98382543af1a3a1282e5d3eddee0555b02bf",
+    ".gitignore": "b201bbdd243ad3e7ceae6cf8b7e53ad9cafc5c9df5b0b1da6eec8a6e0c8350a7",
+    "docs/research_index.md": "0c2b7048323c2bea1ab108cf6d519b8bdb261a32791d5138ab066ae2a98fe0b6",
+    "docs/tracking_planning.md": "70b2b9276f272df7c5d15c9eb774036f3a2c5a17d8fb15c95a96bdd5206c7f7c",
+    "docs/reproduce_latest_studies.md": "0428802ac486f2bdfe194da56c3526f14c4d679cd7268a7bf90ef330abbeec1d"
+  },
+  "initial_research_files": 413
+}
