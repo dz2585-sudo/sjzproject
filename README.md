@@ -432,6 +432,8 @@ For example, the current saved Relative Potential model for training seed 10 is 
 
 ## Installation and verification
 
+**Documentation-only README revision:** historical hash-bound acceptance commands and the full historical test suite must be run at their frozen publication checkout. Use the [README revision record and exact checkout commands](provenance/readme_status_clarification/README.md) for that entry point, or run the current documentation audit shown there. Old contracts and expected hashes are unchanged; historical test counts below are not new checks of this revision.
+
 **Fresh-checkout reproduction:** use the [supported reproduction guide](docs/reproduction.md) for verified saved-model evaluation and independent fresh training. The new `aimrl.reproduce` entry point records its own session and avoids original-workspace-only startup files. The historical commands remain execution records.
 
 The recorded Windows environment used Python 3.13.9, NumPy 2.5.4, Matplotlib 3.11.2, and Pillow 13.0.0. No GPU or deep-learning framework is required. Use the existing working environment when available. From a normal clone of the repository root, a new Windows PowerShell environment can be prepared with:
@@ -464,10 +466,10 @@ This command writes a short trace; it does not open an interactive game window. 
 
 - The arena is a structured-state simulation. No real-game input control, screen recognition, or game-performance claim is included.
 - Relative-state aliasing at boundaries is established mechanically. Observational boundary slices do not determine its isolated causal effect on performance.
-- The 75% close-tracking target is still unmet. Higher hit counts, higher accuracy, and closer tracking are separate objectives under the current firing rule.
-- The current formal comparison uses three training seeds and finite scenario sets. Results are descriptive; independent scenario seeds need not generate states never seen in training.
+- The early representation study did not reach the C≥75% close-tracking target. The later short-horizon planning study (Hybrid-H3) and two-cell action study (Plan-H3-A14 and Hybrid-H3-A14) reach C≥75% while retaining hits on their respective Final holdouts. Their Stress results remain below 75%, and their prespecified relative joint gates requiring ΔC≥5 percentage points remain unmet. Results and baselines are specific to each study and holdout; higher hit counts, accuracy, and closeness remain distinct objectives.
+- Replication differs by study: the representation and reward studies use three training seeds per condition; the boundary-stability study uses five. Each Hybrid condition references five distinct frozen source models, while each pure Plan condition is one controller evaluated over multiple scenarios. Sample SD across trained or frozen models describes between-model variation; uncertainty across scenarios is separate. Paired scenario/model bootstrap intervals preserve the shared-scene pairing and do not treat ticks as independent samples. Scenario sets are finite, and independent scenario seeds need not generate states never seen in training.
 - Early hit-once success, original continuous-tracking development, and the latest final/stress tests use different tasks, splits, or budgets. Their tables should not be pooled into one leaderboard.
-- Remaining work is the course-format final report and presentation, followed, if pursued, by a separately specified boundary-aware or tracking-objective study. A 50 by 50 extension has not been executed. Interactive GUI playback remains unverified.
+- The boundary-stability, short-horizon planning, and two-cell action-resolution studies are complete. Next work includes integrating the course-format paper and presentation, and an optional, independently specified fourteen-action training study. Fourteen-action Q-learning has not been executed. A 50 by 50 extension has not been executed. Interactive GUI playback remains unverified.
 
 Potential-based shaping follows Ng, Harada, and Russell (1999), [Policy Invariance under Reward Transformations](https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf). The potential form does not provide a finite-budget or optimality guarantee for a lossy relative observation. Full technical references are in the [specification](spec.md).
 

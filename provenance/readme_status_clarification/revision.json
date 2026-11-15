@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "80c25e452e38e46ee18a04e6e2fb668bb93d2367",
+  "scope": "Three Limitations and next work bullets plus one installation-time historical-verification notice; no scientific artifact or old contract change.",
+  "original_readme_sha256": "eb7ad0eebf6dd29fb35ade62c98dbb01482dcbc80241ba80e9b22dd0e47d44a5",
+  "revised_readme_sha256": "03cc9e7239117959f68a0921e5d506afe40ac3b678064a9dfc60e1493b71080b",
+  "operations": [
+    {
+      "before": "- The 75% close-tracking target is still unmet. Higher hit counts, higher accuracy, and closer tracking are separate objectives under the current firing rule.",
+      "after": "- The early representation study did not reach the C≥75% close-tracking target. The later short-horizon planning study (Hybrid-H3) and two-cell action study (Plan-H3-A14 and Hybrid-H3-A14) reach C≥75% while retaining hits on their respective Final holdouts. Their Stress results remain below 75%, and their prespecified relative joint gates requiring ΔC≥5 percentage points remain unmet. Results and baselines are specific to each study and holdout; higher hit counts, accuracy, and closeness remain distinct objectives."
+    },
+    {
+      "before": "- The current formal comparison uses three training seeds and finite scenario sets. Results are descriptive; independent scenario seeds need not generate states never seen in training.",
+      "after": "- Replication differs by study: the representation and reward studies use three training seeds per condition; the boundary-stability study uses five. Each Hybrid condition references five distinct frozen source models, while each pure Plan condition is one controller evaluated over multiple scenarios. Sample SD across trained or frozen models describes between-model variation; uncertainty across scenarios is separate. Paired scenario/model bootstrap intervals preserve the shared-scene pairing and do not treat ticks as independent samples. Scenario sets are finite, and independent scenario seeds need not generate states never seen in training."
+    },
+    {
+      "before": "- Remaining work is the course-format final report and presentation, followed, if pursued, by a separately specified boundary-aware or tracking-objective study. A 50 by 50 extension has not been executed. Interactive GUI playback remains unverified.",
+      "after": "- The boundary-stability, short-horizon planning, and two-cell action-resolution studies are complete. Next work includes integrating the course-format paper and presentation, and an optional, independently specified fourteen-action training study. Fourteen-action Q-learning has not been executed. A 50 by 50 extension has not been executed. Interactive GUI playback remains unverified."
+    },
+    {
+      "before": "## Installation and verification\n\n",
+      "after": "## Installation and verification\n\n**Documentation-only README revision:** historical hash-bound acceptance commands and the full historical test suite must be run at their frozen publication checkout. Use the [README revision record and exact checkout commands](provenance/readme_status_clarification/README.md) for that entry point, or run the current documentation audit shown there. Old contracts and expected hashes are unchanged; historical test counts below are not new checks of this revision.\n\n"
+    }
+  ],
+  "old_contract": "provenance/action_resolution_release/release.json",
+  "old_expected_hashes_modified": false,
+  "verification_script": "scripts/verify_readme_status.py",
+  "verifier_sha256": "5153b9d6ce5389da668adca6c3786270f49090dce373c17865f5fd10711bb7a7"
+}

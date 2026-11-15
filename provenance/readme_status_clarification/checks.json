@@ -1,0 +1,142 @@
+{
+  "complete": true,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "scripts/verify_readme_status.py",
+        "--output",
+        ".tmp/readme-status-final-normal.json"
+      ],
+      "returncode": 0,
+      "receipt": {
+        "complete": true,
+        "baseline_commit": "80c25e452e38e46ee18a04e6e2fb668bb93d2367",
+        "exact_substitutions": 4,
+        "protected_baseline_files": 4275,
+        "protected_files_changed": [],
+        "old_contract_unchanged": true,
+        "saved_record_statement_checks": true,
+        "relative_links_checked": 182,
+        "training_interactions": 0,
+        "Q_updates": 0,
+        "environment_rollout_ticks": 0,
+        "historical_test_suites_executed": false,
+        "check_scope": "Documentation scope, saved record consistency, all other baseline blob hashes, relative links and anchors."
+      },
+      "receipt_sha256": "580bfaffe4d155fe28fd179f0d4a538cc37231fa6da2678dcf433e096ea3280c"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "scripts/verify_readme_status.py",
+        "--output",
+        ".tmp/readme-status-final-optimized.json"
+      ],
+      "returncode": 0,
+      "receipt": {
+        "complete": true,
+        "baseline_commit": "80c25e452e38e46ee18a04e6e2fb668bb93d2367",
+        "exact_substitutions": 4,
+        "protected_baseline_files": 4275,
+        "protected_files_changed": [],
+        "old_contract_unchanged": true,
+        "saved_record_statement_checks": true,
+        "relative_links_checked": 182,
+        "training_interactions": 0,
+        "Q_updates": 0,
+        "environment_rollout_ticks": 0,
+        "historical_test_suites_executed": false,
+        "check_scope": "Documentation scope, saved record consistency, all other baseline blob hashes, relative links and anchors."
+      },
+      "receipt_sha256": "580bfaffe4d155fe28fd179f0d4a538cc37231fa6da2678dcf433e096ea3280c"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "preliminary_document_checks": [
+    {
+      "command": [
+        "python",
+        "scripts/verify_readme_status.py",
+        "--output",
+        ".tmp/readme-status-normal.json"
+      ],
+      "returncode": 0,
+      "receipt": {
+        "complete": true,
+        "baseline_commit": "80c25e452e38e46ee18a04e6e2fb668bb93d2367",
+        "exact_substitutions": 4,
+        "protected_baseline_files": 4275,
+        "protected_files_changed": [],
+        "old_contract_unchanged": true,
+        "saved_record_statement_checks": true,
+        "relative_links_checked": 182,
+        "training_interactions": 0,
+        "Q_updates": 0,
+        "environment_rollout_ticks": 0,
+        "historical_test_suites_executed": false,
+        "check_scope": "Documentation scope, saved record consistency, all other baseline blob hashes, relative links and anchors."
+      },
+      "receipt_sha256": "580bfaffe4d155fe28fd179f0d4a538cc37231fa6da2678dcf433e096ea3280c"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "scripts/verify_readme_status.py",
+        "--output",
+        ".tmp/readme-status-optimized.json"
+      ],
+      "returncode": 0,
+      "receipt": {
+        "complete": true,
+        "baseline_commit": "80c25e452e38e46ee18a04e6e2fb668bb93d2367",
+        "exact_substitutions": 4,
+        "protected_baseline_files": 4275,
+        "protected_files_changed": [],
+        "old_contract_unchanged": true,
+        "saved_record_statement_checks": true,
+        "relative_links_checked": 182,
+        "training_interactions": 0,
+        "Q_updates": 0,
+        "environment_rollout_ticks": 0,
+        "historical_test_suites_executed": false,
+        "check_scope": "Documentation scope, saved record consistency, all other baseline blob hashes, relative links and anchors."
+      },
+      "receipt_sha256": "580bfaffe4d155fe28fd179f0d4a538cc37231fa6da2678dcf433e096ea3280c"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "line_ending_correction": "Initial staged check reported new JSON CRLF as trailing whitespace (exit 2). Only the two new revision JSON files were normalized to LF; no historical file or expected digest was changed. Final staged check exits 0.",
+  "prior_experiment_tests_reexecuted": false,
+  "training_interactions": 0,
+  "Q_updates": 0,
+  "formal_evaluation_windows": 0,
+  "expected_publication_paths": [
+    "README.md",
+    "scripts/verify_readme_status.py",
+    "provenance/readme_status_clarification/README.md",
+    "provenance/readme_status_clarification/revision.json",
+    "provenance/readme_status_clarification/checks.json"
+  ]
+}
